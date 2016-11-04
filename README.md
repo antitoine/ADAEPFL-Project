@@ -48,4 +48,4 @@ We plan to schedule our project on the following big steps:
   - Visualization / Website  (2 month)
 
 See below a quick overview of the project time plan:
-![Gantt Time Plan](Waiting upload)
+![Gantt Time Plan](https://antitoine.github.io/ADAEPFL-Project/images/gantt.png)
