@@ -34,16 +34,16 @@ The deliverable is going to be a website exposing our result. We are going to fo
 
 We should focus our study on multiple points:
   - General overview of the running in Switzerland
-  - The demographic (may be a competition between Swiss people and strangers) 
-  - Analysis of results (may be follow some people throws the years)
-  - Analysis focused on teams (maybe, the performance change if people compete alone or in team)
+  - The demographic (maybe a competition between Swiss people and strangers) 
+  - Analysis of results (maybe follow some people throws the years)
+  - Analysis focused on teams (see the effect on the performance if people compete alone or in team)
   - Measure the effect of the relief and how people can react to it (oxygen missing, etc.) (maybe Map Visualization) 
   - Focus on the running through the years ([youtu.be/jbkSRLYSojo](https://youtu.be/jbkSRLYSojo))
 
 ## Timeplan
 
 We plan to schedule our project on the following big steps:
-  - Gather data and wrangling (2 month)
+  - Gathering data and wrangling (2 month)
   - Key point study  (1 month)
   - Visualization / Website  (2 month)
 
