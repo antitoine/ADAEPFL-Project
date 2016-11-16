@@ -1,85 +1,85 @@
-,altitude (m),current_adress,latitude,longitude,stationCity
-0,1325,http://www.infoclimat.fr/observations-meteo/temps-reel/adelboden/06735.html,"46,30","7,34",Adelboden
-1,383,http://www.infoclimat.fr/observations-meteo/temps-reel/aigle/06712.html,"46,33","6,92",Aigle
-2,445,http://www.infoclimat.fr/observations-meteo/temps-reel/alpnach/06611.html,"45,93","8,28",Alpnach
-3,449,http://www.infoclimat.fr/observations-meteo/temps-reel/altdorf/06672.html,"46,87","8,63",Altdorf
-4,0,http://www.infoclimat.fr/observations-meteo/temps-reel/altenrhein/06690.html,"47,48","9,57",Altenrhein
-5,196,http://www.infoclimat.fr/observations-meteo/temps-reel/ascona/06990.html,"46,15","8,76",Ascona
-6,316,http://www.infoclimat.fr/observations-meteo/temps-reel/bale-binningen/06601.html,"47,55","7,58",Bâle-Binningen
-7,505,http://www.infoclimat.fr/observations-meteo/temps-reel/bern-belp-berne/06630.html,"46,92","7,50",Bern/Belp (Berne)
-8,565,http://www.infoclimat.fr/observations-meteo/temps-reel/berne-liebefeld/06631.html,"46,93","7,42",Berne Liebefeld
-9,389,http://www.infoclimat.fr/observations-meteo/temps-reel/buchs-suhr/06633.html,"47,23","8,05",Buchs-Suhr
-10,0,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/LSMU.html,"46,98","8,38",Buochs
-11,0,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/LSMU.html,"46,98","8,38",Buochs
-12,444,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/06806.html,"46,98","8,40",BUOCHS
-13,432,http://www.infoclimat.fr/observations-meteo/temps-reel/changins/06705.html,"46,24","6,14",Changins
-14,1631,http://www.infoclimat.fr/observations-meteo/temps-reel/chasseral/06605.html,"47,08","7,04",Chasseral
-15,555,http://www.infoclimat.fr/observations-meteo/temps-reel/chur-ems/06786.html,"46,87","9,53",Chur-Ems
-16,1672,http://www.infoclimat.fr/observations-meteo/temps-reel/cimetta/06759.html,"46,20","8,80",Cimetta
-17,575,http://www.infoclimat.fr/observations-meteo/temps-reel/comprovasco/06756.html,"46,47","8,93",Comprovasco
-18,3315,http://www.infoclimat.fr/observations-meteo/temps-reel/corvatsch/06791.html,"46,42","9,82",Corvatsch
-19,1190,http://www.infoclimat.fr/observations-meteo/temps-reel/disentis/06782.html,"46,70","8,85",Disentis
-20,1973,http://www.infoclimat.fr/observations-meteo/temps-reel/moleson/06609.html,"46,55","7,02",Dübendorf
-21,427,http://www.infoclimat.fr/observations-meteo/temps-reel/emmen/06613.html,"47,10","8,30",Emmen
-22,1000,http://www.infoclimat.fr/observations-meteo/temps-reel/ernen/06743.html,"46,40","8,13",Ernen
-23,1828,http://www.infoclimat.fr/observations-meteo/temps-reel/evolene-villaz/06722.html,"46,07","7,31",Evolene-Villaz
-24,597,http://www.infoclimat.fr/observations-meteo/temps-reel/fahy-boncourt/06616.html,"47,42","6,94",Fahy-Boncourt
-25,1500,http://www.infoclimat.fr/observations-meteo/temps-reel/fionnay/06721.html,"46,03","7,32",Fionnay
-26,2342,http://www.infoclimat.fr/observations-meteo/temps-reel/gemmi/06726.html,"46,40","7,62",Gemmi
-27,405,http://www.infoclimat.fr/observations-meteo/temps-reel/geneve-cointrin/06700.html,"46,23","6,13",Genève-Cointrin
-28,489,http://www.infoclimat.fr/observations-meteo/temps-reel/giswil/06657.html,"46,82","8,17",Giswil
-29,380,http://www.infoclimat.fr/observations-meteo/temps-reel/goesgen/06626.html,"47,22","7,59",Goesgen
-30,2472,http://www.infoclimat.fr/observations-meteo/temps-reel/grand-saint-bernhard/06717.html,"45,87","7,17",Grand Saint-Bernhard
-31,430,http://www.infoclimat.fr/observations-meteo/temps-reel/grenchen/06632.html,"47,18","7,42",Grenchen
-32,2284,http://www.infoclimat.fr/observations-meteo/temps-reel/guetsch/06750.html,"46,65","8,62",Guetsch
-33,1144,http://www.infoclimat.fr/observations-meteo/temps-reel/hoernli/06689.html,"47,37","8,95",Hoernli
-34,579,http://www.infoclimat.fr/observations-meteo/temps-reel/interlaken/06734.html,"46,40","7,52",Interlaken
-35,3580,http://www.infoclimat.fr/observations-meteo/temps-reel/jungfraujoch/06730.html,"46,55","7,98",Jungfraujoch
-36,1170,http://www.infoclimat.fr/observations-meteo/temps-reel/la-cure/06703.html,"46,47","6,08",La Cure
-37,1675,http://www.infoclimat.fr/observations-meteo/temps-reel/la-dole/06702.html,"46,43","6,10",La Dole
-38,1509,http://www.infoclimat.fr/observations-meteo/temps-reel/la-fouly/000F4.html,"45,95","7,11",La Fouly
-39,1210,http://www.infoclimat.fr/observations-meteo/temps-reel/la-fretaz/06619.html,"46,83","6,58",La Fretaz
-40,868,http://www.infoclimat.fr/observations-meteo/temps-reel/laegern/06669.html,"47,48","8,40",Laegern
-41,322,http://www.infoclimat.fr/observations-meteo/temps-reel/laufenburg/06649.html,"47,55","8,05",Laufenburg
-42,616,http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne/06710.html,"46,55","6,62",Lausanne
-43,462,http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html,"46,52","6,67",Lausanne - Pully
-44,341,http://www.infoclimat.fr/observations-meteo/temps-reel/leibstadt/06666.html,"47,36","8,11",Leibstadt
-45,1027,http://www.infoclimat.fr/observations-meteo/temps-reel/les-eplatures/06612.html,"47,08","6,79",Les Eplatures
-46,1360,http://www.infoclimat.fr/observations-meteo/temps-reel/leysin/000A6.html,"46,35","7,03",Leysin
-47,366,http://www.infoclimat.fr/observations-meteo/temps-reel/locarno-monti/06760.html,"46,17","8,78",Locarno Monti
-48,197,http://www.infoclimat.fr/observations-meteo/temps-reel/locarno-magadino/06762.html,"46,17","8,88",Locarno-Magadino
-49,273,http://www.infoclimat.fr/observations-meteo/temps-reel/lugano/06770.html,"46,00","8,97",Lugano
-50,279,http://www.infoclimat.fr/observations-meteo/temps-reel/lugano-agno/06775.html,"46,00","8,90",Lugano/Agno
-51,579,http://www.infoclimat.fr/observations-meteo/temps-reel/meiringen/06614.html,"46,75","8,12",Meiringen
-52,417,http://www.infoclimat.fr/observations-meteo/temps-reel/mettlen/06652.html,"47,12","8,33",Mettlen
-53,1973,http://www.infoclimat.fr/observations-meteo/temps-reel/moleson/06609.html,"46,55","7,02",Moleson
-54,1508,http://www.infoclimat.fr/observations-meteo/temps-reel/montana/06724.html,"46,19","7,29",Montana
-55,482,http://www.infoclimat.fr/observations-meteo/temps-reel/muhleberg/06636.html,"46,97","7,28",Mühleberg
-56,1407,http://www.infoclimat.fr/observations-meteo/temps-reel/napf/06639.html,"47,00","7,93",Napf
-57,487,http://www.infoclimat.fr/observations-meteo/temps-reel/neuchatel/06604.html,"46,96","6,87",Neuchatel
-58,448,http://www.infoclimat.fr/observations-meteo/temps-reel/payerne/00022.html,"46,82","6,94",Payerne
-59,491,http://www.infoclimat.fr/observations-meteo/temps-reel/payerne-metar/06610.html,"46,82","6,95",Payerne/Metar
-60,1007,http://www.infoclimat.fr/observations-meteo/temps-reel/piotta/06753.html,"46,52","8,68",Piotta
-61,1041,http://www.infoclimat.fr/observations-meteo/temps-reel/plaffeien/06628.html,"46,45","7,16",Plaffeien
-62,1078,http://www.infoclimat.fr/observations-meteo/temps-reel/robbia/06794.html,"46,35","10,07",Robbia
-63,610,http://www.infoclimat.fr/observations-meteo/temps-reel/ruenenberg/06645.html,"47,26","7,53",Ruenenberg
-64,2490,http://www.infoclimat.fr/observations-meteo/temps-reel/saentis/06680.html,"47,25","9,35",Saentis
-65,779,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-gallen/06681.html,"47,43","9,40",Saint Gallen
-66,398,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-gallen-altenrhein/06691.html,"47,49","9,56",Saint Gallen-Altenrhein
-67,441,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-triphon/00025.html,"46,29","6,98",Saint-Triphon
-68,1706,http://www.infoclimat.fr/observations-meteo/temps-reel/samedan/06792.html,"46,53","9,88",Samedan
-69,1639,http://www.infoclimat.fr/observations-meteo/temps-reel/san-bernardino/06783.html,"46,47","9,18",San Bernardino
-70,665,http://www.infoclimat.fr/observations-meteo/temps-reel/savatan/06718.html,"46,20","7,02",Savatan
-71,481,http://www.infoclimat.fr/observations-meteo/temps-reel/sion/06720.html,"46,22","7,33",Sion
-72,481,http://www.infoclimat.fr/observations-meteo/temps-reel/sion/06720.html,"46,22","7,33",SION (MIL)
-73,1850,http://www.infoclimat.fr/observations-meteo/temps-reel/st-moritz/06790.html,"46,50","9,85",St. Moritz
-74,353,http://www.infoclimat.fr/observations-meteo/temps-reel/stabio/06771.html,"45,85","8,93",Stabio
-75,1348,http://www.infoclimat.fr/observations-meteo/temps-reel/ulrichen/06745.html,"46,50","8,32",Ulrichen
-76,385,http://www.infoclimat.fr/observations-meteo/temps-reel/versoix/000F7.html,"46,30","6,17",Versoix
-77,645,http://www.infoclimat.fr/observations-meteo/temps-reel/villarzel/000R9.html,"46,75","6,91",Villarzel
-78,642,http://www.infoclimat.fr/observations-meteo/temps-reel/visp/06727.html,"46,18","7,51",Visp
-79,423,http://www.infoclimat.fr/observations-meteo/temps-reel/weesen/06684.html,"47,13","9,10",Weesen
-80,416,http://www.infoclimat.fr/observations-meteo/temps-reel/wynau/06643.html,"47,25","7,78",Wynau
-81,1621,http://www.infoclimat.fr/observations-meteo/temps-reel/zermatt/06748.html,"46,02","7,45",Zermatt
-82,556,http://www.infoclimat.fr/observations-meteo/temps-reel/zurich-sma/06660.html,"47,38","8,57",Zurich SMA
-83,432,http://www.infoclimat.fr/observations-meteo/temps-reel/zurich-kloten/06670.html,"47,48","8,53",Zürich/Kloten
+,altitude (m),current_adress,lattitude,longitude,stationCity
+0,1325,http://www.infoclimat.fr/observations-meteo/temps-reel/adelboden/06735.html,46.30,7.34,Adelboden
+1,383,http://www.infoclimat.fr/observations-meteo/temps-reel/aigle/06712.html,46.33,6.92,Aigle
+2,445,http://www.infoclimat.fr/observations-meteo/temps-reel/alpnach/06611.html,45.93,8.28,Alpnach
+3,449,http://www.infoclimat.fr/observations-meteo/temps-reel/altdorf/06672.html,46.87,8.63,Altdorf
+4,0,http://www.infoclimat.fr/observations-meteo/temps-reel/altenrhein/06690.html,47.48,9.57,Altenrhein
+5,196,http://www.infoclimat.fr/observations-meteo/temps-reel/ascona/06990.html,46.15,8.76,Ascona
+6,316,http://www.infoclimat.fr/observations-meteo/temps-reel/bale-binningen/06601.html,47.55,7.58,Bâle-Binningen
+7,505,http://www.infoclimat.fr/observations-meteo/temps-reel/bern-belp-berne/06630.html,46.92,7.50,Bern/Belp (Berne)
+8,565,http://www.infoclimat.fr/observations-meteo/temps-reel/berne-liebefeld/06631.html,46.93,7.42,Berne Liebefeld
+9,389,http://www.infoclimat.fr/observations-meteo/temps-reel/buchs-suhr/06633.html,47.23,8.05,Buchs-Suhr
+10,0,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/LSMU.html,46.98,8.38,Buochs
+11,0,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/LSMU.html,46.98,8.38,Buochs
+12,444,http://www.infoclimat.fr/observations-meteo/temps-reel/buochs/06806.html,46.98,8.40,BUOCHS
+13,432,http://www.infoclimat.fr/observations-meteo/temps-reel/changins/06705.html,46.24,6.14,Changins
+14,1631,http://www.infoclimat.fr/observations-meteo/temps-reel/chasseral/06605.html,47.08,7.04,Chasseral
+15,555,http://www.infoclimat.fr/observations-meteo/temps-reel/chur-ems/06786.html,46.87,9.53,Chur-Ems
+16,1672,http://www.infoclimat.fr/observations-meteo/temps-reel/cimetta/06759.html,46.20,8.80,Cimetta
+17,575,http://www.infoclimat.fr/observations-meteo/temps-reel/comprovasco/06756.html,46.47,8.93,Comprovasco
+18,3315,http://www.infoclimat.fr/observations-meteo/temps-reel/corvatsch/06791.html,46.42,9.82,Corvatsch
+19,1190,http://www.infoclimat.fr/observations-meteo/temps-reel/disentis/06782.html,46.70,8.85,Disentis
+20,1973,http://www.infoclimat.fr/observations-meteo/temps-reel/moleson/06609.html,46.55,7.02,Dübendorf
+21,427,http://www.infoclimat.fr/observations-meteo/temps-reel/emmen/06613.html,47.10,8.30,Emmen
+22,1000,http://www.infoclimat.fr/observations-meteo/temps-reel/ernen/06743.html,46.40,8.13,Ernen
+23,1828,http://www.infoclimat.fr/observations-meteo/temps-reel/evolene-villaz/06722.html,46.07,7.31,Evolene-Villaz
+24,597,http://www.infoclimat.fr/observations-meteo/temps-reel/fahy-boncourt/06616.html,47.42,6.94,Fahy-Boncourt
+25,1500,http://www.infoclimat.fr/observations-meteo/temps-reel/fionnay/06721.html,46.03,7.32,Fionnay
+26,2342,http://www.infoclimat.fr/observations-meteo/temps-reel/gemmi/06726.html,46.40,7.62,Gemmi
+27,405,http://www.infoclimat.fr/observations-meteo/temps-reel/geneve-cointrin/06700.html,46.23,6.13,Genève-Cointrin
+28,489,http://www.infoclimat.fr/observations-meteo/temps-reel/giswil/06657.html,46.82,8.17,Giswil
+29,380,http://www.infoclimat.fr/observations-meteo/temps-reel/goesgen/06626.html,47.22,7.59,Goesgen
+30,2472,http://www.infoclimat.fr/observations-meteo/temps-reel/grand-saint-bernhard/06717.html,45.87,7.17,Grand Saint-Bernhard
+31,430,http://www.infoclimat.fr/observations-meteo/temps-reel/grenchen/06632.html,47.18,7.42,Grenchen
+32,2284,http://www.infoclimat.fr/observations-meteo/temps-reel/guetsch/06750.html,46.65,8.62,Guetsch
+33,1144,http://www.infoclimat.fr/observations-meteo/temps-reel/hoernli/06689.html,47.37,8.95,Hoernli
+34,579,http://www.infoclimat.fr/observations-meteo/temps-reel/interlaken/06734.html,46.40,7.52,Interlaken
+35,3580,http://www.infoclimat.fr/observations-meteo/temps-reel/jungfraujoch/06730.html,46.55,7.98,Jungfraujoch
+36,1170,http://www.infoclimat.fr/observations-meteo/temps-reel/la-cure/06703.html,46.47,6.08,La Cure
+37,1675,http://www.infoclimat.fr/observations-meteo/temps-reel/la-dole/06702.html,46.43,6.10,La Dole
+38,1509,http://www.infoclimat.fr/observations-meteo/temps-reel/la-fouly/000F4.html,45.95,7.11,La Fouly
+39,1210,http://www.infoclimat.fr/observations-meteo/temps-reel/la-fretaz/06619.html,46.83,6.58,La Fretaz
+40,868,http://www.infoclimat.fr/observations-meteo/temps-reel/laegern/06669.html,47.48,8.40,Laegern
+41,322,http://www.infoclimat.fr/observations-meteo/temps-reel/laufenburg/06649.html,47.55,8.05,Laufenburg
+42,616,http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne/06710.html,46.55,6.62,Lausanne
+43,462,http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html,46.52,6.67,Lausanne - Pully
+44,341,http://www.infoclimat.fr/observations-meteo/temps-reel/leibstadt/06666.html,47.36,8.11,Leibstadt
+45,1027,http://www.infoclimat.fr/observations-meteo/temps-reel/les-eplatures/06612.html,47.08,6.79,Les Eplatures
+46,1360,http://www.infoclimat.fr/observations-meteo/temps-reel/leysin/000A6.html,46.35,7.03,Leysin
+47,366,http://www.infoclimat.fr/observations-meteo/temps-reel/locarno-monti/06760.html,46.17,8.78,Locarno Monti
+48,197,http://www.infoclimat.fr/observations-meteo/temps-reel/locarno-magadino/06762.html,46.17,8.88,Locarno-Magadino
+49,273,http://www.infoclimat.fr/observations-meteo/temps-reel/lugano/06770.html,46.00,8.97,Lugano
+50,279,http://www.infoclimat.fr/observations-meteo/temps-reel/lugano-agno/06775.html,46.00,8.90,Lugano/Agno
+51,579,http://www.infoclimat.fr/observations-meteo/temps-reel/meiringen/06614.html,46.75,8.12,Meiringen
+52,417,http://www.infoclimat.fr/observations-meteo/temps-reel/mettlen/06652.html,47.12,8.33,Mettlen
+53,1973,http://www.infoclimat.fr/observations-meteo/temps-reel/moleson/06609.html,46.55,7.02,Moleson
+54,1508,http://www.infoclimat.fr/observations-meteo/temps-reel/montana/06724.html,46.19,7.29,Montana
+55,482,http://www.infoclimat.fr/observations-meteo/temps-reel/muhleberg/06636.html,46.97,7.28,Mühleberg
+56,1407,http://www.infoclimat.fr/observations-meteo/temps-reel/napf/06639.html,47.00,7.93,Napf
+57,487,http://www.infoclimat.fr/observations-meteo/temps-reel/neuchatel/06604.html,46.96,6.87,Neuchatel
+58,448,http://www.infoclimat.fr/observations-meteo/temps-reel/payerne/00022.html,46.82,6.94,Payerne
+59,491,http://www.infoclimat.fr/observations-meteo/temps-reel/payerne-metar/06610.html,46.82,6.95,Payerne/Metar
+60,1007,http://www.infoclimat.fr/observations-meteo/temps-reel/piotta/06753.html,46.52,8.68,Piotta
+61,1041,http://www.infoclimat.fr/observations-meteo/temps-reel/plaffeien/06628.html,46.45,7.16,Plaffeien
+62,1078,http://www.infoclimat.fr/observations-meteo/temps-reel/robbia/06794.html,46.35,10.07,Robbia
+63,610,http://www.infoclimat.fr/observations-meteo/temps-reel/ruenenberg/06645.html,47.26,7.53,Ruenenberg
+64,2490,http://www.infoclimat.fr/observations-meteo/temps-reel/saentis/06680.html,47.25,9.35,Saentis
+65,779,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-gallen/06681.html,47.43,9.40,Saint Gallen
+66,398,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-gallen-altenrhein/06691.html,47.49,9.56,Saint Gallen-Altenrhein
+67,441,http://www.infoclimat.fr/observations-meteo/temps-reel/saint-triphon/00025.html,46.29,6.98,Saint-Triphon
+68,1706,http://www.infoclimat.fr/observations-meteo/temps-reel/samedan/06792.html,46.53,9.88,Samedan
+69,1639,http://www.infoclimat.fr/observations-meteo/temps-reel/san-bernardino/06783.html,46.47,9.18,San Bernardino
+70,665,http://www.infoclimat.fr/observations-meteo/temps-reel/savatan/06718.html,46.20,7.02,Savatan
+71,481,http://www.infoclimat.fr/observations-meteo/temps-reel/sion/06720.html,46.22,7.33,Sion
+72,481,http://www.infoclimat.fr/observations-meteo/temps-reel/sion/06720.html,46.22,7.33,SION (MIL)
+73,1850,http://www.infoclimat.fr/observations-meteo/temps-reel/st-moritz/06790.html,46.50,9.85,St. Moritz
+74,353,http://www.infoclimat.fr/observations-meteo/temps-reel/stabio/06771.html,45.85,8.93,Stabio
+75,1348,http://www.infoclimat.fr/observations-meteo/temps-reel/ulrichen/06745.html,46.50,8.32,Ulrichen
+76,385,http://www.infoclimat.fr/observations-meteo/temps-reel/versoix/000F7.html,46.30,6.17,Versoix
+77,645,http://www.infoclimat.fr/observations-meteo/temps-reel/villarzel/000R9.html,46.75,6.91,Villarzel
+78,642,http://www.infoclimat.fr/observations-meteo/temps-reel/visp/06727.html,46.18,7.51,Visp
+79,423,http://www.infoclimat.fr/observations-meteo/temps-reel/weesen/06684.html,47.13,9.10,Weesen
+80,416,http://www.infoclimat.fr/observations-meteo/temps-reel/wynau/06643.html,47.25,7.78,Wynau
+81,1621,http://www.infoclimat.fr/observations-meteo/temps-reel/zermatt/06748.html,46.02,7.45,Zermatt
+82,556,http://www.infoclimat.fr/observations-meteo/temps-reel/zurich-sma/06660.html,47.38,8.57,Zurich SMA
+83,432,http://www.infoclimat.fr/observations-meteo/temps-reel/zurich-kloten/06670.html,47.48,8.53,Zürich/Kloten
