@@ -1,0 +1,955 @@
+acode,name
+14A9LKWE,Schilliger Richard
+16GXUB7Y,Dändliker Victoria
+17NC2TEJ,Pätzold Hermann
+17NUHTED,Hochuli Urs
+18HEQE3K,Stucki Thomas
+18HUP83S,Hürlimann Bruno
+194GJ957,"Fleischmann Philip, Au ZH"
+194TF95G,"Kurmann Lisa, Winterthur"
+1AZQG51U,"Heer Dominik, Pfungen"
+1E6L3ERA,"Frei Walter, Buchs ZH"
+1GM6BGN2,von Gunten Erich
+1GMD6RNX,Estapé Timon
+1HPWWSYT,"Zihlmann Peter, Baar"
+1K52ZKDD,Berchtold Werner
+1LB1SLC1,"Borst Cornelis, Uzwil"
+1LB9MLC6,"Brettle Doris, Mönchaltorf"
+1LBR71C9,Humbert Michel
+1LBX71C3,Troxler Fiona
+1NQSHN62,"Wicki Ruedi, Unterägeri"
+1PKCPPFK,"Sturm Jürg, Adliswil"
+1PKUNPFH,"Hasler Bruno, Rickenbach b. Wil"
+1R73WCJG,Billeter Jürg
+1R783CJ1,"Kurtz Olivia, Esslingen"
+1S3E16MQ,Jucker Daniel
+1S3GD6MJ,"Hasler Melvin, Winterthur"
+1S3JNSMF,Grunder Werner
+1S3M86ME,"Frauenfelder Andrina, Hofstetten ZH"
+1S3RK6M2,Mazza Massimo
+1S3ST6M5,"Widmer Michael, Oberwangen TG"
+1S3TF6MW,"Dall Acqua Noah, Männedorf"
+1X916XKE,Fiechter Urs
+1YF7LY8Q,"Hug Paul, Hombrechtikon"
+23YBUG2W,"Hyrenbach Hans, D-Klettgau"
+23YLGG2Q,"Haldimann Angela, Niederuzwil"
+26G98679,"Hodel Thomas, Littau"
+26GD767C,"Schneider Nadja, Rorschach"
+27N7WTEY,"Richle Karl, Ebnat-Kappel"
+27NZDAEJ,Locher Esther
+2948SP5Y,"Dinkelmann Sven, Winterthur"
+2AZ1CF1E,"Zingg Fabio, Busswil TG"
+2AZFKF1R,Huber Ramon
+2CT4B4Z1,"Maurhofer Daniela, Nürensdorf"
+2E6WRERW,"Erb Peter, Winterthur"
+2GM5JRNZ,"Badertscher Christian, Ohringen"
+2GM7TRN2,"Huber Hans, Winterthur"
+2GMPLRNF,"Pfister Heinz, Thayngen"
+2PKAC3FM,Städeli Nicole
+2PKGL3FZ,"Brandes Nicole, Uster"
+2S3GS6MQ,Alonso Javier
+2TJFL5LJ,Schadegg Louis
+2UCPKUAM,"Rehmann Brigitte, Embrach"
+2X9DRHKH,Lauffenburger Monika
+31UEKX4U,"De Pizzol Stefan, St. Gallenkappel"
+34AYF4WP,Hunn Peter
+36G5XU7B,"Brandenburger Sarah, Winterthur"
+36GJ3U7U,Trusgnach Dario
+36GQQU7B,"Praetorius Fabio, Winterthur"
+36GU5U7U,"Schürch Tim, Winterthur"
+36GWAU7R,Müntener Christian
+3941PP5D,"Resegatti Diego, Uznach"
+3AZ8K51P,"Hohl Severin, Winterthur"
+3AZBJ51P,"Fürst Jan, Winterthur"
+3AZRW51B,"Frauenfelder Florian, Hofstetten ZH"
+3BR569TX,"Groll Günther, Meilen"
+3BR6YBTY,"Huser Josef, Dübendorf"
+3BRCU9TL,Waldner Marcel
+3BRH49TN,Ramel Peter
+3BRHM9T1,Da Costa Fernando
+3BRN39TD,Päper Corinne
+3BRND9T6,Binkert Lucas
+3BRP6UTA,"Eppler Hugo, Schaffhausen"
+3CT5P4Z2,"Bachmann Christian, Zürich"
+3CT8S4ZJ,Iseli Jonas
+3CTAC4ZJ,"Carna Diego, I-Morbegno (SO)"
+3CTB84ZY,Jucker Heinz
+3CTBG4ZG,"Piffaretti Aurora, Rümlang"
+3CTD84Z7,"Schoch Stefan, Gibswil-Ried"
+3GMKSGN9,"Stäheli Markus, Brütten"
+3HP15SY2,"Kölle Bjarne, Zürich"
+3HP3TSYN,"Studler Seraina, Jona"
+3PKJZ3FP,Schmid Roger
+3QSAFEGE,Trüssel Stefan
+3S3CH6M3,"Giger Max, Wilen b. Wollerau"
+3X9J7XKW,Staub Hans Peter
+3X9R2HKD,"Guler René, Thalwil"
+3YFNEY87,"Wernli Urs, Schalchen"
+43Y16G2D,"Baumgartner Nathan, Neftenbach"
+43Y28R2P,Turner Gillian
+43Y2JR2L,Maingot Emma
+43Y5HR2S,Dall Acqua Elia
+43YB6G2S,"Rossi Riccardo, Winterthur"
+43YGSR2B,Krämer Christian
+43YPWR2P,Mohn Christian
+43YRLR2S,Guarnuto Luciano
+46G6SB7U,"Kölle Malte, Zürich"
+46G78B7M,"Anderegg Lukas, Winterthur"
+47N8X7EZ,Buzzi Andreas
+47NKDTED,"Längle Lucas, Würenlos"
+47NWYTEL,Dietrich Bengt
+494XWP5N,Tiralosi Tosca
+4BRB6UTN,Creemers Lilyan
+4E658ERH,"Thoma Stephan, Dübendorf"
+4GM4SCN3,Schmidt Urs
+4GMG5CNQ,Leemann Nico
+4GMJ9CNA,Rhyner Hans-Kaspar
+4K5PPKDR,"Bärtschi Andreas, Kyburg"
+4LBAALCN,"Meier Heiri, Dietikon"
+4LBN8LCJ,"Bähler René, Rickenbach b. Wil"
+4M282MQJ,"Bringold Andreas, Beinwil SO"
+4M2LD7QQ,"Fischer Bettina, Volketswil"
+4PK1CGFG,"Wipf Brandon, Winterthur"
+4PK8LGF3,"Staub Carmen, Winterthur"
+4PKB3GF3,"Schwender Sven, Winterthur"
+4PKCHGFK,Schmid Lea
+4PKE6GFK,Leutenegger Thomas
+4PKFBGFK,Burger Christoph
+4PKHFGFY,Häfliger Reto
+4PKJKGFP,"Hügle Jana, Winterthur"
+4PKML3F2,"Camporelli Marcel, Winterthur"
+4PKN3GFG,Hochheuser Yvonne
+4PKRAGFM,Kunz Sibylle
+4PKWLGF4,Cadisch Peter
+4PKX8GFP,"Bürgi Melissa, Winterthur"
+4QS71QGM,"Klaus Walter, Weinfelden"
+4R72BCJP,Rohner Pia
+4R77A4JH,Krättli Martin
+4S382SMT,"Züfle Ernst, Mettmenstetten"
+4UC4LUAX,Schätti Alfred
+4UCJ49AL,Pani Oliver
+4UCYQUAQ,"Sablone Gregorio, Zürich"
+4W1D2W9C,"Frisch René, Oberglatt ZH"
+4X99AHKY,"Zuber Sulamith, Winterthur"
+51UE914S,Bucher André
+53YF6G2N,Ombroni Mario
+53YWAG2L,Liechti Alexander
+57N11AEU,"Rüegg Aline, Hedingen"
+57NR5AEH,Fiorentino Massimo
+594UDP51,Reich Daniel
+5BRJAUT4,"Keller Silas, Winterthur"
+5GMEGRNY,"Giger Mägi, Wilen b. Wollerau"
+5K5FAYD8,"Hemmi Marina, Rapperswil SG"
+5K5NXKDL,Murer Rolf
+5K5XZYDL,"Steffani Jana, Winterthur"
+5PKKM3FD,"Schiegg Urs, Winterthur"
+5PKP23FE,Kupper Hans
+5R729CJ1,"Ricklin Nadia, St. Gallen"
+5R7MZRJY,Suppa Sandro
+5UC5WUAQ,Hauser Sandra
+5UCW79AB,Plüer Marcus
+5YF1E78T,Beutler Dario
+5YFEM782,Meier Livia
+5YFKXM8G,"M'Tir Sabrine, Seuzach"
+5YFST78F,Denzler Alain
+5YFU978Y,"Gava Nina, Winterthur"
+5YFW278F,Steinemann Sarah
+61U9K14E,Kleesattel Heinrich
+61UGYH4A,Haas Ingo
+61UUMH4T,Waser Monika
+61UX1H4A,"Baktoo Andrea, Dietikon"
+63Y1AG2Q,Kägi Christian
+63YCCG2X,Stahl Yves
+63YPH32U,Stöckli Mara
+63YPL32R,"Gäumann Coni, Mettmenstetten"
+63YTEG29,Egger Jasmin
+64A354W2,Vuistiner Francis
+64AER4W7,Stöckli Daniel
+66GR6B78,"Müller Heinz-Olaf, Zürich"
+6941WP53,Pagliaccio Antonio
+6943MP5G,Salzgeber Roger
+694CBP5L,Zimmermann André
+694GMP5S,"Wipf Gavin, Winterthur"
+694JPP5H,"Stirnimann Jan, Schlatt b. Winterth"
+694Q895L,Wittwer Gertrud
+694WAP5F,Schaffner Ursula
+6BR6KBTU,"Fédier Laura, Horgenberg"
+6E64YERZ,"Pang Kwee Loy, Zürich"
+6E667ERZ,"Pace Ettore, Zürich"
+6GM2GRNK,Meier Armin
+6GM9CGN1,"Kessler Lorenza, Elgg"
+6GMA9GND,"Bader Renate, Bremgarten AG"
+6LB6PLCL,"Knutti Walter, Wolfhausen"
+6PKHZPF2,"Rüeger Urs, Winterthur"
+6QSCJQGW,Scheiwiller Margrit
+6QSHEQGX,"Ramp Jakob, Winterthur"
+6S3W3BM7,"Weiser Thomas, Zürich"
+6S3XP6MA,Portmann Hans-Peter
+6TJLYTLQ,"Knobel Wilfried, Rümlang"
+6UCJ49AJ,Müller Patrick
+6X9M3HKY,Perrenoud Erich
+6YF6WM8T,Kläusli Rolf
+6YF9YM8F,Wälchli Kevin
+73YCGG2U,"Henry Marianne, Richterswil"
+74A62KW9,"Anderegg Christina, Winterthur"
+74AEAKWG,Frei Rosemarie
+7CT1MKZC,"Walker Alena, Winterthur"
+7CT3TKZC,"Früh Shana, Winterthur"
+7CTBQ4Z6,"Meier Mateo, Pfäffikon ZH"
+7CTCCKZM,Windler Melanie
+7CTJ9KZA,Colaci Sandra
+7CTKGKZC,"Fürst Lukas, Winterthur"
+7CTL54ZC,"Haupt Priska, Winterthur"
+7CTLAKZK,"Maier Karin, Frauenfeld"
+7CTNFCZS,"Lüscher Rolf, Hütten"
+7CTPNKZK,Cartwright Jason
+7CTQXKZT,"Rehal-Chane Mampa, Winterthur"
+7CTT6KZ4,Meier Lukas
+7CTUBKZT,Fusté Joan
+7CTWCKZY,Strickler Irene
+7CTY2KZA,Hediger Patrick
+7GMY7RNJ,"Andres Robert, Zürich"
+7K5HRMD8,Araujo Victor
+7K5NGMD1,Furrer Yvonne
+7PKZY3FR,Gloor Emanuel
+7UC7G9A9,"Pani Sharon Lindsay, Bülach"
+7UCAX9AF,Tiralosi Susi
+7UCRK9AB,Grass Leonhard
+7X98QXK1,"Brunold Andrea, Adliswil"
+7YFK578N,Gähwiler Michael
+7YFUFY8C,Gauss Lorenz
+81U1K14K,Berni Philipp
+84AF8KWN,"Wieser Patrick, Winterthur"
+84AHR4W2,"Kaser Alfred, Muhen"
+84AQAKWZ,"Eilinger Michael, Arnegg"
+87NHSTEK,Knecht Hugo
+894D4P51,Ott Andreas
+894L8P5X,"Besson Yves, Stettfurt"
+8BR13BT3,Baer Willi
+8BRS4UTB,Aurag Daniel
+8CTCF4ZL,Roth Beatrice
+8HPPLHYD,Dubach Hansueli
+8K51EYDU,Meier Martin
+8K547YDE,Monego Enrico
+8K5Q8YDS,"Scherzinger Sereina, Mels"
+8LB7JLCY,"Huber Peter, Lenzburg"
+8LB9E1C8,"Eichelberger Thea, Kleinandelfingen"
+8LBLM1C7,Nussbaum Rolf
+8M26R7Q3,Jimenez José Manuel
+8S33JSMW,"Stähli Lukas, Rapperswil SG"
+8UC13UAA,"Stadelmann Dominik, Winterthur"
+8UC179AE,"Flückiger Armin, Rüeterswil"
+8UC319A2,Hilber Petra
+8UCA49AQ,Martin Patricia
+8UCBCUA3,"Wyss Manuel, Zürich"
+8UCFW9A9,"Künzle Nadja, Zürich"
+8YFJEM8B,"Glaeske Thomas, Eschenbach SG"
+91U8Y14D,Schall Beni
+91UKJX4S,Schmid Bruno
+94AG94WN,"Hintermann Doris, Oetwil am See"
+96G3Q67Y,"Gschwend Peter, Kloten"
+96GFPU72,Breiter Andrea
+96GNBB7Z,"Huber Reshmi, Winterthur"
+97N9QTES,"Kern Selina, Schlatt b. Winterthur"
+9E6WCERQ,"Widmer Köbi, Laupen ZH"
+9GM1GGN4,Schmid Christian
+9GM34RNJ,Zimmermann René
+9GM9GRNA,"Wiedermann Dominik, Jona"
+9GMENRNB,"Rechsteiner Silvan, Schlatt b. Wint"
+9GMYDRN2,Gröbli Michelle
+9HPHJ6Y6,"Estapé Cédric, Winterthur"
+9JEDSZBM,Städeli Jonah
+9LBLB1CK,"Kern Rafael, Winterthur"
+9PK3JPFC,"Rahuet Josefine, Effretikon"
+9R7DSCJW,Geiselmann Anna-Katharina
+9R7JWRJ9,"Zollinger Reto, Wetzikon ZH"
+9R7MDCJF,Mantel Angela
+9S37GBM5,Sickel Caspar
+9S3A9BMH,Dubach Linda
+9S3AZBMZ,Bill Walter
+9S3JM6M4,"Saxer Claudia, Dällikon"
+9S3KCSM2,"Jud Markus, Zürich"
+9TJZ5AL8,Spahn Petra
+A1U26X4P,Niederberger Trudi
+A4AP9KWF,Troxler Donat
+A7NHHTEA,"Baumann Walter, Flawil"
+A945JP5B,"Wolfensberger Annemarie, Oetwil am"
+A948LP5F,Kern Silvan
+A94CDP57,Sieber Ruth
+A94NSP54,"Achermann Annemarie, Zürich"
+ABRU3UT3,M'Tir Woisim
+ABRYMUT6,"Meier Florentina, Uster"
+ACTZ84Z3,Voser Lukas
+AFDG72H6,Troxler Ruben
+AGM21RN6,"Balmer Hanspeter, Männedorf"
+AGMS4RNB,Gehrig Arnold
+AK519YDU,Huber Peter
+AK521MDY,Kern Yannis
+AK543KDB,"Lüthi Willi, Bünzen"
+AK545MDK,"Gosch Tatjana, Winterthur"
+AK55ZYDC,Meier Paul
+AK562MDK,"Zobrist Nima, Winterthur"
+AK5D6MDK,Fluck Noemi
+AK5E7MD7,Müller Marco
+AK5FTMD7,Betschart Philipp
+AK5G7MD5,Macary Patricia
+AK5J5MD5,Moduli Micha
+AK5M2MDT,Plach Michael
+AK5XHMD5,Zahler Silvan
+AK5YSMD5,Hoefnagels Maud
+ALBBU1CN,Bundi Marco
+ALBYHLCX,Walker Ruedi
+AM252TQ9,Geiselmann Patricia Maria
+AM2D5TQH,Strucken Werner
+AM2J6TQ2,Maiori Lukas
+ANQEGN6X,"Müller Christian, Frauenfeld"
+APK3J3FX,"Haldimann Stefan, Niederuzwil"
+APKEB3F3,"Pfeiffer Franziska, Winterthur"
+AR79MRJ8,Sidler Franz
+AS3HHSMC,"Blatter Roger, Dietlikon"
+AUC9M9AS,"Landwehr Lukas, Winterthur"
+AUCRC9A6,"Clematide Renate, Zürich"
+B1UCKH4X,Thompson Stuart
+B3Y52328,"Rüdisüli Anja, Thalwil"
+B3YRTG2C,Schmidli Sandro
+B6G7KB7Q,Pedrett Renato
+B6GA1B79,"von Ballmoos Jörg, Vordemwald"
+B6GDKB7D,Gaus Daniel
+B8HMYQ38,"Bösch Concetta, Steinach"
+B8HP4Q3S,Widmer Eric Timo
+BCT49CZT,D'Agostini Vogt Marialuisa
+BE6MWLR9,"Fatzer Marco, Lachen SZ"
+BGM3URNZ,Visholm Steffen
+BGM5ERNP,Egger Michel
+BGMJ7GN9,Baumann Heinz
+BK577KDF,Frei Susanne
+BK5FXYDY,"Hegner Marc, Buttikon SZ"
+BK5R5KDN,Schenker Thomas
+BK5XKYDT,"Herzog Patrick, Homburg"
+BLBD71C6,Tiralosi Mario
+BLBYHLCW,"Pang Micheline, Zürich"
+BPK1M3F1,Stapfer Jan
+BPK3Z3FX,Spielmann-Moukhi Karim
+BPK553FQ,"Baumberger Linus, Winterthur"
+BPK8JPFU,Wick Marco
+BPKB83FL,Crevatin Mario
+BPKJD3FC,Sauerbier Martin
+BPKLH3FH,"Schneider Léonie, Winterthur"
+BPKLPPF1,Dietze Markus
+BPKQM3FQ,"Schneider Martin, Rheinau"
+BR7Y3RJP,"Wettstein Walter, Brugg AG"
+BS3BN6MZ,"Zumbach Thomas, Wald ZH"
+BS3CYSMT,"Fischer Ernst, Winterthur"
+BS3F7SM3,"Elmer Beat, Hombrechtikon"
+BUCW6UAL,"Zollinger Fabienne, Wetzikon ZH"
+BX9LWSKT,Meyer Rosa Katharina
+BX9PRSKA,"Gubser Jasmin, Volketswil"
+BX9W3SK8,Ly Camkiet
+BX9WQHK7,"Jost Barbara, Neftenbach"
+BX9YESKK,"Knoblauch William, Forch"
+BX9YXSKN,Maingot Anton
+C3Y7JR28,Sauter Benjamin
+C3YPQR2D,Plüer Dario
+C6GEEB72,"Kessler Nadja, Rapperswil SG"
+C941H35K,"Ratnaweera Visvanath, Winterthur"
+C9427359,"Epprecht Adrian, Wildberg"
+C944A359,"Gava Jan, Sennhof (Winterthur)"
+C944B95E,"Lüscher Barbara, Nänikon"
+C9484P5R,Jobin Jannick
+C94EE353,Achermann Thomas
+C94EL95N,"Lehmann Ruedi, Zürich"
+C94FL353,Windmüller Stefan
+C94LR359,"Hitz Daniela, Winterthur"
+C94M9P5W,"Tan Siew, Dietikon"
+C94S335P,"Hammouda Nadim, Winterthur"
+C94W435P,"Wernli Lara, Winterthur"
+C94XX35C,"Salomon Suing, Winterthur"
+C94Z935G,Beutler Luana
+CCT8D4ZR,Hodel Roger
+CGMM8RNU,"Kreienbühl Anna, Rüti ZH"
+CHPF8SY5,"Sägesser Manfred, Schaffhausen"
+CK5M9YDW,Schär Andrea
+CK5Y5YD8,"Schraner Seraina, Waldstatt"
+CPK1C3FL,"Huwiler Reto, Winterthur"
+CPK1EGFJ,Rossian Oliver
+CPK5QGFE,Maingot Maxence
+CPKE1GF8,Guarino Marco
+CPKH8PFH,"Keller Thomy, Oetwil am See"
+CPKM13FD,"Baumgartner Jonas, Neftenbach"
+CPKMXPFH,"Keller Max, Zürich"
+CPKQZGFE,Balmer Ampi
+CPKRH3FA,"Maurer Monika, Opfikon"
+CPKRKGF9,Glauser Thomas
+CPKSWGFD,"Meier Rolf, Gündelhart"
+CPKU7GF9,Heer Oriana
+CS3PE6MR,"Farner Monika, Lommis"
+CUCBY9AG,Dünki Mauro
+CYF8DM8F,Stäuble Hannes
+CYFK4M8E,"Ammann Simon, Oberrieden"
+D3YW9G21,Haselbach Stefan
+D94FP95U,"Weiss Hansruedi, Bubikon"
+DBR2WUTD,"Maillard Joel, Winterthur"
+DBR9SUTF,Abderhalden Fabian
+DBRA6BT2,Adank Kurt
+DBRM5UTC,Elmer Anneliese
+DBRPCUT8,Knaus Markus
+DCTRB4ZA,"Morand Jean-Pierre, Bévilard"
+DLBSW1CN,Kurth Ueli
+DPKPC3FL,Cupa Patrik
+DQSC2QGG,"Billich Michael, Uster"
+DUC6A9A6,Rando Andres
+DUCD5UAM,"Kuenzler Sascha, Zürich"
+DX933XK5,"Meier Toni, Bütschwil"
+DYFA9M8H,"Quiquerez Murielle, Winterthur"
+DZL9LZUN,"Gehrig Roman, Zürich"
+E4A264WT,"Weber Jörg, Elsau"
+E6G2H673,"Merkt Jürg, Bülach"
+E6GXS67N,Frei Werner
+EBR8TBTH,Meyer Uschy
+EBRE8BTE,"Graf Rolf, Untersiggenthal"
+ECT3KCZY,Schneider Martin
+EDXRUDPH,"Graf Monika, Bütschwil"
+ELB4QLC4,"Cescato Fabio, Winterthur"
+EM26F7QP,"Lippuner Christoph, Frauenfeld"
+EPK4E3FY,Meister René
+EPKAF3FC,Bucher Irène
+EPKD13FK,Huber Daniel
+EPKR63FA,"Schenk Shelly, Wigoltingen"
+EPKRNPF7,"Wäschle Stefan, Embrach"
+ER7PJCJT,"Schiess Katrin, Uster"
+ES3A96MH,Ebersold Marc
+ES3ZGSM5,"Scheiber Kaspar, Luzern"
+ETJ74ALH,"Sdovc Bruno, Guntalingen"
+EX9FLXK7,"Pfister Walter, Dietlikon"
+EX9P2HKT,"Plüer Fabian, Winterthur"
+EX9UZHK2,"Hohl Fabienne, Winterthur"
+EX9ZMXKT,Stäheli Migg
+EYF6ZY88,"Rüegg Heidi, Rapperswil SG"
+EYFZXM8H,"Lo Monte Alessia, Hettlingen"
+F3Y8RG22,"Cescato Chiara, Winterthur"
+F3YCJG2T,Dusina Dominic
+F3YCNG23,"Lingua Michael, Urdorf"
+F4A3W4WH,Spichiger Armin
+F4A7N4WA,"Schmutz Robert, Adligenswil"
+F6G3667S,"Stapfer Melanie, Pfäffikon ZH"
+F6GSHB7E,Brun Michel
+F6GZFB71,Zimmermann Beat
+F944PP5N,"Farner Pascal, Frauenfeld"
+F94BQP5U,Huber Daniel
+F94RKP56,Koch Rita
+FBRUXBTY,"Rehmann Stefan, Embrach"
+FCTJ24ZX,"Ricklin Paul, St. Gallen"
+FM21CTQN,"Schwarz Karsten, Zürich"
+FM27DTQ7,"Rohrer Melina, Winterthur"
+FM2BXTQ2,"Amarante Philippe, Glattfelden"
+FM2N3TQN,Keller Michael
+FM2R1TQA,Mc Grath Mark
+FPKGT3F9,"Schall Jacqueline, Winterthur"
+FTJ235L4,Randjelovic Sonja
+FTJGQ5L3,Murari Federico
+FTJH65L9,"Rüegg Seline, Hedingen"
+FTJLB5L6,Burri Seraina
+FUC1CUA6,"Treichler Urs, Richterswil"
+FUCM1UAN,Gisler Andrea
+FUCZR9AH,"Bieler Ueli, Zürich"
+FX9GYXKE,"Sturzenegger Ivo, Uetikon am See"
+G1UX814C,"Zelenka Antoine, Bülach"
+G3YUMG29,Trusgnach Ramona
+G3YZKG2R,"Eisenegger Alfred, Seuzach"
+G4AS5KWJ,Huber Cyrill
+G4ATQKW2,Huber Fabrice
+G5W98FX3,"Blattmann David, Winterthur"
+G6GNWB7A,Läderach Peter
+G7NKL7E2,"Kurmann Maria, Winterthur"
+G94GL35N,Fiorentino Roberto
+G94P7P5Z,Glaus Erhard
+G94XK35L,Weder Eleni
+GBR2T9TU,"Wirth Janina, Winterthur"
+GBR319TB,"Stierli, Winterthur"
+GBR8U9TC,Iseli Erwin
+GBRC5UTJ,"Leimgruber Jörg, Dietikon"
+GBRLC9TU,"Schoch Florin, Winterthur"
+GBRP59T9,"Schefer Noah, Winterthur"
+GBRQS9TG,Baggieri Corrado
+GHP2YSY8,Hemri Hafid
+GHPA1SYZ,Kölle Karin
+GK5EBKDG,"Burri Urs, Winterthur"
+GK5ZFYDT,Habegger Andreas
+GPKBSPFQ,"Frey Hansruedi, Rüschlikon"
+GPKZK3FA,"Hediger Christa, Uesslingen"
+GS3PA6MC,"Ramsauer Robert, Ebmatingen"
+GS3QD6MJ,Vonarburg Marc
+GUC6YPAX,Schmid Philipp
+GUC7YPAW,Ammann Thomas
+GUC98PAB,"Morand Myriam, Bévilard"
+GUCBYPAL,"Bosshard Gabriel, Stettfurt"
+GUCHRPAB,"Bachmann Bruno, Andelfingen"
+GUCN1PA1,Pummer Andreas
+GYFC3Y8Y,"Riedel Florian, Neftenbach"
+GYFJHY8K,"Casto Salvatore, Zürich"
+H3Y2U32E,"Wullschleger René, Pfungen"
+H3YMU32J,"Bühlmann Hans, Bonstetten"
+H4A1SKWZ,"Wolf Elischa, Gundetswil"
+H8HWP83Z,Peter Walter
+H94B495Z,"Müller Marianne, Dinhard"
+HBR8WUTZ,Balsiger Tom
+HBRQ9UTN,"Theiler Janis, Winterthur"
+HBRTYUT3,Albrecht Marco
+HCT2L4ZW,Frey Marco
+HCT6Z4ZM,Rando Ursula
+HCTCD4ZB,"Aschwanden Martin, Ennetbürgen"
+HCTEA4Z8,Illi Ruedi
+HCTHY4ZQ,Primus Yannik
+HCTJT4Z2,"Vetterli Kevin-Mark, Reutlingen (Wi"
+HCTNK4ZJ,"Widmer Marlon, Eschenbach SG"
+HCTPQ4ZW,Zuberbuehler Fredy
+HCTSTCZZ,"Brucherseifer Martin, Neuhaus SG"
+HCTXH4Z4,Krahl Selina
+HE6HX1RZ,Villiger Delia
+HE6PX1R2,Maingot Nicolas
+HGMMKGNM,Golding Ian
+HGMTRGNC,Buff-Fischer Brigitte
+HPK8ZPFP,"Pfister Matthias, Thalwil"
+HQSQ6QGC,Lanz Peter
+HR77BCJ7,Ferber Hanna
+HR7W2RJY,Stöckli Christine
+HUC4M9AQ,"Lang Silvana, Zwillikon"
+HUCJQ9AH,Oldani Imma
+HUCY7UA1,"Stucki Adrian, Altendorf"
+HUCYQ9A9,Pilat Galvano
+J3Y14G27,"von Arx Tobias, Winterthur"
+J3Y41G2G,Weiss Bruno
+J3Y4WG2A,Tischhauser Walter
+J4AZ9KWS,"Hubmann Heinz, Frauenfeld"
+J5W762XN,Caspers Sascha
+J5WNT2XE,Kuratli Monika
+J5WZM2XW,Schadegg Bernard
+J6GL8B7B,"Scarpetti Bernhard, Zürich"
+J7NDM7EG,"Saxer Peter, Oetwil am See"
+J8H5PQ3A,"Linder Philippe, Wilen b. Sarnen"
+JAZUWF1W,Stöckli Angela
+JCT934ZX,"Alpiger Markus, Mels"
+JCTB84ZB,"Kurath Adrian, Uster"
+JCTHW4ZZ,"Theiler Joël, Winterthur"
+JCTL24Z2,"Schirrmeister Meret, Winterthur"
+JCTX54ZD,"Nüssli Dave, Dägerlen"
+JE6L8LRT,Sumpf Marianne
+JGMGLRNW,"Stillman David, Siebnen"
+JGMSWRNF,"Fankhauser Michael, Bauma"
+JGMW7RN9,"Rebetez Michel, Moutier"
+JHP6RHY8,Eichholzer Hans
+JHPGASYD,Bitterli Hans-Rudolf
+JR7SECJ2,"Crisafulli Sebastiano, Sennhof (Win"
+JS37GSMS,"Scheuch Ursula, Frauenfeld"
+JS3CE6MX,Peter Renate
+JUCD39AX,"Tschopp Marcel, Winterthur"
+JW1WTW96,Scheuch Heidi
+K1U6914L,"Gentsch Erich, Frauenfeld"
+K1UHCX48,Segura Andreas
+K3Y1DR2Y,Zimmermann Devi
+K3Y37R2M,Hasler Karin
+K3Y53R2C,Ritler Roger
+K3Y65R2M,Ryter Olaf
+K3Y7DR23,Wicki Roger
+K3YBER2K,"Hügle Luca, Winterthur"
+K3YCDR2G,Peter Michael
+K3YEQR2G,"Baumberger Moira, Winterthur"
+K3YHRR2R,Gähwiler Renato
+K3YKFR2Y,Snel Youp
+K3YNJR2Y,Leemann Lorin
+K3YRUR2C,Tschopp Tanja
+K3YSNR23,"Demarmels Fabienne, Winterthur"
+K3YU3R2C,"Deteix Maglaure, Winterthur"
+K3YWDR23,"Sahli Alissia, Winterthur"
+K3YZQR2R,"Wettstein Matthias, Remetschwil"
+K4A5JYWZ,"Brunner Nico, Rapperswil SG"
+K6GBXB7P,"Zwicker Peter, Rorschacherberg"
+K6GYXB7Y,Krieger Peter
+K944Q955,"Roffler Markus, Kloten"
+K94JRP56,Hasenfratz Martin
+K94JU95H,Schafflützel Ueli
+K94NGP5Q,Gyomlay Bela
+KBRASUT7,"Anderegg Jonas, Winterthur"
+KCTJ24Z3,Zenger Regula
+KCTX64Z3,"Ulrich Barbara, Zürich"
+KGM2DCN6,Stutz Urs
+KGMJMCN3,Turner Rod
+KGMLFCN6,Dietrich Karin
+KHPEFSYG,"Schadegg Eveline, Wald ZH"
+KPK1QPF8,Niethammer Thomas
+KPKK93FE,"Marazzi Marco, Zürich"
+KPKNP3FC,Ramer Roger
+KPKR43FD,Muhr Hans-Joachim
+KR755CJE,"Binder Peter, Zürich"
+KR7BF4JH,Hollenstein Ambros
+KTJ55TL8,Diem Roland
+KUC2SUAG,"Schmid Urs, Bazenheid"
+KUCFB9A1,Hilfiker Christian
+KUCKD9AB,"Zehnder Fabian, Wädenswil"
+KUCRP9AH,"Moreira Rosa, Obfelden"
+KX98UHK6,"Suter Pius, Wallisellen"
+L1UE1145,"Kornmayer Peter, Algetshausen"
+L1UXP14J,"Schönenberger Josef, Mosnang"
+L3Y4MG25,Schenk Debby
+L3Y7NG29,Oldani Michael
+L3YFLG22,Zaugg Pascal
+L4A1R4W5,Cavelti Roland
+L4AL1KWX,Stoll Ernst
+L6G4KB7J,Zanvit Bruno
+L7NQUTE1,"Bösch Trix, Stein SG"
+L94HF958,Odermatt Martin
+L94WDP58,"Megert Jürg, Dietlikon"
+LE6U4ERA,"Cicero Salvatore, Mönchaltorf"
+LHPFBSYU,Schoch Christoph
+LHPPPSYN,"Hohl Annina, Winterthur"
+LHPZ9HYN,"Zingg Alexandra, Busswil TG"
+LM2967QU,"Widmer Denton, Uster"
+LQS3GQGC,"Fischer Georg, Riedikon"
+LQSA4QG8,Gentile Daniele
+LS35E6MD,Billeter Jill
+LS3JSSM7,"Hunkeler Roland, Winterthur"
+LS3RG6M3,Ferber Lotta
+LTJEGALP,"Glaeske Jacqueline, Eschenbach SG"
+LUCDQUAN,"Marty Roland, Wädenswil"
+LUCKHUAL,"Gut Adrian, Truttikon"
+LX9FHXKS,"Gabriel Werner, Winterthur"
+M1UEW14N,"Knobel Josef, Illnau"
+M3YGY32T,"Richter Michael, Schindellegi"
+M3YYSG2B,Bächtold Bruno
+M4ALPYWQ,Omollo Omondi
+M4ATNYW8,Gwerder Carla
+M6GG4B7U,"Lohri Philipp, Frauenfeld"
+M948ZP5T,"Hubmann-Mai Brigitte, Frauenfeld"
+MBRD9UT6,Hertach Martin
+MCTNX4ZX,Fejes Stefan
+MCTQ5KZ1,Roth Jürg
+MCTWEKZU,Gomez Roberto
+MGMMBRNT,Villiger Martin
+MGMQ2RNA,Klemenz Markus
+MHPPRSYP,"Thöni Albert, Bonaduz"
+MK57ZYDU,Walser Emil
+MK5PLYDB,Zollinger Michelle
+MR72A4JT,Moexy Kate
+MR7344JM,"Suter Ramona, Winterthur"
+MR74F4JT,Sprenger Sven
+MR79J4JR,"Fritsche Macuba, Winterthur"
+MR7CH4JR,"Binkert Oliver, Winterthur"
+MR7GL4JK,Windler Daniel
+MR7JH4JK,"Heer Ambra, Wilen b. Sarnen"
+MR7TJ4J7,"Kramer Nils, Schlatt b. Winterthur"
+N28742S5,Dreyer Richard
+N3YS6G2H,Jaquet Michel
+N7N99TEH,"Neuhäusler Janina, Winterthur"
+N7NM4TEZ,Dünki Regula
+NAZNWF1Z,Schadegg Chantal
+NBRXKUTH,Uebersax Daniel
+NE6DEERA,"Schäfer Roger, Jona"
+NGMC8RNT,"Friedlos Geri, Altendorf"
+NM2MT7QM,"Stucki Pius, Altendorf"
+NPK5H3F3,Gugelmann René
+NPKHZ3F7,"Stapfer Martin, Schlatt b. Winterth"
+NPKWG3FY,"Leumann Astrid, Frauenfeld"
+NQS7AEG2,Holenweger Thomas
+NR7ACCJN,Friedrich Stefan
+NS3M3SM8,Widmer Sandra
+NTJD35LZ,Fuchs Daniela
+NTJY7ALA,Wirz Michael
+NX9BRHKN,"Feremutsch Christoph, Kleinandelfin"
+NYF4EY86,"Spiegel Peter, Esslingen"
+P1UG4X4U,"Rüdisüli Laurin, Thalwil"
+P1UM7X4S,"Eggenschwiler Patrick, Watt"
+P1USCX4H,Ott Alexander
+P3Y7F32G,"Mohr Albert, Winterthur"
+P3YYE32N,"Huber Asha, Winterthur"
+P4A6B4WF,Fischer Vinzenz
+P4AQQ4WC,Müller Peter
+P6GF1U7S,Binkert Philipp
+P6GF6U7W,Hiltebrand Cornelia
+P6GP7U7Z,Bissig Wilhelm
+P7NMDTEF,Coimbra Artur
+P94QTP5Q,"Steffani Celina, Winterthur"
+PBRGCUT5,"Bolliger Armin, Hohentannen"
+PCT3N4ZF,"Heckendorn Felix, Oberglatt ZH"
+PCT75CZP,Petrinec Daniel
+PCTSD4ZJ,"Stamm Philipp, Schaffhausen"
+PE6HDLRQ,Angst Petra
+PGM6PGN6,"De Faveri Gianfranco, Bülach"
+PHPGLHYU,"Meili Theres, Winterthur"
+PLB5Q1CC,"Eichhammer Günther, Berg TG"
+PLBZ91CH,"Wirth Richard, Henggart"
+PPK8B3F1,Keller Stephan
+PR739CJU,Jucker Philipp
+PR7NMRJT,Anneler James
+PR7PXCJ2,Pilz Michelle M.
+PR7Q9CJW,Steiner Barbara
+PR7TCCJ9,"Decaster Liam, Winterthur"
+PR7U9CJS,Ambühl Beat
+PS364BMB,"Wermelinger Levi, Winterthur"
+PS3756M4,"Klarer Gerhard, Graltshausen"
+PS3DQSM3,"Kühne Jörg, Jona"
+PS3JUBMG,Wäger Nadine
+PS3TLBM6,"Suter Jürg, Wallisellen"
+PS3XPSMJ,Loher Werner
+PS3YJSMY,"Lacher Bruno, Schwändi b. Schwanden"
+PTJW3AL9,"Siegrist Lukas, Winterthur"
+Q1U3WX45,Moduli Lea
+Q1UEBX4N,"Weber Jasmin, Winterthur"
+Q1UJAX47,"Peter Angela, Zürich"
+Q4A24KWZ,Tischer Georg
+Q4AS94WJ,Balmer Toni
+Q7NUBTEG,Kurth Andreas
+Q8HLK83B,"Brunner Peter, Forch"
+Q94F8P5E,"Marchal Salome, Winterthur"
+Q94SZP55,"Heckendorn Renate, Bürglen TG"
+Q94WQP55,Niosi Christina
+QDXQ1DPW,"Geiselmann Andreas, Oetwil am See"
+QHPLCSY1,"Schaad Janine, Rümlang"
+QK57CYDD,Fäh Hansjörg
+QK58WYD1,"Siegenthaler Timo, Winterthur"
+QK5QPYDF,"Glaboniat Edwin, Niederhasli"
+QNQ63J6Z,"Hächler Roland, Volketswil"
+QPKCT3F2,Nyffeler Jacqueline
+QPKLE3FU,Lenherr Oliver
+QPKSYPFB,"Glaus Martin, Thalwil"
+QUCDP9AP,Turner Nathan
+QUCFR9AQ,"Wirth Fredy, Erlen"
+QX9L2HKL,"Quittard Olivier, Zürich"
+QX9MBHKZ,Hornung Uschi
+QYF2AM86,"Hofer Richard, Bachenbülach"
+QYFMQM8E,Erb Markus
+R1UJ4X4P,"Ritschard Urs, Zürich"
+R3YX8G27,"Trusgnach Laura, Bülach"
+R7NACTEA,Gröbli Adrian
+R7NZCTEH,"Steiger Bruno, Rüschlikon"
+R941E358,Niederer Sandra
+R942435F,Svendsen Anne
+R946135U,Kessler Thomas
+R9486P5Z,"Baumgartner Timon, Neftenbach"
+R948S356,Gezer Melanie
+R94X635W,Roth Elena
+RBR8FUTK,Vollmer Eduard
+RBRQUUTC,"Meier Kurt, Degersheim"
+RFD3L2HG,"Häfelin Hanspeter, Winterthur"
+RGMN3RNR,"Rahja Erkki, Winterthur"
+RHP9ZSYP,"Meyner Stefan, Effretikon"
+RHPWTHY6,"Studier Guido, Turbenthal"
+RK5G1YDG,Meier Beat
+RPK8RPFX,"Heinzer Ruedi, Seuzach"
+RPK9FGFJ,"Fehr Kurt, Andelfingen"
+RS389SMG,"Schneider Roman, Mosnang"
+RS3FP6M7,"Kern Ana, Winterthur"
+RS3FP6MW,"Kölle Christian, Zürich"
+RS3T46MN,"Wespi Marcel, Uitikon Waldegg"
+RUC85PAP,Kladny Ralf
+RUCAQPAP,Zanetti Lara
+RUCEBPA4,Fässler Daniel
+RUCFRUAT,Lacher Daniel
+RUCGSPAP,"Meienberger Aeneas, Winterthur"
+RUCJYPA9,"Lamari Selina, Winterthur"
+RUCKGPA3,Wepfer Andrea
+RUCPLPAC,Küng Lavio
+RUCRAPAU,"Thomann Jonathan, Winterthur"
+RUCXQPA9,"Dillschneider Jonas, Winterthur"
+RX93WXKX,"Widmer Paul, Effretikon"
+RYFXEY8N,"Müller Lothar, Uetikon am See"
+S4A39KWQ,Weilenmann Corinne
+S4AJXKWT,Zimmermann Marina
+S4AMGKWZ,"Fariselli Umberto, Freienstein"
+S4AMJKWH,"Hohl Anja, Winterthur"
+S7NBF7EE,"Michnac Ivan, Hochfelden"
+S7NKL7EF,"Walt Renata, Uster"
+S8HBFQ3X,"Vilchez Martin, Zürich"
+S94LCP5M,Berchtold Rene
+S94TLP5X,"Leutenegger Anja, Gossau ZH"
+S94WQP5S,Moduli Noel
+SHPC8SYH,"Pirotti Antonio, Wettingen"
+SLB4WXC7,Muggli Manuel
+SLBEFXCA,"Greenwood Tony, D-Weil am Rhein"
+SS32RSMP,"Ammann Anton, Winterthur"
+SUC219AX,"Stapfer Til, Schlatt b. Winterthur"
+SUCA89AE,"Frischknecht Daniel, Frauenfeld"
+SX98KXKF,"Frei Silvan, Speicher"
+SX9GWXKC,"Fässler Albert, Berg SG"
+SX9Y4HK4,Badertscher Urs
+T1UX5X4G,"Kessler Rolf, Frauenfeld"
+T3Y6RG2F,"Ebneter Martin, Affeltrangen"
+T3YET322,"Urner Stefan, Grüningen"
+T4A49YWA,Vetsch Marlies
+T4A5TYWK,Elsener Barbara
+T4A7EYW5,Lüthi Markus
+T4AA1YWM,Meyer Simon
+T4ABXYWM,Steiner Claudia
+T4AHKYW4,"Wittwer Deborah, Winterthur"
+T4APSYWA,Pineau Florent
+T4ARJYW4,"Gosch Larissa, Winterthur"
+T4AWEYW5,Boutellier René
+T6GX6B74,Schneidinger Céline
+T94ABP5P,"Pani Joana Leslie, Bülach"
+TCT5P4ZQ,"Binder Patrick, Winterthur"
+TCTBM4ZL,"Hohl Michael, Winterthur"
+TCTNX4Z1,"Binder Michael, Winterthur"
+TCTPL4ZM,Quina Luis
+TCTZQ4ZA,"Casto Vittorio, Fällanden"
+TFDJGFHE,"Dux Xaver, Stein am Rhein"
+TGMZ8RN7,"Zuber René, Dübendorf"
+TK5Y1YD3,"Zurlinden Riccardo, Winterthur"
+TM23B7Q4,Egli Michael
+TPK8K3F6,"Roth Rodolfo, Kilchberg ZH"
+TPKPH3F2,"Vassalli Christian, Opfikon"
+TR78HRJ8,"Rüdisüli Pius, Herrliberg"
+TR7BCRJ8,Rüeger Andrea
+TR7WHCJH,"Zehnder Erwin, Wädenswil"
+TR7YLRJT,Reinhard Urs
+TS3556MR,"Wolf Etienne, Gundetswil"
+TS3KW6MB,Strassmann Heinz
+TS3YZ6MS,Hugentobler Margrit
+TTJXH5LY,Barth Gunta
+TUC3E9AT,Abderhalden Reto
+TUCKT9AP,Tiralosi Otello
+TUCW19AR,"Studler Janice, Jona"
+TX9AAHKQ,Lillo Thomas
+TYFN778K,"Birrer Luca, Aeugstertal"
+TYFXA78C,"Andrey Sophie, Flums"
+U28QKNSY,Denker Catrina
+U3Y8EG26,"Anliker Andri, Schlatt b. Winterthu"
+U3YBPG26,Roth Jana
+U3YBUG2T,"Wiedermann Yanik, Jona"
+U3YKAG28,Jeker Marianne
+U3YMFG2X,"Sangleboeuf Nicolas, Rüti ZH"
+U3YQ3G2H,"Figoutz Audrey, Mollis"
+U4A8D4W5,Kleis Maggie
+U6G7M67L,"Gajic Stefica, Eggenwil"
+U94Z4955,"Wettstein Markus, Russikon"
+UBRFRUTP,"Jauner Geri, Kleinandelfingen"
+UBRLWUTY,"Brügger Eveline, Winterthur"
+UBRLZUTX,"Stutz George, Winterthur"
+UBRRLUT8,"Däscher Martin, Kleinandelfingen"
+UHP146YF,"Meier Noah, Dietikon"
+UHP2PSYC,"Saxer Marco, Dällikon"
+UHP8S6Y5,"Kraj Anna, Zürich"
+UHPAP6YQ,Ulrich Michael
+UHPBQ6YE,Pfister Teddy
+UHPPE6YX,Paul Christophe
+UHPPL6YY,Billeter Noé
+UHPPM6YJ,Placereani Sonja
+UHPZKHYL,"Kläger Martin, Mosnang"
+ULB5A1C4,"Kuhn Ramon, Aeugst am Albis"
+ULBHELCQ,"Schenk Felix, Wigoltingen"
+UM2237Q8,"Senti Marco, Giswil"
+UR723CJ3,Egger Fabian
+UR74CRJE,"Grässlin Ralph, Uetikon am See"
+UR7BRRJ6,Zahler Andreas
+UR7LSCJ3,"Kuratli Jonas, Winterthur"
+UUCAB9AL,"M'Tir Yasmine, Seuzach"
+UX9NSSKH,"Corsi Noa, Winterthur"
+UYFCAM8A,Polster Armin
+W1UXQ144,Schnider Willy
+W6G5SB7S,"Früh Sunita Seraina, Männedorf"
+W6GMXB79,Büchel Tina
+W6GRR67J,"Urner Raja, Grüningen"
+WBR1RUTC,Lagler Caayann
+WBRC9UTM,"Scheuch Matthias, Frauenfeld"
+WBRD9UTL,"Besson Anouk, Stettfurt"
+WBRS5UTJ,Fikarova Olga
+WCT1K4Z8,"Blöchlinger Roland, Eschenbach SG"
+WCTNF4ZB,Wespi Beatrice
+WCTNR4Z8,"Dörig Xaver, Niederglatt SG"
+WJEB5JB2,"Gehrig Röbi, Zürich"
+WK55MYDD,"Zehnder Roland, Altendorf"
+WK5BGYDQ,"Brun Hanspeter, Pfäffikon ZH"
+WK5L5YD1,"Bodmer Peter, Winterthur"
+WK5NRYDF,"Riederer Lukas, Winterthur"
+WK5PJYD1,"Kündig Nicolas, Winterthur"
+WM22B7QR,Spiegel Janine
+WPKTLPFK,"Oliver Rubén, Ebmatingen"
+WR74YCJ5,"Sutter Silvan, Winterthur"
+WR7CQCJ4,"Anderegg Benjamin, Winterthur"
+WR7M6CJ1,"Kappeler Karin, Guntalingen"
+WS3Q1SMB,"Koch Hansjörg, Frauenfeld"
+WUCCM9AS,"Hossmann Giulia, Zürich"
+WUCTMUAF,"Peterhans Rita, Turgi"
+WUCZQUAM,"Hurter Lukas, Kloten"
+WX96XXKW,"Früh Philipp, Frauenfeld"
+X1USAX4G,"Troxler Fiammetta, Zürich"
+X1UT9X4Z,"Wittwer Marc, Winterthur"
+X6G1TB7E,"Wolf Elina, Gundetswil"
+X6G56B73,Decasper Konrad
+X6G5T67M,"Mastroianni Gaetano, Wil SG"
+X6GAYB7R,"Scheidegger René, Spreitenbach"
+X6GCZB7Z,"Ruch Marvin, Winterthur"
+X6GE3B7H,"Piffaretti Chiara, Rümlang"
+X6GNYB7E,"Jacomet Fabienne, Winterthur"
+X6GSZB7J,"Jacober Valentina, Winterthur"
+X6GY4B78,Käser Fritz
+X946P951,"Mäder Anton, Fribourg"
+X949E95D,"von Büren Priska, Wisen SO"
+XAZU951G,"Weilenmann Felix, Aegerten"
+XBR5KUTA,Kappeler Beat
+XBRFKUTP,Krieger Irene
+XCT264ZL,Henry Marc
+XCTY1CZR,"Glaus Seraina, Thalwil"
+XE6KLERQ,Hochstrasser Paula
+XE6U3ER1,"Gilbert Paul, Frauenfeld"
+XLBTKLC2,"Fritschi Karl, Uster"
+XPKBFPF2,Schuler Franz
+XPKWH3FG,Windegger Hubert
+XR7A6RJM,"Spaeti Daniel, Zürich"
+XR7KGCJ8,Zogg Mary
+XS33G6MF,Nessler René
+XUC1KUAF,"Luder-Gautschi Maja, Bertschikon (G"
+XUCS5UAJ,"Müller Beat, Dinhard"
+Y3Y85G2H,"Hofmann Christiane, Hüntwangen"
+Y3YHQ32U,"Peter Peter, Männedorf"
+Y6GEYB7M,"Scheuch Livio, Frauenfeld"
+Y94CEP5B,"Tormen Laura, Kriens"
+Y94HTP5Q,"Reumer Karin, Schwanden GL"
+YAZTMA1D,"Müller Peter, Frauenfeld"
+YBR4UUTY,"Kellerhals Jan, Rümlang"
+YCT9KKZW,"Schudel Beat, Schaffhausen"
+YCTJPCZH,Hauser Claudia
+YCTJQKZU,"Zeller Philipp, Gachnang"
+YCTMXKZ6,Zimmermann Ursin
+YGM29CN4,La Commare Gaspare
+YGM3UCNR,"Meier Yannick, Winterthur"
+YGM42RNR,"Bula Rahel, Winterthur"
+YGM43CN4,Andenna Andrea
+YGM54CN7,Graf Tobias
+YGM9ACNY,"Suter Linda, Winterthur"
+YGMBGCNG,"Fritsche Alessandra, Winterthur"
+YGMDPCNC,Ochsner Marcel
+YGMGYCNG,"Stofer Oliver, Winterthur"
+YGMH2CNM,Vajna Bettina
+YGMKECNR,Irniger Susanne
+YGMMDCNM,Müller Benjamin
+YGMRGCN7,Peter Käthi
+YGMZPCNM,Badertscher Fabio
+YK52HMDC,Wiesner Michael
+YK5UYYDA,"Hess Andy, Kleinandelfingen"
+YPKF13FU,Weber Philipp
+YPKJBPF9,"Schibig Viktor, Illnau"
+YR73QCJB,"Nyffeler Aaron, Winterthur"
+YR7JB4JB,Stutz Walter
+YR7U64J6,Meier-Kümin Margrith
+YR7WN4JG,Turner Daniel
+YS3D36MS,"Lohri Renato, Frauenfeld"
+YS3P46MK,Näf Manuela
+YS3P66MB,"Lohri Nicole, Frauenfeld"
+YW1WQW92,"Muff Corinne, Winterthur"
+Z2846JSK,"Quirici Giulio, Hinteregg"
+Z3Y6C325,Jobin Michel
+Z4A3BKWH,Bigger Daniel
+Z4AT7KWS,Vogt Ivo
+Z6G3E67Y,"Unternährer René, Bubikon"
+Z6G98B7E,Moser Yvonne
+Z948F95Z,"Meier Alois, Rothenburg"
+ZAZK7519,Koch Denis
+ZGMDMGNF,"Wäny Roland, Frauenfeld"
+ZHP65HY1,"Ernst Beat, Bertschikon b. Attikon"
+ZHP8WHY5,"Kreienbühl Christian, Rüti ZH"
+ZR79UCJD,Stucki Peter
+ZR7H3CJ8,"Lavarini Fabio, Eschenbach SG"
+ZS3316MZ,"Muther Linda, Orpund"
+ZS35R6MC,Zimmermann Angela
+ZS3PWSMZ,"Gnos Werner, Kloten"
+ZTJSZTLP,"Rutishauser Paul, Goldach"
+ZX9BXXKH,Baumann Daniel

@@ -1,0 +1,887 @@
+acode,name
+1161H1D5,Frei Jürg
+1168B1D1,"Abt Werner, Spiez"
+116BB1DG,Boucard Serge
+116PE1D2,Gafner Thomas
+1EHDREZ1,Scholl Hans
+1EHE7EZ6,"Spieler Simon, Interlaken"
+1LSGQLWP,Kradolfer Werner
+27FTW7CC,Gerber Janick
+2M51KMRG,"Ryf Ursula, Solothurn"
+2M54TMRH,Boucard Claudia
+2M556MR9,"Kottmann Helena, Heitenried"
+2M58XMR3,Kätsch Hans-Martin
+2M597MRB,Widiez Luca
+2M5AGMR3,Ziegler Alain
+2M5APMR1,Kellenberger Stephan
+2M5BRMR3,"Spielmann Stefan, Spiez"
+2M5G4MRP,Ehrler Markus
+2M5HAMRU,Niederberger Martin
+2M5HYMRQ,Zysset Remo
+2M5K5MR3,Margelist Beat
+2M5KYMRN,Schütz Sarah
+2M5NRMRG,"Rüfenacht Pascal, Kerzers"
+2M5Q1MR9,Hirt Eduard
+2M5RQMRU,Daucourt Philippe
+2M5XEMRP,Zurflueh-Begre Daniel
+2M5ZBMRU,Stebler Markus
+2T2GCT4G,Sager Sandra
+2YA4YYGY,Hubacher Ulrich
+2YA67YGY,Matter Nadine
+2YAEDYGT,Jenni Selina
+3343X36U,Haldemann Ueli
+3344A36F,Bühler Margrit
+334AK36T,Bohren Jörg
+36P936LG,Nivola Gianpaolo
+36PB26LK,"Zaugg Urs, Jaberg"
+36PDB6LX,Kehrli Roland
+36PKL6LK,"Rüesch-Reber Christoph, Frutigen"
+36PX66LC,Buri André
+36PZG6LG,Lubasch Nicola
+39R4H9HA,"Tschopp Fritz, Lengnau BE"
+39R7F9HQ,Zwahlen Heidi
+39RL19HG,Schwaller Marcel
+3B38JB1B,Liechti Daniel
+3B3J8B14,"Zeller Peter, Weissenburg"
+3B3QTB1C,"Tschannen Rolf, Bösingen"
+3HU19HQS,Ming Nadin
+3HUBJHQS,Jossi Sven
+3HUKXHQS,Wüthrich Hans
+3HUN6HQS,Kallabis Wolfgang
+3PCJAPSH,"Rieder Markus, Wilderswil"
+3PCUKPSX,Repond Maurice
+3PCXAPSZ,Meyer Uwe
+3S927SEX,Kipfer Susanne
+3S93BSEK,De Bellis François
+3S94ASEX,"Albrecht Michele, Visp"
+3S96FSEX,Grieder Peter
+3S97USEH,Herwig Reto
+3S986SEE,Kobler Kevin
+3S9A4SEE,"Etzweiler Daniel, Muri bei Bern"
+3S9BFSEL,Signer Roland
+3S9KESEL,Bühler D.J. Wale
+3S9LRSEX,Leuthold Brigitte
+3S9PLSEH,Gowland Peter
+3S9XMSEQ,"Hofmann Andre, Brienz BE"
+3S9YFSE5,Hubacher Christoph
+3UGG4UXY,"Holliger Ursina, Interlaken"
+3UGLCUX3,Gander Herbert
+43451361,Streit Peter
+4347H36Q,Gremaud-Cochard Lise-Louise
+4349C369,Kunz Sibylle
+434MA36L,von Burg Peter
+434Q8361,Grossmann Marco
+434TT36D,"Aebischer Sascha, Düdingen"
+434ZU362,Odermatt Noldi
+49R2A9HS,Ruch Nadja
+49R4Z9H7,Burla Stephan
+49R6C9HH,Brechbühl Daniel
+49R7D9H6,Margot Annemarie
+49R7J9H3,Müller Stefan
+49R989HU,Schläpfer Bernhard
+49R9Z9HR,Albrecht Donald
+49RAW9HK,Heiniger Michael
+49RCA9HB,"Dähler Barbara, Thun"
+49RDL9HM,"Lüthi Martin, Subingen"
+49RDW9HH,Lemp Lindenmann Karin
+49RE59HA,Lorenz Markus
+49REF9HB,"Schär Hanna, Bern"
+49REW9HG,Jeger Roswitha
+49RF29HB,Vogt Olivier
+49RFD9HG,Aeberhardt Regine
+49RHR9HU,Feller Roland
+49RL49HS,Geisser Manuel
+49RMM9HU,Lenz Michael
+49RP59H6,Tschannen Sandra
+49RQ69HE,"Künzi Stefanie, Kandersteg"
+49RQB9HF,Kunz Sandra
+49RRS9HC,Pfenninger-Kaufmann Ruth
+49RS59H3,Zehnder Cornelia
+49RT89HZ,Fuchs Balz
+49RTG9HH,Seeger Thomas
+49RU39HF,Fuhrer Fabri
+49RUP9HE,"Fuss Beat, Eggiwil"
+49RWD9H6,Jenni Julia
+49RYA9HL,"Sonderegger Thomas, Oberburg"
+49RZQ9HU,Roten Peter
+4CMWAC93,"Ruef Rosina, Brienz BE"
+4GK9NGBL,Zuber Helen
+4GKMMGB1,Mühlemann Ramon
+4GKYBGBZ,"Ursenbacher Marc, Bolligen Dorf"
+4PC6YPS7,Schmied Katharina
+4PCNQPSM,Flückiger Peter
+4PCWWPSA,"Mosimann Eveline, Pfaffnau"
+4PCXBPSK,Weiland Andreas
+4RYP5RUE,"Zeh Andreas, D-Schopfheim"
+4UG2ZUX9,Christen Lia
+4UG32UXU,Blickenstorfer Marco
+4UG4DUX9,"Schild Pascal, Brienz BE"
+4UG7FUXP,"Blatti Peter, Därligen"
+4UGC6UX3,Olivera Elias
+4UGLAUX9,"Eggler Christian, Interlaken"
+4UGPKUXP,Ming Carole
+4UGS7UXP,Studer Peter
+4UGTNUXU,Minder Yannic
+4UGWFUXP,Büttler Marius
+5471H4P4,"Braungart Georg, D-Würzburg"
+547364P4,Ackeret Peter
+5477X4PM,Zwahlen Roland
+547K84P4,Anliker Raymond
+547NL4P4,Hurni Eva
+547PU4PY,"Kilchenmann Christa, Steffisburg"
+547WX4PM,Koch Dominik
+5KT32K3N,Feuz Christoph
+5KT3ZK31,Ackermann Lars
+5KT4AK3J,Schneider Christian T.
+5KT5LK3U,Bertschmann Thomas
+5KT66K3Y,Reichen Toni
+5KT6SK3X,"Krieg Ruth, Heimberg"
+5KT8QK3P,Roten Daniel
+5KT96K36,Grubenmann Hens
+5KTAHK3L,Oldani Lukas
+5KTAUK3P,Tschannen Nathalie
+5KTCYK3W,Schwab Jennifer
+5KTF7K36,Heller Andreas
+5KTGFK39,Beersma Jos
+5KTJ6K3E,"Kipfer Roger, Bern"
+5KTJBK3F,"Rubin Kerstin, Baltschieder"
+5KTJJK39,"Aebischer Beat, Bern"
+5KTLAK3R,Wanner Hansueli
+5KTQDK3U,Fluri Maja
+5KTR3K3B,Lentes Jörg
+5KTSLK3W,"Meer Cécile, Thun"
+5KTTAK3J,Schild Martin
+5KTULK3U,Glünz Thomas
+5KTXUK39,Leuthold Juliette
+5KTY9K39,Pedrotti Sandro
+5KTZ7K3B,Zimmermann Patrick
+5M5BHMRG,Albrecht Ueli
+5M5CEMRB,Steinacher Helmuth
+5M5Q2MRL,Vonderheit Andreas
+5YA2GYGS,"Baschung Regina, Hinterkappelen"
+5YAKSYG3,Krebs Nicolas
+616EZ1DS,Machera Armando
+66P6M6LN,Fischer Alfred
+66PAE6LQ,Gnaegi Erhard
+66PAL6LR,"Binggeli Fritz, Matten b. Interlake"
+66PB56LF,"Ernst Arthur, Hofstetten b. Brienz"
+66PMM6L7,"Bütikofer Walter, Kernenried"
+66PQM6L3,Beiner Fritz
+6EH1UEZZ,"Shiva Priya, Wengen"
+6EHNAEZJ,Scarcella Giovanni
+6EHW2EZD,"Schlegel Cornelia, Thun"
+6HU55HQ9,Simmen Peter
+6HU6LHQC,Sturzenegger Rolf
+6HUJ9HQ7,Weber Markus
+6S99QSEZ,Nyffenegger Lorenz
+6S9MMSE9,Jaun Karin
+6S9T6SEF,Michel Urs
+6S9XUSED,"Raemy Elsbeth, Moosseedorf"
+6XBBEX83,Frei Bruno
+6XBG1X8P,"Imhof Hansjörg, Bönigen b. Interlak"
+6XBL9X8R,Wegmüller Bernhard
+6XBQYX8U,"Sterchi Hansruedi, Ringgenberg BE"
+6XBSTX86,Reinhard Madeleine
+7478D4PD,"Hostettler Svenja, Bönigen b. Inter"
+747M64PX,Burri Hans
+747R34PX,Gremaud Gérald
+747RD4PJ,Zeller Doris
+7CM47C9Q,Hulliger Heinz
+7CM4FC9U,Schaefer Anaïs
+7CMBBC9W,Schwaiger Fritz
+7CMDPC98,Mühlemann Nicola
+7CMHBC91,Andermatt Alfons
+7CMZ7C9K,Meyer Marco
+7GK7AGBG,Mader Seraina
+7GK91GBR,Pradervand Jerome
+7GKH1GBC,Wagner Michelle
+7GKMBGBC,Koller Adrian
+7GKQWGB4,Theytaz Jean-Pite
+7GKRDGB4,Ringgenberg Samira
+7GKSYGBG,Regenass Marianne
+7GKWAGBG,"Beiderbeck Dietmar, D-Veitshöchheim"
+7GKZTGBC,Schaller Bernhard
+7KTYUK36,Gurtner Sonya
+7RY3CRUW,Leuthardt Sara
+7RY68RUD,Senn Silvia
+7RY6CRUT,Fahner-Gmür Bernhard
+7RYCGRUE,Heimberg Ramona
+7RYCRRUF,Trittibach Daniel
+7RYD8RU6,Michel Dominique
+7RYDWRUT,Büchler Ruedi
+7RYE1RU9,Huggler Markus
+7RYECRUE,Mader Flurina
+7RYGMRUG,Botteron Pierre O.
+7RYHWRUP,Hungerbuehler Samuel
+7RYJ6RUX,Streit-Buri Heidi
+7RYJARUG,"Zurbrügg Franz, Scharnachtal"
+7RYK1RUS,"Andermatt Claudia, Lungern"
+7RYMLRUP,Gartmann Herbi
+7RYN9RU7,"Feremutsch Christoph, Kleinandelfin"
+7RYN9RUW,Jörg Eliane
+7RYNSRUS,Rüegger Andrea
+7RYPGRU8,Scheidegger Edy
+7RYQXRUN,Schulz Marlen
+7RYTCRU6,"Schädler Philippe, Dübendorf"
+7RYTWRUD,"Sinzig Bettina, Winterthur"
+7RYUBRUN,Graf Michi
+7RYXTRUX,Schellenberger Petra
+7RYXXRUG,Frutiger Pascal
+7RYZCRUP,Peric Frank
+7YAM9YGS,Zeller Gerhard
+82W3F274,Flückiger Claudia Maya
+82WCE27M,Plüss Markus
+82WSK27M,Buser Patrice
+8815H8NB,Borter Kurt
+881TM8N1,Barrot Christian
+8DLMFD2S,Knöri Monika
+8WET4WFE,"Seiler Marcel, Reichenbach im Kande"
+916GS1DX,von Bergen Nicolas
+916X51DX,Zimmermann Kathy
+96P426LS,"Melchiorre Mario, Bellinzona"
+96P5G6LF,Binkert Jean-Pierre
+96P7G6LD,"Gäumann Bruno, Spiegel b. Bern"
+96PBD6LJ,Steffen Peter
+96PHP6LQ,Michel Hermann
+96PMK6LR,"Gafner Lukas, Oberhofen am Thunerse"
+96PPT6L3,Schütz Hanspeter
+96PS26LT,Blanc Ruth
+99RPP9HE,"Gäumann Walter, Riedbach"
+99RRQ9HX,"Graf Judith, Matten b. Interlaken"
+9B39SB1F,"Weiler Simon, Unterseen"
+9B3C8B15,Walthert Michel
+9B3W8B1A,Voramwald Kurt
+9HUBNHQL,"Rickli Jörg, Sennhof (Winterthur)"
+9HUCSHQ7,Schulz Sandra
+9HUFLHQP,Lubasch Noah
+9HUN4HQ6,Krieg Wilhelm
+9HUUMHQR,Kuhn Ramon
+9HUYGHQH,Gledstone-Brown Stephanie
+9S9JGSES,Siegrist Sandor
+9UG86UX9,Hostettler Erich
+9UGBHUXM,"Kurt Fritz, Ittigen"
+9UGBYUXZ,Mühlemann Sascha
+9XB1HX8E,Wäny Roland
+9XBD8X8L,Rufibach Rinaldo
+9XBH9X83,Nenniger Christoph
+9XBP7X8U,"Froidevaux Monica, Iseltwald"
+9XBQXX8D,"Gassner Kirsten, Thun"
+9XBTCX8L,Ribi Christoph
+9XBUZX88,Feigenwinter Roland
+9XBXFX8Q,"Erb Thomas, Thun"
+9XBYQX88,Keusch Yvonne
+A472M4PU,"Zaugg Marcel, Heimberg"
+A473T4P6,Zweifel Ursula
+A474K4PQ,Zompicchiatti Brigitte
+A474T4PU,Adolfsen Lars
+A475B4PG,Bodner Robert
+A477Z4P9,Eggerschwiler Bernadette
+A47854PS,"Meier Paul, Kölliken"
+A478J4P7,"Aebischer Stefan, Uettligen"
+A479K4PL,Mäder Marc
+A47AQ4PS,Goodman Lisa
+A47BH4PW,"Kohler Pirmin, Nänikon"
+A47C74PE,Kneubühl Roland
+A47DY4PB,Baur Daniel
+A47E14P2,Brunner Belinda
+A47H84PK,Reusser Hans-Ueli
+A47J44PZ,von Allmen Nadja
+A47KG4P6,Luetolf Pascal
+A47LG4PU,Helbling Michael
+A47LU4PQ,Scheller Christina
+A47M64PN,Seiler Joana
+A47M94P1,Schlachter Therese
+A47MX4PK,Mühlematter Bente
+A47N44P6,Annen Stephan
+A47PK4PU,Holzer Fabrice
+A47QX4PG,Müller Stefan
+A47TL4PB,"Pulfer Stefan, Schliern b. Köniz"
+A47UB4PG,"Stähli Marc, Unterseen"
+A47XD4PZ,Gfeller Hans
+A47ZK4PK,Gafner Martin
+ACM9TC9C,"Zumoberhaus Sarah, Oberwald"
+ACMC8C9C,Stähli Peter
+ACMEEC9C,Hänni Ursula
+ACMFLC9C,Steiner Adrian
+ACMJZC9Y,Schaefer Anthony
+ACMQTC9K,Henz Markus
+ACMU2C9K,Feuz Dominique Dana
+ACMYPC9Y,Brönnimann Simon
+AKT1GK38,Thöni Carmen
+AKTS1K3L,"Weber André, Ins"
+AKTX8K3C,Lendi Johannes
+AM5LHMR1,Haueter Max
+AYAGKYG6,"Borer Markus, Brienz BE"
+AYATGYGE,"Zbinden Marius, St. Ursen"
+AYAX4YGD,"von Kaenel Carole, Thun"
+B161G1DL,Sahli Hannes
+B16HU1D1,Mühlemann Beatrice
+B16YE1D8,Kaufmann Ruth
+B6P1H6L9,Iseli Ernst
+B6P6X6L3,"Jenzer Stefan, Frutigen"
+BB3BUB1W,"Frutiger Ernst, Recherswil"
+BB3FZB1F,"Ehrlich Margrith, Muri b. Bern"
+BB3GXB1M,Brunner Ingrid
+BB3JMB1Y,Brügger Markus
+BHU4LHQ9,Schütz Hanspeter
+BHUALHQL,Glanzmann Marlène
+BHUDYHQY,Holzer Benjamin
+BHUKKHQ1,"Reutemann Patrick, Baar"
+BHUTEHQX,"Hulliger Michael, Brienz BE"
+BLSBGLWQ,Harr Meyer Jacqueline
+BLSH2LWW,Mariotti Christian
+BLSR1LWW,Seeger Sandra
+BLSZRLWZ,"Schumacher Erich, Thun"
+BS918SEU,Schwarz Hans-Rudolf
+BS95ESES,Schläpfer Vreni
+BS9BHSEJ,Zuber Jörg
+BS9FSSEG,Steiner Jürg
+BS9PWSET,"Walther Urs, Oberburg"
+BS9W1SE3,Stähli Peter
+BS9YBSE6,"Schmid Lea, Frauenkappelen"
+BXBNZX86,"Schäfer Michael, Aeugst am Albis"
+BXBSLX87,Ringgenberg Marco
+BXBU8X8R,Kobler Sabrina
+C341G36P,"Schenk Therese, Steffisburg"
+C346436N,Nyffenegger Ursula
+C346G36K,Weingart Markus
+C34FH36S,Ruprecht Hanspeter
+C34XT36Q,"Zanini Ursula, Ostermundigen"
+C9R1S9H5,"Kiser Monika, Meiringen"
+C9R4S9H2,Streit Romy
+C9R889HG,Eisele Marianne
+C9RA29H8,"Schmutz Hans, Bönigen b. Interlaken"
+C9RQB9HW,Fischer Marco
+C9RU39H7,Fuhrer Jessica
+C9RYG9HT,Brescancin Patrizia Flavia
+CB35JB1U,Leist Marco
+CB393B1B,Häfliger Peter
+CB3J7B19,Vonrüti Simon
+CB3Q5B1U,Meyer Kevin
+CB3RFB1U,"Hostettler Stephan, Bönigen b. Inte"
+CB3U8B19,Ming Michelle
+CB3XLB19,Saunier Peter
+CB3Y1B19,Zeller Jan
+CGKNQGBN,"Vogler Franz, Unterseen"
+CGKWYGB7,Steiner Hans
+CPC71PSX,Niederhauser Elisabeth
+CPCGGPSR,Ghodrat Mehdi
+CPCJAPS8,Rinderknecht Hubert
+CPCQFPS3,Battegay Muriel
+CPCSQPSY,"Riedo Roger, Bösingen"
+CPCTNPS2,Brunner Nadine
+CRY6ERUZ,"Lüthi Willi, Bünzen"
+CRYQJRU9,Roth Walter
+CUG1MUXB,Blatter Jessy
+CUG2TUXC,Müller Andrea
+CUG5WUXH,Richener Niklaus
+CUG6PUX5,Balmer Ernst
+CUG8RUX6,Brunner Michael
+CUG9KUXX,Kipfer Cornelia
+CUGA5UX6,Messerli Anita
+CUGBFUX6,"Plum Petra, Liebefeld"
+CUGCRUXK,"Meier Ella, Bern"
+CUGDTUXQ,Foster Rene
+CUGGPUXD,Andermatt Sven
+CUGHQUXX,Kropf Simon
+CUGJWUXS,Oppliger Elena
+CUGKGUXB,Schenker Lilian
+CUGMHUXX,Gilgen Jacqueline
+CUGN4UXB,Baumann Samuel
+CUGQ2UXH,"Michel Andrea, Gurzelen"
+CUGRNUXH,Bläsi Lynn
+CUGUBUXS,Le Tourneur Ingrid
+CUGXBUXP,"Flück Jan, Meiringen"
+CUGY3UXS,Suri Hans Jürg
+CUGZCUXU,Gysin Peter
+CUGZMUXY,"Schoy Rolf, Oekingen"
+DDLDQD28,Aebersold Kurt
+DFZ9HFMC,Geldof Francis
+DFZEKFMC,Klarer Alice
+DFZGUFMY,van der Velde Renee
+DFZJ3FMY,Zumstein Albert
+DFZXNFMY,Buser Monica
+E81H28N6,Steuri Walter
+EEH26EZH,Bärtschi Beatrice
+EEHXKEZL,Aebersold Susanne
+EQXQLQJY,"Michel Christian, Bönigen b. Interl"
+FKT8FK37,"Weibel Roland, Solothurn"
+FKTAEK37,Maurer Melanie
+FKTHZK3K,Matter Fabienne
+FKTRSK3K,Glässner Marcel
+FKTZRK3K,Teuscher Roger
+FM52CMRP,Francescutto Karin
+FM5D9MR9,Thamm Andrea
+FM5Y2MRS,Ruef Rahel
+FYA13YGB,Lauber Reto
+FYA1LYG8,"Gasche Otto, Derendingen"
+FYA2XYG9,Fikarova Olga
+FYA3RYGB,Bircher Andreas
+FYA7QYGP,Lehmann Fredy
+FYA7ZYGL,Streich Agnes
+FYAC3YGP,"Wüthrich Gisela, Bettenhausen"
+FYACBYGL,Hofmann Thomas
+FYADYYGU,Fäh Urban
+FYAEKYG3,"Blatter Stefan, Kriechenwil"
+FYAFYYG3,Tschannen Andreas
+FYAG1YGC,Madlener Gaby
+FYAH2YGX,Wüthrich Lara
+FYALDYG9,Neri Filippo
+FYANUYGB,"Schwendimann Christen, Thun"
+FYAPLYG9,"Künzi Adrian, Kandersteg"
+FYAQXYGZ,Zurcher Thomas
+FYASZYGP,Burch Oswald
+FYATLYGU,Burri Kriemhilde
+FYAUJYGM,Streit Ueli
+FYAWQYGP,"Zobrist Britta, Beatenberg"
+FYAWZYGL,"Aeschlimann Matthias, Bern"
+G345536R,Huber Martin
+G34YL369,"Sager Adrian, Unterseen"
+G6P8P6LS,"Gehrig Heinz, Zürich"
+G6P996L1,Frei Susanne
+G6PA76LS,Wendorf Uwe
+G6PC26L6,"Eggerschwiler Viktor, Baar"
+G6PCC6LL,Held Michel
+G6PEK6LL,Wanner Levin
+G6PFY6LL,Hirschi Bendicht
+G6PGN6LS,Gerber Markus
+G6PH26L1,Bohnenblust Patrik
+G6PH96LB,Jungen Barbara
+G6PJY6LH,Fanti Christian
+G6PPM6LC,Schiffmann Barbara
+G6PR66LU,Rüegger Thomas
+G6PRP6LY,Watson Niall
+G6PSF6LE,Huber Jan
+G6PTJ6LG,Donzé Elias
+G6PUW6LH,Boscaini Matthias
+G6PXQ6LH,"Frautschi Jonas, Wilderswil"
+G6PYE6LH,Eisner Hannes
+G6PZP6L1,Roth Thomas
+G9RB59HQ,Zbinden Peter
+G9RCE9HZ,"Gamboni Luca, Unterseen"
+G9RFX9HZ,"Bähler Lukas, Steffisburg"
+G9RRN9HD,Iseli Sandra
+G9RTX9HL,Scheidegger Thomas
+GB3CSB1N,"Hintermann Andi, Wolfisberg"
+GB3FSB1K,"Rüesch-Herren Martin, Frutigen"
+GB3MJB1Y,Bala Avdullah
+GGKTXGBH,Gerwer Armin
+GPCRLPS8,"Zeller Walter, Spiez"
+GS99GSE6,Müller Bruno
+GS9HZSE6,"Briggen Stefan, Unterseen"
+GS9MESE6,Meyern Raphael
+GS9RYSEB,Imhof Joris
+GS9ZRSE6,Dänzer Silvan
+GUG2BUX2,Sonderegger Franz
+GUGH2UXM,"Buser Franz, Rüfenacht BE"
+GUGM9UX9,Hirschi Tim
+GUGSLUXK,Kalbermatten Gudrid
+H16CH1DL,"Wyss Andreas, Interlaken"
+H16FB1DL,Binkert Annj
+H16RW1DU,"Stadelmann Billy, Ringgenberg BE"
+HEH5JEZ6,von Allmen-Sarmiento Teresita
+HEHCXEZQ,"Salzmann Oliver, Lommiswil"
+HEHRFEZ6,Kreis Sven
+HEHTJEZW,Graf Samuel
+HHUGNHQ8,Grenacher Peter
+HHUHMHQP,"Berger Emil, Wiedlisbach"
+HLS3XLW1,"Stucki Helene, Bern"
+HLS43LWX,"Thomi Muriel, Gattikon"
+HLS9CLW6,Hiltbrunner Beat
+HLSYYLWY,Wasem Philemon
+HQX7AQJD,"Schilt Marcel, Unterseen"
+HXBLWX8S,"Hürzeler Samuel, Därligen"
+JJ8GWJAN,"Herren Elisabeth, Bern"
+JT21ZT4R,"Ackeret Christian, Deitingen"
+JT237T4H,Gerber Oliver
+JT23DT4R,Bourrely Alice
+JT26YT4C,Kehrli Stefanie
+JT2D4T4S,"Tännler Monika, Meiringen"
+JT2DQT4C,Rast Gabi
+JT2JAT43,von Grünigen Nicole
+JT2N2T4R,Jakob Annette
+JT2QNT4P,Thommen Lilian
+JT2UDT4P,Hegewald Günther
+JT2XXT43,Schwab Alexandra Tuula
+JT2YDT4L,"Derungs Daniel, Urtenen-Schönbühl"
+JT2YLT4P,Scheidegger Sarah
+K34CK36Z,Thöni Patric
+K34F736Z,Nickell Cinders
+K34G336Q,Zehnder Rolf
+K34J836A,Sahli Werner
+K34XX368,Flückiger Urs
+K47KU4PH,Murer Rolf
+K47ZU4P9,Rieder Corina
+K9R5A9H9,Schweizer Anna
+K9R8M9H3,Bieri Erika
+K9RAZ9H3,Charnier Julien
+K9RBW9H3,"Benz Claudia, Worb"
+K9RGL9H3,Schiefermüller Melanie
+K9RJL9HP,Christen Jan
+K9RKN9HG,Eichenberger Stefan
+K9RNW9HG,Feuz Laura
+K9RQY9H9,Spielmann Stefan
+K9RRM9H9,"Paurevic Zdravko, Matzendorf"
+K9RX49HP,"Hasler Martin, Thürnen"
+K9RYK9HP,Glanzmann Eugen
+KGK2AGBX,Streit Jan
+KGK3CGBP,Vonderheit Christian
+KGK9FGBS,Beugger Manuel
+KGKAYGBE,Danieli Toni
+KGKDDGBN,"Kohler Christine, Oppligen"
+KGKRQGBB,"Gasser Manuela, Matten b. Interlake"
+KPC1LPSU,Lanz Doris
+KPC2LPS4,Grütter Matthias
+KPC3BPS9,Dellsperger Janet
+KPC6PPS9,Wüthrich Alexa
+KPC7EPSN,Bieri Lukas
+KPC7XPS1,"Caldwell Ricky, Wilderswil"
+KPC8APSB,Jäggi Hiromi
+KPCA8PSB,Michel Eliane
+KPCD2PS9,Schmid Wilo
+KPCGHPSB,Frutig Peter
+KPCJZPS6,Danz Martin
+KPCKFPSQ,"Urfer Jan, Spiez"
+KPCL7PSL,Neff Ester
+KPCN8PSU,Kicza Daniel
+KPCQXPSW,Robinson Jason
+KPCTUPS9,Nydegger Regula
+KPCUXPSS,Barmettler Christian
+KPCWEPSN,"Aeschimann Riccardo, Matten b. Inte"
+KPCWXPS1,Kohler Christine
+KPCX9PS6,Grossen Urs
+KPCYPPS6,Gafner Celine
+KRY76RUW,"Buri-Ritter Werner, Hettiswil b. Hi"
+KRYJBRUE,Lauber Hermann
+KRYP1RUZ,Holzer Hanni
+LEHPKEZM,Michel Paul
+LEHRGEZG,"Leiggener Karl, St. Niklaus VS"
+LEHW4EZE,"Hofer Rolf, Orpund"
+LLS4KLW9,Blatter Marc
+M341236R,"Hodler Vivian, Goldswil b. Interlak"
+M343336C,Ploner Martin
+M348T36G,Batcheva Zveta
+M34B836G,Gerber Christine
+M34DW36C,Ramseier Judith
+M34JM363,Niederer Kathrin
+M34KM36R,"Haegler Stefan, Lengnau BE"
+M34NA36R,Zingg Janic
+M34TG36C,Brantschen Simon
+M34XE363,Buholzer Marlis
+M34YL363,Ziemendorf Sven
+M47484PS,Zuber Ralf
+M47JR4PL,"Brunner Irène, Wengen"
+MCM5CC9U,Simmler Dorothea
+MCMHCC9B,Kilchenmann Urs
+MCMSCC9W,Schneider Beat
+MCMYXC9F,Braun Yolanda
+MGK1FGB9,Hungerbühler Toni
+MGK1XGBE,Gyger Vanessa
+MGK2KGB1,Aeschlimann Andreas
+MGK2RGBN,Gerber Martin
+MGK3SGBE,Steffen Beat
+MGK4GGBK,"Pritz Stefan, Thun"
+MGK4TGB3,Gretener Urs
+MGK85GBQ,"Bachmann Anita, Bern"
+MGK8JGB5,Fellmann Beat
+MGK8JGBU,Abegglen Markus
+MGK9CGBH,Winkelmann Remo
+MGK9EGBZ,"Karlen Nicolas, Urtenen-Schönbühl"
+MGKAEGBR,"Vollenweider Bettina, Bern"
+MGKBHGBU,Frey Erika
+MGKC2GBH,Lindenmann Markus
+MGKDSGB4,Hommann Edgar
+MGKDXGB2,Schulz Noemi
+MGKEJGBH,Kittel Christian
+MGKFZGBH,Pletschet René Bernhard
+MGKGSGBQ,Heimberg Michelle
+MGKKYGB9,Truninger Anita
+MGKLGGB3,von Känel Stefan
+MGKMRGBS,Harter Jean-Luc
+MGKNTGB9,Michel Thomas
+MGKP3GBN,Rubin Melinda
+MGKPKGB3,"Beer Urs, Heimberg"
+MGKQMGBT,Nothofer Karl-Heinz
+MGKYBGBA,"Colella Andy, Gommiswald"
+MRY25RUJ,Wolf Rolf
+MRY3DRUP,"Hostettler Simon, Bönigen b. Interl"
+MRY78RUM,Zeitvogel Hubert
+MRY96RUS,Hiltbrunner Jan
+MRYBQRUC,Strasser Christian
+MRYD4RU1,Kunz Gerhard
+MRYDYRU3,Bernhard Urs
+MRYM3RUD,Fuchs Markus
+MRYQXRU8,"Raemy Cornelia, Gurmels"
+MRYWNRUH,Mühlemann Luca
+MYACFYGU,Pfeuti Urs
+MYAF8YG9,Pillet Pascal
+N7F4C7C9,"Stalder Sabine, Wabern"
+N7F6K7C9,Joder Manuela
+N7F9L7CG,"Niemack Andreas, Rapperswil BE"
+N7FAH7CB,Hess Rene
+N7FAJ7C8,Brunner Pascal
+N7FCF7C3,Nägeli Jonas
+N7FD87C9,Thommen Dombois Oliver
+N7FER7CG,Schneider Claudia
+N7FFC7CG,Bertram Elke
+N7FHZ7CR,Meier Daniela
+N7FLD7CP,Schwab Fabian
+N7FMA7CG,Margelist Caroline
+N7FTC7C9,Hofer Beat
+N7FZR7CR,Pleticha Petra
+NM5YJMRM,Weiss Heidi
+NNDDUNTW,"Andres Susanne, Arch"
+NT276T43,Fink Dieter
+NT2LZT43,"Beer Michael, Meiringen"
+NT2PQT43,Berger Stefan
+P6P4Q6LC,Gauch Beat
+P6P556L9,"Brand Markus, Gwatt (Thun)"
+P6P6H6LF,Risler Martin
+P6P6L6LC,"Müller Beat, Biel/Bienne"
+P6PAW6L3,Melliger Betsy
+P6PCN6LN,Jobin Michelle
+P9R4P9HJ,"Messerli Heinz, Kiesen"
+P9R9Z9H6,Rubin Jacqueline
+P9RUN9H8,"Nyffeler Hans, Bönigen b. Interlake"
+PB35SB1S,"Heiniger Hans-Ulrich, Niederscherli"
+PB375B1B,"Ruchti Bruno, Amsoldingen"
+PB38RB18,"Grütter Doris, Matten b. Interlaken"
+PB3KDB15,"Weissmüller Markus, Neuenegg"
+PB3Q8B1P,Summermatter Philipp
+PB3QSB17,Rieben Barbara
+PHU5UHQ1,Bühler Silvia
+PHU7PHQQ,Wirth Andrea
+PHUCPHQE,Schilling Hans
+PHUG5HQM,Frei Judith
+PHUHZHQ1,Grieder Corinne
+PHUL6HQ8,Overney Josef
+PHUPXHQQ,Ess Christian
+PHUQHHQ1,Rubin Timon
+PHURSHQ1,In-Albon Philipp
+PHUSJHQE,Notter Beat
+PHUU4HQX,Pauli Michael
+PHUWPHQQ,"Leibundgut Toni, Rohrbach"
+PPC56PSQ,"Fuchs Hans, Brienz BE"
+PPCNQPS1,"Giacometti Mario, Gsteigwiler"
+PPCPBPS7,Blum Erna
+PS9NBSE3,Ursin Xaver
+PS9PNSEC,"Kuhn Heinz, Aeugst am Albis"
+PUG2GUXN,Williner Alfons
+PUG5TUX3,"Schuler Meinrad, Thun"
+PUGE3UXZ,Zbinden Christian
+PUGJDUXG,"Seiler Christoph, Unterseen"
+PUGXSUXA,von Allmen Fritz
+PXBCKX8H,Strucken Werner
+PXBF7X8H,"Kammer Patrick, Brienz BE"
+PXBSEX8H,"Maeder Patrick, Bettlach"
+Q81GA8NH,Kallen Hugo
+QDLE4D2Z,Hubschmid Roger
+QNDKMNT7,"Schönholzer Christine, Muri b. Bern"
+QQX2CQJY,"Feuz Thomas, Thun"
+QQXMLQJ1,"Augsburger Martin, Thun"
+R34E7364,Seiler Hansruedi
+R34G236W,"Widmer Andreas, Brienz BE"
+R6P2Y6LU,Gartwyl Roger
+R6P3Q6LB,Siegenthaler Daniel
+R6P476LU,Sieben Georg
+R6P6A6LU,Ming Marco
+R6PDK6LB,Ackermann Iris
+R6PTE6LB,"Jemini Enrico, Prugiasco"
+R9R469HD,Ackermann Thomas
+R9R8Q9HY,"Ulli Jörg, Langenthal"
+R9RAB9HX,"Michel Mario, Hünibach"
+R9RES9HR,Spring Bruno
+R9RF99H5,Bethke Ricarda
+R9RML9HF,Krebs Tanja
+RB31LB11,Kropf Philipp
+RB31MB1B,Gysin Peter
+RB33PB1X,Bläsi Cla-Fadri
+RB34ZB1H,Zumbrunn Franziska
+RB36RB1X,Favre-Bulle Olivier
+RB379B1S,Voeten Robert
+RB39QB1G,Schönholzer Urs
+RB3B4B1N,Scheller Nico
+RB3BMB11,Schenkel Sina
+RB3DZB1X,"Maurer Michael, Reichenbach im Kand"
+RB3EJB16,Ambrosini Stefan
+RB3FZB16,Claes Leif
+RB3KAB1K,Roth Lukas
+RB3KGB1B,"Schüpbach Elisabeth, Bolligen"
+RB3KZB11,Gschwind Cornelia
+RB3N8B11,Fässler Xaver
+RB3P1B1S,Schneeberger Reto
+RB3R6B15,"Schmocker Thomas, Ringgenberg BE"
+RB3S1B1P,"Schwegler Stefan, Frutigen"
+RB3SSB1S,Plum Carsten
+RB3T3B1X,"von Burg Diana, Seedorf BE"
+RB3W9B1S,Fanti Cécile
+RB3ZJB1A,Flück Bernadette
+RB3ZYB18,Trachsel Stéphanie
+RGK7NGBP,"Sager Ursula, Unterseen"
+RGK8EGB6,"Rieder Stefanie, Matten b. Interlak"
+RGK9NGBN,Lötscher Margrit
+RGKLXGBE,Müller Lorenz
+RPC16PSS,Brawand Ulrich
+RPC2GPS8,Mühlemann Robert
+RPC5SPSN,Calame Louis
+RPCC3PSF,Griesser Chantal
+RPCKEPSS,Bläsi Caroline Louise
+RRYLZRUP,Hardegger Stephan
+RUG79UXD,Lüthi-Rösti Quirina
+RUGBZUXK,Goetz Stefan Martin
+RUGKMUXY,Knecht Sylvia
+RUGQ1UXC,Lubasch Mischa
+RUGQHUXE,Selimi Ismet
+RUGRXUXC,Michel Adrienne
+RUGUFUX4,Zobrist Ursula
+S161W1DK,Srienz Oliver
+S16B21D6,Beiner Berta
+S16Q91DX,Aebersold Thomas
+S16UD1DH,"Iseli Marcel, Beatenberg"
+SHU5DHQC,Kundert Hanspeter
+SHUGCHQB,Ilg Thomas
+SLSGNLWH,Olbrecht Willi
+SQXFNQJN,Zingg René
+SS95TSE6,Aeschlimann Heidi
+SS9DHSE7,"Decorvet Herbert, Courtaman"
+SS9R4SE4,Bracher Peter
+SS9U9SEK,Brunner Hansueli
+SS9WBSEG,"Bircher Othmar, Steffisburg"
+SXBKHX81,Donzé Roland
+SXBYTX8S,"Schneider Stefan, Interlaken"
+T477U4PS,Mader Andri Mika
+T47JR4PE,"Wade Willy, Matten b. Interlaken"
+T47WG4PW,Gilgen Marco
+T47YK4P9,Berger Marc
+TCM2BC9J,Gyger Giovanna
+TCM3CC9P,Maropoulos Michael
+TCM51C9B,Gerber Lisbeth
+TCM6TC93,"Hug Natalie, Ittigen"
+TCM74C9M,"Rothenbühler Urs, Spiez"
+TCM7PC9H,Kropf Blaise
+TCM8UC9E,Ittig Martin
+TCM9FC9S,Staffelbach Thomas
+TCMCLC9S,Lütolf Susanne
+TCMD1C93,"Killing Katja, Spiez"
+TCMH9C96,"Aebischer Roman, Düdingen"
+TCMLKC9Y,"Ruef Mauro, Bönigen b. Interlaken"
+TCMLLC9J,Lazic Nenad
+TCMMCC96,Edwards James
+TCMQTC98,Brunner Sabrina
+TCMS6C9H,Bender Hans
+TCMSKC9R,"Maurer Roland, Zetzwil"
+TCMU1C9B,Schmitt Julia
+TCMULC9A,"Huber Max, Altdorf UR"
+TCMWPC9H,Isler Hans Rudolf
+TCMWWC9Z,Schürch Mathias
+TCMZ9C9D,Stauber Jörg
+TCMZZC96,Probst Michael
+TKTAPK33,Patt Niklaus
+TKTAUK31,Müller Martin
+TKTF8K3B,Graf Edith
+TKTH4K3Q,Nyffenegger Marc
+TRY28RUK,Bruckmayr Friedrich
+TRY4ERUK,Pfister Daryl
+TRY63RU4,"Brunner Janette, Habkern"
+TRY83RUR,Schenkel Angela
+TRYATRUR,Friberg Martisa
+TRYBARUR,"Hischier Manisha, Oberwald"
+TRYDNRU4,Teuscher Monika
+TRYT9RU4,"Bähler Ueli, Uetendorf"
+TYAQXYGL,"Herrmann Andreas, Sumiswald"
+U161X1DP,Blum Roger
+U164J1DD,Gyurakovics Karl-Heinz
+U166W1DD,Benfatto Alessandro
+U169E1DE,Meyer Markus
+U16DD1DW,Anderegg Dana
+U16E21DQ,Leoncini Tanja
+U16MT1DE,Greber Urs
+U16SD1DH,Lausegger Nadja
+U6P3X6LC,"Steuri Ueli, Steffisburg"
+UB3LNB1K,Krebs Werner
+UB3N5B1F,Meier Jörg
+UB3U2B1A,Lucio Angelo
+UB3U8B1G,"Jenzer Urs, Frutigen"
+UHUFNHQL,Bärtschi Conny
+ULSL9LW1,Buchenau Carsten
+US9DHSE5,Urfer Jens
+UUG4DUXX,Grünig Barbara
+UUGFBUXP,"Widmer Wiltrud, Brienz BE"
+UXB7MX8Q,Wenger Willi
+UXBAHX89,Lubasch Luca
+UXBLCX88,Marty Philipp
+UXBP3X8Q,"Schwab Sonya, Wilderswil"
+W5J215YK,Frasa Nina
+W5J4R5Y4,Weimann Christiane
+W5J845YR,Müller Nadia
+W5JAR5YG,Scheidegger Irina
+W5JLW5YK,Just Albrecht Vroni
+W5JPE5YK,Gäumann Bruno
+W5JZ45YP,Perreten Heidi
+WZQU3Z5D,"Huber Peter, Lenzburg"
+X16891DL,"Schenker Toni, Däniken SO"
+X16CG1DD,Ritschard Oliver
+X16CN1D1,Hirschi Beat
+X16JT1DE,Schär Urs
+XEHXQEZH,"Kernen Fabian, Matten b. Interlaken"
+XXBD8X8M,Dysli Marcel
+XXBHUX8S,Alpinice Toni
+Y341Q36M,Nienhüser Denis
+Y342F36D,Ittig Nicole
+Y344N36D,Fuchs Heinz
+Y345636P,Savary Laurent
+Y345U362,Scheidegger Christian
+Y347J36B,Gafner Geraldine
+Y348M36Y,Rolli Paul
+Y34AJ36X,Bernasconi Sergio
+Y34BZ36X,Waldmeier Thomas
+Y34CN36U,"Bauer Andrea, Bern"
+Y34EZ36U,Schroeder Brigitte
+Y34FW365,Mühlemann Nico
+Y34GM36J,"Abegglen Nadine, Interlaken"
+Y34H436F,Wenger Stefan
+Y34K636Z,"Trummer Albert, Spiez"
+Y34LY36D,Ackermann Arne
+Y34N936Z,Burri Renate
+Y34PA36D,"Andrey Alan, Bönigen b. Interlaken"
+Y34PB366,Moreira Rosa
+Y34PS36T,"Gertsch Daniel, Matten b. Interlake"
+Y34Q136P,"Wälchli Hanz Ulrich, Oschwand"
+Y34RQ36L,Kieliger Matthias
+Y34RX36P,Neuenschwander Pierre
+Y34S536B,Roost Patrick
+Y34U636P,Gobet Jacques
+Y34WJ36B,Schär Linda
+Y34WN36A,Pfister Heinz
+Y34ZE36E,Brauchli Brigitte
+YCM7FC9P,Gerber Vreny
+YCMRGC9J,Thalmann Ferdinand
+YGKFSGBF,Schulz Patricia
+YGKTLGBT,Niederberger Fränzi
+YPC23PSP,Sauser David
+YPC4RPSP,Zumbrunn Andre
+YPC77PS3,Lehner Markus
+YPC99PSG,"Brügger Sarah, Unterseen"
+YPCC7PSG,"Beer Tobias, Langendorf"
+YPCEAPSG,Arnold Adrian
+YPCF5PSG,Schmidt Dario
+YPCLSPSP,"Regenass Hanspeter, Bennwil"
+YPCMUPSR,Ramseier Adrian
+YPCS4PS3,von Allmen Luca
+YPCW7PS3,Wallimann Isabelle
+YRY9YRU2,Zurbrügg Pascal
+YRYJDRUM,"Aeschlimann Christina, Bolligen Dor"
+YRYMHRU1,Rohr Kathrin
+YRYU7RUX,Reber Sam
+Z5JYG5YK,"von Allmen Sebastian, Bönigen b. In"
+ZAN17AK9,Roth Christian
+ZAN5MAK4,Frasa Jan
+ZAN77AK3,Scheidegger Ian
+ZANHTAKC,Meyer Roberta
+ZANNKAK9,Imhof Andri
+ZANPGAK3,Stürmer Matthias
+ZANQCAK4,Albrecht Marco
+ZANR8AKC,Grüner Bruno
+ZANSXAKG,Gaschen Wolfgang
+ZANUMAK4,Kehrli Michelle
+ZANWBAKG,von Grünigen Markus
