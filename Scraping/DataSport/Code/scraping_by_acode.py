@@ -9,6 +9,7 @@ import os
 from Crypto.Cipher import AES
 import binascii
 import json
+from datetime import datetime
 
 KEY = '0187fcdf7ac3d90d68334afa03b87efe' # Decode Base64 string + Hex encoder
 IV = '33a39433e4dde7c4ddb9d4502b8905d4' # Decode Base64 string + Hex encoder
@@ -100,24 +101,21 @@ def parse_html_runner_table(table, base_url='https://www.datasport.com'):
     return df
 
 
-def get_runners_information(
-    acode_file='./Data/acode_2009_2015/unique_acode_2009_2015.csv',
-    base_url='https://www.datasport.com/sys/myds/ajax/getDSInfo.htm?acode=',
-    store_runners_information_file='./Data/runners.csv',
-    store_runs_information_file='./Data/runs.csv'):
+def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/myds/ajax/getDSInfo.htm?acode=', store_runners_information_file=False, store_runs_information_file=False):
 
     data_acode = pd.read_csv(acode_file)
-    
+
     data_runners = []
     data_runs = []
 
-    print('Number of runners: ' + str(len(data_acode)))
+    print('Start at: ' + str(datetime.now()), flush=True)
+    print('Number of runners: ' + str(len(data_acode)), flush=True)
     
     for idx_acode, row_acode in data_acode.iterrows():
         
         url = base_url + row_acode['acode']
         
-        print('Runner acode ' + row_acode['acode'], end='')
+        print('[' + str(datetime.now()) + '] Runner acode ' + row_acode['acode'], end='', flush=True)
         
         # We retrieve filters and store cookies for further calls to server
         filters_page = rq.get(url)
@@ -126,17 +124,14 @@ def get_runners_information(
 
         # We get the birthyear
         small_p = page.findAll('p', { 'class': 'small' })
-        location = small_p[0].text.strip()
-        birthyear = small_p[1].text.split(" ")[1:][0]
+        if len(small_p) >= 2:
+            location = small_p[0].text.strip()
+            birthyear = small_p[1].text.split(" ")[1:][0]
+        else:
+            print(' -:- No location of birthyear found', end='', flush=True)
+            location = ''
+            birthyear = ''
 
-        # We get information on the table
-        table_run_event = page.find('table', {'id': 'timeTable'})
-
-        try:
-            information_runner = parse_html_runner_table(table_run_event)
-        except Exception:
-            continue
-        
         # We store information of the runner
         data_runners.append({
                 'acode': row_acode['acode'],
@@ -145,8 +140,17 @@ def get_runners_information(
                 'location': location
             })
 
+        # We get information on the table
+        table_run_event = page.find('table', {'id': 'timeTable'})
+
+        try:
+            information_runner = parse_html_runner_table(table_run_event)
+        except Exception:
+            print(' -:- Error when parse the html tablei: ' + url, flush=True)
+            continue
+        
         # We retrieve all runs of the runner
-        print(' / Number of runs: ' + str(len(information_runner)))
+        print(' -:- Number of runs: ' + str(len(information_runner)), end='', flush=True)
 
         for idx_runner, row_runner in information_runner.iterrows():
 
@@ -165,17 +169,19 @@ def get_runners_information(
                     break
 
             if decrypted_response == None:
-                print('Error after multiple try to decrypt from: ' + row_runner['url_run_event'] + ' / Runner: ' + url + ' / Encrypted response: "' + ajax_response.text + '"')
+                print(' -:- Error after multiple try to decrypt from: ' + row_runner['url_run_event'] + ' / Runner: ' + url + ' / Encrypted response: "' + ajax_response.text + '"', end='', flush=True)
                 continue
 
             try:
                 running_information = json.loads(decrypted_response)
             except Exception:
+                print(' -:- Error when handling json response from: ' + row_runner['url_run_event'] + ' / Runner: ' + url + ' / Encrypted response: "' + ajax_response.text + '"', end='', flush=True)
                 continue
             
             data_runs.append({**running_information, 'acode': row_acode['acode']})
         
         time.sleep(random.uniform(0.5, 1))
+        print(' -:- End at: ' + str(datetime.now()), flush=True)
 
     df_data_runners = pd.DataFrame(data_runners)
     df_data_runs = pd.DataFrame(data_runs)
@@ -188,6 +194,6 @@ def get_runners_information(
     return [df_data_runners, df_data_runs]
 
 
-df_data_runners, df_data_runs = get_runners_information()
+df_data_runners, df_data_runs = get_runners_information(acode_file='./acode.csv', store_runners_information_file='./runners.csv', store_runs_information_file='./runs.csv')
 
-print('Done')
+print('End at: ' + str(datetime.now()), flush=True)
