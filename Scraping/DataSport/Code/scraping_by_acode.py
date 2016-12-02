@@ -168,7 +168,10 @@ def get_runners_information(
                 print('Error after multiple try to decrypt from: ' + row_runner['url_run_event'] + ' / Runner: ' + url + ' / Encrypted response: "' + ajax_response.text + '"')
                 continue
 
-            running_information = json.loads(decrypted_response)
+            try:
+                running_information = json.loads(decrypted_response)
+            except Exception:
+                continue
             
             data_runs.append({**running_information, 'acode': row_acode['acode']})
         
