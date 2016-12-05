@@ -155,7 +155,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
         for idx_runner, row_runner in information_runner.iterrows():
 
             # Multiple try
-            for i in range(0, 3):
+            for i in range(0, 1):
 
                 ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies)
 
@@ -163,7 +163,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
                 cipher = AES.new(KEY_BYTES, AES.MODE_CBC, IV_BYTES, segment_size=128)
 
                 decrypted_response = decrypt_data(cipher=cipher, encrypted=ajax_response.text)
-                time.sleep(random.uniform(0.5, 1))
+                time.sleep(random.uniform(2, 5))
 
                 if decrypted_response != None:
                     break
