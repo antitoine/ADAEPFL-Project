@@ -127,7 +127,12 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
         print('[' + str(datetime.now()) + '] Runner acode ' + row_acode['acode'], end='', flush=True)
         
         # We retrieve filters and store cookies for further calls to server
-        filters_page = rq.get(url, headers=headers)
+        try:
+            filters_page = rq.get(url, headers=headers, timeout=10)
+        except Exception:
+            print(' -:- Error when get the first page (timeout): ' + url, flush=True)
+            continue
+
         cookies = filters_page.cookies.get_dict()
         page = bfs(filters_page.text, 'html.parser')
 
