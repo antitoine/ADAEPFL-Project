@@ -108,17 +108,26 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
     data_runners = []
     data_runs = []
 
+    default_headers = {
+        'Accept': 'application/json, text/javascript, */*; q=0.01',
+        'X-Requested-With': 'XMLHttpRequest',
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/53.0.2785.143 Chrome/53.0.2785.143 Safari/537.36',
+	'Accept-Encoding': 'gzip, deflate, sdch, br',
+	'Accept-Language': 'fr-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4',
+    }
+
     print('Start at: ' + str(datetime.now()), flush=True)
     print('Number of runners: ' + str(len(data_acode)), flush=True)
     
     for idx_acode, row_acode in data_acode.iterrows():
         
         url = base_url + row_acode['acode']
+        headers = {**default_headers, 'Referer': url}
         
         print('[' + str(datetime.now()) + '] Runner acode ' + row_acode['acode'], end='', flush=True)
         
         # We retrieve filters and store cookies for further calls to server
-        filters_page = rq.get(url)
+        filters_page = rq.get(url, headers=headers)
         cookies = filters_page.cookies.get_dict()
         page = bfs(filters_page.text, 'html.parser')
 
@@ -157,7 +166,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
             # Multiple try
             for i in range(0, 1):
 
-                ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies)
+                ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies, headers=headers)
 
                 # We generate a cipher to avoid any interference between the decrypt processes
                 cipher = AES.new(KEY_BYTES, AES.MODE_CBC, IV_BYTES, segment_size=128)
