@@ -155,7 +155,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
         for idx_runner, row_runner in information_runner.iterrows():
 
             # Multiple try
-            for i in range(0, 10):
+            for i in range(0, 3):
 
                 ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies)
 
