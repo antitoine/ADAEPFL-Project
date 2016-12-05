@@ -160,7 +160,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
         try:
             information_runner = parse_html_runner_table(table_run_event)
         except Exception:
-            print(' -:- Error when parse the html tablei: ' + url, flush=True)
+            print(' -:- Error when parse the html table: ' + url, flush=True)
             continue
         
         # We retrieve all runs of the runner
@@ -171,7 +171,13 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
             # Multiple try
             for i in range(0, 1):
 
-                ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies, headers=headers)
+                decrypted_response = None
+
+                try:
+                    ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies, headers=headers)
+                except Exception:
+                    print(' -:- Error when get a crypted response (timeout): ' + row_runner['url_run_event'], end='', flush=True)
+                    continue
 
                 # We generate a cipher to avoid any interference between the decrypt processes
                 cipher = AES.new(KEY_BYTES, AES.MODE_CBC, IV_BYTES, segment_size=128)
