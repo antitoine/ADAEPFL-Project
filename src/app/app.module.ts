@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ScrapingComponent } from './scraping/scraping.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ScrapingComponent
   ],
   imports: [
     BrowserModule,
