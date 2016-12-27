@@ -1,0 +1,340 @@
+,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
+0,MD4,4.,Wab,e,ocelyne,50,F-Paris 20,"3:52.35,7",(1755),MF/79.
+1,QH2,142.,Wac,s,ean-Claude,67,Wahlendorf,"48.46,4",(7166),QM/451.
+2,SD3,52.,Wae,er,Chantal,54,Avry-sur-Matran,"2:00.14,4",(5446),SF/244.
+3,SH1,46.,Wae,er,Christophe,71,Corsier-sur-Vevey,"1:29.32,4",(5202),SM/197.
+4,SH1,213.,Wae,ht,r Frank,75,Basel,"1:59.18,7",(4713),SM/1259.
+5,RD,19.,Wae,ke,lin Monica,71,Hoeri,"52.13,4",(8246),IF/23.
+6,MH2,406.,Wae,er,Michael,61,Steinach,"3:56.26,9",(1756),MM/1003.
+7,MH4,17.,Wae,li,Ueli,48,Sissach,"3:17.38,2",(1757),MM/324.
+8,RD,79.,Wae,ch,i Celine,80,La Tour-de-Peilz,"1:46.06,8",(8247),IF/88.
+9,SH4,278.,Wae,ch,i Max,27,Koeniz,"2:28.28,3",(4779),SM/1493.
+10,SD3,60.,Wae,ti,Iris,54,Ostermundigen,"2:01.05,0",(5469),SF/260.
+11,SH3,158.,Wae,ti,Roland,60,Neuchatel,"1:40.12,4",(4780),SM/550.
+12,MH2,207.,Wag,n,artin,69,Oberwil BL,"3:27.33,3",(1758),MM/501.
+13,RH,235.,Wag,er,Frederic,76,F-Paris 15,"1:11.41,5",(8248),IH/252.
+14,MD3,71.,Wag,er,Heidi,55,Basel,"4:32.15,4",(2328),MF/187.
+15,MH3,183.,Wag,er,Jean-Marc,53,F-Wintzenheim,"3:30.32,2",(1759),MM/555.
+16,QH4,90.,Wag,er,Michel,34,Lausanne,"54.52,8",(7167),QM/672.
+17,SH3,277.,Wag,ie,es Jean-Daniel,54,Rueyres,"1:49.53,3",(4781),SM/971.
+18,SD3,9.,Wah,ed,Brigitte,59,Chavannes-de-Bogis,"1:42.09,7",(4782),SF/52.
+19,K7,11.,Wah,ed,Hajra,91,CHAVANNES-DE-BOGI,"19.19,0",(10310),JF/69.
+20,K8,31.,Wah,ed,Samara,88,Chavannes-de-Bogis,"20.22,3",(9340),JF/108.
+21,QH1,102.,Wah,en,Raphael,84,La Croix (Lutry),"43.38,0",(7513),QM/241.
+22,QH2,64.,Wah,i,hristophe,65,La Chaux-de-Fonds,"42.28,8",(7168),QM/193.
+23,SH2,391.,Wah,i,ichel,61,La Neuveville,"1:51.55,6",(4784),SM/1044.
+24,MD1,31.,Wai,e,eredith,78,Geneve,"5:02.15,2",(1760),MF/227.
+25,SH3,282.,Wal,h,ean-Pierre,53,F-Berling,"1:50.13,2",(4785),SM/988.
+26,RD,79.,Wal,hl,Christel,76,Vevey,"1:46.06,8",(8249),IF/88.
+27,SH1,67.,Wal,ma,n Richard,72,Vevey,"1:33.10,2",(5175),SM/291.
+28,MH3,155.,Wal,me,er Pierre-Vince,57,Denens,"3:24.55,1",(1761),MM/455.
+29,QD2,124.,Wal,me,er-Crausaz Anne,67,Lutry,"59.19,7",(7169),QF/336.
+30,SD4,13.,Wal,vo,el Cathy,46,Bussigny-Lausanne,"1:50.52,4",(4786),SF/127.
+31,SH4,144.,Wal,vo,el Roland,46,Bussigny-Lausanne,"1:50.36,5",(4787),SM/998.
+32,MH4,84.,Wal,ac,John,44,USA-SARATOSA FL,"3:38.57,0",(1762),MM/706.
+33,MD2,19.,Wal,er,Luzia,63,Schenkon,"3:31.52,8",(1763),MF/40.
+34,MH4,211.,Wal,er,Max,50,Bern,"4:23.27,8",(1764),MM/1294.
+35,MH1,14.,Wal,im,nn Patrick,73,Alpnach Dorf,"2:49.59,5",(2191),MM/40.
+36,SH2,144.,Wal,er,Joerg,64,Cham,"1:35.15,0",(4788),SM/364.
+37,MH3,173.,Wal,er,Richard,57,Gryon,"3:28.37,4",(1765),MM/521.
+38,MD2,89.,Wal,er,Linda,65,Bellach,"4:57.56,5",(1766),MF/222.
+39,MH1,13.,Wal,er,Urs,75,Neunkirch,"2:48.43,4",(1767),MM/35.
+40,MD2,26.,Wal,he,Colette,62,Glis,"3:41.49,1",(1768),MF/53.
+41,MH3,482.,Wal,he,Daniel,56,Plan-les-Ouates,"5:13.39,1",(1769),MM/1452.
+42,MH3,104.,Wal,he,Manfred,60,Boll,"3:17.04,6",(1770),MM/312.
+43,RH,60.,Wal,M,rtin,67,Glattbrugg,"46.22,2",(8250),IH/68.
+44,MH3,438.,Wam,ac,Francois,52,F-Mertzwiller,"4:24.35,5",(1771),MM/1305.
+45,MH3,75.,Wam,fl,r Andreas,51,Kernenried,"3:11.41,7",(1772),MM/237.
+46,MH4,239.,Wan,el,r Sepp,48,Liebefeld,"4:41.04,8",(1773),MM/1398.
+47,MH4,249.,Wan,mu,hitakul Jirawat,44,THA-BANGKOK CIY,"4:56.28,4",(1774),MM/1430.
+48,K6,50.,Wan,az,Oceane,93,Lausanne,"29.02,4",(10311),JF/270.
+49,MH3,57.,Wan,er,Claude,60,Belmont-Lausanne,"3:08.14,3",(1775),MM/193.
+50,MH2,128.,Wap,F,lix,63,Taegerwilen,"3:13.32,2",(1776),MM/267.
+51,QD4,36.,War,de,Marie-Louise,39,Lausanne,"1:02.58,1",(7171),QF/421.
+52,K9,40.,War,de,Sophie,87,Nyon,"22.37,5",(9341),JF/176.
+53,SH4,165.,War,el,n Gilbert,47,Lausanne,"1:53.19,8",(4791),SM/1097.
+54,QH2,222.,War,in,er Fredrik,70,S-Malmoe,"57.33,7",(7556),QM/744.
+55,SD4,52.,Wat,na,e Tokiko,41,JPN-133-0044 TOKYO,"2:47.29,8",(4792),SF/464.
+56,SH4,114.,Wat,nu,i Akira,39,JPN-319-0209 NISHIIB,"1:46.55,5",(4793),SM/840.
+57,MH2,472.,Wat,er,Felix,62,Hausen b. Brugg,"4:18.22,3",(1777),MM/1244.
+58,MH4,80.,Web,r,redi,45,Bern,"3:37.18,8",(1780),MM/681.
+59,SH4,230.,Web,r,osef,49,Gossau SG,"2:03.34,6",(4794),SM/1334.
+60,MH2,195.,Web,r,arc,66,Wangen ZH,"3:25.38,5",(1781),MM/467.
+61,SD3,81.,Web,r,icole,60,La Chaux-de-Fonds,"2:07.30,1",(4795),SF/341.
+62,RH,207.,Web,r,eter,68,Schoenbuehl-Urtenen,"1:02.19,1",(8416),IH/222.
+63,QH1,114.,Web,r,ylvain,81,Plan-les-Ouates,"44.58,7",(7172),QM/288.
+64,MH2,372.,Web,r,hierry,63,F-Strasbourg,"3:50.37,0",(2179),MM/907.
+65,MH4,224.,Wed,r,rich,37,Bern,"4:29.35,1",(2224),MM/1340.
+66,RH,66.,Wed,r,arkus,49,Willisau,"47.18,6",(8251),IH/75.
+67,QH2,104.,Wee,am,ntry Romesh,67,Geneve,"45.47,7",(7547),QM/325.
+68,QH4,9.,Weg,li,Christophe,44,Morges,"42.17,3",(7173),QM/183.
+69,MH1,182.,Weg,an,Joachim,73,Staefa,"4:51.39,6",(1778),MM/1423.
+70,MH1,181.,Weg,an,Thomas,74,Effretikon,"4:45.39,4",(1782),MM/1409.
+71,SH4,238.,Weg,ul,er Eric,48,Epalinges,"2:06.48,8",(4796),SM/1372.
+72,MH2,415.,Weg,ez,Eric,63,B-BAUDOUR,"3:57.22,0",(1783),MM/1026.
+73,MH3,325.,Wei,el,Dominique,56,Lausanne,"3:55.40,5",(1784),MM/988.
+74,MH4,100.,Wei,B,rtrand,45,F-Besancon,"3:45.26,6",(1785),MM/813.
+75,SH2,383.,Wei,en,ann Kaspar,66,Wabern,"1:51.02,2",(4801),SM/1015.
+76,K7,63.,Wei,er,Joana,90,Lausanne,"25.50,0",(10606),JF/231.
+77,SD1,71.,Wei,ha,pt Anita,73,Trimmis,"2:04.10,6",(4797),SF/303.
+78,SD4,7.,Wei,s,utta,35,Burgdorf,"1:46.49,1",(4799),SF/83.
+79,MH1,22.,Wei,s,rs,71,Riniken,"2:55.42,9",(1787),MM/70.
+80,SH1,161.,Wei,sb,um Gerald,??,Villarsel-Gibloux,"1:46.20,5",(4800),SM/812.
+81,QH2,78.,Wei,sh,upt Reto,68,Zuerich,"43.22,1",(7507),QM/234.
+82,SD4,37.,Wel,on,Elizabeth,45,Mont-sur-Rolle,"2:10.56,6",(4802),SF/377.
+83,MH3,423.,Wel,er,Anthony,51,Bogis-Bossey,"4:20.22,7",(1788),MM/1266.
+84,MD3,45.,Wel,er,Elise-Marie,55,F-Soppe le Bas,"4:00.32,5",(1789),MF/112.
+85,MH3,172.,Wel,er,Joel,55,F-Soppe le Bas,"3:28.35,4",(1790),MM/520.
+86,QH4,50.,Wen,li,g Gerard,50,F-Dauendorf,"49.16,6",(7175),QM/474.
+87,QD3,13.,Wen,er,Catherine,56,Bussigny-Lausanne,"50.28,1",(7654),QF/98.
+88,SH3,150.,Wen,er,Christian,55,Bussigny-Lausanne,"1:39.48,7",(4803),SM/532.
+89,QH2,84.,Wen,er,Denis,63,Morges,"43.48,0",(7447),QM/248.
+90,SD1,81.,Wen,er,Fabienne,76,Le Locle,"2:07.34,3",(4804),SF/343.
+91,RD,52.,Wen,er,Marie,53,F-Pontarlier,"1:08.00,0",(8252),IF/60.
+92,QD1,35.,Wen,er,Nathalie,83,BUSSIGNY,"47.08,5",(7176),QF/53.
+93,SH4,15.,Wen,H,ns-Ruedi,49,Madetswil,"1:31.41,0",(4806),SM/246.
+94,QD1,74.,Wer,en,Catherine,75,Lausanne,"53.01,1",(7177),QF/164.
+95,RH,220.,Wer,i,van,74,Cadro,"1:06.45,6",(8253),IH/236.
+96,SD3,76.,Wer,o,armen,58,Pensier,"2:05.28,8",(4807),SF/314.
+97,SH3,395.,Wer,o,ichel,55,Prilly,"2:01.29,7",(4808),SM/1306.
+98,MD1,9.,Wer,li,Beatrice,76,Geneve,"3:34.44,4",(1791),MF/44.
+99,MH1,155.,Wes,i,rmin,77,Baettwil-Flueh,"4:13.31,6",(1792),MM/1206.
+100,MH1,156.,Wes,i,ernhard,73,Muenchenstein,"4:13.34,1",(1793),MM/1208.
+101,MH4,11.,Wes,ga,th Ralph,50,CAN-K7K555 BARRIEFIE,"3:10.43,5",(1794),MM/225.
+102,MH3,190.,Wet,st,in Erich,58,Solothurn,"3:32.05,8",(1795),MM/580.
+103,K3,35.,Wet,el,Alexandre,88,Pully,"18.32,3",(9419),JM/122.
+104,RH,108.,Wet,ke,Guenter,43,D-Lahr,"51.05,3",(8329),IH/118.
+105,MH3,252.,Wey,r,lois,55,D-Niederkassel,"3:42.04,3",(1796),MM/754.
+106,QD3,15.,Wha,le,Hazel,51,F-Cessy,"50.42,7",(7178),QF/102.
+107,QH3,103.,Wid,oe,her-Loux Patric,55,F-Wildersbach,"49.25,0",(7180),QM/483.
+108,MH3,221.,Wid,er,Christian,60,Kirchlindach,"3:36.53,9",(1798),MM/670.
+109,SH4,201.,Wid,er,Jean-Pierre,38,Les Avanchets,"1:58.44,9",(4810),SM/1242.
+110,SD2,21.,Wie,me,Laurence,67,Lausanne,"1:41.53,5",(4811),SF/48.
+111,SH4,36.,Wie,an,Fritz,48,Murten,"1:36.04,4",(4812),SM/396.
+112,SH2,328.,Wie,er,Christian,63,F-Neubois,"1:47.05,4",(5049),SM/843.
+113,RH,157.,Wie,ne,Marcel,43,Chardonne,"55.08,0",(8254),IH/168.
+114,MH4,118.,Wig,er,Hansruedi,45,Luzern,"3:49.57,4",(1799),MM/896.
+115,MH4,223.,Wig,er,Toni,45,Sulz LU,"4:27.19,3",(1800),MM/1327.
+116,MH2,459.,Wil,A,ex,67,Lausanne,"4:10.45,2",(1801),MM/1179.
+117,MH2,184.,Wil,R,lf,64,Niederhasli,"3:24.21,0",(1802),MM/438.
+118,MH2,467.,Wil,a,hristian,62,Sissach,"4:14.43,5",(1803),MM/1219.
+119,MH2,231.,Wil,el,Christophe,65,Lausanne,"3:30.25,3",(1804),MM/552.
+120,MH2,353.,Wil,el,Peter,63,Meyrin,"3:47.11,5",(1805),MM/849.
+121,MH2,367.,Wil,i,runo,64,Sargans,"3:49.49,6",(1806),MM/895.
+122,QH4,5.,Wil,i,ean,41,Prilly,"40.49,2",(7181),QM/139.
+123,MH3,392.,Wil,in,r Alfons,55,Naters,"4:11.29,7",(1808),MM/1189.
+124,QD1,154.,Wil,in,r Sheila,76,MONTANA VILLAGE,"1:03.30,3",(7182),QF/432.
+125,SH2,77.,Win,le,Felix,63,Gland,"1:28.38,0",(4813),SM/178.
+126,QH1,59.,Win,ge,Daniel,71,Leuzigen,"40.37,4",(7492),QM/132.
+127,SH4,247.,Win,el,ann Eric,47,Aubonne,"2:08.55,5",(4814),SM/1401.
+128,MH2,462.,Win,le,Urs,67,Schwarzenbach SG,"4:12.52,8",(1810),MM/1202.
+129,MH3,206.,Win,le,Walter,51,Pratteln,"3:34.25,6",(1811),MM/618.
+130,MH2,77.,Win,el,r Harald,65,Lachen SZ,"3:05.15,5",(1812),MM/160.
+131,SH1,70.,Win,er,Bernd,83,D-Steinen,"1:33.29,1",(4815),SM/300.
+132,SH4,65.,Win,er,Peter,50,D-Steinen,"1:41.15,1",(4817),SM/587.
+133,MH2,523.,Win,el,r Peter,61,Thayngen,"4:53.06,3",(1813),MM/1425.
+134,QD1,19.,Wip,B,atrice,73,Geneve,"44.27,8",(7183),QF/27.
+135,RH,119.,Wir,h,lex,68,Worb,"52.27,8",(8256),IH/129.
+136,MH2,101.,Wir,T,ierry,63,La Chaux-de-Fonds,"3:10.01,3",(1814),MM/213.
+137,SD2,148.,Wit,e,laudia,61,Bassins,"2:07.18,1",(4818),SF/339.
+138,RH,58.,Wit,en,oldner Matthias,77,Pfaeffikon ZH,"45.29,1",(8345),IH/66.
+139,K7,48.,Wit,we,Jenna,91,Mex VD,"23.28,4",(10312),JF/192.
+140,K8,45.,Wit,we,Sandy,89,Mex VD,"21.39,4",(9343),JF/152.
+141,MH2,478.,Wit,ma,n Frank,61,D-Trier,"4:19.59,5",(1815),MM/1264.
+142,MH1,179.,Woh,li,h Thierry,72,Geneve,"4:42.06,9",(1816),MM/1400.
+143,SH3,51.,Wol,R,land,52,Gland,"1:28.41,2",(4819),SM/179.
+144,MH3,4.,Wol,er,Martin,57,Meilen,"2:44.52,5",(1817),MM/24.
+145,QH1,37.,Wol,eb,Bertrand,77,Epalinges,"39.03,9",(7185),QM/93.
+146,SH4,102.,Wol,er,Leo,44,D-Huerth,"1:45.42,0",(5153),SM/788.
+147,MH4,208.,Won,ch,roonlax Kittisa,49,THA-BANGKOK CIY,"4:22.57,0",(1819),MM/1286.
+148,MD2,76.,Woo,tl,Christiane,67,Spiez,"4:29.21,3",(2348),MF/179.
+149,MH2,185.,Woo,tl,Philippe,64,Spiez,"3:24.26,2",(1820),MM/441.
+150,MH4,212.,Wue,de,ann Odo Rolf,42,D-Wittenburg,"4:24.09,7",(1821),MM/1297.
+151,MH3,34.,Wue,t,ans,57,Sempach Stadt,"3:01.23,3",(1822),MM/126.
+152,SH3,45.,Wue,hr,ch Claude,55,Echallens,"1:27.45,2",(4821),SM/164.
+153,MH2,163.,Wue,hr,ch Hans-Ulrich,64,Arni-Islisberg,"3:19.46,5",(1823),MM/360.
+154,K4,63.,Wue,hr,ch Marc,87,Blonay,"22.39,1",(9454),JM/302.
+155,K2,63.,Wue,ri,h Damien,91,Echallens,"21.16,6",(10313),JM/256.
+156,SD3,46.,Wui,le,in Christine,56,Geneve,"1:57.54,9",(4822),SF/219.
+157,SH2,475.,Wui,le,in Philippe,66,Geneve,"2:02.24,6",(4823),SM/1317.
+158,QH4,100.,Wul,sc,leger Peter,41,Lausanne,"55.54,8",(7187),QM/697.
+159,RD,16.,Wun,er,i Hoa,68,Menzingen,"50.28,2",(8257),IF/20.
+160,K9,8.,Wyd,r,oriane,87,Ollon VD,"17.54,7",(9344),JF/29.
+161,K2,16.,Wyd,r,atrice,90,Antagnes,"18.14,7",(10315),JM/110.
+162,MD3,13.,Wyl,r,adeleine,60,Uetikon am See,"3:32.51,4",(2347),MF/41.
+163,K3,3.,Wys,D,mien,88,F-St Genis Pouilly,"15.36,3",(9345),JM/21.
+164,MH3,477.,Wys,K,rt,52,Port,"4:58.21,7",(1826),MM/1437.
+165,RD,20.,Wys,M,reille,64,F-Oullins,"52.35,3",(8458),IF/24.
+166,QH2,32.,Wys,R,land,66,Bern,"38.33,0",(7188),QM/83.
+167,QH3,51.,Wys,W,rner,55,Morrens VD,"44.05,7",(7189),QM/258.
+168,total 168,,,,,,,,,
+169,---------,,,,---------------,,--------------------,----------,-------,---------
+170,MD4,4.,Wab,e,ocelyne,50,F-Paris 20,"3:52.35,7",(1755),MF/79.
+171,QH2,142.,Wac,s,ean-Claude,67,Wahlendorf,"48.46,4",(7166),QM/451.
+172,SD3,52.,Wae,er,Chantal,54,Avry-sur-Matran,"2:00.14,4",(5446),SF/244.
+173,SH1,46.,Wae,er,Christophe,71,Corsier-sur-Vevey,"1:29.32,4",(5202),SM/197.
+174,SH1,213.,Wae,ht,r Frank,75,Basel,"1:59.18,7",(4713),SM/1259.
+175,RD,19.,Wae,ke,lin Monica,71,Hoeri,"52.13,4",(8246),IF/23.
+176,MH2,406.,Wae,er,Michael,61,Steinach,"3:56.26,9",(1756),MM/1003.
+177,MH4,17.,Wae,li,Ueli,48,Sissach,"3:17.38,2",(1757),MM/324.
+178,RD,79.,Wae,ch,i Celine,80,La Tour-de-Peilz,"1:46.06,8",(8247),IF/88.
+179,SH4,278.,Wae,ch,i Max,27,Koeniz,"2:28.28,3",(4779),SM/1493.
+180,SD3,60.,Wae,ti,Iris,54,Ostermundigen,"2:01.05,0",(5469),SF/260.
+181,SH3,158.,Wae,ti,Roland,60,Neuchatel,"1:40.12,4",(4780),SM/550.
+182,MH2,207.,Wag,n,artin,69,Oberwil BL,"3:27.33,3",(1758),MM/501.
+183,RH,235.,Wag,er,Frederic,76,F-Paris 15,"1:11.41,5",(8248),IH/252.
+184,MD3,71.,Wag,er,Heidi,55,Basel,"4:32.15,4",(2328),MF/187.
+185,MH3,183.,Wag,er,Jean-Marc,53,F-Wintzenheim,"3:30.32,2",(1759),MM/555.
+186,QH4,90.,Wag,er,Michel,34,Lausanne,"54.52,8",(7167),QM/672.
+187,SH3,277.,Wag,ie,es Jean-Daniel,54,Rueyres,"1:49.53,3",(4781),SM/971.
+188,SD3,9.,Wah,ed,Brigitte,59,Chavannes-de-Bogis,"1:42.09,7",(4782),SF/52.
+189,K7,11.,Wah,ed,Hajra,91,CHAVANNES-DE-BOGI,"19.19,0",(10310),JF/69.
+190,K8,31.,Wah,ed,Samara,88,Chavannes-de-Bogis,"20.22,3",(9340),JF/108.
+191,QH1,102.,Wah,en,Raphael,84,La Croix (Lutry),"43.38,0",(7513),QM/241.
+192,QH2,64.,Wah,i,hristophe,65,La Chaux-de-Fonds,"42.28,8",(7168),QM/193.
+193,SH2,391.,Wah,i,ichel,61,La Neuveville,"1:51.55,6",(4784),SM/1044.
+194,MD1,31.,Wai,e,eredith,78,Geneve,"5:02.15,2",(1760),MF/227.
+195,SH3,282.,Wal,h,ean-Pierre,53,F-Berling,"1:50.13,2",(4785),SM/988.
+196,RD,79.,Wal,hl,Christel,76,Vevey,"1:46.06,8",(8249),IF/88.
+197,SH1,67.,Wal,ma,n Richard,72,Vevey,"1:33.10,2",(5175),SM/291.
+198,MH3,155.,Wal,me,er Pierre-Vince,57,Denens,"3:24.55,1",(1761),MM/455.
+199,QD2,124.,Wal,me,er-Crausaz Anne,67,Lutry,"59.19,7",(7169),QF/336.
+200,SD4,13.,Wal,vo,el Cathy,46,Bussigny-Lausanne,"1:50.52,4",(4786),SF/127.
+201,SH4,144.,Wal,vo,el Roland,46,Bussigny-Lausanne,"1:50.36,5",(4787),SM/998.
+202,MH4,84.,Wal,ac,John,44,USA-SARATOSA FL,"3:38.57,0",(1762),MM/706.
+203,MD2,19.,Wal,er,Luzia,63,Schenkon,"3:31.52,8",(1763),MF/40.
+204,MH4,211.,Wal,er,Max,50,Bern,"4:23.27,8",(1764),MM/1294.
+205,MH1,14.,Wal,im,nn Patrick,73,Alpnach Dorf,"2:49.59,5",(2191),MM/40.
+206,SH2,144.,Wal,er,Joerg,64,Cham,"1:35.15,0",(4788),SM/364.
+207,MH3,173.,Wal,er,Richard,57,Gryon,"3:28.37,4",(1765),MM/521.
+208,MD2,89.,Wal,er,Linda,65,Bellach,"4:57.56,5",(1766),MF/222.
+209,MH1,13.,Wal,er,Urs,75,Neunkirch,"2:48.43,4",(1767),MM/35.
+210,MD2,26.,Wal,he,Colette,62,Glis,"3:41.49,1",(1768),MF/53.
+211,MH3,482.,Wal,he,Daniel,56,Plan-les-Ouates,"5:13.39,1",(1769),MM/1452.
+212,MH3,104.,Wal,he,Manfred,60,Boll,"3:17.04,6",(1770),MM/312.
+213,RH,60.,Wal,M,rtin,67,Glattbrugg,"46.22,2",(8250),IH/68.
+214,MH3,438.,Wam,ac,Francois,52,F-Mertzwiller,"4:24.35,5",(1771),MM/1305.
+215,MH3,75.,Wam,fl,r Andreas,51,Kernenried,"3:11.41,7",(1772),MM/237.
+216,MH4,239.,Wan,el,r Sepp,48,Liebefeld,"4:41.04,8",(1773),MM/1398.
+217,MH4,249.,Wan,mu,hitakul Jirawat,44,THA-BANGKOK CIY,"4:56.28,4",(1774),MM/1430.
+218,K6,50.,Wan,az,Oceane,93,Lausanne,"29.02,4",(10311),JF/270.
+219,MH3,57.,Wan,er,Claude,60,Belmont-Lausanne,"3:08.14,3",(1775),MM/193.
+220,MH2,128.,Wap,F,lix,63,Taegerwilen,"3:13.32,2",(1776),MM/267.
+221,QD4,36.,War,de,Marie-Louise,39,Lausanne,"1:02.58,1",(7171),QF/421.
+222,K9,40.,War,de,Sophie,87,Nyon,"22.37,5",(9341),JF/176.
+223,SH4,165.,War,el,n Gilbert,47,Lausanne,"1:53.19,8",(4791),SM/1097.
+224,QH2,222.,War,in,er Fredrik,70,S-Malmoe,"57.33,7",(7556),QM/744.
+225,SD4,52.,Wat,na,e Tokiko,41,JPN-133-0044 TOKYO,"2:47.29,8",(4792),SF/464.
+226,SH4,114.,Wat,nu,i Akira,39,JPN-319-0209 NISHIIB,"1:46.55,5",(4793),SM/840.
+227,MH2,472.,Wat,er,Felix,62,Hausen b. Brugg,"4:18.22,3",(1777),MM/1244.
+228,MH4,80.,Web,r,redi,45,Bern,"3:37.18,8",(1780),MM/681.
+229,SH4,230.,Web,r,osef,49,Gossau SG,"2:03.34,6",(4794),SM/1334.
+230,MH2,195.,Web,r,arc,66,Wangen ZH,"3:25.38,5",(1781),MM/467.
+231,SD3,81.,Web,r,icole,60,La Chaux-de-Fonds,"2:07.30,1",(4795),SF/341.
+232,RH,207.,Web,r,eter,68,Schoenbuehl-Urtenen,"1:02.19,1",(8416),IH/222.
+233,QH1,114.,Web,r,ylvain,81,Plan-les-Ouates,"44.58,7",(7172),QM/288.
+234,MH2,372.,Web,r,hierry,63,F-Strasbourg,"3:50.37,0",(2179),MM/907.
+235,MH4,224.,Wed,r,rich,37,Bern,"4:29.35,1",(2224),MM/1340.
+236,RH,66.,Wed,r,arkus,49,Willisau,"47.18,6",(8251),IH/75.
+237,QH2,104.,Wee,am,ntry Romesh,67,Geneve,"45.47,7",(7547),QM/325.
+238,QH4,9.,Weg,li,Christophe,44,Morges,"42.17,3",(7173),QM/183.
+239,MH1,182.,Weg,an,Joachim,73,Staefa,"4:51.39,6",(1778),MM/1423.
+240,MH1,181.,Weg,an,Thomas,74,Effretikon,"4:45.39,4",(1782),MM/1409.
+241,SH4,238.,Weg,ul,er Eric,48,Epalinges,"2:06.48,8",(4796),SM/1372.
+242,MH2,415.,Weg,ez,Eric,63,B-BAUDOUR,"3:57.22,0",(1783),MM/1026.
+243,MH3,325.,Wei,el,Dominique,56,Lausanne,"3:55.40,5",(1784),MM/988.
+244,MH4,100.,Wei,B,rtrand,45,F-Besancon,"3:45.26,6",(1785),MM/813.
+245,SH2,383.,Wei,en,ann Kaspar,66,Wabern,"1:51.02,2",(4801),SM/1015.
+246,K7,63.,Wei,er,Joana,90,Lausanne,"25.50,0",(10606),JF/231.
+247,SD1,71.,Wei,ha,pt Anita,73,Trimmis,"2:04.10,6",(4797),SF/303.
+248,SD4,7.,Wei,s,utta,35,Burgdorf,"1:46.49,1",(4799),SF/83.
+249,MH1,22.,Wei,s,rs,71,Riniken,"2:55.42,9",(1787),MM/70.
+250,SH1,161.,Wei,sb,um Gerald,??,Villarsel-Gibloux,"1:46.20,5",(4800),SM/812.
+251,QH2,78.,Wei,sh,upt Reto,68,Zuerich,"43.22,1",(7507),QM/234.
+252,SD4,37.,Wel,on,Elizabeth,45,Mont-sur-Rolle,"2:10.56,6",(4802),SF/377.
+253,MH3,423.,Wel,er,Anthony,51,Bogis-Bossey,"4:20.22,7",(1788),MM/1266.
+254,MD3,45.,Wel,er,Elise-Marie,55,F-Soppe le Bas,"4:00.32,5",(1789),MF/112.
+255,MH3,172.,Wel,er,Joel,55,F-Soppe le Bas,"3:28.35,4",(1790),MM/520.
+256,QH4,50.,Wen,li,g Gerard,50,F-Dauendorf,"49.16,6",(7175),QM/474.
+257,QD3,13.,Wen,er,Catherine,56,Bussigny-Lausanne,"50.28,1",(7654),QF/98.
+258,SH3,150.,Wen,er,Christian,55,Bussigny-Lausanne,"1:39.48,7",(4803),SM/532.
+259,QH2,84.,Wen,er,Denis,63,Morges,"43.48,0",(7447),QM/248.
+260,SD1,81.,Wen,er,Fabienne,76,Le Locle,"2:07.34,3",(4804),SF/343.
+261,RD,52.,Wen,er,Marie,53,F-Pontarlier,"1:08.00,0",(8252),IF/60.
+262,QD1,35.,Wen,er,Nathalie,83,BUSSIGNY,"47.08,5",(7176),QF/53.
+263,SH4,15.,Wen,H,ns-Ruedi,49,Madetswil,"1:31.41,0",(4806),SM/246.
+264,QD1,74.,Wer,en,Catherine,75,Lausanne,"53.01,1",(7177),QF/164.
+265,RH,220.,Wer,i,van,74,Cadro,"1:06.45,6",(8253),IH/236.
+266,SD3,76.,Wer,o,armen,58,Pensier,"2:05.28,8",(4807),SF/314.
+267,SH3,395.,Wer,o,ichel,55,Prilly,"2:01.29,7",(4808),SM/1306.
+268,MD1,9.,Wer,li,Beatrice,76,Geneve,"3:34.44,4",(1791),MF/44.
+269,MH1,155.,Wes,i,rmin,77,Baettwil-Flueh,"4:13.31,6",(1792),MM/1206.
+270,MH1,156.,Wes,i,ernhard,73,Muenchenstein,"4:13.34,1",(1793),MM/1208.
+271,MH4,11.,Wes,ga,th Ralph,50,CAN-K7K555 BARRIEFIE,"3:10.43,5",(1794),MM/225.
+272,MH3,190.,Wet,st,in Erich,58,Solothurn,"3:32.05,8",(1795),MM/580.
+273,K3,35.,Wet,el,Alexandre,88,Pully,"18.32,3",(9419),JM/122.
+274,RH,108.,Wet,ke,Guenter,43,D-Lahr,"51.05,3",(8329),IH/118.
+275,MH3,252.,Wey,r,lois,55,D-Niederkassel,"3:42.04,3",(1796),MM/754.
+276,QD3,15.,Wha,le,Hazel,51,F-Cessy,"50.42,7",(7178),QF/102.
+277,QH3,103.,Wid,oe,her-Loux Patric,55,F-Wildersbach,"49.25,0",(7180),QM/483.
+278,MH3,221.,Wid,er,Christian,60,Kirchlindach,"3:36.53,9",(1798),MM/670.
+279,SH4,201.,Wid,er,Jean-Pierre,38,Les Avanchets,"1:58.44,9",(4810),SM/1242.
+280,SD2,21.,Wie,me,Laurence,67,Lausanne,"1:41.53,5",(4811),SF/48.
+281,SH4,36.,Wie,an,Fritz,48,Murten,"1:36.04,4",(4812),SM/396.
+282,SH2,328.,Wie,er,Christian,63,F-Neubois,"1:47.05,4",(5049),SM/843.
+283,RH,157.,Wie,ne,Marcel,43,Chardonne,"55.08,0",(8254),IH/168.
+284,MH4,118.,Wig,er,Hansruedi,45,Luzern,"3:49.57,4",(1799),MM/896.
+285,MH4,223.,Wig,er,Toni,45,Sulz LU,"4:27.19,3",(1800),MM/1327.
+286,MH2,459.,Wil,A,ex,67,Lausanne,"4:10.45,2",(1801),MM/1179.
+287,MH2,184.,Wil,R,lf,64,Niederhasli,"3:24.21,0",(1802),MM/438.
+288,MH2,467.,Wil,a,hristian,62,Sissach,"4:14.43,5",(1803),MM/1219.
+289,MH2,231.,Wil,el,Christophe,65,Lausanne,"3:30.25,3",(1804),MM/552.
+290,MH2,353.,Wil,el,Peter,63,Meyrin,"3:47.11,5",(1805),MM/849.
+291,MH2,367.,Wil,i,runo,64,Sargans,"3:49.49,6",(1806),MM/895.
+292,QH4,5.,Wil,i,ean,41,Prilly,"40.49,2",(7181),QM/139.
+293,MH3,392.,Wil,in,r Alfons,55,Naters,"4:11.29,7",(1808),MM/1189.
+294,QD1,154.,Wil,in,r Sheila,76,MONTANA VILLAGE,"1:03.30,3",(7182),QF/432.
+295,SH2,77.,Win,le,Felix,63,Gland,"1:28.38,0",(4813),SM/178.
+296,QH1,59.,Win,ge,Daniel,71,Leuzigen,"40.37,4",(7492),QM/132.
+297,SH4,247.,Win,el,ann Eric,47,Aubonne,"2:08.55,5",(4814),SM/1401.
+298,MH2,462.,Win,le,Urs,67,Schwarzenbach SG,"4:12.52,8",(1810),MM/1202.
+299,MH3,206.,Win,le,Walter,51,Pratteln,"3:34.25,6",(1811),MM/618.
+300,MH2,77.,Win,el,r Harald,65,Lachen SZ,"3:05.15,5",(1812),MM/160.
+301,SH1,70.,Win,er,Bernd,83,D-Steinen,"1:33.29,1",(4815),SM/300.
+302,SH4,65.,Win,er,Peter,50,D-Steinen,"1:41.15,1",(4817),SM/587.
+303,MH2,523.,Win,el,r Peter,61,Thayngen,"4:53.06,3",(1813),MM/1425.
+304,QD1,19.,Wip,B,atrice,73,Geneve,"44.27,8",(7183),QF/27.
+305,RH,119.,Wir,h,lex,68,Worb,"52.27,8",(8256),IH/129.
+306,MH2,101.,Wir,T,ierry,63,La Chaux-de-Fonds,"3:10.01,3",(1814),MM/213.
+307,SD2,148.,Wit,e,laudia,61,Bassins,"2:07.18,1",(4818),SF/339.
+308,RH,58.,Wit,en,oldner Matthias,77,Pfaeffikon ZH,"45.29,1",(8345),IH/66.
+309,K7,48.,Wit,we,Jenna,91,Mex VD,"23.28,4",(10312),JF/192.
+310,K8,45.,Wit,we,Sandy,89,Mex VD,"21.39,4",(9343),JF/152.
+311,MH2,478.,Wit,ma,n Frank,61,D-Trier,"4:19.59,5",(1815),MM/1264.
+312,MH1,179.,Woh,li,h Thierry,72,Geneve,"4:42.06,9",(1816),MM/1400.
+313,SH3,51.,Wol,R,land,52,Gland,"1:28.41,2",(4819),SM/179.
+314,MH3,4.,Wol,er,Martin,57,Meilen,"2:44.52,5",(1817),MM/24.
+315,QH1,37.,Wol,eb,Bertrand,77,Epalinges,"39.03,9",(7185),QM/93.
+316,SH4,102.,Wol,er,Leo,44,D-Huerth,"1:45.42,0",(5153),SM/788.
+317,MH4,208.,Won,ch,roonlax Kittisa,49,THA-BANGKOK CIY,"4:22.57,0",(1819),MM/1286.
+318,MD2,76.,Woo,tl,Christiane,67,Spiez,"4:29.21,3",(2348),MF/179.
+319,MH2,185.,Woo,tl,Philippe,64,Spiez,"3:24.26,2",(1820),MM/441.
+320,MH4,212.,Wue,de,ann Odo Rolf,42,D-Wittenburg,"4:24.09,7",(1821),MM/1297.
+321,MH3,34.,Wue,t,ans,57,Sempach Stadt,"3:01.23,3",(1822),MM/126.
+322,SH3,45.,Wue,hr,ch Claude,55,Echallens,"1:27.45,2",(4821),SM/164.
+323,MH2,163.,Wue,hr,ch Hans-Ulrich,64,Arni-Islisberg,"3:19.46,5",(1823),MM/360.
+324,K4,63.,Wue,hr,ch Marc,87,Blonay,"22.39,1",(9454),JM/302.
+325,K2,63.,Wue,ri,h Damien,91,Echallens,"21.16,6",(10313),JM/256.
+326,SD3,46.,Wui,le,in Christine,56,Geneve,"1:57.54,9",(4822),SF/219.
+327,SH2,475.,Wui,le,in Philippe,66,Geneve,"2:02.24,6",(4823),SM/1317.
+328,QH4,100.,Wul,sc,leger Peter,41,Lausanne,"55.54,8",(7187),QM/697.
+329,RD,16.,Wun,er,i Hoa,68,Menzingen,"50.28,2",(8257),IF/20.
+330,K9,8.,Wyd,r,oriane,87,Ollon VD,"17.54,7",(9344),JF/29.
+331,K2,16.,Wyd,r,atrice,90,Antagnes,"18.14,7",(10315),JM/110.
+332,MD3,13.,Wyl,r,adeleine,60,Uetikon am See,"3:32.51,4",(2347),MF/41.
+333,K3,3.,Wys,D,mien,88,F-St Genis Pouilly,"15.36,3",(9345),JM/21.
+334,MH3,477.,Wys,K,rt,52,Port,"4:58.21,7",(1826),MM/1437.
+335,RD,20.,Wys,M,reille,64,F-Oullins,"52.35,3",(8458),IF/24.
+336,QH2,32.,Wys,R,land,66,Bern,"38.33,0",(7188),QM/83.
+337,QH3,51.,Wys,W,rner,55,Morrens VD,"44.05,7",(7189),QM/258.
+338,total 168,,,,,,,,,
