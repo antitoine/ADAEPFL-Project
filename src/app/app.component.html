@@ -1,21 +1,21 @@
 <div id="wrapper" [class.toggled]="menuToggled">
 
   <!-- Sidebar -->
-  <div id="sidebar-wrapper">
+  <nav id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <li>
+      <li class="sidebar-brand">
         <a routerLink="/">
           <img src="./assets/images/ADA-logo.png" alt="" width="210">
         </a>
       </li>
       <li>
-        <a routerLink="/main">The Project</a>
+        <a routerLink="/main" routerLinkActive="active">The Project</a>
       </li>
       <li>
-        <a routerLink="/scraping">Part 1: Scraping Data</a>
+        <a routerLink="/scraping" routerLinkActive="active">Part 1: Scraping Data</a>
       </li>
     </ul>
-  </div>
+  </nav>
 
   <!-- Page Content -->
   <div id="page-content-wrapper">
