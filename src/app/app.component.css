@@ -1,7 +1,3 @@
-body {
-  overflow-x: hidden;
-}
-
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -28,6 +24,7 @@ body {
   transition: all 0.5s ease;
   border-right: 1px solid #e3e3e3;
   box-shadow: 0 0 15px rgba(0,0,0,.05);
+  overflow-x: hidden;
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -97,6 +94,25 @@ body {
   border-right: none;
 }
 
+.sidebar-footer {
+  position: absolute;
+  bottom: 10px;
+  width: 250px;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  text-indent: 20px;
+  font-size: 2em;
+}
+
+.sidebar-footer li a {
+  color: #616161;
+}
+
+.sidebar-footer li a:hover {
+  color: #333;
+}
+
 @media(min-width:768px) {
   #wrapper {
     padding-left: 250px;
@@ -123,4 +139,16 @@ body {
     position: relative;
     margin-right: 0;
   }
+}
+
+@media(max-height:400px) {
+  .sidebar-footer {
+    display: none;
+  }
+}
+
+.footer {
+  text-align: center;
+  color: #616161;
+  margin-top: 40px;
 }

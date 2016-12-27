@@ -15,6 +15,11 @@
         <a routerLink="/scraping" routerLinkActive="active">Part 1: Scraping Data</a>
       </li>
     </ul>
+
+    <ul class="sidebar-footer list-inline">
+      <li><a href="https://github.com/antitoine/ADAEPFL-Project" title="Github project"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+      <li><a href="https://github.com/antitoine/ADAEPFL-Project/archive/master.zip" title="Download the project"><i class="fa fa-download" aria-hidden="true"></i></a></li>
+    </ul>
   </nav>
 
   <!-- Page Content -->
@@ -27,6 +32,13 @@
             <i *ngIf="menuToggled" class="fa fa-chevron-right" aria-hidden="true"></i>
           </a>
           <router-outlet></router-outlet>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <p class="footer">
+            <a href="https://github.com/antitoine">Antoine Chabert</a>, <a href="https://github.com/arnaudDup">Arnaud Dupeyrat</a>, <a href="https://github.com/asalihi">Arbër Salihi</a> - <a href="http://ada.epfl.ch/">Applied Data Analysis</a> - <a href="http://epfl.ch/">EPFL</a> - Copyright 2016/2017
+          </p>
         </div>
       </div>
     </div>
