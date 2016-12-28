@@ -1,34 +1,34 @@
-,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
-0,QH2,241.0,Iba,ro,a Aitor,66,Ecublens VD,"55.33,2",(4576),QM/691.
-1,SH1,76.0,Ibb,rs,n Mark,71,Lausanne,"1:32.30,7",(2722),SM/344.
-2,MH2,77.0,Ibo,ra,Jean-Marc,61,F-St Michel sur Orge,"3:06.18,0",(715),MM/143.
-3,MH2,411.0,Ike,Ak,hiro,68,"JPN-386-0027 Nagano,","4:21.26,2",(716),MM/1071.
-4,RH,127.0,Ile,en,Erwin,73,CH,"1:07.59,5",(8634),IH/140.
-5,QD2,3.0,Ili,io,Franca,63,Geneve,"41.06,1",(5832),QF/10.
-6,MH3,328.0,Imf,ld,Franklin,58,Echallens,"4:07.49,2",(1682),MM/984.
-7,SH3,203.0,Imh,f,laude,58,Morges,"1:43.06,7",(2724),SM/733.
-8,SD2,133.0,Imh,f,ornelia,69,Baar,"2:18.56,4",(2725),SF/353.
-9,K1,18.0,Imh,f,abian,91,Naters,"20.14,5",(7193),JM/241.
-10,SD3,74.0,Imh,f,elanie,56,Lutry,"2:00.53,2",(7854),SF/245.
-11,K4,36.0,Imh,f,icolas,86,Morges,"17.44,4",(6192),JM/88.
-12,K2,11.0,Imh,f,atrick,89,Naters,"17.36,8",(7194),JM/79.
-13,SH3,68.0,Imh,f,epp,53,Erstfeld,"1:30.37,2",(7649),SM/279.
-14,MH3,302.0,Imo,er,orf Emil,50,Ulrichen,"3:59.42,8",(717),MM/893.
-15,MH3,267.0,Imo,er,orf German,55,Murten,"3:53.56,0",(718),MM/815.
-16,SD1,31.0,In-,lb,n Sibylle,75,Romanel-s-Lausanne,"1:49.06,8",(2726),SF/121.
-17,MH4,210.0,Ina,a,aoji,33,JPN-005-0013 Sapporo,"5:37.18,0",(719),MM/1211.
-18,QD4,25.0,Ina,a,ei,35,JPN-005-0013 Sapporo,"1:02.45,8",(4577),QF/411.
-19,SD3,100.0,Inc,S,zan,57,Founex,"2:15.53,6",(2727),SF/339.
-20,SD3,94.0,Inc,au,pe Annie,50,Renens VD,"2:09.51,6",(2728),SF/318.
-21,SD2,14.0,Ing,er,en Kimberly,67,Collonge-Bellerive,"1:37.00,9",(3966),SF/33.
-22,MH1,115.0,Inv,rs,ni Daniel,70,Etzelkofen,"3:57.41,1",(721),MM/865.
-23,MH1,63.0,Iqu,M,afak,78,Salvan,"3:31.30,9",(722),MM/462.
-24,SD3,23.0,Isc,er,Daniele,58,La Chaux-de-Fonds,"1:46.43,1",(3950),SF/101.
-25,QH1,51.0,Isc,i,regory,82,Geneve,"40.17,3",(5804),QM/126.
-26,K2,37.0,Ise,y,avid,89,Lutry,"19.08,1",(7195),JM/187.
-27,MH2,303.0,Ise,eg,er Beat,66,Lausanne,"3:46.10,9",(723),MM/712.
-28,K4,2.0,Ise,ri,g Julien,85,Lausanne,"14.30,9",(6194),JM/3.
-29,QH4,104.0,Isg,o,ino,49,Gingins,"1:02.50,8",(4578),QM/783.
-30,SH4,1.0,Isl,r,obert,49,Lausanne,"1:19.28,6",(2730),SM/55.
-31,SD3,24.0,Isl,r,uzanne,56,Zuerich,"1:47.09,0",(3952),SF/105.
-32,MH2,121.0,Ism,ni,Baki,61,Geneve,"3:15.07,7",(725),MM/234.
+,catégorie,rang,nom,an,pays/lieu,temps,doss,overall
+0,QH2,241.0,Ibarrola Aitor,66,Ecublens VD,"55.33,2",(4576),QM/691.
+1,SH1,76.0,Ibberson Mark,71,Lausanne,"1:32.30,7",(2722),SM/344.
+2,MH2,77.0,Iborra Jean-Marc,61,F-St Michel sur Orge,"3:06.18,0",(715),MM/143.
+3,MH2,411.0,Ike Akihiro,68,"JPN-386-0027 Nagano,","4:21.26,2",(716),MM/1071.
+4,RH,127.0,Ilegens Erwin,73,CH,"1:07.59,5",(8634),IH/140.
+5,QD2,3.0,Ilidio Franca,63,Geneve,"41.06,1",(5832),QF/10.
+6,MH3,328.0,Imfeld Franklin,58,Echallens,"4:07.49,2",(1682),MM/984.
+7,SH3,203.0,Imhof Claude,58,Morges,"1:43.06,7",(2724),SM/733.
+8,SD2,133.0,Imhof Cornelia,69,Baar,"2:18.56,4",(2725),SF/353.
+9,K1,18.0,Imhof Fabian,91,Naters,"20.14,5",(7193),JM/241.
+10,SD3,74.0,Imhof Melanie,56,Lutry,"2:00.53,2",(7854),SF/245.
+11,K4,36.0,Imhof Nicolas,86,Morges,"17.44,4",(6192),JM/88.
+12,K2,11.0,Imhof Patrick,89,Naters,"17.36,8",(7194),JM/79.
+13,SH3,68.0,Imhof Sepp,53,Erstfeld,"1:30.37,2",(7649),SM/279.
+14,MH3,302.0,Imoberdorf Emil,50,Ulrichen,"3:59.42,8",(717),MM/893.
+15,MH3,267.0,Imoberdorf German,55,Murten,"3:53.56,0",(718),MM/815.
+16,SD1,31.0,In-Albon Sibylle,75,Romanel-s-Lausanne,"1:49.06,8",(2726),SF/121.
+17,MH4,210.0,Inaba Naoji,33,JPN-005-0013 Sapporo,"5:37.18,0",(719),MM/1211.
+18,QD4,25.0,Inaba Sei,35,JPN-005-0013 Sapporo,"1:02.45,8",(4577),QF/411.
+19,SD3,100.0,Ince Suzan,57,Founex,"2:15.53,6",(2727),SF/339.
+20,SD3,94.0,Inchauspe Annie,50,Renens VD,"2:09.51,6",(2728),SF/318.
+21,SD2,14.0,Ingwersen Kimberly,67,Collonge-Bellerive,"1:37.00,9",(3966),SF/33.
+22,MH1,115.0,Inversini Daniel,70,Etzelkofen,"3:57.41,1",(721),MM/865.
+23,MH1,63.0,Iqul Moafak,78,Salvan,"3:31.30,9",(722),MM/462.
+24,SD3,23.0,Ischer Daniele,58,La Chaux-de-Fonds,"1:46.43,1",(3950),SF/101.
+25,QH1,51.0,Ischi Gregory,82,Geneve,"40.17,3",(5804),QM/126.
+26,K2,37.0,Isely David,89,Lutry,"19.08,1",(7195),JM/187.
+27,MH2,303.0,Isenegger Beat,66,Lausanne,"3:46.10,9",(723),MM/712.
+28,K4,2.0,Isenring Julien,85,Lausanne,"14.30,9",(6194),JM/3.
+29,QH4,104.0,Isgro Tino,49,Gingins,"1:02.50,8",(4578),QM/783.
+30,SH4,1.0,Isler Robert,49,Lausanne,"1:19.28,6",(2730),SM/55.
+31,SD3,24.0,Isler Suzanne,56,Zuerich,"1:47.09,0",(3952),SF/105.
+32,MH2,121.0,Ismani Baki,61,Geneve,"3:15.07,7",(725),MM/234.

@@ -1,421 +1,421 @@
-,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
-0,K1,2.0,Caa,ei,o Adrian,91,Ecublens VD,"18.11,9",(7607),JM/104.
-1,K7,5.0,Caa,ei,o Noemi,89,Ecublens VD,"18.15,6",(7807),JF/32.
-2,SH3,122.0,Cab,dd,Demetrio,51,Le Sentier,"1:36.07,2",(2237),SM/474.
-3,MH2,237.0,Cab,ra,Olivier,65,F-Nice,"3:34.11,6",(1610),MM/517.
-4,MH2,236.0,Cae,an,Edouard,66,Courtaman,"3:34.07,9",(313),MM/515.
-5,MH1,149.0,Cai,la,Pierre-Francoi,78,Epalinges,"4:27.40,1",(1628),MM/1094.
-6,SD2,32.0,Cai,ns,Rebecca,69,Founex,"1:45.17,6",(3959),SF/80.
-7,MH4,48.0,Cal,ho,ra Florencio,42,Prilly,"3:34.38,9",(315),MM/525.
-8,QH2,182.0,Cal,me,Christian,64,Yverdon-les-Bains,"49.22,0",(4185),QM/488.
-9,SH3,55.0,Cal,me,Daniel,58,Cheseaux-Lausanne,"1:29.07,8",(2238),SM/234.
-10,QH4,92.0,Cal,me,Jean-Pierre,46,Savagnier,"58.30,8",(4186),QM/741.
-11,MH3,149.0,Cal,me,Louis,52,Lausanne,"3:32.21,2",(316),MM/479.
-12,QH1,80.0,Cal,me,Serge,71,Bruettisellen,"42.57,5",(4187),QM/208.
-13,QH1,68.0,Cal,an,ret Gael,78,Neuchatel,"42.03,7",(4188),QM/175.
-14,SD3,66.0,Cal,z,ntoinette,59,Sierre,"1:58.45,1",(2239),SF/219.
-15,QH1,3.0,Cal,o,anuel,78,Geneve,"33.15,0",(4189),QM/6.
-16,MH3,233.0,Cam,nd,na Pierre,51,Lausanne,"3:45.57,5",(1710),MM/709.
-17,QD1,13.0,Cam,lo,Nisa,82,Geneve,"43.52,7",(1837),QF/27.
-18,MD2,31.0,Cam,nz,nd Margrith,61,Goldau,"3:47.38,6",(317),MF/66.
-19,QH2,110.0,Cam,an,co Helder,61,Lausanne,"45.08,3",(4192),QM/313.
-20,QD2,7.0,Cam,ic,e Cidele,68,Yverdon-les-Bains,"42.50,5",(4193),QF/19.
-21,QH2,159.0,Cam,ic,e Francisco,63,Yverdon-les-Bains,"47.49,0",(4194),QM/423.
-22,MH2,198.0,Cam,os,Joao,62,Marly,"3:28.13,8",(318),MM/408.
-23,SH2,79.0,Cam,os,Jose,62,Fribourg,"1:25.57,9",(2240),SM/154.
-24,QD2,140.0,Can,l,lyda,69,Geneve,"1:00.06,7",(5975),QF/355.
-25,QH1,24.0,Can,pi,i Steve,77,Lausanne,"38.12,0",(4196),QM/59.
-26,K6,2.0,Can,E,iah,91,Morges,"18.22,1",(7061),JF/37.
-27,QH2,168.0,Can,J,an-Philippe,61,Morges,"48.23,2",(4197),QM/449.
-28,MH2,293.0,Can,re,a Maurus,67,Ilanz,"3:44.32,2",(320),MM/685.
-29,MH1,74.0,Can,at,a Fabio,75,Salvan,"3:36.48,1",(321),MM/557.
-30,SD1,11.0,Can,in,t M.,76,Igis,"1:35.52,5",(3916),SF/28.
-31,MH4,177.0,Can,G,orges,36,F-St Priest,"4:31.44,1",(319),MM/1115.
-32,SH4,216.0,Can,in,Bruno,47,Cheseaux-Lausanne,"2:04.56,8",(2241),SM/1215.
-33,SD3,43.0,Can,in,Mireille,56,St-Aubin FR,"1:51.30,3",(2242),SF/145.
-34,SH3,274.0,Can,in,Remy,56,St-Aubin FR,"1:48.39,9",(2243),SM/915.
-35,K10,13.0,Can,in,Sylvie,83,St-Aubin FR,"20.19,4",(6051),JF/88.
-36,MH2,92.0,Can,on,Jose,62,Gland,"3:09.13,5",(322),MM/173.
-37,QH2,90.0,Can,ia,Silvano,68,Ostermundigen,"44.21,2",(4198),QM/265.
-38,MH3,231.0,Cap,ll,Marc,58,F-St-Laurent,"3:45.29,0",(323),MM/705.
-39,QD1,151.0,Cap,as,Gaelle,77,Lausanne,"1:09.37,0",(4199),QF/474.
-40,MH2,59.0,Cap,et,i Gino,61,I-San Benedetto del,"3:01.40,4",(324),MM/110.
-41,QH2,103.0,Cap,A,ain De La Tour-,66,La Tour-de-Peilz,"44.55,1",(4200),QM/296.
-42,K8,48.0,Cap,C,arlotte,87,Lausanne,"21.59,9",(6052),JF/158.
-43,SD1,70.0,Cap,F,ona,70,Leysin,"2:05.58,4",(2244),SF/292.
-44,K2,108.0,Cap,M,xime,90,Lausanne,"25.12,8",(7062),JM/397.
-45,SD2,101.0,Car,on,ll Nicole,63,St-Sulpice VD,"2:02.10,0",(3918),SF/263.
-46,K9,21.0,Car,in,ux Laure,86,Lausanne,"20.10,7",(6801),JF/83.
-47,SD2,34.0,Car,in,ux Liliane,60,Lausanne,"1:45.35,2",(3695),SF/83.
-48,MH3,242.0,Car,os,Dos Santos Jor,56,F-evian les Bains,"3:48.16,9",(325),MM/737.
-49,SH4,199.0,Car,tt,Giancarlo,37,F-San Giovanni Persi,"2:00.17,0",(2245),SM/1159.
-50,SH3,323.0,Car,a,rancois,53,F-Lomme,"1:53.50,2",(2246),SM/1044.
-51,MH2,254.0,Car,de,Vincenzo,60,I-Guardiagrele,"3:37.50,9",(1665),MM/578.
-52,QD2,73.0,Car,ta,Chantal,67,Froideville,"54.10,4",(4201),QF/191.
-53,MH2,228.0,Car,e,idier,62,F-Grand Couronne,"3:32.53,6",(326),MM/489.
-54,K1,59.0,Car,en,Francois,91,Lausanne,"23.51,9",(7063),JM/361.
-55,K1,60.0,Car,en,Magnus,92,Lausanne,"23.54,6",(7613),JM/362.
-56,K2,118.0,Car,en,Vincent,89,Lausanne,"28.22,8",(7064),JM/433.
-57,MH2,10.0,Car,oz,Didier,66,F-Ville la Grand,"2:36.37,7",(327),MM/22.
-58,QD4,14.0,Car,e,ndree,45,Geneve,"55.49,2",(4202),QF/235.
-59,QH3,68.0,Car,e,rancis,50,Petit-Lancy,"45.21,8",(4203),QM/321.
-60,QD1,87.0,Car,ah,n Michaun,71,Geneve,"55.28,1",(5968),QF/223.
-61,QH2,137.0,Car,n,ertrand,66,F-Lyon 07,"46.49,2",(4204),QM/372.
-62,MH3,171.0,Car,en,ier Etienne,59,F-CALUIRE,"3:35.24,2",(329),MM/536.
-63,QH2,87.0,Car,in,Walthert Lauren,69,Geneve,"44.01,9",(4205),QM/252.
-64,SH3,247.0,Car,ar,Dominique,59,Renens VD,"1:46.19,1",(2248),SM/859.
-65,MH3,148.0,Car,ar,Patrick,57,Renens VD,"3:32.10,4",(330),MM/474.
-66,MD2,53.0,Car,as,o Brigitte,65,F-Bezons,"4:13.08,3",(331),MF/116.
-67,SD1,71.0,Car,as,o Rachele,74,Monthey,"2:07.49,5",(3910),SF/308.
-68,QH3,2.0,Car,e,hristian,59,F-St Symphorien d'Oz,"34.53,9",(5775),QM/17.
-69,QH3,150.0,Car,el,Jean-Luc,57,Lausanne,"53.11,9",(4206),QM/628.
-70,SD2,132.0,Car,ie,o Patrizia,65,Lausanne,"2:18.53,0",(3978),SF/352.
-71,MH2,300.0,Car,ou,e Bruno,65,F-Le Grand Bornand,"3:45.25,3",(332),MM/704.
-72,MH4,125.0,Car,ie,Beat,46,Cham,"4:03.50,3",(1984),MM/945.
-73,QH3,6.0,Car,on,Said,58,Geneve,"35.51,0",(4209),QM/28.
-74,QH1,143.0,Car,aj,lino Juan,82,Vetroz,"47.45,0",(4210),QM/418.
-75,MH3,187.0,Car,al,eira Manuel,55,Lausanne,"3:38.02,0",(334),MM/581.
-76,QD2,131.0,Car,al,o Fernanda,69,Marly,"59.06,3",(4211),QF/338.
-77,MH1,31.0,Car,al,o Jean,71,Les Diablerets,"3:07.25,7",(335),MM/151.
-78,MH3,381.0,Cas,D,vid,55,Blonay,"4:46.05,8",(336),MM/1163.
-79,SH2,393.0,Cas,ni,Dino,63,I-Cento,"1:56.02,6",(2249),SM/1086.
-80,MH4,130.0,Cas,ar,Otto,37,D-Bielefeld,"4:05.41,8",(337),MM/959.
-81,SH2,91.0,Cas,et,a Vittorio,65,Ecublens VD,"1:27.29,4",(3659),SM/189.
-82,SH3,17.0,Cas,el,ani Fabrizio,59,Fleurier,"1:21.50,4",(1993),SM/87.
-83,SH2,420.0,Cas,el,o Mario,63,Troinex,"2:00.43,9",(2252),SM/1169.
-84,SH2,308.0,Cas,ro,J. Francois,68,Renens VD,"1:43.38,3",(2253),SM/756.
-85,QH4,94.0,Cat,ld,Antonio,39,Biel/Bienne,"58.46,5",(4212),QM/746.
-86,RH,67.0,Cat,el,z Alain,64,Aigle,"53.29,8",(8604),IH/74.
-87,QH2,194.0,Cat,in,Raphael,66,Ecublens VD,"50.07,7",(4213),QM/524.
-88,SH1,48.0,Cau,in,Roberto,71,I-Cossato,"1:28.14,7",(3766),SM/211.
-89,QD3,26.0,Cav,gl,otti Dolores,59,Les Avanchets,"52.32,8",(4214),QF/156.
-90,K4,43.0,Cav,gl,otti Lorris,86,Les Avanchets,"18.09,5",(6053),JM/103.
-91,QH2,115.0,Cav,le,a Danilo,64,Blonay,"45.23,4",(5792),QM/322.
-92,MH2,445.0,Cav,le,i Olivier,62,Lutry,"4:54.44,8",(340),MM/1187.
-93,QH3,117.0,Cav,t,ernard,50,Penthalaz,"49.53,2",(4215),QM/515.
-94,MH2,248.0,Cav,in,Stefano,64,I-Cossato,"3:36.28,6",(1706),MM/551.
-95,SH1,197.0,Cav,n,erald,78,Pully,"2:04.48,1",(7673),SM/1214.
-96,MH4,102.0,Cav,n,ean-Daniel,35,La Chaux-de-Fonds,"3:53.09,9",(341),MM/808.
-97,MH2,222.0,Cav,n,ean-Philippe,61,La Chaux-de-Fonds,"3:31.28,4",(342),MM/461.
-98,SD2,91.0,Cav,n,alerie,69,Chevroux,"2:00.38,2",(2255),SF/240.
-99,K7,76.0,Cay,Tu,ay,90,Renens VD,"26.33,9",(7065),JF/246.
-100,K3,44.0,Cec,o,awwaf Ascanio,88,Lausanne,"18.31,6",(6054),JM/127.
-101,K4,44.0,Cec,o,awwaf Giandomen,85,Lausanne,"18.12,4",(6055),JM/106.
-102,K6,16.0,Cec,o,awwaf Lucia,91,Lausanne,"21.34,5",(7066),JF/140.
-103,SH4,11.0,Cel,uc,i Lorenzo,47,I-Rapino,"1:27.06,1",(1667),SM/181.
-104,SH1,72.0,Cel,uc,i Tony,76,I-Rapino,"1:31.59,0",(3656),SM/327.
-105,QD1,136.0,Cen,el,i Feride,76,St-Prex,"1:02.59,5",(4217),QF/414.
-106,QD1,135.0,Cen,el,i Semanur,82,St-Prex,"1:02.59,3",(4218),QF/413.
-107,MH3,48.0,Cer,tt,Marco,52,Bellinzona,"3:11.47,5",(343),MM/202.
-108,SH3,99.0,Cev,y,ierre,54,Prilly,"1:34.16,5",(2256),SM/403.
-109,K4,70.0,Cha,lo,Arthis,86,Ferreyres,"21.21,2",(6057),JM/292.
-110,SH3,384.0,Cha,lo,Daniel,55,Echandens-Denges,"2:09.02,0",(2257),SM/1250.
-111,SH3,65.0,Cha,lo,Eric,59,Collombey,"1:30.13,6",(2258),SM/271.
-112,MH3,129.0,Cha,od,Lionel,50,F-St Antoine,"3:28.37,5",(345),MM/418.
-113,QH2,73.0,Cha,ou,ez Alain,67,Lausanne,"42.52,1",(5755),QM/204.
-114,QH4,22.0,Cha,gn,t Louis,41,Sion,"46.38,5",(4221),QM/363.
-115,QH2,271.0,Cha,an,on Patrick,62,F-Gex,"1:03.30,8",(4222),QM/786.
-116,QH2,6.0,Cha,li,r Jerome,69,F-La Roche sur Foron,"33.50,0",(4223),QM/10.
-117,RD,7.0,Cha,ay,Marie-Dominique,69,F-Annecy,"51.33,9",(8822),IF/11.
-118,RD,42.0,Cha,ba,Celine,75,Lausanne,"1:16.27,4",(8818),IF/49.
-119,RD,46.0,Cha,ba,Katia,70,Lausanne,"1:18.25,3",(8817),IF/54.
-120,SH2,239.0,Cha,or,l Philippe,60,Chernex,"1:38.23,8",(7627),SM/560.
-121,RH,121.0,Cha,pe,dal Xavier,71,Mont-sur-Rolle,"1:05.45,6",(8026),IH/134.
-122,SH4,22.0,Cha,pf,illy Yves,41,Cornaux NE,"1:30.11,0",(2260),SM/269.
-123,SH4,204.0,Cha,et,Claude,46,F-Vesoul,"2:00.42,6",(2261),SM/1166.
-124,SH2,110.0,Cha,ez,Jean-Marie,60,Brent,"1:29.11,6",(2262),SM/235.
-125,MH3,239.0,Cha,oi,Bernard,52,F-Fleurey les Favern,"3:47.39,4",(346),MM/731.
-126,QH1,130.0,Cha,to,Georges,80,St. Niklaus VS,"46.04,6",(4224),QM/350.
-127,SH1,18.0,Cha,to,Philippe,73,St. Niklaus VS,"1:19.23,5",(2263),SM/54.
-128,QH3,121.0,Cha,u,erard,50,F-St Maur des Fosses,"49.57,8",(4225),QM/520.
-129,SD3,64.0,Cha,ua,hi Amel,54,Geneve 1,"1:58.16,5",(2264),SF/210.
-130,MH3,216.0,Cha,al,y Jacques,52,Cully,"3:42.55,9",(347),MM/662.
-131,K2,28.0,Cha,al,y Michael,90,Lausanne,"18.54,9",(7603),JM/163.
-132,QH2,108.0,Cha,er,n Jean-Daniel,63,Yverdon-les-Bains,"45.00,7",(4226),QM/305.
-133,QH1,174.0,Cha,pa,te Raphael,74,La Chaux-de-Fonds,"50.53,6",(4227),QM/562.
-134,QH3,194.0,Cha,pu,s Alain,55,Prevonloup,"1:02.13,3",(5671),QM/778.
-135,SH2,294.0,Cha,pu,s Alain,67,Crissier-Village,"1:42.37,4",(2265),SM/708.
-136,SH3,333.0,Cha,pu,s Didier,57,Penthalaz,"1:56.01,2",(2266),SM/1085.
-137,QH3,83.0,Cha,pu,s Guy-Olivier,56,Vevey,"47.18,8",(5685),QM/400.
-138,MH2,115.0,Cha,pu,s Jean-Marc,68,Rivaz,"3:13.41,9",(348),MM/219.
-139,MH2,129.0,Cha,ui,Jacques,65,Feldmeilen,"3:17.23,6",(1705),MM/258.
-140,RH,108.0,Cha,ui,Oliver,69,Lausanne,"1:00.59,2",(8616),IH/119.
-141,SH4,23.0,Cha,ui,Raymond,43,F-La Seauve sur Seme,"1:30.28,4",(2267),SM/275.
-142,MH2,194.0,Cha,bo,Christian,67,St-Saphorin-Morges,"3:27.50,2",(349),MM/402.
-143,K8,9.0,Cha,ia,te Aurelie,88,Val-d'Illiez,"18.32,0",(6058),JF/42.
-144,MD2,48.0,Cha,mi,lot Jocelyne,68,Vicques,"4:04.34,8",(350),MF/103.
-145,SD4,32.0,Cha,pa,Chantal,44,F-St Genis Laval,"2:17.09,1",(2269),SF/347.
-146,SH4,110.0,Cha,pe,tier Jean-Louis,37,F-Gaillard,"1:44.40,1",(2270),SM/794.
-147,QH1,15.0,Cha,re,ier Didier,73,F-St Galmier,"36.58,2",(4228),QM/43.
-148,SH1,12.0,Cha,re,ier Philippe,71,F-St Galmier,"1:17.33,7",(2271),SM/40.
-149,K5,4.0,Cha,ri,re Christophe,83,Vuibroye,"15.36,4",(6059),JM/12.
-150,K5,3.0,Cha,ri,re Jerome,84,Vuibroye,"15.32,7",(6060),JM/11.
-151,K8,22.0,Cha,ri,re Melinda,88,Vuibroye,"19.51,6",(6061),JF/76.
-152,RD,8.0,Cha,vi,r Laurence,64,F-Menthonnex sous Cl,"53.47,1",(8853),IF/12.
-153,RD,4.0,Cha,vi,r Nicole,62,F-Meythet,"48.44,8",(8825),IF/7.
-154,MH3,190.0,Cha,sa,ng Andre,57,F-Thones,"3:38.29,5",(351),MM/590.
-155,SH3,291.0,Cha,sa,d Michel,51,F-Golbey,"1:50.06,6",(2272),SM/955.
-156,QH2,126.0,Cha,so,Frederic,66,F-Lyon 02,"46.01,2",(4229),QM/347.
-157,SH3,123.0,Cha,so,Michel,55,Lausanne,"1:36.11,4",(3746),SM/477.
-158,K3,77.0,Cha,to,ay Alexis,88,ROMANEL-S-LAUSANN,"19.43,1",(6062),JM/223.
-159,K5,10.0,Cha,to,ay Francois,84,Romanel-s-Lausanne,"17.36,4",(6063),JM/76.
-160,K1,73.0,Cha,be,t Jeremie,91,Les Cullayes,"24.52,4",(7067),JM/389.
-161,MH4,17.0,Cha,t,ene,47,F-St Galmier,"3:19.07,4",(352),MM/275.
-162,SH3,263.0,Cha,vi,Denis,51,Lausanne,"1:47.40,9",(3640),SM/890.
-163,SH3,375.0,Cha,ag,e Jean-Pierre,50,F-St Priest,"2:05.56,2",(2273),SM/1223.
-164,QD1,101.0,Che,au,Anne-Catherine,70,Geneve,"57.13,9",(4231),QF/270.
-165,QH1,43.0,Che,au,David,76,Renens VD,"39.45,0",(5784),QM/111.
-166,SH4,136.0,Che,uz,Jean-Pierre,47,St-Prex,"1:47.56,9",(2274),SM/899.
-167,QD3,31.0,Che,bu,n Marylou,55,Payerne,"53.12,8",(4232),QF/171.
-168,QH3,33.0,Che,ix,Ronald,57,Aigle,"41.37,4",(4233),QM/157.
-169,K2,14.0,Che,ix,Samuel,89,Aigle,"18.14,9",(7068),JM/109.
-170,K1,3.0,Che,pi,lod Dave,91,Froideville,"18.23,1",(7069),JM/118.
-171,QH3,10.0,Che,pi,lod Herve,57,Prilly,"37.54,8",(4234),QM/53.
-172,QH2,66.0,Che,pi,lod Jacques,62,Emmenbruecke,"42.19,8",(5722),QM/183.
-173,SH2,206.0,Che,ve,te Herve,68,F-Ste Genevieve des,"1:36.00,9",(2276),SM/466.
-174,SH2,267.0,Che,au,Christian,60,Romanel-s-Lausanne,"1:40.17,2",(2277),SM/625.
-175,QD2,57.0,Che,au,Genevieve,63,Romanel-s-Lausanne,"52.58,3",(4235),QF/165.
-176,K9,35.0,Che,au,Valerie,86,Romanel-s-Lausanne,"22.57,2",(6065),JF/185.
-177,SD2,93.0,Che,au,Veronique,66,St-Maurice,"2:01.10,3",(2278),SF/248.
-178,QD2,46.0,Che,ea,x Liseby,63,Bussigny-Lausanne,"51.44,2",(4236),QF/144.
-179,QH3,23.0,Che,el,t Bernard,56,Pully,"39.21,7",(5692),QM/102.
-180,SH3,15.0,Che,el,t Pierre-Alain,57,Saignelegier,"1:21.23,1",(2279),SM/82.
-181,MH2,321.0,Che,al,er Pascal,64,F-Lussac les eglises,"3:49.36,4",(354),MM/752.
-182,K7,30.0,Che,al,ey Celia,90,Lausanne,"20.54,2",(7071),JF/109.
-183,K7,71.0,Che,al,ey Chloe,89,Granges (Veveyse),"25.12,0",(7072),JF/236.
-184,SH3,136.0,Che,al,ey Christian,51,Lausanne,"1:37.01,7",(2280),SM/514.
-185,SH3,164.0,Che,al,ey Christian,56,Bussy-Chardonney,"1:39.54,7",(2281),SM/608.
-186,QH2,131.0,Che,al,ey Jean-Francoi,61,Villars-le-Comte,"46.18,1",(4237),QM/358.
-187,K1,38.0,Che,al,ey Jeremie,91,Granges (Veveyse),"21.37,2",(7074),JM/300.
-188,QH1,78.0,Che,al,ey Maxime,83,Lausanne,"42.47,0",(4239),QM/200.
-189,MH2,114.0,Che,al,ey Pascal,61,Lausanne,"3:13.01,4",(355),MM/214.
-190,MH2,23.0,Che,an,e Jean-Baptiste,63,F-La Loye,"2:48.44,2",(353),MM/41.
-191,QH1,101.0,Chi,ra,ia Serge,74,Yverdon-les-Bains,"44.12,2",(4240),QM/258.
-192,SH2,415.0,Chi,ri,Massimo,63,Lausanne,"1:59.53,0",(2286),SM/1154.
-193,K6,55.0,Chi,ri,Monod Maeva,92,Lausanne,"29.23,1",(7076),JF/282.
-194,MH2,139.0,Chi,vi,i Stephane,69,Marchissy,"3:19.38,1",(356),MM/284.
-195,MH3,59.0,Chi,p,aul-Etienne,59,F-Gaillard,"3:15.23,9",(357),MM/237.
-196,QH2,233.0,Chi,ia,ti Oscar,69,Morges,"54.22,8",(4241),QM/661.
-197,SH2,423.0,Chi,on,Donato,60,Cheseaux-Lausanne,"2:01.07,6",(2287),SM/1175.
-198,QH1,206.0,Chi,os,Tomoyuki,82,Leysin,"58.32,8",(4242),QM/742.
-199,SH2,227.0,Chi,ta,o Gianni,65,Morges,"1:37.40,2",(2288),SM/533.
-200,QD1,114.0,Cho,fa,Anne-Julie,77,Echichens,"58.46,6",(4243),QF/325.
-201,SH3,285.0,Cho,le,Alain,51,Lausanne,"1:49.22,7",(2289),SM/935.
-202,QH3,4.0,Cho,le,Andre,57,Tolochenaz,"35.21,3",(4244),QM/21.
-203,MH3,72.0,Cho,le,Eddy,55,Maracon,"3:18.40,6",(358),MM/269.
-204,SH2,125.0,Cho,le,Fabrice,66,Apples,"1:29.54,1",(2290),SM/263.
-205,RH,112.0,Cho,lo,Pascal,63,Lausanne,"1:02.44,2",(8606),IH/123.
-206,MH3,266.0,Chr,st,Joseph,51,Lausanne,"3:53.42,8",(359),MM/814.
-207,QD3,91.0,Chr,st,Samira,59,Lausanne,"1:03.35,4",(5916),QF/421.
-208,QH2,174.0,Chr,st,n Francois,69,Geneve,"48.47,8",(4245),QM/466.
-209,K7,44.0,Chr,st,n Lydia,90,St-Cergue,"22.21,2",(7077),JF/163.
-210,SH1,204.0,Chr,st,n Michael,78,Davos Platz,"2:23.12,4",(2291),SM/1288.
-211,K8,21.0,Chr,st,n Virginie,88,St-Cergue,"19.50,1",(6067),JF/75.
-212,K6,64.0,Chr,st,n Nadia,91,F-AMPHION,"31.31,9",(7078),JF/294.
-213,RH,31.0,Chr,st,n Olivier,64,Muraz (Collombey),"46.47,0",(8028),IH/36.
-214,QH3,71.0,Chr,st,n Rene,56,F-Amphion les Bains,"45.51,2",(4247),QM/339.
-215,QD2,69.0,Chr,st,na Nadine,61,Lutry,"54.06,2",(4248),QF/187.
-216,SH3,80.0,Chr,st,nat Andre,59,Lutry,"1:32.05,3",(2292),SM/329.
-217,QD3,89.0,Chr,st,nat Martine,59,Le Brassus,"1:02.53,8",(4249),QF/412.
-218,SH2,181.0,Chr,st,net Alain,65,Neuchatel,"1:34.14,5",(2293),SM/400.
-219,MH2,278.0,Chu,rd,Daniel,63,St-Legier-Chiesaz,"3:41.21,8",(360),MM/643.
-220,K2,105.0,Chu,t,omain,90,Etagnieres,"24.51,5",(7079),JM/387.
-221,MH1,2.0,Chu,ba,Patrick,74,KEN-Kenya,"2:13.25,4",(10),MM/2.
-222,SH2,214.0,Cia,pi,Gerard,69,Lausanne,"1:36.35,2",(2295),SM/492.
-223,MH3,237.0,Cic,ri,Giorgio,52,Bellinzona,"3:46.54,0",(361),MM/719.
-224,QD2,77.0,Cid,Ma,ie,69,Renens VD,"54.25,6",(4250),QF/195.
-225,MH2,224.0,Cir,us,Alvawce,60,F-St Priest,"3:32.09,6",(1720),MM/472.
-226,K7,56.0,Cis,er,a Daniela,90,Crissier,"23.04,9",(7081),JF/190.
-227,SH3,170.0,Cis,er,a Jorge,57,Crissier,"1:40.39,9",(2297),SM/636.
-228,SH2,285.0,Ciu,lo,Cosimo,61,Corcelles NE,"1:41.55,5",(2298),SM/677.
-229,QH1,199.0,Cla,in,al Valery,75,Preverenges,"54.39,2",(4252),QM/669.
-230,SD4,37.0,Cla,k,argaret,35,GB-HA8 8JU Middlesse,"2:32.06,9",(2299),SF/377.
-231,K4,11.0,Cla,s,avy,85,F-Reignier,"16.00,6",(6625),JM/24.
-232,K7,35.0,Cla,ad,tscher Audrey,90,Pully,"21.26,4",(7082),JF/132.
-233,QD3,88.0,Cla,ad,tscher Carole,59,Pully,"1:02.28,1",(4253),QF/405.
-234,K3,66.0,Cla,ad,tscher Luca,88,Pully,"19.11,9",(6071),JM/192.
-235,K1,68.0,Cla,ad,tscher Philippe,92,Pully,"24.10,8",(7083),JM/372.
-236,MH3,173.0,Cla,au,Gilles,58,F-L'Isle Jourdain,"3:36.07,3",(365),MM/546.
-237,SH4,170.0,Cla,el,Jean-Francois,38,Echandens-Denges,"1:54.25,5",(2300),SM/1051.
-238,MH3,385.0,Cla,ie,Daniel,58,Miege,"4:50.22,5",(366),MM/1177.
-239,SH2,379.0,Cla,ig,Louis,66,Lausanne,"1:53.48,1",(3670),SM/1042.
-240,SH3,33.0,Cle,in,Bernhard,52,Biel/Bienne,"1:25.13,7",(2301),SM/137.
-241,MH2,433.0,Cle,c,ertrand,66,Villars-sur-Glane,"4:39.06,9",(367),MM/1138.
-242,SD4,30.0,Cle,c,olette,41,Chateau-d'Oex,"2:14.56,7",(3947),SF/336.
-243,QH1,13.0,Cle,c,rederic,72,Villars-sur-Glane,"36.45,7",(4255),QM/39.
-244,K3,85.0,Cle,c,aspard,88,Villars-sur-Ollon,"20.26,3",(6072),JM/247.
-245,QH3,56.0,Cle,c,ean-Bernard,59,Muraz (Collombey),"44.08,6",(4256),QM/256.
-246,MH4,148.0,Cle,c,oseph,49,F-Besancon,"4:13.23,1",(368),MM/1022.
-247,SH1,110.0,Cle,c,livier,71,Monthey,"1:37.29,0",(2302),SM/528.
-248,RH,81.0,Cle,c,hierry,64,St-Cergue,"56.24,5",(8029),IH/90.
-249,MH2,112.0,Cli,az,Christophe,69,Chavannes-Renens,"3:12.37,3",(369),MM/211.
-250,QH3,179.0,Clo,s,aymond,51,ROMANEL,"57.23,8",(5807),QM/728.
-251,MH3,137.0,Clo,ui,Bertrand,56,Martigny,"3:30.53,8",(1608),MM/454.
-252,QH3,201.0,Clo,E,ic,57,Baulmes,"1:16.10,4",(4257),QM/812.
-253,RH,133.0,Clo,P,ul,34,Carrouge VD,"1:09.33,7",(8030),IH/147.
-254,QD3,109.0,Cme,in,Gaby,57,F-Urschenheim,"1:14.46,7",(5929),QF/484.
-255,MH3,312.0,Cme,in,Jean Pierre,52,F-Urschenheim,"4:03.18,7",(1646),MM/935.
-256,SH3,124.0,Coa,es,Andrew,56,GB-NR30 1QG Norfolk,"1:36.21,2",(2303),SM/483.
-257,QH2,7.0,Cob,s,ascal,61,Bevaix,"33.53,6",(4258),QM/11.
-258,SH2,241.0,Coc,an,Philippe,64,Grandson,"1:38.27,7",(2305),SM/562.
-259,QH2,46.0,Coc,et,Gilles,60,F-Thyez,"40.28,3",(4259),QM/129.
-260,MH3,327.0,Coe,te,Fritz,54,Wimmis,"4:07.21,8",(370),MM/983.
-261,K3,62.0,Coe,te,Julian,88,Wimmis,"19.05,5",(6073),JM/179.
-262,K2,1.0,Coe,te,Philipp,89,Wimmis,"16.14,3",(7084),JM/29.
-263,QH1,183.0,Coe,te,Tobias,84,Wimmis,"52.28,5",(4260),QM/603.
-264,QH2,161.0,Col,ng,lo Paolo,69,Bussigny-Lausanne,"47.55,5",(5803),QM/428.
-265,MD2,7.0,Col,on,Christine,62,Bettens,"3:20.43,4",(371),MF/15.
-266,MH4,22.0,Col,on,Gianfranco,48,Bettens,"3:20.42,5",(372),MM/303.
-267,K3,114.0,Col,ll,Andre,88,Pully,"25.36,3",(6074),JM/401.
-268,MH3,349.0,Col,y,atrice,57,F-Besancon,"4:19.10,5",(1919),MM/1062.
-269,MH3,226.0,Col,n,ichel,59,Massongex,"3:44.55,0",(1615),MM/694.
-270,SH3,127.0,Col,ar,Yves,56,F-Frotey les Vesoul,"1:36.30,4",(2306),SM/489.
-271,K2,5.0,Col,au,Cedric,89,Romanel-s-Lausanne,"16.59,5",(7085),JM/57.
-272,QH2,140.0,Col,i,laude,62,Epalinges,"46.57,7",(5629),QM/377.
-273,K9,10.0,Col,ia,d Aude,86,La Tour-de-Treme,"17.46,5",(6075),JF/22.
-274,K6,13.0,Col,ia,d Julie,92,La Tour-de-Treme,"21.16,5",(7086),JF/122.
-275,K8,2.0,Col,ia,d Laura,88,La Tour-de-Treme,"17.14,3",(6076),JF/13.
-276,SH1,200.0,Col,io,d Daniel,71,Lausanne,"2:10.07,2",(3681),SM/1258.
-277,SH3,149.0,Col,ou,Bernard,52,F-Thonon les Bains,"1:38.16,8",(2307),SM/556.
-278,SH2,164.0,Col,mb,Corrado,65,I-Novara,"1:33.12,2",(3793),SM/363.
-279,SH2,364.0,Col,mb,Pietro,68,I-Como,"1:50.57,2",(2308),SM/978.
-280,SD3,90.0,Col,on,Dominique,56,F-Magny Vernois,"2:07.37,2",(2309),SF/304.
-281,MH3,101.0,Col,on,Pierre,52,F-Magny Vernois,"3:23.18,0",(374),MM/337.
-282,MH1,146.0,Com,et,Laurent D.G.,73,F-Chatenois les Forg,"4:22.52,1",(376),MM/1077.
-283,MH2,6.0,Com,na,Didier,67,Sierre,"2:33.50,5",(377),MM/18.
-284,QH1,22.0,Com,e,anilo,75,Pully,"38.05,1",(4261),QM/57.
-285,QH2,78.0,Com,e,ierre,64,Biel/Bienne,"43.15,8",(4262),QM/217.
-286,SD4,31.0,Con,gh,n Isabel,40,GB-TS10 2HX Redcar,"2:16.08,6",(2310),SF/341.
-287,MH2,439.0,Con,gh,n James,68,GB-NE2 2PJ Newcastle,"4:46.37,2",(378),MM/1166.
-288,SH4,62.0,Con,gh,n Jim,36,GB-TS10 2HX Redcar,"1:39.13,1",(2311),SM/587.
-289,SD3,103.0,Con,o,aurette,56,F-Jougne,"2:17.02,1",(2312),SF/346.
-290,SH4,58.0,Con,ai,sa Gerard,48,Romanel-sur-Lausanne,"1:38.14,9",(3665),SM/555.
-291,MH2,408.0,Con,e,erge,61,Vuiteboeuf,"4:18.49,9",(379),MM/1059.
-292,SH4,99.0,Con,ta,tin Alexandre,36,Arbaz,"1:43.39,1",(2313),SM/757.
-293,QH4,37.0,Con,ta,tin Jean-Bernar,46,Petit-Lancy,"49.00,5",(4263),QM/477.
-294,SH3,126.0,Con,ta,tin Mario,52,Zermatt,"1:36.26,5",(2314),SM/486.
-295,QH2,209.0,Con,ta,tin Pascal,64,Lausanne,"51.36,5",(4264),QM/581.
-296,QD3,59.0,Con,i,elene,57,Ecublens VD,"58.05,3",(4265),QF/301.
-297,SH3,20.0,Con,i,ascal,53,Ecublens VD,"1:22.55,7",(2315),SM/99.
-298,QH2,193.0,Con,s,ominique,62,Bionnens,"50.01,2",(5801),QM/523.
-299,QH1,6.0,Con,s,hierry,76,Vuadens,"34.52,3",(4266),QM/16.
-300,SD2,79.0,Con,er,et Christiane,62,F-Cranves Sales,"1:58.25,3",(6633),SF/212.
-301,QH2,214.0,Cop,ey,Pascal,64,Lausanne,"52.11,6",(5680),QM/594.
-302,MH1,48.0,Coq,ar,Ludovic,78,F-St Vaury,"3:17.27,9",(380),MM/259.
-303,SD1,28.0,Cor,da,zi Sylvie,72,Moudon,"1:47.21,8",(2316),SF/106.
-304,QD2,41.0,Cor,di,Carine,69,Les Charbonnieres,"51.15,4",(4267),QF/130.
-305,QH4,65.0,Cor,az,Jean-Charles,47,Echandens-Denges,"53.29,9",(5605),QM/637.
-306,QH1,73.0,Cor,az,Sylvain,70,Pully,"42.32,9",(5663),QM/190.
-307,SD2,102.0,Cor,as,o Flavia,68,Le Vaud,"2:02.12,8",(2317),SF/264.
-308,QD2,76.0,Cor,ey,Christine,69,Carouge GE,"54.24,1",(4268),QF/194.
-309,QD2,37.0,Cor,ey,Martine,60,JOUXTENS,"51.04,8",(4269),QF/123.
-310,SD2,107.0,Cor,ey,Monica,67,La Conversion,"2:02.40,9",(7858),SF/271.
-311,QH2,13.0,Cor,a,enrique,66,Geneve,"35.37,7",(5779),QM/23.
-312,MH3,184.0,Cor,a,ranco,57,I-Ciserano,"3:37.29,6",(1699),MM/570.
-313,SH4,107.0,Cor,ar,Eric,46,Echandens-Denges,"1:44.16,7",(2318),SM/779.
-314,SH3,366.0,Cor,az,Pierre-Alain,53,Lausanne,"2:02.43,7",(2319),SM/1197.
-315,QH2,15.0,Cor,el,s Marc,68,Geneve,"36.16,0",(5778),QM/33.
-316,QD2,156.0,Cor,el,us Francoise,61,Paudex,"1:01.53,5",(4270),QF/393.
-317,QH3,173.0,Cor,el,us Robin,56,Paudex,"56.32,3",(4271),QM/710.
-318,MH3,55.0,Cor,es,Iain,56,Montricher,"3:13.45,2",(381),MM/220.
-319,MD4,17.0,Cor,io,ey Mireille,42,Vevey,"4:41.13,7",(382),MF/152.
-320,SD2,68.0,Cor,u,atherine,68,Geneve,"1:55.47,5",(2320),SF/188.
-321,SH2,321.0,Cor,u,hristophe,63,Pully,"1:44.57,1",(3699),SM/804.
-322,MH2,442.0,Cor,u,aniel,60,Lausanne,"4:48.45,2",(383),MM/1174.
-323,SH2,390.0,Cor,u,ascal,67,Geneve,"1:55.49,3",(2321),SM/1077.
-324,QD3,45.0,Cor,uz,Beatrice,50,Morges,"56.29,9",(4272),QF/250.
-325,QD1,122.0,Cor,uz,Vanessa,77,Villars-sous-Yens,"1:00.36,0",(4273),QF/366.
-326,K8,30.0,Cor,al,s Vanessa,88,Lausanne,"20.49,3",(6078),JF/105.
-327,QH1,28.0,Cor,et,Laurent,73,Crans-pres-Celigny,"38.35,4",(4275),QM/70.
-328,QH2,42.0,Cor,az,o Francesco,68,Prilly,"39.34,4",(4276),QM/106.
-329,K9,8.0,Cor,es,Miryam,86,St-Maurice,"17.29,1",(6079),JF/18.
-330,QH4,23.0,Cor,ha,Andre,45,Crissier,"46.39,8",(4277),QM/366.
-331,K3,98.0,Cor,he,y Christophe,87,La Chaux-de-Fonds,"21.40,2",(6080),JM/303.
-332,K4,27.0,Cor,he,y Matthieu,86,La Chaux-de-Fonds,"17.01,7",(6081),JM/59.
-333,K3,63.0,Cor,he,y Pierre,88,La Chaux-de-Fonds,"19.05,7",(6082),JM/180.
-334,SD1,13.0,Cor,i,heba,79,Neuchatel,"1:37.57,0",(7853),SF/37.
-335,SH2,105.0,Cos,nd,y Yves,67,Echallens,"1:28.34,4",(2325),SM/221.
-336,K6,14.0,Cos,nt,no Krislane,91,Vallorbe,"21.18,3",(7088),JF/125.
-337,SH2,21.0,Cos,nt,no Mario,69,Vallorbe,"1:16.54,9",(2326),SM/34.
-338,QH1,120.0,Cos,me,ti Fabio,72,Renens VD,"45.01,1",(4278),QM/306.
-339,SH2,408.0,Cos,a,alvatore,68,St-Aubin NE,"1:58.16,2",(2327),SM/1130.
-340,MH2,225.0,Cos,y,ierre-Andre,63,Conthey,"3:32.10,8",(384),MM/475.
-341,K2,18.0,Cos,a,uben,90,Prilly,"18.37,4",(7089),JM/135.
-342,SH2,80.0,Cos,as,Jesus,60,Prilly,"1:26.02,4",(2328),SM/155.
-343,SD1,78.0,Cos,az,Annick,71,Bussigny-Lausanne,"2:14.23,4",(3905),SF/334.
-344,MH4,174.0,Cos,ie,Jean,48,Renens VD,"4:29.26,7",(385),MM/1105.
-345,MH2,120.0,Cot,C,lisson Didier,61,F-Chaon,"3:14.53,0",(387),MM/232.
-346,QH2,51.0,Cot,et,Laurent,68,Geneve,"41.04,6",(5727),QM/145.
-347,K4,55.0,Cot,ie,Cedric,86,Echallens,"18.48,6",(6083),JM/152.
-348,SH2,244.0,Cot,ie,Francois,68,Gland,"1:38.30,1",(2330),SM/566.
-349,QH3,187.0,Cot,ie,Pierre,54,Bussigny-Lausanne,"58.54,8",(5670),QM/749.
-350,SH2,268.0,Cot,ie,Roland,60,Echallens,"1:40.23,5",(2331),SM/628.
-351,MH2,363.0,Cot,in,Pascal,62,F-St Priest,"3:59.55,1",(388),MM/898.
-352,QD2,180.0,Cot,A,exia,66,Le Mont-sur-Lausanne,"1:06.23,3",(5911),QF/451.
-353,QH1,190.0,Cou,ur,ier Jean-Marie,71,Morges,"53.15,4",(4279),QM/630.
-354,QH3,185.0,Cou,gn,t Jean-Luc,55,F-Aubusson,"58.24,6",(4280),QM/739.
-355,MH3,4.0,Cou,il,Jose-Luis,59,Courtaman,"2:46.24,0",(389),MM/33.
-356,MD2,56.0,Cou,on,Christel,64,F-Besancon,"4:18.50,7",(390),MF/127.
-357,MH3,249.0,Cou,an,Claude,52,F-Paris 15,"3:50.03,7",(391),MM/758.
-358,SH2,439.0,Cou,t,ean-Luc,62,Orbe,"2:08.28,2",(2332),SM/1243.
-359,QD2,88.0,Cou,ti,Genevieve,63,Onex,"55.46,1",(4281),QF/232.
-360,SD3,87.0,Cou,ti,e Martine,57,Vouvry,"2:05.29,8",(2333),SF/289.
-361,SH4,179.0,Cou,in,Albert,38,Panex,"1:55.44,3",(2334),SM/1076.
-362,SH4,217.0,Cou,in,Charles,45,Apples,"2:05.12,7",(6632),SM/1218.
-363,MH1,47.0,Cou,sa,Cyril,74,Villars-Ste-Croix,"3:17.11,4",(392),MM/254.
-364,RH,53.0,Cou,te,Jean-Marie,69,F-Grenade,"49.50,1",(8031),IH/60.
-365,MH2,355.0,Cou,en,eau Richard,60,F-Le Bourget du Lac,"3:58.46,4",(393),MM/880.
-366,SH1,22.0,Cou,o,ose,70,Marly,"1:21.35,8",(2337),SM/84.
-367,SH1,153.0,Cou,ur,er Simon,76,Lausanne,"1:46.03,9",(3772),SM/851.
-368,SH1,157.0,Cou,y,hilippe,71,Lausanne,"1:47.02,3",(3698),SM/879.
-369,MH4,188.0,Cra,do,John Roy,45,Clarens,"4:46.03,2",(394),MM/1162.
-370,RH,4.0,Cre,n,regory,76,F-Sardieu,"37.41,2",(8650),IH/4.
-371,MH1,65.0,Cre,al,az Frederic,71,F-Brenthonne,"3:32.12,4",(395),MM/476.
-372,SD1,75.0,Cre,eg,y Annie,74,Lausanne,"2:10.34,4",(3949),SF/322.
-373,RH,75.0,Cre,eg,y Danilo,72,Winterthur,"53.53,8",(8032),IH/82.
-374,K7,57.0,Cre,eg,y Laetitia,89,Lully VD,"23.07,4",(7090),JF/191.
-375,SD1,82.0,Cre,ig,y Valerie,71,Boussens,"2:16.54,5",(2338),SF/345.
-376,MH1,62.0,Cre,in,Romaric,73,F-Les Rousses,"3:30.57,6",(396),MM/455.
-377,K8,50.0,Cre,ta,Claudine,88,Savigny,"22.16,3",(6084),JF/161.
-378,QH1,105.0,Cre,ta,Jean-Laurent,83,Savigny,"44.15,0",(4282),QM/262.
-379,SH2,59.0,Cre,te,and Patrick,69,Saviese,"1:24.18,3",(2339),SM/115.
-380,SH3,198.0,Cre,te,and Pierre-Erne,54,Conthey,"1:42.45,5",(2340),SM/719.
-381,SH2,338.0,Cre,to,Benoit,68,Lausanne,"1:46.45,9",(2342),SM/871.
-382,SH4,128.0,Cre,oi,erat Abel,41,Movelier,"1:47.04,1",(7657),SM/880.
-383,SH3,235.0,Cri,in,l Dominique,56,Ollon VD,"1:45.29,7",(2343),SM/824.
-384,SH3,3.0,Cri,ti,no Francesco,57,Le Sentier,"1:15.16,4",(2344),SM/24.
-385,SH1,123.0,Cro,si,r Michel,74,Vallorbe,"1:40.08,7",(2345),SM/619.
-386,QH2,111.0,Cro,la,Bertrand,60,Echandens,"45.09,9",(5838),QM/314.
-387,MH3,84.0,Cro,et,Didier,51,Lucens,"3:19.55,5",(397),MM/292.
-388,MH3,316.0,Cro,et,Georges,50,Granges (Veveyse),"4:03.44,0",(398),MM/944.
-389,K4,68.0,Cro,ta,Gwenda,86,Denges,"20.17,5",(6693),JM/242.
-390,QD3,20.0,Cro,ta,Michele,50,Echandens-Denges,"51.04,9",(4285),QF/124.
-391,SH2,4.0,Cro,vi,ier Pascal,60,F-Amphion les Bains,"1:12.55,3",(2346),SM/8.
-392,QH2,4.0,Cro,et,Eric,67,F-Larringes,"33.15,2",(4286),QM/7.
-393,K2,75.0,Cru,ho,Florent,90,Prilly,"21.32,7",(7092),JM/299.
-394,K4,22.0,Cru,ho,Fabien,85,Echichens,"16.47,6",(6086),JM/46.
-395,SH3,44.0,Cru,ho,Francois,58,Echichens,"1:27.28,8",(2347),SM/188.
-396,K2,90.0,Cuc,ur,llo Raffael,90,Lausanne,"23.22,3",(7093),JM/347.
-397,MH2,305.0,Cuc,e,idier,61,F-Bonnevaux,"3:46.20,6",(399),MM/716.
-398,MH2,180.0,Cud,e,eon,63,Bossonnens,"3:26.28,8",(401),MM/383.
-399,SD3,104.0,Cue,de,Esther,59,Rolle,"2:17.26,0",(2348),SF/348.
-400,MH1,97.0,Cue,i,homas,75,Unterseen,"3:44.46,3",(402),MM/693.
-401,MH2,274.0,Cue,el,Guy,69,Arzier,"3:41.02,9",(403),MM/635.
-402,K4,48.0,Cul,er,i Daniel,86,Ecublens VD,"18.22,9",(6087),JM/117.
-403,K1,37.0,Cur,ho,Nicolas,92,Prilly,"21.32,4",(7094),JM/298.
-404,SH3,367.0,Cur,ho,Pierre,57,Mont-sur-Lausanne,"2:02.48,6",(2349),SM/1198.
-405,K9,37.0,Cur,e,oralie,86,Lausanne,"23.45,3",(6088),JF/209.
-406,SD1,60.0,Cur,en,Laurence,72,F-Vesoul,"2:00.43,6",(2350),SF/243.
-407,SH4,82.0,Cur,at,Roger,45,Rossens,"1:41.58,1",(2351),SM/683.
-408,MH2,251.0,Cur,os,Cesar,63,Geneve,"3:37.22,9",(405),MM/566.
-409,QD2,157.0,Cur,ch,llas Anne,64,F-Thonon les Bains,"1:02.08,3",(4287),QF/395.
-410,SH3,330.0,Cur,ch,llas Thierry,59,F-Thonon les Bains,"1:55.54,7",(2352),SM/1081.
-411,SH3,249.0,Cur,et,Francois,51,Renens VD,"1:46.32,5",(3751),SM/865.
-412,QD1,24.0,Cur,et,Saskia,81,Renens VD,"45.25,9",(5946),QF/43.
-413,RH,167.0,Cur,il,Philippe,65,Lausanne,"1:32.30,4",(8033),IH/181.
-414,RH,93.0,Cur,o,uigi,53,Lausanne,"58.29,2",(8034),IH/102.
-415,QD2,161.0,Cur,y,atherine,61,Lausanne,"1:02.29,3",(4288),QF/406.
-416,MH2,82.0,Cur,y,ean-Claude,62,Rose,"3:07.36,3",(406),MM/155.
-417,QD3,4.0,Cut,el,d Ana Maria,57,Fechy,"43.26,1",(4289),QF/24.
-418,QH3,35.0,Cut,el,d Jacques,57,Fechy,"41.49,1",(4290),QM/164.
-419,QD1,12.0,Cut,el,d Melanie,81,Fechy,"43.49,6",(4291),QF/26.
+,catégorie,rang,nom,an,pays/lieu,temps,doss,overall
+0,K1,2.0,Caaveiro Adrian,91,Ecublens VD,"18.11,9",(7607),JM/104.
+1,K7,5.0,Caaveiro Noemi,89,Ecublens VD,"18.15,6",(7807),JF/32.
+2,SH3,122.0,Cabiddu Demetrio,51,Le Sentier,"1:36.07,2",(2237),SM/474.
+3,MH2,237.0,Cabiran Olivier,65,F-Nice,"3:34.11,6",(1610),MM/517.
+4,MH2,236.0,Caetano Edouard,66,Courtaman,"3:34.07,9",(313),MM/515.
+5,MH1,149.0,Caillat Pierre-Francoi,78,Epalinges,"4:27.40,1",(1628),MM/1094.
+6,SD2,32.0,Cairns Rebecca,69,Founex,"1:45.17,6",(3959),SF/80.
+7,MH4,48.0,Calahorra Florencio,42,Prilly,"3:34.38,9",(315),MM/525.
+8,QH2,182.0,Calame Christian,64,Yverdon-les-Bains,"49.22,0",(4185),QM/488.
+9,SH3,55.0,Calame Daniel,58,Cheseaux-Lausanne,"1:29.07,8",(2238),SM/234.
+10,QH4,92.0,Calame Jean-Pierre,46,Savagnier,"58.30,8",(4186),QM/741.
+11,MH3,149.0,Calame Louis,52,Lausanne,"3:32.21,2",(316),MM/479.
+12,QH1,80.0,Calame Serge,71,Bruettisellen,"42.57,5",(4187),QM/208.
+13,QH1,68.0,Callandret Gael,78,Neuchatel,"42.03,7",(4188),QM/175.
+14,SD3,66.0,Caloz Antoinette,59,Sierre,"1:58.45,1",(2239),SF/219.
+15,QH1,3.0,Calvo Manuel,78,Geneve,"33.15,0",(4189),QM/6.
+16,MH3,233.0,Camandona Pierre,51,Lausanne,"3:45.57,5",(1710),MM/709.
+17,QD1,13.0,Camelo Nisa,82,Geneve,"43.52,7",(1837),QF/27.
+18,MD2,31.0,Camenzind Margrith,61,Goldau,"3:47.38,6",(317),MF/66.
+19,QH2,110.0,Campanico Helder,61,Lausanne,"45.08,3",(4192),QM/313.
+20,QD2,7.0,Campiche Cidele,68,Yverdon-les-Bains,"42.50,5",(4193),QF/19.
+21,QH2,159.0,Campiche Francisco,63,Yverdon-les-Bains,"47.49,0",(4194),QM/423.
+22,MH2,198.0,Campos Joao,62,Marly,"3:28.13,8",(318),MM/408.
+23,SH2,79.0,Campos Jose,62,Fribourg,"1:25.57,9",(2240),SM/154.
+24,QD2,140.0,Canal Alyda,69,Geneve,"1:00.06,7",(5975),QF/355.
+25,QH1,24.0,Canapini Steve,77,Lausanne,"38.12,0",(4196),QM/59.
+26,K6,2.0,Cand Eliah,91,Morges,"18.22,1",(7061),JF/37.
+27,QH2,168.0,Cand Jean-Philippe,61,Morges,"48.23,2",(4197),QM/449.
+28,MH2,293.0,Candreja Maurus,67,Ilanz,"3:44.32,2",(320),MM/685.
+29,MH1,74.0,Cannatta Fabio,75,Salvan,"3:36.48,1",(321),MM/557.
+30,SD1,11.0,Canninet M.,76,Igis,"1:35.52,5",(3916),SF/28.
+31,MH4,177.0,Cano Georges,36,F-St Priest,"4:31.44,1",(319),MM/1115.
+32,SH4,216.0,Cantin Bruno,47,Cheseaux-Lausanne,"2:04.56,8",(2241),SM/1215.
+33,SD3,43.0,Cantin Mireille,56,St-Aubin FR,"1:51.30,3",(2242),SF/145.
+34,SH3,274.0,Cantin Remy,56,St-Aubin FR,"1:48.39,9",(2243),SM/915.
+35,K10,13.0,Cantin Sylvie,83,St-Aubin FR,"20.19,4",(6051),JF/88.
+36,MH2,92.0,Canton Jose,62,Gland,"3:09.13,5",(322),MM/173.
+37,QH2,90.0,Canzian Silvano,68,Ostermundigen,"44.21,2",(4198),QM/265.
+38,MH3,231.0,Capelli Marc,58,F-St-Laurent,"3:45.29,0",(323),MM/705.
+39,QD1,151.0,Capmas Gaelle,77,Lausanne,"1:09.37,0",(4199),QF/474.
+40,MH2,59.0,Capretti Gino,61,I-San Benedetto del,"3:01.40,4",(324),MM/110.
+41,QH2,103.0,Capt Alain De La Tour-,66,La Tour-de-Peilz,"44.55,1",(4200),QM/296.
+42,K8,48.0,Capt Charlotte,87,Lausanne,"21.59,9",(6052),JF/158.
+43,SD1,70.0,Capt Fiona,70,Leysin,"2:05.58,4",(2244),SF/292.
+44,K2,108.0,Capt Maxime,90,Lausanne,"25.12,8",(7062),JM/397.
+45,SD2,101.0,Carbonell Nicole,63,St-Sulpice VD,"2:02.10,0",(3918),SF/263.
+46,K9,21.0,Cardinaux Laure,86,Lausanne,"20.10,7",(6801),JF/83.
+47,SD2,34.0,Cardinaux Liliane,60,Lausanne,"1:45.35,2",(3695),SF/83.
+48,MH3,242.0,Cardoso Dos Santos Jor,56,F-evian les Bains,"3:48.16,9",(325),MM/737.
+49,SH4,199.0,Caretti Giancarlo,37,F-San Giovanni Persi,"2:00.17,0",(2245),SM/1159.
+50,SH3,323.0,Caria Francois,53,F-Lomme,"1:53.50,2",(2246),SM/1044.
+51,MH2,254.0,Carideo Vincenzo,60,I-Guardiagrele,"3:37.50,9",(1665),MM/578.
+52,QD2,73.0,Carita Chantal,67,Froideville,"54.10,4",(4201),QF/191.
+53,MH2,228.0,Carle Didier,62,F-Grand Couronne,"3:32.53,6",(326),MM/489.
+54,K1,59.0,Carlen Francois,91,Lausanne,"23.51,9",(7063),JM/361.
+55,K1,60.0,Carlen Magnus,92,Lausanne,"23.54,6",(7613),JM/362.
+56,K2,118.0,Carlen Vincent,89,Lausanne,"28.22,8",(7064),JM/433.
+57,MH2,10.0,Carloz Didier,66,F-Ville la Grand,"2:36.37,7",(327),MM/22.
+58,QD4,14.0,Carme Andree,45,Geneve,"55.49,2",(4202),QF/235.
+59,QH3,68.0,Carme Francis,50,Petit-Lancy,"45.21,8",(4203),QM/321.
+60,QD1,87.0,Carnahan Michaun,71,Geneve,"55.28,1",(5968),QF/223.
+61,QH2,137.0,Caron Bertrand,66,F-Lyon 07,"46.49,2",(4204),QM/372.
+62,MH3,171.0,Carpentier Etienne,59,F-CALUIRE,"3:35.24,2",(329),MM/536.
+63,QH2,87.0,Carpin-Walthert Lauren,69,Geneve,"44.01,9",(4205),QM/252.
+64,SH3,247.0,Carrard Dominique,59,Renens VD,"1:46.19,1",(2248),SM/859.
+65,MH3,148.0,Carrard Patrick,57,Renens VD,"3:32.10,4",(330),MM/474.
+66,MD2,53.0,Carrasco Brigitte,65,F-Bezons,"4:13.08,3",(331),MF/116.
+67,SD1,71.0,Carrasco Rachele,74,Monthey,"2:07.49,5",(3910),SF/308.
+68,QH3,2.0,Carre Christian,59,F-St Symphorien d'Oz,"34.53,9",(5775),QM/17.
+69,QH3,150.0,Carrel Jean-Luc,57,Lausanne,"53.11,9",(4206),QM/628.
+70,SD2,132.0,Carriero Patrizia,65,Lausanne,"2:18.53,0",(3978),SF/352.
+71,MH2,300.0,Carrouee Bruno,65,F-Le Grand Bornand,"3:45.25,3",(332),MM/704.
+72,MH4,125.0,Cartier Beat,46,Cham,"4:03.50,3",(1984),MM/945.
+73,QH3,6.0,Carton Said,58,Geneve,"35.51,0",(4209),QM/28.
+74,QH1,143.0,Carvajalino Juan,82,Vetroz,"47.45,0",(4210),QM/418.
+75,MH3,187.0,Carvalheira Manuel,55,Lausanne,"3:38.02,0",(334),MM/581.
+76,QD2,131.0,Carvalho Fernanda,69,Marly,"59.06,3",(4211),QF/338.
+77,MH1,31.0,Carvalho Jean,71,Les Diablerets,"3:07.25,7",(335),MM/151.
+78,MH3,381.0,Cash David,55,Blonay,"4:46.05,8",(336),MM/1163.
+79,SH2,393.0,Casoni Dino,63,I-Cento,"1:56.02,6",(2249),SM/1086.
+80,MH4,130.0,Caspari Otto,37,D-Bielefeld,"4:05.41,8",(337),MM/959.
+81,SH2,91.0,Cassetta Vittorio,65,Ecublens VD,"1:27.29,4",(3659),SM/189.
+82,SH3,17.0,Castellani Fabrizio,59,Fleurier,"1:21.50,4",(1993),SM/87.
+83,SH2,420.0,Castello Mario,63,Troinex,"2:00.43,9",(2252),SM/1169.
+84,SH2,308.0,Castro J. Francois,68,Renens VD,"1:43.38,3",(2253),SM/756.
+85,QH4,94.0,Cataldo Antonio,39,Biel/Bienne,"58.46,5",(4212),QM/746.
+86,RH,67.0,Cathelaz Alain,64,Aigle,"53.29,8",(8604),IH/74.
+87,QH2,194.0,Cattin Raphael,66,Ecublens VD,"50.07,7",(4213),QM/524.
+88,SH1,48.0,Caucino Roberto,71,I-Cossato,"1:28.14,7",(3766),SM/211.
+89,QD3,26.0,Cavagliotti Dolores,59,Les Avanchets,"52.32,8",(4214),QF/156.
+90,K4,43.0,Cavagliotti Lorris,86,Les Avanchets,"18.09,5",(6053),JM/103.
+91,QH2,115.0,Cavalera Danilo,64,Blonay,"45.23,4",(5792),QM/322.
+92,MH2,445.0,Cavaleri Olivier,62,Lutry,"4:54.44,8",(340),MM/1187.
+93,QH3,117.0,Cavat Bernard,50,Penthalaz,"49.53,2",(4215),QM/515.
+94,MH2,248.0,Cavcino Stefano,64,I-Cossato,"3:36.28,6",(1706),MM/551.
+95,SH1,197.0,Cavin Gerald,78,Pully,"2:04.48,1",(7673),SM/1214.
+96,MH4,102.0,Cavin Jean-Daniel,35,La Chaux-de-Fonds,"3:53.09,9",(341),MM/808.
+97,MH2,222.0,Cavin Jean-Philippe,61,La Chaux-de-Fonds,"3:31.28,4",(342),MM/461.
+98,SD2,91.0,Cavin Valerie,69,Chevroux,"2:00.38,2",(2255),SF/240.
+99,K7,76.0,Cay Tugay,90,Renens VD,"26.33,9",(7065),JF/246.
+100,K3,44.0,Cecco Sawwaf Ascanio,88,Lausanne,"18.31,6",(6054),JM/127.
+101,K4,44.0,Cecco Sawwaf Giandomen,85,Lausanne,"18.12,4",(6055),JM/106.
+102,K6,16.0,Cecco Sawwaf Lucia,91,Lausanne,"21.34,5",(7066),JF/140.
+103,SH4,11.0,Cellucci Lorenzo,47,I-Rapino,"1:27.06,1",(1667),SM/181.
+104,SH1,72.0,Cellucci Tony,76,I-Rapino,"1:31.59,0",(3656),SM/327.
+105,QD1,136.0,Cengelli Feride,76,St-Prex,"1:02.59,5",(4217),QF/414.
+106,QD1,135.0,Cengelli Semanur,82,St-Prex,"1:02.59,3",(4218),QF/413.
+107,MH3,48.0,Cerutti Marco,52,Bellinzona,"3:11.47,5",(343),MM/202.
+108,SH3,99.0,Cevey Pierre,54,Prilly,"1:34.16,5",(2256),SM/403.
+109,K4,70.0,Chabloz Arthis,86,Ferreyres,"21.21,2",(6057),JM/292.
+110,SH3,384.0,Chabloz Daniel,55,Echandens-Denges,"2:09.02,0",(2257),SM/1250.
+111,SH3,65.0,Chabloz Eric,59,Collombey,"1:30.13,6",(2258),SM/271.
+112,MH3,129.0,Chabod Lionel,50,F-St Antoine,"3:28.37,5",(345),MM/418.
+113,QH2,73.0,Chaboudez Alain,67,Lausanne,"42.52,1",(5755),QM/204.
+114,QH4,22.0,Chaignat Louis,41,Sion,"46.38,5",(4221),QM/363.
+115,QH2,271.0,Chalancon Patrick,62,F-Gex,"1:03.30,8",(4222),QM/786.
+116,QH2,6.0,Challier Jerome,69,F-La Roche sur Foron,"33.50,0",(4223),QM/10.
+117,RD,7.0,Chamay Marie-Dominique,69,F-Annecy,"51.33,9",(8822),IF/11.
+118,RD,42.0,Chambaz Celine,75,Lausanne,"1:16.27,4",(8818),IF/49.
+119,RD,46.0,Chambaz Katia,70,Lausanne,"1:18.25,3",(8817),IF/54.
+120,SH2,239.0,Chamorel Philippe,60,Chernex,"1:38.23,8",(7627),SM/560.
+121,RH,121.0,Champendal Xavier,71,Mont-sur-Rolle,"1:05.45,6",(8026),IH/134.
+122,SH4,22.0,Champfailly Yves,41,Cornaux NE,"1:30.11,0",(2260),SM/269.
+123,SH4,204.0,Chanet Claude,46,F-Vesoul,"2:00.42,6",(2261),SM/1166.
+124,SH2,110.0,Chanez Jean-Marie,60,Brent,"1:29.11,6",(2262),SM/235.
+125,MH3,239.0,Chanoit Bernard,52,F-Fleurey les Favern,"3:47.39,4",(346),MM/731.
+126,QH1,130.0,Chanton Georges,80,St. Niklaus VS,"46.04,6",(4224),QM/350.
+127,SH1,18.0,Chanton Philippe,73,St. Niklaus VS,"1:19.23,5",(2263),SM/54.
+128,QH3,121.0,Chanu Gerard,50,F-St Maur des Fosses,"49.57,8",(4225),QM/520.
+129,SD3,64.0,Chaouachi Amel,54,Geneve 1,"1:58.16,5",(2264),SF/210.
+130,MH3,216.0,Chapalay Jacques,52,Cully,"3:42.55,9",(347),MM/662.
+131,K2,28.0,Chapalay Michael,90,Lausanne,"18.54,9",(7603),JM/163.
+132,QH2,108.0,Chaperon Jean-Daniel,63,Yverdon-les-Bains,"45.00,7",(4226),QM/305.
+133,QH1,174.0,Chappatte Raphael,74,La Chaux-de-Fonds,"50.53,6",(4227),QM/562.
+134,QH3,194.0,Chappuis Alain,55,Prevonloup,"1:02.13,3",(5671),QM/778.
+135,SH2,294.0,Chappuis Alain,67,Crissier-Village,"1:42.37,4",(2265),SM/708.
+136,SH3,333.0,Chappuis Didier,57,Penthalaz,"1:56.01,2",(2266),SM/1085.
+137,QH3,83.0,Chappuis Guy-Olivier,56,Vevey,"47.18,8",(5685),QM/400.
+138,MH2,115.0,Chappuis Jean-Marc,68,Rivaz,"3:13.41,9",(348),MM/219.
+139,MH2,129.0,Chapuis Jacques,65,Feldmeilen,"3:17.23,6",(1705),MM/258.
+140,RH,108.0,Chapuis Oliver,69,Lausanne,"1:00.59,2",(8616),IH/119.
+141,SH4,23.0,Chapuis Raymond,43,F-La Seauve sur Seme,"1:30.28,4",(2267),SM/275.
+142,MH2,194.0,Charbon Christian,67,St-Saphorin-Morges,"3:27.50,2",(349),MM/402.
+143,K8,9.0,Chariatte Aurelie,88,Val-d'Illiez,"18.32,0",(6058),JF/42.
+144,MD2,48.0,Charmillot Jocelyne,68,Vicques,"4:04.34,8",(350),MF/103.
+145,SD4,32.0,Charpa Chantal,44,F-St Genis Laval,"2:17.09,1",(2269),SF/347.
+146,SH4,110.0,Charpentier Jean-Louis,37,F-Gaillard,"1:44.40,1",(2270),SM/794.
+147,QH1,15.0,Charretier Didier,73,F-St Galmier,"36.58,2",(4228),QM/43.
+148,SH1,12.0,Charretier Philippe,71,F-St Galmier,"1:17.33,7",(2271),SM/40.
+149,K5,4.0,Charriere Christophe,83,Vuibroye,"15.36,4",(6059),JM/12.
+150,K5,3.0,Charriere Jerome,84,Vuibroye,"15.32,7",(6060),JM/11.
+151,K8,22.0,Charriere Melinda,88,Vuibroye,"19.51,6",(6061),JF/76.
+152,RD,8.0,Charvier Laurence,64,F-Menthonnex sous Cl,"53.47,1",(8853),IF/12.
+153,RD,4.0,Charvier Nicole,62,F-Meythet,"48.44,8",(8825),IF/7.
+154,MH3,190.0,Chassaing Andre,57,F-Thones,"3:38.29,5",(351),MM/590.
+155,SH3,291.0,Chassard Michel,51,F-Golbey,"1:50.06,6",(2272),SM/955.
+156,QH2,126.0,Chasson Frederic,66,F-Lyon 02,"46.01,2",(4229),QM/347.
+157,SH3,123.0,Chassot Michel,55,Lausanne,"1:36.11,4",(3746),SM/477.
+158,K3,77.0,Chastonay Alexis,88,ROMANEL-S-LAUSANN,"19.43,1",(6062),JM/223.
+159,K5,10.0,Chastonay Francois,84,Romanel-s-Lausanne,"17.36,4",(6063),JM/76.
+160,K1,73.0,Chaubert Jeremie,91,Les Cullayes,"24.52,4",(7067),JM/389.
+161,MH4,17.0,Chaut Rene,47,F-St Galmier,"3:19.07,4",(352),MM/275.
+162,SH3,263.0,Chauvin Denis,51,Lausanne,"1:47.40,9",(3640),SM/890.
+163,SH3,375.0,Chavagne Jean-Pierre,50,F-St Priest,"2:05.56,2",(2273),SM/1223.
+164,QD1,101.0,Chenaux Anne-Catherine,70,Geneve,"57.13,9",(4231),QF/270.
+165,QH1,43.0,Chenaux David,76,Renens VD,"39.45,0",(5784),QM/111.
+166,SH4,136.0,Chenuz Jean-Pierre,47,St-Prex,"1:47.56,9",(2274),SM/899.
+167,QD3,31.0,Cherbuin Marylou,55,Payerne,"53.12,8",(4232),QF/171.
+168,QH3,33.0,Cherix Ronald,57,Aigle,"41.37,4",(4233),QM/157.
+169,K2,14.0,Cherix Samuel,89,Aigle,"18.14,9",(7068),JM/109.
+170,K1,3.0,Cherpillod Dave,91,Froideville,"18.23,1",(7069),JM/118.
+171,QH3,10.0,Cherpillod Herve,57,Prilly,"37.54,8",(4234),QM/53.
+172,QH2,66.0,Cherpillod Jacques,62,Emmenbruecke,"42.19,8",(5722),QM/183.
+173,SH2,206.0,Chervette Herve,68,F-Ste Genevieve des,"1:36.00,9",(2276),SM/466.
+174,SH2,267.0,Chesaux Christian,60,Romanel-s-Lausanne,"1:40.17,2",(2277),SM/625.
+175,QD2,57.0,Chesaux Genevieve,63,Romanel-s-Lausanne,"52.58,3",(4235),QF/165.
+176,K9,35.0,Chesaux Valerie,86,Romanel-s-Lausanne,"22.57,2",(6065),JF/185.
+177,SD2,93.0,Chesaux Veronique,66,St-Maurice,"2:01.10,3",(2278),SF/248.
+178,QD2,46.0,Cheseaux Liseby,63,Bussigny-Lausanne,"51.44,2",(4236),QF/144.
+179,QH3,23.0,Chetelat Bernard,56,Pully,"39.21,7",(5692),QM/102.
+180,SH3,15.0,Chetelat Pierre-Alain,57,Saignelegier,"1:21.23,1",(2279),SM/82.
+181,MH2,321.0,Chevalier Pascal,64,F-Lussac les eglises,"3:49.36,4",(354),MM/752.
+182,K7,30.0,Chevalley Celia,90,Lausanne,"20.54,2",(7071),JF/109.
+183,K7,71.0,Chevalley Chloe,89,Granges (Veveyse),"25.12,0",(7072),JF/236.
+184,SH3,136.0,Chevalley Christian,51,Lausanne,"1:37.01,7",(2280),SM/514.
+185,SH3,164.0,Chevalley Christian,56,Bussy-Chardonney,"1:39.54,7",(2281),SM/608.
+186,QH2,131.0,Chevalley Jean-Francoi,61,Villars-le-Comte,"46.18,1",(4237),QM/358.
+187,K1,38.0,Chevalley Jeremie,91,Granges (Veveyse),"21.37,2",(7074),JM/300.
+188,QH1,78.0,Chevalley Maxime,83,Lausanne,"42.47,0",(4239),QM/200.
+189,MH2,114.0,Chevalley Pascal,61,Lausanne,"3:13.01,4",(355),MM/214.
+190,MH2,23.0,Chevanne Jean-Baptiste,63,F-La Loye,"2:48.44,2",(353),MM/41.
+191,QH1,101.0,Chiaradia Serge,74,Yverdon-les-Bains,"44.12,2",(4240),QM/258.
+192,SH2,415.0,Chiari Massimo,63,Lausanne,"1:59.53,0",(2286),SM/1154.
+193,K6,55.0,Chiari-Monod Maeva,92,Lausanne,"29.23,1",(7076),JF/282.
+194,MH2,139.0,Chiovini Stephane,69,Marchissy,"3:19.38,1",(356),MM/284.
+195,MH3,59.0,Chipp Paul-Etienne,59,F-Gaillard,"3:15.23,9",(357),MM/237.
+196,QH2,233.0,Chiriatti Oscar,69,Morges,"54.22,8",(4241),QM/661.
+197,SH2,423.0,Chironi Donato,60,Cheseaux-Lausanne,"2:01.07,6",(2287),SM/1175.
+198,QH1,206.0,Chitose Tomoyuki,82,Leysin,"58.32,8",(4242),QM/742.
+199,SH2,227.0,Chittaro Gianni,65,Morges,"1:37.40,2",(2288),SM/533.
+200,QD1,114.0,Choffat Anne-Julie,77,Echichens,"58.46,6",(4243),QF/325.
+201,SH3,285.0,Chollet Alain,51,Lausanne,"1:49.22,7",(2289),SM/935.
+202,QH3,4.0,Chollet Andre,57,Tolochenaz,"35.21,3",(4244),QM/21.
+203,MH3,72.0,Chollet Eddy,55,Maracon,"3:18.40,6",(358),MM/269.
+204,SH2,125.0,Chollet Fabrice,66,Apples,"1:29.54,1",(2290),SM/263.
+205,RH,112.0,Chollon Pascal,63,Lausanne,"1:02.44,2",(8606),IH/123.
+206,MH3,266.0,Christe Joseph,51,Lausanne,"3:53.42,8",(359),MM/814.
+207,QD3,91.0,Christe Samira,59,Lausanne,"1:03.35,4",(5916),QF/421.
+208,QH2,174.0,Christen Francois,69,Geneve,"48.47,8",(4245),QM/466.
+209,K7,44.0,Christen Lydia,90,St-Cergue,"22.21,2",(7077),JF/163.
+210,SH1,204.0,Christen Michael,78,Davos Platz,"2:23.12,4",(2291),SM/1288.
+211,K8,21.0,Christen Virginie,88,St-Cergue,"19.50,1",(6067),JF/75.
+212,K6,64.0,Christin Nadia,91,F-AMPHION,"31.31,9",(7078),JF/294.
+213,RH,31.0,Christin Olivier,64,Muraz (Collombey),"46.47,0",(8028),IH/36.
+214,QH3,71.0,Christin Rene,56,F-Amphion les Bains,"45.51,2",(4247),QM/339.
+215,QD2,69.0,Christina Nadine,61,Lutry,"54.06,2",(4248),QF/187.
+216,SH3,80.0,Christinat Andre,59,Lutry,"1:32.05,3",(2292),SM/329.
+217,QD3,89.0,Christinat Martine,59,Le Brassus,"1:02.53,8",(4249),QF/412.
+218,SH2,181.0,Christinet Alain,65,Neuchatel,"1:34.14,5",(2293),SM/400.
+219,MH2,278.0,Chuard Daniel,63,St-Legier-Chiesaz,"3:41.21,8",(360),MM/643.
+220,K2,105.0,Chuat Romain,90,Etagnieres,"24.51,5",(7079),JM/387.
+221,MH1,2.0,Chumba Patrick,74,KEN-Kenya,"2:13.25,4",(10),MM/2.
+222,SH2,214.0,Ciampi Gerard,69,Lausanne,"1:36.35,2",(2295),SM/492.
+223,MH3,237.0,Ciceri Giorgio,52,Bellinzona,"3:46.54,0",(361),MM/719.
+224,QD2,77.0,Cid Marie,69,Renens VD,"54.25,6",(4250),QF/195.
+225,MH2,224.0,Circus Alvawce,60,F-St Priest,"3:32.09,6",(1720),MM/472.
+226,K7,56.0,Cisterna Daniela,90,Crissier,"23.04,9",(7081),JF/190.
+227,SH3,170.0,Cisterna Jorge,57,Crissier,"1:40.39,9",(2297),SM/636.
+228,SH2,285.0,Ciullo Cosimo,61,Corcelles NE,"1:41.55,5",(2298),SM/677.
+229,QH1,199.0,Clarinval Valery,75,Preverenges,"54.39,2",(4252),QM/669.
+230,SD4,37.0,Clark Margaret,35,GB-HA8 8JU Middlesse,"2:32.06,9",(2299),SF/377.
+231,K4,11.0,Claus Davy,85,F-Reignier,"16.00,6",(6625),JM/24.
+232,K7,35.0,Clavadetscher Audrey,90,Pully,"21.26,4",(7082),JF/132.
+233,QD3,88.0,Clavadetscher Carole,59,Pully,"1:02.28,1",(4253),QF/405.
+234,K3,66.0,Clavadetscher Luca,88,Pully,"19.11,9",(6071),JM/192.
+235,K1,68.0,Clavadetscher Philippe,92,Pully,"24.10,8",(7083),JM/372.
+236,MH3,173.0,Clavaud Gilles,58,F-L'Isle Jourdain,"3:36.07,3",(365),MM/546.
+237,SH4,170.0,Clavel Jean-Francois,38,Echandens-Denges,"1:54.25,5",(2300),SM/1051.
+238,MH3,385.0,Clavien Daniel,58,Miege,"4:50.22,5",(366),MM/1177.
+239,SH2,379.0,Clavigo Louis,66,Lausanne,"1:53.48,1",(3670),SM/1042.
+240,SH3,33.0,Clenin Bernhard,52,Biel/Bienne,"1:25.13,7",(2301),SM/137.
+241,MH2,433.0,Clerc Bertrand,66,Villars-sur-Glane,"4:39.06,9",(367),MM/1138.
+242,SD4,30.0,Clerc Colette,41,Chateau-d'Oex,"2:14.56,7",(3947),SF/336.
+243,QH1,13.0,Clerc Frederic,72,Villars-sur-Glane,"36.45,7",(4255),QM/39.
+244,K3,85.0,Clerc Gaspard,88,Villars-sur-Ollon,"20.26,3",(6072),JM/247.
+245,QH3,56.0,Clerc Jean-Bernard,59,Muraz (Collombey),"44.08,6",(4256),QM/256.
+246,MH4,148.0,Clerc Joseph,49,F-Besancon,"4:13.23,1",(368),MM/1022.
+247,SH1,110.0,Clerc Olivier,71,Monthey,"1:37.29,0",(2302),SM/528.
+248,RH,81.0,Clerc Thierry,64,St-Cergue,"56.24,5",(8029),IH/90.
+249,MH2,112.0,Clivaz Christophe,69,Chavannes-Renens,"3:12.37,3",(369),MM/211.
+250,QH3,179.0,Cloos Raymond,51,ROMANEL,"57.23,8",(5807),QM/728.
+251,MH3,137.0,Closuit Bertrand,56,Martigny,"3:30.53,8",(1608),MM/454.
+252,QH3,201.0,Clot Eric,57,Baulmes,"1:16.10,4",(4257),QM/812.
+253,RH,133.0,Clot Paul,34,Carrouge VD,"1:09.33,7",(8030),IH/147.
+254,QD3,109.0,Cmevin Gaby,57,F-Urschenheim,"1:14.46,7",(5929),QF/484.
+255,MH3,312.0,Cmevin Jean Pierre,52,F-Urschenheim,"4:03.18,7",(1646),MM/935.
+256,SH3,124.0,Coates Andrew,56,GB-NR30 1QG Norfolk,"1:36.21,2",(2303),SM/483.
+257,QH2,7.0,Cobos Pascal,61,Bevaix,"33.53,6",(4258),QM/11.
+258,SH2,241.0,Cochand Philippe,64,Grandson,"1:38.27,7",(2305),SM/562.
+259,QH2,46.0,Cochet Gilles,60,F-Thyez,"40.28,3",(4259),QM/129.
+260,MH3,327.0,Coester Fritz,54,Wimmis,"4:07.21,8",(370),MM/983.
+261,K3,62.0,Coester Julian,88,Wimmis,"19.05,5",(6073),JM/179.
+262,K2,1.0,Coester Philipp,89,Wimmis,"16.14,3",(7084),JM/29.
+263,QH1,183.0,Coestev Tobias,84,Wimmis,"52.28,5",(4260),QM/603.
+264,QH2,161.0,Colangelo Paolo,69,Bussigny-Lausanne,"47.55,5",(5803),QM/428.
+265,MD2,7.0,Colaone Christine,62,Bettens,"3:20.43,4",(371),MF/15.
+266,MH4,22.0,Colaone Gianfranco,48,Bettens,"3:20.42,5",(372),MM/303.
+267,K3,114.0,Colella Andre,88,Pully,"25.36,3",(6074),JM/401.
+268,MH3,349.0,Coley Patrice,57,F-Besancon,"4:19.10,5",(1919),MM/1062.
+269,MH3,226.0,Colin Michel,59,Massongex,"3:44.55,0",(1615),MM/694.
+270,SH3,127.0,Collard Yves,56,F-Frotey les Vesoul,"1:36.30,4",(2306),SM/489.
+271,K2,5.0,Collaud Cedric,89,Romanel-s-Lausanne,"16.59,5",(7085),JM/57.
+272,QH2,140.0,Colli Claude,62,Epalinges,"46.57,7",(5629),QM/377.
+273,K9,10.0,Colliard Aude,86,La Tour-de-Treme,"17.46,5",(6075),JF/22.
+274,K6,13.0,Colliard Julie,92,La Tour-de-Treme,"21.16,5",(7086),JF/122.
+275,K8,2.0,Colliard Laura,88,La Tour-de-Treme,"17.14,3",(6076),JF/13.
+276,SH1,200.0,Collioud Daniel,71,Lausanne,"2:10.07,2",(3681),SM/1258.
+277,SH3,149.0,Colloud Bernard,52,F-Thonon les Bains,"1:38.16,8",(2307),SM/556.
+278,SH2,164.0,Colombo Corrado,65,I-Novara,"1:33.12,2",(3793),SM/363.
+279,SH2,364.0,Colombo Pietro,68,I-Como,"1:50.57,2",(2308),SM/978.
+280,SD3,90.0,Colson Dominique,56,F-Magny Vernois,"2:07.37,2",(2309),SF/304.
+281,MH3,101.0,Colson Pierre,52,F-Magny Vernois,"3:23.18,0",(374),MM/337.
+282,MH1,146.0,Combet Laurent D.G.,73,F-Chatenois les Forg,"4:22.52,1",(376),MM/1077.
+283,MH2,6.0,Comina Didier,67,Sierre,"2:33.50,5",(377),MM/18.
+284,QH1,22.0,Comte Danilo,75,Pully,"38.05,1",(4261),QM/57.
+285,QH2,78.0,Comte Pierre,64,Biel/Bienne,"43.15,8",(4262),QM/217.
+286,SD4,31.0,Conaghan Isabel,40,GB-TS10 2HX Redcar,"2:16.08,6",(2310),SF/341.
+287,MH2,439.0,Conaghan James,68,GB-NE2 2PJ Newcastle,"4:46.37,2",(378),MM/1166.
+288,SH4,62.0,Conaghan Jim,36,GB-TS10 2HX Redcar,"1:39.13,1",(2311),SM/587.
+289,SD3,103.0,Conio Laurette,56,F-Jougne,"2:17.02,1",(2312),SF/346.
+290,SH4,58.0,Connaissa Gerard,48,Romanel-sur-Lausanne,"1:38.14,9",(3665),SM/555.
+291,MH2,408.0,Conne Serge,61,Vuiteboeuf,"4:18.49,9",(379),MM/1059.
+292,SH4,99.0,Constantin Alexandre,36,Arbaz,"1:43.39,1",(2313),SM/757.
+293,QH4,37.0,Constantin Jean-Bernar,46,Petit-Lancy,"49.00,5",(4263),QM/477.
+294,SH3,126.0,Constantin Mario,52,Zermatt,"1:36.26,5",(2314),SM/486.
+295,QH2,209.0,Constantin Pascal,64,Lausanne,"51.36,5",(4264),QM/581.
+296,QD3,59.0,Conti Helene,57,Ecublens VD,"58.05,3",(4265),QF/301.
+297,SH3,20.0,Conti Pascal,53,Ecublens VD,"1:22.55,7",(2315),SM/99.
+298,QH2,193.0,Conus Dominique,62,Bionnens,"50.01,2",(5801),QM/523.
+299,QH1,6.0,Conus Thierry,76,Vuadens,"34.52,3",(4266),QM/16.
+300,SD2,79.0,Converset Christiane,62,F-Cranves Sales,"1:58.25,3",(6633),SF/212.
+301,QH2,214.0,Coppey Pascal,64,Lausanne,"52.11,6",(5680),QM/594.
+302,MH1,48.0,Coquard Ludovic,78,F-St Vaury,"3:17.27,9",(380),MM/259.
+303,SD1,28.0,Coradazzi Sylvie,72,Moudon,"1:47.21,8",(2316),SF/106.
+304,QD2,41.0,Coradi Carine,69,Les Charbonnieres,"51.15,4",(4267),QF/130.
+305,QH4,65.0,Corbaz Jean-Charles,47,Echandens-Denges,"53.29,9",(5605),QM/637.
+306,QH1,73.0,Corbaz Sylvain,70,Pully,"42.32,9",(5663),QM/190.
+307,SD2,102.0,Cordasco Flavia,68,Le Vaud,"2:02.12,8",(2317),SF/264.
+308,QD2,76.0,Cordey Christine,69,Carouge GE,"54.24,1",(4268),QF/194.
+309,QD2,37.0,Cordey Martine,60,JOUXTENS,"51.04,8",(4269),QF/123.
+310,SD2,107.0,Cordey Monica,67,La Conversion,"2:02.40,9",(7858),SF/271.
+311,QH2,13.0,Corga Henrique,66,Geneve,"35.37,7",(5779),QM/23.
+312,MH3,184.0,Corna Franco,57,I-Ciserano,"3:37.29,6",(1699),MM/570.
+313,SH4,107.0,Cornaro Eric,46,Echandens-Denges,"1:44.16,7",(2318),SM/779.
+314,SH3,366.0,Cornaz Pierre-Alain,53,Lausanne,"2:02.43,7",(2319),SM/1197.
+315,QH2,15.0,Cornelis Marc,68,Geneve,"36.16,0",(5778),QM/33.
+316,QD2,156.0,Cornelius Francoise,61,Paudex,"1:01.53,5",(4270),QF/393.
+317,QH3,173.0,Cornelius Robin,56,Paudex,"56.32,3",(4271),QM/710.
+318,MH3,55.0,Cornes Iain,56,Montricher,"3:13.45,2",(381),MM/220.
+319,MD4,17.0,Cornioley Mireille,42,Vevey,"4:41.13,7",(382),MF/152.
+320,SD2,68.0,Cornu Catherine,68,Geneve,"1:55.47,5",(2320),SF/188.
+321,SH2,321.0,Cornu Christophe,63,Pully,"1:44.57,1",(3699),SM/804.
+322,MH2,442.0,Cornu Daniel,60,Lausanne,"4:48.45,2",(383),MM/1174.
+323,SH2,390.0,Cornu Pascal,67,Geneve,"1:55.49,3",(2321),SM/1077.
+324,QD3,45.0,Cornuz Beatrice,50,Morges,"56.29,9",(4272),QF/250.
+325,QD1,122.0,Cornuz Vanessa,77,Villars-sous-Yens,"1:00.36,0",(4273),QF/366.
+326,K8,30.0,Corrales Vanessa,88,Lausanne,"20.49,3",(6078),JF/105.
+327,QH1,28.0,Corset Laurent,73,Crans-pres-Celigny,"38.35,4",(4275),QM/70.
+328,QH2,42.0,Cortazzo Francesco,68,Prilly,"39.34,4",(4276),QM/106.
+329,K9,8.0,Cortese Miryam,86,St-Maurice,"17.29,1",(6079),JF/18.
+330,QH4,23.0,Corthay Andre,45,Crissier,"46.39,8",(4277),QM/366.
+331,K3,98.0,Corthesy Christophe,87,La Chaux-de-Fonds,"21.40,2",(6080),JM/303.
+332,K4,27.0,Corthesy Matthieu,86,La Chaux-de-Fonds,"17.01,7",(6081),JM/59.
+333,K3,63.0,Corthesy Pierre,88,La Chaux-de-Fonds,"19.05,7",(6082),JM/180.
+334,SD1,13.0,Corti Sheba,79,Neuchatel,"1:37.57,0",(7853),SF/37.
+335,SH2,105.0,Cosandey Yves,67,Echallens,"1:28.34,4",(2325),SM/221.
+336,K6,14.0,Cosentino Krislane,91,Vallorbe,"21.18,3",(7088),JF/125.
+337,SH2,21.0,Cosentino Mario,69,Vallorbe,"1:16.54,9",(2326),SM/34.
+338,QH1,120.0,Cosimetti Fabio,72,Renens VD,"45.01,1",(4278),QM/306.
+339,SH2,408.0,Cossa Salvatore,68,St-Aubin NE,"1:58.16,2",(2327),SM/1130.
+340,MH2,225.0,Cossy Pierre-Andre,63,Conthey,"3:32.10,8",(384),MM/475.
+341,K2,18.0,Costa Ruben,90,Prilly,"18.37,4",(7089),JM/135.
+342,SH2,80.0,Costas Jesus,60,Prilly,"1:26.02,4",(2328),SM/155.
+343,SD1,78.0,Costaz Annick,71,Bussigny-Lausanne,"2:14.23,4",(3905),SF/334.
+344,MH4,174.0,Costier Jean,48,Renens VD,"4:29.26,7",(385),MM/1105.
+345,MH2,120.0,Cote Colisson Didier,61,F-Chaon,"3:14.53,0",(387),MM/232.
+346,QH2,51.0,Cottet Laurent,68,Geneve,"41.04,6",(5727),QM/145.
+347,K4,55.0,Cottier Cedric,86,Echallens,"18.48,6",(6083),JM/152.
+348,SH2,244.0,Cottier Francois,68,Gland,"1:38.30,1",(2330),SM/566.
+349,QH3,187.0,Cottier Pierre,54,Bussigny-Lausanne,"58.54,8",(5670),QM/749.
+350,SH2,268.0,Cottier Roland,60,Echallens,"1:40.23,5",(2331),SM/628.
+351,MH2,363.0,Cottin Pascal,62,F-St Priest,"3:59.55,1",(388),MM/898.
+352,QD2,180.0,Coty Alexia,66,Le Mont-sur-Lausanne,"1:06.23,3",(5911),QF/451.
+353,QH1,190.0,Coudurrier Jean-Marie,71,Morges,"53.15,4",(4279),QM/630.
+354,QH3,185.0,Couegnat Jean-Luc,55,F-Aubusson,"58.24,6",(4280),QM/739.
+355,MH3,4.0,Cougil Jose-Luis,59,Courtaman,"2:46.24,0",(389),MM/33.
+356,MD2,56.0,Coulon Christel,64,F-Besancon,"4:18.50,7",(390),MF/127.
+357,MH3,249.0,Courant Claude,52,F-Paris 15,"3:50.03,7",(391),MM/758.
+358,SH2,439.0,Court Jean-Luc,62,Orbe,"2:08.28,2",(2332),SM/1243.
+359,QD2,88.0,Courtin Genevieve,63,Onex,"55.46,1",(4281),QF/232.
+360,SD3,87.0,Courtine Martine,57,Vouvry,"2:05.29,8",(2333),SF/289.
+361,SH4,179.0,Cousin Albert,38,Panex,"1:55.44,3",(2334),SM/1076.
+362,SH4,217.0,Cousin Charles,45,Apples,"2:05.12,7",(6632),SM/1218.
+363,MH1,47.0,Coussat Cyril,74,Villars-Ste-Croix,"3:17.11,4",(392),MM/254.
+364,RH,53.0,Coustes Jean-Marie,69,F-Grenade,"49.50,1",(8031),IH/60.
+365,MH2,355.0,Coutenceau Richard,60,F-Le Bourget du Lac,"3:58.46,4",(393),MM/880.
+366,SH1,22.0,Couto Jose,70,Marly,"1:21.35,8",(2337),SM/84.
+367,SH1,153.0,Couturier Simon,76,Lausanne,"1:46.03,9",(3772),SM/851.
+368,SH1,157.0,Couty Philippe,71,Lausanne,"1:47.02,3",(3698),SM/879.
+369,MH4,188.0,Crandon John Roy,45,Clarens,"4:46.03,2",(394),MM/1162.
+370,RH,4.0,Crenn Gregory,76,F-Sardieu,"37.41,2",(8650),IH/4.
+371,MH1,65.0,Cretallaz Frederic,71,F-Brenthonne,"3:32.12,4",(395),MM/476.
+372,SD1,75.0,Cretegny Annie,74,Lausanne,"2:10.34,4",(3949),SF/322.
+373,RH,75.0,Cretegny Danilo,72,Winterthur,"53.53,8",(8032),IH/82.
+374,K7,57.0,Cretegny Laetitia,89,Lully VD,"23.07,4",(7090),JF/191.
+375,SD1,82.0,Cretigny Valerie,71,Boussens,"2:16.54,5",(2338),SF/345.
+376,MH1,62.0,Cretin Romaric,73,F-Les Rousses,"3:30.57,6",(396),MM/455.
+377,K8,50.0,Crettaz Claudine,88,Savigny,"22.16,3",(6084),JF/161.
+378,QH1,105.0,Crettaz Jean-Laurent,83,Savigny,"44.15,0",(4282),QM/262.
+379,SH2,59.0,Crettenand Patrick,69,Saviese,"1:24.18,3",(2339),SM/115.
+380,SH3,198.0,Crettenand Pierre-Erne,54,Conthey,"1:42.45,5",(2340),SM/719.
+381,SH2,338.0,Cretton Benoit,68,Lausanne,"1:46.45,9",(2342),SM/871.
+382,SH4,128.0,Crevoiserat Abel,41,Movelier,"1:47.04,1",(7657),SM/880.
+383,SH3,235.0,Crisinel Dominique,56,Ollon VD,"1:45.29,7",(2343),SM/824.
+384,SH3,3.0,Cristiano Francesco,57,Le Sentier,"1:15.16,4",(2344),SM/24.
+385,SH1,123.0,Croisier Michel,74,Vallorbe,"1:40.08,7",(2345),SM/619.
+386,QH2,111.0,Crolla Bertrand,60,Echandens,"45.09,9",(5838),QM/314.
+387,MH3,84.0,Croset Didier,51,Lucens,"3:19.55,5",(397),MM/292.
+388,MH3,316.0,Croset Georges,50,Granges (Veveyse),"4:03.44,0",(398),MM/944.
+389,K4,68.0,Crottaz Gwenda,86,Denges,"20.17,5",(6693),JM/242.
+390,QD3,20.0,Crottaz Michele,50,Echandens-Denges,"51.04,9",(4285),QF/124.
+391,SH2,4.0,Crouvizier Pascal,60,F-Amphion les Bains,"1:12.55,3",(2346),SM/8.
+392,QH2,4.0,Crozet Eric,67,F-Larringes,"33.15,2",(4286),QM/7.
+393,K2,75.0,Cruchod Florent,90,Prilly,"21.32,7",(7092),JM/299.
+394,K4,22.0,Cruchon Fabien,85,Echichens,"16.47,6",(6086),JM/46.
+395,SH3,44.0,Cruchon Francois,58,Echichens,"1:27.28,8",(2347),SM/188.
+396,K2,90.0,Cuccurullo Raffael,90,Lausanne,"23.22,3",(7093),JM/347.
+397,MH2,305.0,Cuche Didier,61,F-Bonnevaux,"3:46.20,6",(399),MM/716.
+398,MH2,180.0,Cudre Leon,63,Bossonnens,"3:26.28,8",(401),MM/383.
+399,SD3,104.0,Cuendet Esther,59,Rolle,"2:17.26,0",(2348),SF/348.
+400,MH1,97.0,Cueni Thomas,75,Unterseen,"3:44.46,3",(402),MM/693.
+401,MH2,274.0,Cuerel Guy,69,Arzier,"3:41.02,9",(403),MM/635.
+402,K4,48.0,Culiersi Daniel,86,Ecublens VD,"18.22,9",(6087),JM/117.
+403,K1,37.0,Curchod Nicolas,92,Prilly,"21.32,4",(7094),JM/298.
+404,SH3,367.0,Curchod Pierre,57,Mont-sur-Lausanne,"2:02.48,6",(2349),SM/1198.
+405,K9,37.0,Curie Coralie,86,Lausanne,"23.45,3",(6088),JF/209.
+406,SD1,60.0,Curien Laurence,72,F-Vesoul,"2:00.43,6",(2350),SF/243.
+407,SH4,82.0,Currat Roger,45,Rossens,"1:41.58,1",(2351),SM/683.
+408,MH2,251.0,Curros Cesar,63,Geneve,"3:37.22,9",(405),MM/566.
+409,QD2,157.0,Curschellas Anne,64,F-Thonon les Bains,"1:02.08,3",(4287),QF/395.
+410,SH3,330.0,Curschellas Thierry,59,F-Thonon les Bains,"1:55.54,7",(2352),SM/1081.
+411,SH3,249.0,Curtet Francois,51,Renens VD,"1:46.32,5",(3751),SM/865.
+412,QD1,24.0,Curtet Saskia,81,Renens VD,"45.25,9",(5946),QF/43.
+413,RH,167.0,Curtil Philippe,65,Lausanne,"1:32.30,4",(8033),IH/181.
+414,RH,93.0,Curto Luigi,53,Lausanne,"58.29,2",(8034),IH/102.
+415,QD2,161.0,Curty Catherine,61,Lausanne,"1:02.29,3",(4288),QF/406.
+416,MH2,82.0,Curty Jean-Claude,62,Rose,"3:07.36,3",(406),MM/155.
+417,QD3,4.0,Cuttelod Ana Maria,57,Fechy,"43.26,1",(4289),QF/24.
+418,QH3,35.0,Cuttelod Jacques,57,Fechy,"41.49,1",(4290),QM/164.
+419,QD1,12.0,Cuttelod Melanie,81,Fechy,"43.49,6",(4291),QF/26.

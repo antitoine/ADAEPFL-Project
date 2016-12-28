@@ -1,194 +1,97 @@
-,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
-0,QD1,163.,Ebe,ha,dt Sandrine,75,F-ROISSY CD6,"1:06.29,2",(6356),QF/469.
-1,MH3,434.,Ebe,li,Roland,59,Neuenkirch,"4:24.04,9",(520),MM/1296.
-2,MH3,318.,Ebi,a,iroshi,59,JPN-125-0052 TOKYO,"3:54.23,2",(521),MM/956.
-3,MH2,427.,Eco,ha,d Laurent,63,F-Villeurbanne,"4:00.48,7",(522),MM/1074.
-4,SH3,410.,Eco,ha,d Patrick,56,F-Lyon 05,"2:04.57,3",(5066),SM/1351.
-5,QH1,12.,Eco,ur,Yannick,81,Morgins,"34.54,3",(6357),QM/21.
-6,MH3,174.,Ecu,er,Rene,55,F-Laneuveville Devan,"3:28.38,1",(524),MM/523.
-7,SD2,13.,Edd,r,icole,61,Morges,"1:37.49,8",(3528),SF/26.
-8,SH3,193.,Ede,ma,n Benno,54,D-Rheinbach,"1:43.16,3",(3529),SM/664.
-9,SD3,64.,Ede,ma,n Renate,56,D-Rheinbach,"2:02.00,3",(3530),SF/274.
-10,SH3,274.,Ede,ho,er Horts,51,Corminboeuf,"1:49.47,6",(3531),SM/967.
-11,SH4,24.,Edr,ir,Manuel,49,Saanen,"1:33.22,2",(3532),SM/298.
-12,MH3,287.,Egg,ns,hwiler Bruno,58,Belp,"3:48.21,9",(525),MM/868.
-13,QH1,203.,Egg,r,ernard,72,Belmont-Lausanne,"52.59,8",(6359),QM/612.
-14,QD2,160.,Egg,r,orinne,62,Champagne,"1:02.36,3",(6360),QF/417.
-15,MH4,50.,Egg,r,ranz,42,Duedingen,"3:27.24,3",(527),MM/496.
-16,MH2,74.,Egg,r,arcel,66,Lausanne,"3:04.19,3",(528),MM/152.
-17,QD2,135.,Egg,r,irjam,69,Schaffhausen,"1:00.25,3",(6361),QF/365.
-18,RH,224.,Egg,r,hilipp,71,Lausanne,"1:07.32,3",(8366),IH/241.
-19,MH2,366.,Egg,r,homas,62,Schaffhausen,"3:49.47,3",(529),MM/894.
-20,MH3,436.,Egg,r,rs,60,Gerlafingen,"4:24.30,1",(530),MM/1302.
-21,MH4,203.,Egg,rs,Dietrich,37,D-Schwerin,"4:21.23,1",(531),MM/1272.
-22,MH4,206.,Egg,rt,Walter,50,Geneve,"4:22.16,0",(532),MM/1281.
-23,MH4,5.,Egg,ma,n Peter,48,Lyss,"3:02.18,6",(533),MM/132.
-24,SH2,423.,Egg,ma,n Thomas,61,Worb,"1:54.46,6",(5326),SM/1143.
-25,SH2,332.,Egg,er,Juerg,61,Neyruz FR,"1:47.35,3",(3533),SM/855.
-26,K6,21.,Egg,er,Salome,92,Neyruz FR,"23.14,1",(10076),JF/186.
-27,RH,10.,Egl,C,ristian,72,Zuerich,"39.13,9",(8087),IH/12.
-28,SH2,52.,Egl,M,rkus,61,Duillier,"1:24.51,9",(3534),SM/104.
-29,RH,182.,Egl,M,tthias,78,Entlebuch,"58.44,2",(8088),IH/195.
-30,SH2,154.,Egl,P,us,66,Andwil SG,"1:35.55,2",(3535),SM/389.
-31,SH2,373.,Egl,ff,Peter,64,Thun,"1:50.01,6",(3536),SM/978.
-32,RH,204.,Egl,ff,Roland,65,Biel/Bienne,"1:01.35,9",(8089),IH/218.
-33,SH2,5.,Ehm,le,Stefan,68,F-Crozet,"1:14.03,4",(3537),SM/12.
-34,MH3,323.,Ehr,ar,Jean-Luc,57,Lausanne,"3:55.34,8",(534),MM/986.
-35,MD2,90.,Ehr,sm,nn Regine,62,F-Bois d'Amont,"5:02.32,4",(540),MF/228.
-36,RH,88.,Ehr,er,Stefan,66,Mex VD,"49.56,5",(8090),IH/98.
-37,SH2,277.,Eic,en,erger Christian,63,Plan-les-Ouates,"1:44.18,4",(3538),SM/715.
-38,QH2,140.,Eic,en,erger Johann,65,Langnau i. E.,"48.44,5",(6362),QM/446.
-39,MH4,42.,Eic,ho,zer Hans,45,Bruetten,"3:25.02,6",(535),MM/458.
-40,MH2,111.,El,ou,rati Nabil,68,Bern,"3:11.51,8",(2188),MM/239.
-41,K3,105.,El,ai,aoui Adil,88,Lausanne,"28.30,6",(9426),JM/382.
-42,QH2,149.,El,ar,uchy Mamoun,66,Biel/Bienne,"49.16,7",(6363),QM/475.
-43,QD2,173.,El,an,our Dalila,61,Geneve,"1:04.13,2",(6364),QF/445.
-44,MD1,27.,Ela,ri,Rachida,74,Versoix,"4:52.53,7",(2337),MF/218.
-45,SH3,16.,Elh,r,bdellah,59,F-Menil la Horgne,"1:21.47,4",(3539),SM/75.
-46,QD2,33.,Elh,r,nnick,65,F-Menil la Horgne,"51.12,8",(6365),QF/114.
-47,SH2,468.,Eli,C,rnelius,61,Onex,"2:00.32,0",(5251),SM/1296.
-48,SD2,115.,Elk,ie,Sonia,62,Geneve,"2:00.23,7",(3540),SF/249.
-49,QD3,43.,Ell,rk,mp Christel,55,Steinhausen,"56.18,7",(6366),QF/250.
-50,MH1,59.,Ell,ke,Stefan,81,Frauenfeld,"3:19.04,0",(536),MM/351.
-51,SH2,230.,Eme,E,manuel,70,F-St Julien en Genev,"1:41.30,3",(3541),SM/596.
-52,MH3,364.,Eme,i,ean-Francois,60,Lausanne,"4:04.17,1",(538),MM/1102.
-53,SD3,1.,Eme,y,aniele,60,F-Besancon,"1:29.41,3",(5451),SF/8.
-54,QH4,109.,Eme,y,ean-Marc,45,Morges,"56.43,0",(6367),QM/723.
-55,MH2,354.,Eme,y,ean-Marcel,67,Lausanne,"3:47.12,8",(539),MM/850.
-56,SH2,438.,Eme,y,ichel,64,Sion,"1:55.50,3",(5135),SM/1177.
-57,SH3,215.,Eme,y,livier,60,Landecy,"1:44.57,6",(3542),SM/748.
-58,SH2,330.,Eme,y,ierre-Andre,65,La Tour-de-Peilz,"1:47.23,5",(3543),SM/849.
-59,SD2,72.,Eme,y,olande,62,St-Legier-Chiesaz,"1:52.41,6",(5438),SF/151.
-60,SD2,25.,Emi,et,Isabelle,64,F-Fragnes,"1:42.37,1",(3544),SF/56.
-61,SH3,431.,Emm,ne,ger Daniel,59,Bern,"2:12.19,4",(3545),SM/1433.
-62,RH,218.,Emm,ne,ger Thomas,78,Wetzikon ZH 4,"1:06.18,1",(8091),IH/234.
-63,MH3,219.,Emo,et,Georgy,59,Tatroz,"3:36.37,0",(2207),MM/662.
-64,RH,113.,Emo,et,Yves,79,Bern,"51.52,1",(8092),IH/123.
-65,RH,233.,Eng,l,ansjorg,72,Alchenflueh,"1:11.19,1",(8093),IH/250.
-66,MH1,19.,Eng,li,Benjamin,79,Wiesendangen,"2:53.58,3",(541),MM/62.
-67,MH3,35.,Eng,er,Heinrich,56,Gossau SG,"3:02.58,3",(542),MM/138.
-68,MH4,116.,Enn,ss,r Andre,42,F-Metz,"3:49.32,9",(543),MM/888.
-69,QH1,81.,Epa,s,ohn,82,Penthalaz,"42.07,7",(7385),QM/179.
-70,SH4,196.,Epi,ey,Jean-Marc,47,Choulex,"1:56.34,4",(3546),SM/1199.
-71,SH3,374.,Epi,ey,Rene-Pierre,58,Fribourg,"1:58.31,7",(3547),SM/1239.
-72,MD3,78.,Epp,nb,rger Lia,60,Uster,"5:00.12,2",(544),MF/224.
-73,QH2,223.,Equ,y,acques,61,Morges,"57.53,8",(6369),QM/750.
-74,SD1,46.,Era,d,aurence,78,Morges,"1:55.33,0",(3548),SF/190.
-75,QD4,41.,Erb,n,iera,46,Bern,"1:10.45,0",(6370),QF/499.
-76,QH1,132.,Erd,ml,Francois,71,Pully,"45.53,2",(6371),QM/332.
-77,QH2,26.,Ere,ia,Radu Dumitru,65,Bluche-Randogne,"37.49,3",(7414),QM/62.
-78,SH4,5.,Erh,rt,Maurice,48,F-Soppe le Bas,"1:26.11,7",(3549),SM/129.
-79,K3,13.,Ern,t,aurent,88,Coppet,"16.40,0",(9098),JM/50.
-80,SH3,262.,Err,au,Pierrick,59,F-Thonon les Bains,"1:48.53,9",(3550),SM/922.
-81,MH1,164.,Err,ch,ello Oliver,73,Geneve,"4:21.24,6",(545),MM/1273.
-82,MH3,425.,Esc,er,Willy,52,Brig,"4:20.37,6",(546),MM/1269.
-83,SH3,390.,Esk,na,i Dominique,51,Renens VD,"2:00.28,2",(3551),SM/1291.
-84,QD2,184.,Esk,na,i Sonia,66,Meyrin,"1:07.56,0",(7722),QF/480.
-85,MH1,1.,Eti,ha,Tefay,74,ETH-Ethiopie,"2:16.24,8",(1),MM/1.
-86,SH4,242.,Ett,r,ierre-Francois,28,Cugy VD,"2:07.49,7",(3552),SM/1388.
-87,SD2,44.,Ett,ng,r Joelle,69,Chene-Bougeries,"1:48.37,7",(5407),SF/101.
-88,MH3,485.,Eue,uo,Dominique,59,Brig,"5:41.39,1",(2196),MM/1472.
-89,SH2,37.,Eug,ne,Dominique,62,Vevey,"1:21.59,0",(5133),SM/79.
-90,SH1,109.,Eug,te,Olivier,75,Lausanne,"1:38.50,5",(3553),SM/496.
-91,MH3,93.,Evr,ux,Bernard,57,F-Valleiry,"3:15.29,6",(547),MM/289.
-92,MH2,212.,Evr,ux,Christophe,67,F-Premanon,"3:28.10,9",(548),MM/512.
-93,MH3,122.,Ey,ob,rt,59,Nyon,"3:20.23,5",(549),MM/372.
-94,QH4,12.,Eyr,ud,Claude,41,F-Monaco,"43.01,6",(7367),QM/216.
-95,total 95,,,,,,,,,
-96,---------,,,,---------------,,--------------------,----------,-------,---------
-97,QD1,163.,Ebe,ha,dt Sandrine,75,F-ROISSY CD6,"1:06.29,2",(6356),QF/469.
-98,MH3,434.,Ebe,li,Roland,59,Neuenkirch,"4:24.04,9",(520),MM/1296.
-99,MH3,318.,Ebi,a,iroshi,59,JPN-125-0052 TOKYO,"3:54.23,2",(521),MM/956.
-100,MH2,427.,Eco,ha,d Laurent,63,F-Villeurbanne,"4:00.48,7",(522),MM/1074.
-101,SH3,410.,Eco,ha,d Patrick,56,F-Lyon 05,"2:04.57,3",(5066),SM/1351.
-102,QH1,12.,Eco,ur,Yannick,81,Morgins,"34.54,3",(6357),QM/21.
-103,MH3,174.,Ecu,er,Rene,55,F-Laneuveville Devan,"3:28.38,1",(524),MM/523.
-104,SD2,13.,Edd,r,icole,61,Morges,"1:37.49,8",(3528),SF/26.
-105,SH3,193.,Ede,ma,n Benno,54,D-Rheinbach,"1:43.16,3",(3529),SM/664.
-106,SD3,64.,Ede,ma,n Renate,56,D-Rheinbach,"2:02.00,3",(3530),SF/274.
-107,SH3,274.,Ede,ho,er Horts,51,Corminboeuf,"1:49.47,6",(3531),SM/967.
-108,SH4,24.,Edr,ir,Manuel,49,Saanen,"1:33.22,2",(3532),SM/298.
-109,MH3,287.,Egg,ns,hwiler Bruno,58,Belp,"3:48.21,9",(525),MM/868.
-110,QH1,203.,Egg,r,ernard,72,Belmont-Lausanne,"52.59,8",(6359),QM/612.
-111,QD2,160.,Egg,r,orinne,62,Champagne,"1:02.36,3",(6360),QF/417.
-112,MH4,50.,Egg,r,ranz,42,Duedingen,"3:27.24,3",(527),MM/496.
-113,MH2,74.,Egg,r,arcel,66,Lausanne,"3:04.19,3",(528),MM/152.
-114,QD2,135.,Egg,r,irjam,69,Schaffhausen,"1:00.25,3",(6361),QF/365.
-115,RH,224.,Egg,r,hilipp,71,Lausanne,"1:07.32,3",(8366),IH/241.
-116,MH2,366.,Egg,r,homas,62,Schaffhausen,"3:49.47,3",(529),MM/894.
-117,MH3,436.,Egg,r,rs,60,Gerlafingen,"4:24.30,1",(530),MM/1302.
-118,MH4,203.,Egg,rs,Dietrich,37,D-Schwerin,"4:21.23,1",(531),MM/1272.
-119,MH4,206.,Egg,rt,Walter,50,Geneve,"4:22.16,0",(532),MM/1281.
-120,MH4,5.,Egg,ma,n Peter,48,Lyss,"3:02.18,6",(533),MM/132.
-121,SH2,423.,Egg,ma,n Thomas,61,Worb,"1:54.46,6",(5326),SM/1143.
-122,SH2,332.,Egg,er,Juerg,61,Neyruz FR,"1:47.35,3",(3533),SM/855.
-123,K6,21.,Egg,er,Salome,92,Neyruz FR,"23.14,1",(10076),JF/186.
-124,RH,10.,Egl,C,ristian,72,Zuerich,"39.13,9",(8087),IH/12.
-125,SH2,52.,Egl,M,rkus,61,Duillier,"1:24.51,9",(3534),SM/104.
-126,RH,182.,Egl,M,tthias,78,Entlebuch,"58.44,2",(8088),IH/195.
-127,SH2,154.,Egl,P,us,66,Andwil SG,"1:35.55,2",(3535),SM/389.
-128,SH2,373.,Egl,ff,Peter,64,Thun,"1:50.01,6",(3536),SM/978.
-129,RH,204.,Egl,ff,Roland,65,Biel/Bienne,"1:01.35,9",(8089),IH/218.
-130,SH2,5.,Ehm,le,Stefan,68,F-Crozet,"1:14.03,4",(3537),SM/12.
-131,MH3,323.,Ehr,ar,Jean-Luc,57,Lausanne,"3:55.34,8",(534),MM/986.
-132,MD2,90.,Ehr,sm,nn Regine,62,F-Bois d'Amont,"5:02.32,4",(540),MF/228.
-133,RH,88.,Ehr,er,Stefan,66,Mex VD,"49.56,5",(8090),IH/98.
-134,SH2,277.,Eic,en,erger Christian,63,Plan-les-Ouates,"1:44.18,4",(3538),SM/715.
-135,QH2,140.,Eic,en,erger Johann,65,Langnau i. E.,"48.44,5",(6362),QM/446.
-136,MH4,42.,Eic,ho,zer Hans,45,Bruetten,"3:25.02,6",(535),MM/458.
-137,MH2,111.,El,ou,rati Nabil,68,Bern,"3:11.51,8",(2188),MM/239.
-138,K3,105.,El,ai,aoui Adil,88,Lausanne,"28.30,6",(9426),JM/382.
-139,QH2,149.,El,ar,uchy Mamoun,66,Biel/Bienne,"49.16,7",(6363),QM/475.
-140,QD2,173.,El,an,our Dalila,61,Geneve,"1:04.13,2",(6364),QF/445.
-141,MD1,27.,Ela,ri,Rachida,74,Versoix,"4:52.53,7",(2337),MF/218.
-142,SH3,16.,Elh,r,bdellah,59,F-Menil la Horgne,"1:21.47,4",(3539),SM/75.
-143,QD2,33.,Elh,r,nnick,65,F-Menil la Horgne,"51.12,8",(6365),QF/114.
-144,SH2,468.,Eli,C,rnelius,61,Onex,"2:00.32,0",(5251),SM/1296.
-145,SD2,115.,Elk,ie,Sonia,62,Geneve,"2:00.23,7",(3540),SF/249.
-146,QD3,43.,Ell,rk,mp Christel,55,Steinhausen,"56.18,7",(6366),QF/250.
-147,MH1,59.,Ell,ke,Stefan,81,Frauenfeld,"3:19.04,0",(536),MM/351.
-148,SH2,230.,Eme,E,manuel,70,F-St Julien en Genev,"1:41.30,3",(3541),SM/596.
-149,MH3,364.,Eme,i,ean-Francois,60,Lausanne,"4:04.17,1",(538),MM/1102.
-150,SD3,1.,Eme,y,aniele,60,F-Besancon,"1:29.41,3",(5451),SF/8.
-151,QH4,109.,Eme,y,ean-Marc,45,Morges,"56.43,0",(6367),QM/723.
-152,MH2,354.,Eme,y,ean-Marcel,67,Lausanne,"3:47.12,8",(539),MM/850.
-153,SH2,438.,Eme,y,ichel,64,Sion,"1:55.50,3",(5135),SM/1177.
-154,SH3,215.,Eme,y,livier,60,Landecy,"1:44.57,6",(3542),SM/748.
-155,SH2,330.,Eme,y,ierre-Andre,65,La Tour-de-Peilz,"1:47.23,5",(3543),SM/849.
-156,SD2,72.,Eme,y,olande,62,St-Legier-Chiesaz,"1:52.41,6",(5438),SF/151.
-157,SD2,25.,Emi,et,Isabelle,64,F-Fragnes,"1:42.37,1",(3544),SF/56.
-158,SH3,431.,Emm,ne,ger Daniel,59,Bern,"2:12.19,4",(3545),SM/1433.
-159,RH,218.,Emm,ne,ger Thomas,78,Wetzikon ZH 4,"1:06.18,1",(8091),IH/234.
-160,MH3,219.,Emo,et,Georgy,59,Tatroz,"3:36.37,0",(2207),MM/662.
-161,RH,113.,Emo,et,Yves,79,Bern,"51.52,1",(8092),IH/123.
-162,RH,233.,Eng,l,ansjorg,72,Alchenflueh,"1:11.19,1",(8093),IH/250.
-163,MH1,19.,Eng,li,Benjamin,79,Wiesendangen,"2:53.58,3",(541),MM/62.
-164,MH3,35.,Eng,er,Heinrich,56,Gossau SG,"3:02.58,3",(542),MM/138.
-165,MH4,116.,Enn,ss,r Andre,42,F-Metz,"3:49.32,9",(543),MM/888.
-166,QH1,81.,Epa,s,ohn,82,Penthalaz,"42.07,7",(7385),QM/179.
-167,SH4,196.,Epi,ey,Jean-Marc,47,Choulex,"1:56.34,4",(3546),SM/1199.
-168,SH3,374.,Epi,ey,Rene-Pierre,58,Fribourg,"1:58.31,7",(3547),SM/1239.
-169,MD3,78.,Epp,nb,rger Lia,60,Uster,"5:00.12,2",(544),MF/224.
-170,QH2,223.,Equ,y,acques,61,Morges,"57.53,8",(6369),QM/750.
-171,SD1,46.,Era,d,aurence,78,Morges,"1:55.33,0",(3548),SF/190.
-172,QD4,41.,Erb,n,iera,46,Bern,"1:10.45,0",(6370),QF/499.
-173,QH1,132.,Erd,ml,Francois,71,Pully,"45.53,2",(6371),QM/332.
-174,QH2,26.,Ere,ia,Radu Dumitru,65,Bluche-Randogne,"37.49,3",(7414),QM/62.
-175,SH4,5.,Erh,rt,Maurice,48,F-Soppe le Bas,"1:26.11,7",(3549),SM/129.
-176,K3,13.,Ern,t,aurent,88,Coppet,"16.40,0",(9098),JM/50.
-177,SH3,262.,Err,au,Pierrick,59,F-Thonon les Bains,"1:48.53,9",(3550),SM/922.
-178,MH1,164.,Err,ch,ello Oliver,73,Geneve,"4:21.24,6",(545),MM/1273.
-179,MH3,425.,Esc,er,Willy,52,Brig,"4:20.37,6",(546),MM/1269.
-180,SH3,390.,Esk,na,i Dominique,51,Renens VD,"2:00.28,2",(3551),SM/1291.
-181,QD2,184.,Esk,na,i Sonia,66,Meyrin,"1:07.56,0",(7722),QF/480.
-182,MH1,1.,Eti,ha,Tefay,74,ETH-Ethiopie,"2:16.24,8",(1),MM/1.
-183,SH4,242.,Ett,r,ierre-Francois,28,Cugy VD,"2:07.49,7",(3552),SM/1388.
-184,SD2,44.,Ett,ng,r Joelle,69,Chene-Bougeries,"1:48.37,7",(5407),SF/101.
-185,MH3,485.,Eue,uo,Dominique,59,Brig,"5:41.39,1",(2196),MM/1472.
-186,SH2,37.,Eug,ne,Dominique,62,Vevey,"1:21.59,0",(5133),SM/79.
-187,SH1,109.,Eug,te,Olivier,75,Lausanne,"1:38.50,5",(3553),SM/496.
-188,MH3,93.,Evr,ux,Bernard,57,F-Valleiry,"3:15.29,6",(547),MM/289.
-189,MH2,212.,Evr,ux,Christophe,67,F-Premanon,"3:28.10,9",(548),MM/512.
-190,MH3,122.,Ey,ob,rt,59,Nyon,"3:20.23,5",(549),MM/372.
-191,QH4,12.,Eyr,ud,Claude,41,F-Monaco,"43.01,6",(7367),QM/216.
-192,total 95,,,,,,,,,
+,catégorie,rang,nom,an,pays/lieu,temps,doss,overall
+0,QD1,163.,Eberhardt Sandrine,75,F-ROISSY CD6,"1:06.29,2",(6356),QF/469.
+1,MH3,434.,Eberli Roland,59,Neuenkirch,"4:24.04,9",(520),MM/1296.
+2,MH3,318.,Ebina Hiroshi,59,JPN-125-0052 TOKYO,"3:54.23,2",(521),MM/956.
+3,MH2,427.,Ecochard Laurent,63,F-Villeurbanne,"4:00.48,7",(522),MM/1074.
+4,SH3,410.,Ecochard Patrick,56,F-Lyon 05,"2:04.57,3",(5066),SM/1351.
+5,QH1,12.,Ecoeur Yannick,81,Morgins,"34.54,3",(6357),QM/21.
+6,MH3,174.,Ecuyer Rene,55,F-Laneuveville Devan,"3:28.38,1",(524),MM/523.
+7,SD2,13.,Edder Nicole,61,Morges,"1:37.49,8",(3528),SF/26.
+8,SH3,193.,Edelmann Benno,54,D-Rheinbach,"1:43.16,3",(3529),SM/664.
+9,SD3,64.,Edelmann Renate,56,D-Rheinbach,"2:02.00,3",(3530),SF/274.
+10,SH3,274.,Edenhofer Horts,51,Corminboeuf,"1:49.47,6",(3531),SM/967.
+11,SH4,24.,Edreira Manuel,49,Saanen,"1:33.22,2",(3532),SM/298.
+12,MH3,287.,Eggenschwiler Bruno,58,Belp,"3:48.21,9",(525),MM/868.
+13,QH1,203.,Egger Bernard,72,Belmont-Lausanne,"52.59,8",(6359),QM/612.
+14,QD2,160.,Egger Corinne,62,Champagne,"1:02.36,3",(6360),QF/417.
+15,MH4,50.,Egger Franz,42,Duedingen,"3:27.24,3",(527),MM/496.
+16,MH2,74.,Egger Marcel,66,Lausanne,"3:04.19,3",(528),MM/152.
+17,QD2,135.,Egger Mirjam,69,Schaffhausen,"1:00.25,3",(6361),QF/365.
+18,RH,224.,Egger Philipp,71,Lausanne,"1:07.32,3",(8366),IH/241.
+19,MH2,366.,Egger Thomas,62,Schaffhausen,"3:49.47,3",(529),MM/894.
+20,MH3,436.,Egger Urs,60,Gerlafingen,"4:24.30,1",(530),MM/1302.
+21,MH4,203.,Eggers Dietrich,37,D-Schwerin,"4:21.23,1",(531),MM/1272.
+22,MH4,206.,Eggert Walter,50,Geneve,"4:22.16,0",(532),MM/1281.
+23,MH4,5.,Eggimann Peter,48,Lyss,"3:02.18,6",(533),MM/132.
+24,SH2,423.,Eggimann Thomas,61,Worb,"1:54.46,6",(5326),SM/1143.
+25,SH2,332.,Eggler Juerg,61,Neyruz FR,"1:47.35,3",(3533),SM/855.
+26,K6,21.,Eggler Salome,92,Neyruz FR,"23.14,1",(10076),JF/186.
+27,RH,10.,Egli Christian,72,Zuerich,"39.13,9",(8087),IH/12.
+28,SH2,52.,Egli Markus,61,Duillier,"1:24.51,9",(3534),SM/104.
+29,RH,182.,Egli Matthias,78,Entlebuch,"58.44,2",(8088),IH/195.
+30,SH2,154.,Egli Pius,66,Andwil SG,"1:35.55,2",(3535),SM/389.
+31,SH2,373.,Egloff Peter,64,Thun,"1:50.01,6",(3536),SM/978.
+32,RH,204.,Egloff Roland,65,Biel/Bienne,"1:01.35,9",(8089),IH/218.
+33,SH2,5.,Ehmele Stefan,68,F-Crozet,"1:14.03,4",(3537),SM/12.
+34,MH3,323.,Ehrbar Jean-Luc,57,Lausanne,"3:55.34,8",(534),MM/986.
+35,MD2,90.,Ehresmann Regine,62,F-Bois d'Amont,"5:02.32,4",(540),MF/228.
+36,RH,88.,Ehrler Stefan,66,Mex VD,"49.56,5",(8090),IH/98.
+37,SH2,277.,Eichenberger Christian,63,Plan-les-Ouates,"1:44.18,4",(3538),SM/715.
+38,QH2,140.,Eichenberger Johann,65,Langnau i. E.,"48.44,5",(6362),QM/446.
+39,MH4,42.,Eichholzer Hans,45,Bruetten,"3:25.02,6",(535),MM/458.
+40,MH2,111.,El Bouzrati Nabil,68,Bern,"3:11.51,8",(2188),MM/239.
+41,K3,105.,El Haidaoui Adil,88,Lausanne,"28.30,6",(9426),JM/382.
+42,QH2,149.,El Harouchy Mamoun,66,Biel/Bienne,"49.16,7",(6363),QM/475.
+43,QD2,173.,El Mansour Dalila,61,Geneve,"1:04.13,2",(6364),QF/445.
+44,MD1,27.,Elamri Rachida,74,Versoix,"4:52.53,7",(2337),MF/218.
+45,SH3,16.,Elhor Abdellah,59,F-Menil la Horgne,"1:21.47,4",(3539),SM/75.
+46,QD2,33.,Elhor Annick,65,F-Menil la Horgne,"51.12,8",(6365),QF/114.
+47,SH2,468.,Elie Cornelius,61,Onex,"2:00.32,0",(5251),SM/1296.
+48,SD2,115.,Elkrief Sonia,62,Geneve,"2:00.23,7",(3540),SF/249.
+49,QD3,43.,Ellerkamp Christel,55,Steinhausen,"56.18,7",(6366),QF/250.
+50,MH1,59.,Elliker Stefan,81,Frauenfeld,"3:19.04,0",(536),MM/351.
+51,SH2,230.,Emel Emmanuel,70,F-St Julien en Genev,"1:41.30,3",(3541),SM/596.
+52,MH3,364.,Emeri Jean-Francois,60,Lausanne,"4:04.17,1",(538),MM/1102.
+53,SD3,1.,Emery Daniele,60,F-Besancon,"1:29.41,3",(5451),SF/8.
+54,QH4,109.,Emery Jean-Marc,45,Morges,"56.43,0",(6367),QM/723.
+55,MH2,354.,Emery Jean-Marcel,67,Lausanne,"3:47.12,8",(539),MM/850.
+56,SH2,438.,Emery Michel,64,Sion,"1:55.50,3",(5135),SM/1177.
+57,SH3,215.,Emery Olivier,60,Landecy,"1:44.57,6",(3542),SM/748.
+58,SH2,330.,Emery Pierre-Andre,65,La Tour-de-Peilz,"1:47.23,5",(3543),SM/849.
+59,SD2,72.,Emery Yolande,62,St-Legier-Chiesaz,"1:52.41,6",(5438),SF/151.
+60,SD2,25.,Eminet Isabelle,64,F-Fragnes,"1:42.37,1",(3544),SF/56.
+61,SH3,431.,Emmenegger Daniel,59,Bern,"2:12.19,4",(3545),SM/1433.
+62,RH,218.,Emmenegger Thomas,78,Wetzikon ZH 4,"1:06.18,1",(8091),IH/234.
+63,MH3,219.,Emonet Georgy,59,Tatroz,"3:36.37,0",(2207),MM/662.
+64,RH,113.,Emonet Yves,79,Bern,"51.52,1",(8092),IH/123.
+65,RH,233.,Engel Hansjorg,72,Alchenflueh,"1:11.19,1",(8093),IH/250.
+66,MH1,19.,Engeli Benjamin,79,Wiesendangen,"2:53.58,3",(541),MM/62.
+67,MH3,35.,Engler Heinrich,56,Gossau SG,"3:02.58,3",(542),MM/138.
+68,MH4,116.,Ennesser Andre,42,F-Metz,"3:49.32,9",(543),MM/888.
+69,QH1,81.,Epars John,82,Penthalaz,"42.07,7",(7385),QM/179.
+70,SH4,196.,Epiney Jean-Marc,47,Choulex,"1:56.34,4",(3546),SM/1199.
+71,SH3,374.,Epiney Rene-Pierre,58,Fribourg,"1:58.31,7",(3547),SM/1239.
+72,MD3,78.,Eppenberger Lia,60,Uster,"5:00.12,2",(544),MF/224.
+73,QH2,223.,Equey Jacques,61,Morges,"57.53,8",(6369),QM/750.
+74,SD1,46.,Erard Laurence,78,Morges,"1:55.33,0",(3548),SF/190.
+75,QD4,41.,Erben Viera,46,Bern,"1:10.45,0",(6370),QF/499.
+76,QH1,132.,Erdemli Francois,71,Pully,"45.53,2",(6371),QM/332.
+77,QH2,26.,Eremia Radu Dumitru,65,Bluche-Randogne,"37.49,3",(7414),QM/62.
+78,SH4,5.,Erhart Maurice,48,F-Soppe le Bas,"1:26.11,7",(3549),SM/129.
+79,K3,13.,Ernst Laurent,88,Coppet,"16.40,0",(9098),JM/50.
+80,SH3,262.,Erriaud Pierrick,59,F-Thonon les Bains,"1:48.53,9",(3550),SM/922.
+81,MH1,164.,Errichiello Oliver,73,Geneve,"4:21.24,6",(545),MM/1273.
+82,MH3,425.,Escher Willy,52,Brig,"4:20.37,6",(546),MM/1269.
+83,SH3,390.,Eskenazi Dominique,51,Renens VD,"2:00.28,2",(3551),SM/1291.
+84,QD2,184.,Eskenazi Sonia,66,Meyrin,"1:07.56,0",(7722),QF/480.
+85,MH1,1.,Eticha Tefay,74,ETH-Ethiopie,"2:16.24,8",(1),MM/1.
+86,SH4,242.,Etter Pierre-Francois,28,Cugy VD,"2:07.49,7",(3552),SM/1388.
+87,SD2,44.,Ettinger Joelle,69,Chene-Bougeries,"1:48.37,7",(5407),SF/101.
+88,MH3,485.,Euequoz Dominique,59,Brig,"5:41.39,1",(2196),MM/1472.
+89,SH2,37.,Eugene Dominique,62,Vevey,"1:21.59,0",(5133),SM/79.
+90,SH1,109.,Eugster Olivier,75,Lausanne,"1:38.50,5",(3553),SM/496.
+91,MH3,93.,Evreux Bernard,57,F-Valleiry,"3:15.29,6",(547),MM/289.
+92,MH2,212.,Evroux Christophe,67,F-Premanon,"3:28.10,9",(548),MM/512.
+93,MH3,122.,Ey Robert,59,Nyon,"3:20.23,5",(549),MM/372.
+94,QH4,12.,Eyraud Claude,41,F-Monaco,"43.01,6",(7367),QM/216.
+95,total 95,,,,,,,

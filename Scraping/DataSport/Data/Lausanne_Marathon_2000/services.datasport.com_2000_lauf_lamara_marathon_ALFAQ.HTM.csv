@@ -1,18 +1,9 @@
-,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
-0,MH2,328.,Qua,te,oud Pascal,61,Lausanne,"3:43.17,2",(1351),MM/782.
-1,MD2,75.,Qua,tr,pani Tallagnon,69,Carouge GE,"4:27.53,8",(1352),MF/177.
-2,RH,54.,Que,oz,Pierre-Antoine,71,Geneve,"45.19,1",(8405),IH/61.
-3,QH1,48.,Que,ry,Raphael,82,Ballaigues,"39.56,9",(6904),QM/109.
-4,SH2,347.,Que,en,e Philippe,61,F-Neuilly Plaisance,"1:48.44,9",(4352),SM/916.
-5,MH4,168.,Qui,tr,c Gilbert,33,F-Macon,"4:04.49,7",(1353),MM/1110.
-6,MH2,18.,Qui,ti,i Olivier,66,Meyrin,"2:51.57,9",(1354),MM/47.
-7,total 7,,,,,,,,,
-8,---------,,,,--------------,,-------------------,-----------,-------,---------
-9,MH2,328.,Qua,te,oud Pascal,61,Lausanne,"3:43.17,2",(1351),MM/782.
-10,MD2,75.,Qua,tr,pani Tallagnon,69,Carouge GE,"4:27.53,8",(1352),MF/177.
-11,RH,54.,Que,oz,Pierre-Antoine,71,Geneve,"45.19,1",(8405),IH/61.
-12,QH1,48.,Que,ry,Raphael,82,Ballaigues,"39.56,9",(6904),QM/109.
-13,SH2,347.,Que,en,e Philippe,61,F-Neuilly Plaisance,"1:48.44,9",(4352),SM/916.
-14,MH4,168.,Qui,tr,c Gilbert,33,F-Macon,"4:04.49,7",(1353),MM/1110.
-15,MH2,18.,Qui,ti,i Olivier,66,Meyrin,"2:51.57,9",(1354),MM/47.
-16,total 7,,,,,,,,,
+,catégorie,rang,nom,an,pays/lieu,temps,doss,overall
+0,MH2,328.,Quartenoud Pascal,61,Lausanne,"3:43.17,2",(1351),MM/782.
+1,MD2,75.,Quattropani Tallagnon,69,Carouge GE,"4:27.53,8",(1352),MF/177.
+2,RH,54.,Queloz Pierre-Antoine,71,Geneve,"45.19,1",(8405),IH/61.
+3,QH1,48.,Querry Raphael,82,Ballaigues,"39.56,9",(6904),QM/109.
+4,SH2,347.,Quevenne Philippe,61,F-Neuilly Plaisance,"1:48.44,9",(4352),SM/916.
+5,MH4,168.,Quintrec Gilbert,33,F-Macon,"4:04.49,7",(1353),MM/1110.
+6,MH2,18.,Quistini Olivier,66,Meyrin,"2:51.57,9",(1354),MM/47.
+7,total 7,,,,,,,
