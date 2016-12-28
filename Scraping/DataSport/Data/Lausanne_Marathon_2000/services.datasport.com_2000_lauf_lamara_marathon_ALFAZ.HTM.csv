@@ -1,196 +1,98 @@
-,catégorie,rang,nom,et,prénom,an,pays/lieu,temps,doss,overall
-0,RH,172.,Zab,M,chel,61,F-Vesoul,"57.22,8",(8395),IH/184.
-1,SH2,458.,Zag,ne,Jean-Luc,62,F-Bourg en Bresse,"1:59.15,4",(4826),SM/1255.
-2,SH3,26.,Zah,M,rtin,54,Seftigen,"1:25.27,0",(5244),SM/117.
-3,MH3,105.,Zah,er,Urs B.,58,Flurlingen,"3:17.05,3",(1838),MM/313.
-4,MH2,392.,Zah,o,ndreas,62,Duedingen,"3:55.04,1",(1839),MM/971.
-5,QH4,48.,Zam,on,Christian,48,F-Dombasle sur Meurt,"49.11,2",(7191),QM/468.
-6,MH1,125.,Zam,on,Claude,80,Sion,"3:55.22,9",(1840),MM/979.
-7,K7,42.,Zan,re,li Maeva,90,Lausanne,"22.17,4",(10317),JF/168.
-8,QD3,66.,Zan,re,li Martine,57,Lausanne,"1:00.07,7",(7192),QF/351.
-9,MH3,328.,Zan,re,li Mirko,55,Lausanne,"3:55.54,7",(1841),MM/994.
-10,SH3,441.,Zan,on,lla Ferdinand,52,Zollikon,"2:19.19,2",(5323),SM/1471.
-11,QH2,143.,Zan,ne,Pierre-Louis,66,Bussigny-Lausanne,"48.47,5",(7193),QM/453.
-12,MH3,410.,Zap,O,ivier,58,Pully,"4:17.16,3",(1842),MM/1239.
-13,MH3,472.,Zap,P,erre,52,St-Legier-Chiesaz,"4:48.20,9",(1843),MM/1418.
-14,K2,103.,Zap,R,fael,90,Pully,"24.40,5",(10318),JM/351.
-15,K9,38.,Zap,S,brina,87,Pully,"21.57,9",(9346),JF/162.
-16,RJG,10.,Zar,de,Samuel,84,Apples,"48.10,5",(8340),IH/89.
-17,QD4,4.,Zau,g,nnemarie,42,Grosshoechstetten,"48.48,0",(7194),QF/76.
-18,MD2,80.,Zau,g,oris,62,Wetzikon ZH,"4:33.26,2",(1845),MF/192.
-19,MH3,483.,Zau,g,duardo,55,Muelchi,"5:21.28,7",(1846),MM/1458.
-20,QH3,135.,Zau,g,ans,58,Kerzers,"52.26,3",(7196),QM/586.
-21,SH4,13.,Zau,g,aul,41,Grosshoechstetten,"1:31.38,0",(4828),SM/241.
-22,QH1,195.,Zau,g,oman,89,Kerzers,"52.23,8",(7197),QM/584.
-23,SH1,157.,Zbi,de,Alain,81,St-Prex,"1:45.51,3",(4829),SM/792.
-24,SD1,67.,Zbi,de,Andrea,73,Bern,"2:03.08,8",(4830),SF/290.
-25,SH4,130.,Zbi,de,Christian,48,SAINT-PREX,"1:48.37,9",(4831),SM/910.
-26,SH2,256.,Zbi,de,Henri,62,Lausanne,"1:43.02,6",(4832),SM/657.
-27,SH2,516.,Zbi,de,Jean-Daniel,64,Blonay,"2:14.07,3",(4833),SM/1446.
-28,QH1,91.,Zbi,de,Juerg,71,Lausanne,"42.52,3",(7198),QM/208.
-29,MH1,78.,Zbi,de,Marcel,75,Luzern,"3:27.47,4",(1847),MM/507.
-30,MH4,151.,Zbi,de,Pierre,45,Le Locle,"3:59.32,2",(1848),MM/1057.
-31,SH1,159.,Zbi,de,Raphael,81,St-Prex,"1:45.52,5",(5188),SM/795.
-32,K8,59.,Zbi,de,Sara,88,Lausanne,"23.46,7",(9347),JF/201.
-33,SH2,97.,Zeh,ne,Eric,62,Le Landeron,"1:31.09,6",(4834),SM/231.
-34,SH3,73.,Zei,er,Bernhard,53,Fiesch,"1:31.30,8",(4835),SM/238.
-35,SD1,55.,Zei,ou,Mona,73,Davos Platz,"1:59.58,2",(4836),SF/240.
-36,QH1,119.,Zek,ri,as Haile,85,Leysin,"45.18,1",(7199),QM/298.
-37,RH,138.,Zel,r,rancis,59,F-Haguenau,"53.39,7",(8260),IH/149.
-38,QH2,109.,Zel,er,Alexandre,61,Lutry,"46.11,4",(7383),QM/339.
-39,RH,18.,Zel,er,Marcel,75,Prilly,"40.35,0",(8261),IH/21.
-40,K2,41.,Zel,er,Stephane,90,Lutry,"19.54,7",(10319),JM/188.
-41,RD,26.,Zel,we,er Agnes,78,Bern,"55.12,1",(8262),IF/32.
-42,RD,11.,Zel,we,er Susanne,74,Lachen SZ,"45.22,1",(8263),IF/13.
-43,SH4,43.,Zen,el,Horst,34,D-Hagenow,"1:37.30,0",(4837),SM/449.
-44,SD4,12.,Zen,el,Ilse,38,D-Hagenow,"1:50.42,3",(4838),SF/124.
-45,SH2,143.,Zia,e,erard,62,F-St Georges de Rene,"1:35.02,2",(4839),SM/357.
-46,QH1,187.,Zie,er,Nicolas,72,Etoy,"50.38,9",(7502),QM/521.
-47,SH2,451.,Zie,li,Jean-Luc,61,Poliez-Pittet,"1:57.07,7",(4840),SM/1210.
-48,SH1,13.,Zil,en,r Markus,76,Glarus,"1:17.47,7",(4841),SM/34.
-49,SH3,22.,Zim,er,i Kurt,57,Ostermundigen,"1:24.07,3",(4842),SM/98.
-50,QH2,248.,Zim,er,ann Daniel,64,F-Thoiry,"1:05.04,6",(7200),QM/821.
-51,MH2,298.,Zim,er,ann Erich,61,Ebikon,"3:39.28,8",(1849),MM/720.
-52,MH2,123.,Zim,er,ann Juerg,61,Uster,"3:12.56,0",(1850),MM/258.
-53,K6,43.,Zim,er,ann Julie,93,Preverenges,"27.40,1",(10320),JF/261.
-54,K6,42.,Zim,er,ann Leila,93,Preverenges,"27.39,0",(10321),JF/260.
-55,K5,30.,Zim,er,ann Marc,85,Orient,"18.47,9",(9349),JM/137.
-56,MH3,449.,Zim,er,ann Pierre Loui,57,Meyrin,"4:30.56,4",(1851),MM/1346.
-57,QD2,186.,Zim,er,ann Sandrine,66,F-Thoiry,"1:08.03,1",(7202),QF/483.
-58,K9,47.,Zim,er,ann Sophie,86,Orient,"26.56,0",(9350),JF/246.
-59,QH1,193.,Zim,er,ann Thierry,74,Lausanne,"52.14,0",(7203),QM/582.
-60,QD2,54.,Zim,it,i Anabela,70,Daillens,"52.47,3",(7204),QF/156.
-61,MH2,463.,Zin,g,hristoph,64,Basel,"4:13.33,6",(1852),MM/1207.
-62,SH4,222.,Zin,g,illy,50,Aegerten,"2:02.11,3",(5313),SM/1315.
-63,SH1,55.,Zin,S,ephan,83,Muensingen,"1:31.39,3",(4847),SM/244.
-64,QH2,105.,Zol,ik,r Marc,62,Pully,"45.49,9",(7205),QM/329.
-65,MH3,223.,Zol,in,er Kurt,57,Andwil SG,"3:37.11,5",(1853),MM/679.
-66,K8,39.,Zol,in,er Marie,88,Les Cullayes,"21.08,7",(9351),JF/131.
-67,QH3,129.,Zol,in,er Michel,60,Les Cullayes,"51.54,5",(7206),QM/568.
-68,K8,49.,Zol,in,er Pauline,89,Les Cullayes,"22.07,2",(9352),JF/165.
-69,K4,58.,Zol,in,er-Bezencon Jul,86,Les Cullayes,"21.12,3",(9353),JM/253.
-70,QH3,127.,Zor,an,Jean-Claude,53,St-Prex,"51.52,2",(7207),QM/566.
-71,SH3,214.,Zos,o,ean-Michel,57,Montet (Glane),"1:44.53,6",(4848),SM/744.
-72,SH1,45.,Zub,r,eremie,83,Sierre,"1:29.22,1",(4849),SM/195.
-73,MH2,136.,Zub,r,tefan,62,Aesch BL,"3:16.11,1",(1855),MM/295.
-74,MH2,299.,Zub,er,Robert,61,Berikon,"3:39.37,9",(1856),MM/722.
-75,MH2,112.,Zue,er,Peter,62,Emmenbruecke,"3:11.55,7",(1857),MM/241.
-76,MH3,305.,Zue,ch,r Peter,51,Bern,"3:51.31,8",(1858),MM/920.
-77,MH1,61.,Zue,ch,r Rene,71,Gossau SG,"3:19.35,5",(1859),MM/357.
-78,SH2,33.,Zue,ch,r Simon,63,Kaltacker,"1:21.33,3",(4851),SM/72.
-79,K9,24.,Zue,ch,r Xenia,87,Kaltacker,"19.47,8",(9354),JF/85.
-80,MH4,69.,Zug,r,ritz,40,Adliswil,"3:34.46,7",(1860),MM/628.
-81,MH2,375.,Zum,fe,Daniel,70,Bern,"3:51.29,4",(1862),MM/918.
-82,QH3,119.,Zum,te,n Daniel,55,Biel/Bienne,"51.13,3",(7208),QM/543.
-83,QD3,68.,Zum,te,n Marianne,56,Biel/Bienne,"1:00.38,2",(7209),QF/368.
-84,SH1,171.,Zun,no,Paolo,74,Lausanne,"1:47.34,2",(4852),SM/854.
-85,MH1,176.,Zur,ru,gg Franz,71,Muerren,"4:37.43,7",(1863),MM/1381.
-86,MH2,261.,Zur,uc,en Robert,64,Baech SZ,"3:34.39,8",(1864),MM/625.
-87,SD2,94.,Zur,he,Monika,69,Meyrin,"1:56.24,1",(4853),SF/201.
-88,MH4,117.,Zur,lu,Franz,38,Alpnach Dorf,"3:49.34,9",(1865),MM/890.
-89,K1,15.,Zur,in,en Kilian,92,Cheseaux-Lausanne,"20.40,1",(10322),JM/223.
-90,SH2,514.,Zur,P,scal,64,Lausanne,"2:13.41,5",(4854),SM/1442.
-91,RH,131.,Zwa,le,Alain,68,Prilly,"53.30,3",(8266),IH/141.
-92,MD2,47.,Zwa,le,Daniela,70,Kilchberg ZH,"4:00.07,7",(1866),MF/110.
-93,SD3,25.,Zwa,le,Heidi,55,Hinterkappelen,"1:51.39,4",(4856),SF/133.
-94,QH4,135.,Zwa,le,Jean-Pierre,37,Lausanne,"1:08.28,7",(7211),QM/829.
-95,SH3,300.,Zwa,le,Martin,55,Hinterkappelen,"1:51.38,0",(4857),SM/1037.
-96,MH1,54.,Zyg,un,Daniel,75,Lausanne,"3:17.59,1",(1867),MM/330.
-97,---------,,,,---------------,,--------------------,----------,-------,---------
-98,RH,172.,Zab,M,chel,61,F-Vesoul,"57.22,8",(8395),IH/184.
-99,SH2,458.,Zag,ne,Jean-Luc,62,F-Bourg en Bresse,"1:59.15,4",(4826),SM/1255.
-100,SH3,26.,Zah,M,rtin,54,Seftigen,"1:25.27,0",(5244),SM/117.
-101,MH3,105.,Zah,er,Urs B.,58,Flurlingen,"3:17.05,3",(1838),MM/313.
-102,MH2,392.,Zah,o,ndreas,62,Duedingen,"3:55.04,1",(1839),MM/971.
-103,QH4,48.,Zam,on,Christian,48,F-Dombasle sur Meurt,"49.11,2",(7191),QM/468.
-104,MH1,125.,Zam,on,Claude,80,Sion,"3:55.22,9",(1840),MM/979.
-105,K7,42.,Zan,re,li Maeva,90,Lausanne,"22.17,4",(10317),JF/168.
-106,QD3,66.,Zan,re,li Martine,57,Lausanne,"1:00.07,7",(7192),QF/351.
-107,MH3,328.,Zan,re,li Mirko,55,Lausanne,"3:55.54,7",(1841),MM/994.
-108,SH3,441.,Zan,on,lla Ferdinand,52,Zollikon,"2:19.19,2",(5323),SM/1471.
-109,QH2,143.,Zan,ne,Pierre-Louis,66,Bussigny-Lausanne,"48.47,5",(7193),QM/453.
-110,MH3,410.,Zap,O,ivier,58,Pully,"4:17.16,3",(1842),MM/1239.
-111,MH3,472.,Zap,P,erre,52,St-Legier-Chiesaz,"4:48.20,9",(1843),MM/1418.
-112,K2,103.,Zap,R,fael,90,Pully,"24.40,5",(10318),JM/351.
-113,K9,38.,Zap,S,brina,87,Pully,"21.57,9",(9346),JF/162.
-114,RJG,10.,Zar,de,Samuel,84,Apples,"48.10,5",(8340),IH/89.
-115,QD4,4.,Zau,g,nnemarie,42,Grosshoechstetten,"48.48,0",(7194),QF/76.
-116,MD2,80.,Zau,g,oris,62,Wetzikon ZH,"4:33.26,2",(1845),MF/192.
-117,MH3,483.,Zau,g,duardo,55,Muelchi,"5:21.28,7",(1846),MM/1458.
-118,QH3,135.,Zau,g,ans,58,Kerzers,"52.26,3",(7196),QM/586.
-119,SH4,13.,Zau,g,aul,41,Grosshoechstetten,"1:31.38,0",(4828),SM/241.
-120,QH1,195.,Zau,g,oman,89,Kerzers,"52.23,8",(7197),QM/584.
-121,SH1,157.,Zbi,de,Alain,81,St-Prex,"1:45.51,3",(4829),SM/792.
-122,SD1,67.,Zbi,de,Andrea,73,Bern,"2:03.08,8",(4830),SF/290.
-123,SH4,130.,Zbi,de,Christian,48,SAINT-PREX,"1:48.37,9",(4831),SM/910.
-124,SH2,256.,Zbi,de,Henri,62,Lausanne,"1:43.02,6",(4832),SM/657.
-125,SH2,516.,Zbi,de,Jean-Daniel,64,Blonay,"2:14.07,3",(4833),SM/1446.
-126,QH1,91.,Zbi,de,Juerg,71,Lausanne,"42.52,3",(7198),QM/208.
-127,MH1,78.,Zbi,de,Marcel,75,Luzern,"3:27.47,4",(1847),MM/507.
-128,MH4,151.,Zbi,de,Pierre,45,Le Locle,"3:59.32,2",(1848),MM/1057.
-129,SH1,159.,Zbi,de,Raphael,81,St-Prex,"1:45.52,5",(5188),SM/795.
-130,K8,59.,Zbi,de,Sara,88,Lausanne,"23.46,7",(9347),JF/201.
-131,SH2,97.,Zeh,ne,Eric,62,Le Landeron,"1:31.09,6",(4834),SM/231.
-132,SH3,73.,Zei,er,Bernhard,53,Fiesch,"1:31.30,8",(4835),SM/238.
-133,SD1,55.,Zei,ou,Mona,73,Davos Platz,"1:59.58,2",(4836),SF/240.
-134,QH1,119.,Zek,ri,as Haile,85,Leysin,"45.18,1",(7199),QM/298.
-135,RH,138.,Zel,r,rancis,59,F-Haguenau,"53.39,7",(8260),IH/149.
-136,QH2,109.,Zel,er,Alexandre,61,Lutry,"46.11,4",(7383),QM/339.
-137,RH,18.,Zel,er,Marcel,75,Prilly,"40.35,0",(8261),IH/21.
-138,K2,41.,Zel,er,Stephane,90,Lutry,"19.54,7",(10319),JM/188.
-139,RD,26.,Zel,we,er Agnes,78,Bern,"55.12,1",(8262),IF/32.
-140,RD,11.,Zel,we,er Susanne,74,Lachen SZ,"45.22,1",(8263),IF/13.
-141,SH4,43.,Zen,el,Horst,34,D-Hagenow,"1:37.30,0",(4837),SM/449.
-142,SD4,12.,Zen,el,Ilse,38,D-Hagenow,"1:50.42,3",(4838),SF/124.
-143,SH2,143.,Zia,e,erard,62,F-St Georges de Rene,"1:35.02,2",(4839),SM/357.
-144,QH1,187.,Zie,er,Nicolas,72,Etoy,"50.38,9",(7502),QM/521.
-145,SH2,451.,Zie,li,Jean-Luc,61,Poliez-Pittet,"1:57.07,7",(4840),SM/1210.
-146,SH1,13.,Zil,en,r Markus,76,Glarus,"1:17.47,7",(4841),SM/34.
-147,SH3,22.,Zim,er,i Kurt,57,Ostermundigen,"1:24.07,3",(4842),SM/98.
-148,QH2,248.,Zim,er,ann Daniel,64,F-Thoiry,"1:05.04,6",(7200),QM/821.
-149,MH2,298.,Zim,er,ann Erich,61,Ebikon,"3:39.28,8",(1849),MM/720.
-150,MH2,123.,Zim,er,ann Juerg,61,Uster,"3:12.56,0",(1850),MM/258.
-151,K6,43.,Zim,er,ann Julie,93,Preverenges,"27.40,1",(10320),JF/261.
-152,K6,42.,Zim,er,ann Leila,93,Preverenges,"27.39,0",(10321),JF/260.
-153,K5,30.,Zim,er,ann Marc,85,Orient,"18.47,9",(9349),JM/137.
-154,MH3,449.,Zim,er,ann Pierre Loui,57,Meyrin,"4:30.56,4",(1851),MM/1346.
-155,QD2,186.,Zim,er,ann Sandrine,66,F-Thoiry,"1:08.03,1",(7202),QF/483.
-156,K9,47.,Zim,er,ann Sophie,86,Orient,"26.56,0",(9350),JF/246.
-157,QH1,193.,Zim,er,ann Thierry,74,Lausanne,"52.14,0",(7203),QM/582.
-158,QD2,54.,Zim,it,i Anabela,70,Daillens,"52.47,3",(7204),QF/156.
-159,MH2,463.,Zin,g,hristoph,64,Basel,"4:13.33,6",(1852),MM/1207.
-160,SH4,222.,Zin,g,illy,50,Aegerten,"2:02.11,3",(5313),SM/1315.
-161,SH1,55.,Zin,S,ephan,83,Muensingen,"1:31.39,3",(4847),SM/244.
-162,QH2,105.,Zol,ik,r Marc,62,Pully,"45.49,9",(7205),QM/329.
-163,MH3,223.,Zol,in,er Kurt,57,Andwil SG,"3:37.11,5",(1853),MM/679.
-164,K8,39.,Zol,in,er Marie,88,Les Cullayes,"21.08,7",(9351),JF/131.
-165,QH3,129.,Zol,in,er Michel,60,Les Cullayes,"51.54,5",(7206),QM/568.
-166,K8,49.,Zol,in,er Pauline,89,Les Cullayes,"22.07,2",(9352),JF/165.
-167,K4,58.,Zol,in,er-Bezencon Jul,86,Les Cullayes,"21.12,3",(9353),JM/253.
-168,QH3,127.,Zor,an,Jean-Claude,53,St-Prex,"51.52,2",(7207),QM/566.
-169,SH3,214.,Zos,o,ean-Michel,57,Montet (Glane),"1:44.53,6",(4848),SM/744.
-170,SH1,45.,Zub,r,eremie,83,Sierre,"1:29.22,1",(4849),SM/195.
-171,MH2,136.,Zub,r,tefan,62,Aesch BL,"3:16.11,1",(1855),MM/295.
-172,MH2,299.,Zub,er,Robert,61,Berikon,"3:39.37,9",(1856),MM/722.
-173,MH2,112.,Zue,er,Peter,62,Emmenbruecke,"3:11.55,7",(1857),MM/241.
-174,MH3,305.,Zue,ch,r Peter,51,Bern,"3:51.31,8",(1858),MM/920.
-175,MH1,61.,Zue,ch,r Rene,71,Gossau SG,"3:19.35,5",(1859),MM/357.
-176,SH2,33.,Zue,ch,r Simon,63,Kaltacker,"1:21.33,3",(4851),SM/72.
-177,K9,24.,Zue,ch,r Xenia,87,Kaltacker,"19.47,8",(9354),JF/85.
-178,MH4,69.,Zug,r,ritz,40,Adliswil,"3:34.46,7",(1860),MM/628.
-179,MH2,375.,Zum,fe,Daniel,70,Bern,"3:51.29,4",(1862),MM/918.
-180,QH3,119.,Zum,te,n Daniel,55,Biel/Bienne,"51.13,3",(7208),QM/543.
-181,QD3,68.,Zum,te,n Marianne,56,Biel/Bienne,"1:00.38,2",(7209),QF/368.
-182,SH1,171.,Zun,no,Paolo,74,Lausanne,"1:47.34,2",(4852),SM/854.
-183,MH1,176.,Zur,ru,gg Franz,71,Muerren,"4:37.43,7",(1863),MM/1381.
-184,MH2,261.,Zur,uc,en Robert,64,Baech SZ,"3:34.39,8",(1864),MM/625.
-185,SD2,94.,Zur,he,Monika,69,Meyrin,"1:56.24,1",(4853),SF/201.
-186,MH4,117.,Zur,lu,Franz,38,Alpnach Dorf,"3:49.34,9",(1865),MM/890.
-187,K1,15.,Zur,in,en Kilian,92,Cheseaux-Lausanne,"20.40,1",(10322),JM/223.
-188,SH2,514.,Zur,P,scal,64,Lausanne,"2:13.41,5",(4854),SM/1442.
-189,RH,131.,Zwa,le,Alain,68,Prilly,"53.30,3",(8266),IH/141.
-190,MD2,47.,Zwa,le,Daniela,70,Kilchberg ZH,"4:00.07,7",(1866),MF/110.
-191,SD3,25.,Zwa,le,Heidi,55,Hinterkappelen,"1:51.39,4",(4856),SF/133.
-192,QH4,135.,Zwa,le,Jean-Pierre,37,Lausanne,"1:08.28,7",(7211),QM/829.
-193,SH3,300.,Zwa,le,Martin,55,Hinterkappelen,"1:51.38,0",(4857),SM/1037.
-194,MH1,54.,Zyg,un,Daniel,75,Lausanne,"3:17.59,1",(1867),MM/330.
+,catégorie,rang,nom,an,pays/lieu,temps,doss,overall
+0,RH,172.0,Zabe Michel,61,F-Vesoul,"57.22,8",(8395),IH/184.
+1,SH2,458.0,Zagonel Jean-Luc,62,F-Bourg en Bresse,"1:59.15,4",(4826),SM/1255.
+2,SH3,26.0,Zahn Martin,54,Seftigen,"1:25.27,0",(5244),SM/117.
+3,MH3,105.0,Zahner Urs B.,58,Flurlingen,"3:17.05,3",(1838),MM/313.
+4,MH2,392.0,Zahno Andreas,62,Duedingen,"3:55.04,1",(1839),MM/971.
+5,QH4,48.0,Zamboni Christian,48,F-Dombasle sur Meurt,"49.11,2",(7191),QM/468.
+6,MH1,125.0,Zamboni Claude,80,Sion,"3:55.22,9",(1840),MM/979.
+7,K7,42.0,Zanarelli Maeva,90,Lausanne,"22.17,4",(10317),JF/168.
+8,QD3,66.0,Zanarelli Martine,57,Lausanne,"1:00.07,7",(7192),QF/351.
+9,MH3,328.0,Zanarelli Mirko,55,Lausanne,"3:55.54,7",(1841),MM/994.
+10,SH3,441.0,Zandonella Ferdinand,52,Zollikon,"2:19.19,2",(5323),SM/1471.
+11,QH2,143.0,Zanone Pierre-Louis,66,Bussigny-Lausanne,"48.47,5",(7193),QM/453.
+12,MH3,410.0,Zapf Olivier,58,Pully,"4:17.16,3",(1842),MM/1239.
+13,MH3,472.0,Zapf Pierre,52,St-Legier-Chiesaz,"4:48.20,9",(1843),MM/1418.
+14,K2,103.0,Zapf Rafael,90,Pully,"24.40,5",(10318),JM/351.
+15,K9,38.0,Zapf Sabrina,87,Pully,"21.57,9",(9346),JF/162.
+16,RJG,10.0,Zaradez Samuel,84,Apples,"48.10,5",(8340),IH/89.
+17,QD4,4.0,Zaugg Annemarie,42,Grosshoechstetten,"48.48,0",(7194),QF/76.
+18,MD2,80.0,Zaugg Doris,62,Wetzikon ZH,"4:33.26,2",(1845),MF/192.
+19,MH3,483.0,Zaugg Eduardo,55,Muelchi,"5:21.28,7",(1846),MM/1458.
+20,QH3,135.0,Zaugg Hans,58,Kerzers,"52.26,3",(7196),QM/586.
+21,SH4,13.0,Zaugg Paul,41,Grosshoechstetten,"1:31.38,0",(4828),SM/241.
+22,QH1,195.0,Zaugg Roman,89,Kerzers,"52.23,8",(7197),QM/584.
+23,SH1,157.0,Zbinden Alain,81,St-Prex,"1:45.51,3",(4829),SM/792.
+24,SD1,67.0,Zbinden Andrea,73,Bern,"2:03.08,8",(4830),SF/290.
+25,SH4,130.0,Zbinden Christian,48,SAINT-PREX,"1:48.37,9",(4831),SM/910.
+26,SH2,256.0,Zbinden Henri,62,Lausanne,"1:43.02,6",(4832),SM/657.
+27,SH2,516.0,Zbinden Jean-Daniel,64,Blonay,"2:14.07,3",(4833),SM/1446.
+28,QH1,91.0,Zbinden Juerg,71,Lausanne,"42.52,3",(7198),QM/208.
+29,MH1,78.0,Zbinden Marcel,75,Luzern,"3:27.47,4",(1847),MM/507.
+30,MH4,151.0,Zbinden Pierre,45,Le Locle,"3:59.32,2",(1848),MM/1057.
+31,SH1,159.0,Zbinden Raphael,81,St-Prex,"1:45.52,5",(5188),SM/795.
+32,K8,59.0,Zbinden Sara,88,Lausanne,"23.46,7",(9347),JF/201.
+33,SH2,97.0,Zehtner Eric,62,Le Landeron,"1:31.09,6",(4834),SM/231.
+34,SH3,73.0,Zeiter Bernhard,53,Fiesch,"1:31.30,8",(4835),SM/238.
+35,SD1,55.0,Zeitoun Mona,73,Davos Platz,"1:59.58,2",(4836),SF/240.
+36,QH1,119.0,Zekariyas Haile,85,Leysin,"45.18,1",(7199),QM/298.
+37,RH,138.0,Zeler Francis,59,F-Haguenau,"53.39,7",(8260),IH/149.
+38,QH2,109.0,Zeller Alexandre,61,Lutry,"46.11,4",(7383),QM/339.
+39,RH,18.0,Zeller Marcel,75,Prilly,"40.35,0",(8261),IH/21.
+40,K2,41.0,Zeller Stephane,90,Lutry,"19.54,7",(10319),JM/188.
+41,RD,26.0,Zellweger Agnes,78,Bern,"55.12,1",(8262),IF/32.
+42,RD,11.0,Zellweger Susanne,74,Lachen SZ,"45.22,1",(8263),IF/13.
+43,SH4,43.0,Zengel Horst,34,D-Hagenow,"1:37.30,0",(4837),SM/449.
+44,SD4,12.0,Zengel Ilse,38,D-Hagenow,"1:50.42,3",(4838),SF/124.
+45,SH2,143.0,Ziane Gerard,62,F-St Georges de Rene,"1:35.02,2",(4839),SM/357.
+46,QH1,187.0,Ziegert Nicolas,72,Etoy,"50.38,9",(7502),QM/521.
+47,SH2,451.0,Ziehli Jean-Luc,61,Poliez-Pittet,"1:57.07,7",(4840),SM/1210.
+48,SH1,13.0,Ziltener Markus,76,Glarus,"1:17.47,7",(4841),SM/34.
+49,SH3,22.0,Zimmerli Kurt,57,Ostermundigen,"1:24.07,3",(4842),SM/98.
+50,QH2,248.0,Zimmermann Daniel,64,F-Thoiry,"1:05.04,6",(7200),QM/821.
+51,MH2,298.0,Zimmermann Erich,61,Ebikon,"3:39.28,8",(1849),MM/720.
+52,MH2,123.0,Zimmermann Juerg,61,Uster,"3:12.56,0",(1850),MM/258.
+53,K6,43.0,Zimmermann Julie,93,Preverenges,"27.40,1",(10320),JF/261.
+54,K6,42.0,Zimmermann Leila,93,Preverenges,"27.39,0",(10321),JF/260.
+55,K5,30.0,Zimmermann Marc,85,Orient,"18.47,9",(9349),JM/137.
+56,MH3,449.0,Zimmermann Pierre Loui,57,Meyrin,"4:30.56,4",(1851),MM/1346.
+57,QD2,186.0,Zimmermann Sandrine,66,F-Thoiry,"1:08.03,1",(7202),QF/483.
+58,K9,47.0,Zimmermann Sophie,86,Orient,"26.56,0",(9350),JF/246.
+59,QH1,193.0,Zimmermann Thierry,74,Lausanne,"52.14,0",(7203),QM/582.
+60,QD2,54.0,Zimmitti Anabela,70,Daillens,"52.47,3",(7204),QF/156.
+61,MH2,463.0,Zingg Christoph,64,Basel,"4:13.33,6",(1852),MM/1207.
+62,SH4,222.0,Zingg Willy,50,Aegerten,"2:02.11,3",(5313),SM/1315.
+63,SH1,55.0,Zink Stephan,83,Muensingen,"1:31.39,3",(4847),SM/244.
+64,QH2,105.0,Zolliker Marc,62,Pully,"45.49,9",(7205),QM/329.
+65,MH3,223.0,Zollinger Kurt,57,Andwil SG,"3:37.11,5",(1853),MM/679.
+66,K8,39.0,Zollinger Marie,88,Les Cullayes,"21.08,7",(9351),JF/131.
+67,QH3,129.0,Zollinger Michel,60,Les Cullayes,"51.54,5",(7206),QM/568.
+68,K8,49.0,Zollinger Pauline,89,Les Cullayes,"22.07,2",(9352),JF/165.
+69,K4,58.0,Zollinger-Bezencon Jul,86,Les Cullayes,"21.12,3",(9353),JM/253.
+70,QH3,127.0,Zordan Jean-Claude,53,St-Prex,"51.52,2",(7207),QM/566.
+71,SH3,214.0,Zosso Jean-Michel,57,Montet (Glane),"1:44.53,6",(4848),SM/744.
+72,SH1,45.0,Zuber Jeremie,83,Sierre,"1:29.22,1",(4849),SM/195.
+73,MH2,136.0,Zuber Stefan,62,Aesch BL,"3:16.11,1",(1855),MM/295.
+74,MH2,299.0,Zubler Robert,61,Berikon,"3:39.37,9",(1856),MM/722.
+75,MH2,112.0,Zueger Peter,62,Emmenbruecke,"3:11.55,7",(1857),MM/241.
+76,MH3,305.0,Zuercher Peter,51,Bern,"3:51.31,8",(1858),MM/920.
+77,MH1,61.0,Zuercher Rene,71,Gossau SG,"3:19.35,5",(1859),MM/357.
+78,SH2,33.0,Zuercher Simon,63,Kaltacker,"1:21.33,3",(4851),SM/72.
+79,K9,24.0,Zuercher Xenia,87,Kaltacker,"19.47,8",(9354),JF/85.
+80,MH4,69.0,Zuger Fritz,40,Adliswil,"3:34.46,7",(1860),MM/628.
+81,MH2,375.0,Zumofen Daniel,70,Bern,"3:51.29,4",(1862),MM/918.
+82,QH3,119.0,Zumstein Daniel,55,Biel/Bienne,"51.13,3",(7208),QM/543.
+83,QD3,68.0,Zumstein Marianne,56,Biel/Bienne,"1:00.38,2",(7209),QF/368.
+84,SH1,171.0,Zunino Paolo,74,Lausanne,"1:47.34,2",(4852),SM/854.
+85,MH1,176.0,Zurbruegg Franz,71,Muerren,"4:37.43,7",(1863),MM/1381.
+86,MH2,261.0,Zurbuchen Robert,64,Baech SZ,"3:34.39,8",(1864),MM/625.
+87,SD2,94.0,Zurcher Monika,69,Meyrin,"1:56.24,1",(4853),SF/201.
+88,MH4,117.0,Zurfluh Franz,38,Alpnach Dorf,"3:49.34,9",(1865),MM/890.
+89,K1,15.0,Zurkinden Kilian,92,Cheseaux-Lausanne,"20.40,1",(10322),JM/223.
+90,SH2,514.0,Zurn Pascal,64,Lausanne,"2:13.41,5",(4854),SM/1442.
+91,RH,131.0,Zwahlen Alain,68,Prilly,"53.30,3",(8266),IH/141.
+92,MD2,47.0,Zwahlen Daniela,70,Kilchberg ZH,"4:00.07,7",(1866),MF/110.
+93,SD3,25.0,Zwahlen Heidi,55,Hinterkappelen,"1:51.39,4",(4856),SF/133.
+94,QH4,135.0,Zwahlen Jean-Pierre,37,Lausanne,"1:08.28,7",(7211),QM/829.
+95,SH3,300.0,Zwahlen Martin,55,Hinterkappelen,"1:51.38,0",(4857),SM/1037.
+96,MH1,54.0,Zygmunt Daniel,75,Lausanne,"3:17.59,1",(1867),MM/330.
