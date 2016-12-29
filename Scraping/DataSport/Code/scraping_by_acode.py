@@ -10,6 +10,7 @@ from Crypto.Cipher import AES
 import binascii
 import json
 from datetime import datetime
+from fake_useragent import UserAgent
 
 KEY = '0187fcdf7ac3d90d68334afa03b87efe' # Decode Base64 string + Hex encoder
 IV = '33a39433e4dde7c4ddb9d4502b8905d4' # Decode Base64 string + Hex encoder
@@ -108,10 +109,10 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
     data_runners = []
     data_runs = []
 
+    ua = UserAgent()
     default_headers = {
         'Accept': 'application/json, text/javascript, */*; q=0.01',
         'X-Requested-With': 'XMLHttpRequest',
-        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/53.0.2785.143 Chrome/53.0.2785.143 Safari/537.36',
 	'Accept-Encoding': 'gzip, deflate, sdch, br',
 	'Accept-Language': 'fr-FR,fr;q=0.8,en-US;q=0.6,en;q=0.4',
     }
@@ -122,7 +123,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
     for idx_acode, row_acode in data_acode.iterrows():
         
         url = base_url + row_acode['acode']
-        headers = {**default_headers, 'Referer': url}
+        headers = {**default_headers, 'Referer': url, 'User-Agent': ua.random}
         
         print('[' + str(datetime.now()) + '] Runner acode ' + row_acode['acode'], end='', flush=True)
         
@@ -174,6 +175,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
                 decrypted_response = None
 
                 try:
+                    headers = {**default_headers, 'Referer': url, 'User-Agent': ua.random}
                     ajax_response = rq.get(row_runner['url_run_event'], cookies=cookies, headers=headers)
                 except Exception:
                     print(' -:- Error when get a crypted response (timeout): ' + row_runner['url_run_event'], end='', flush=True)
