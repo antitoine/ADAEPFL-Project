@@ -214,6 +214,7 @@ def get_runners_information(acode_file, base_url='https://www.datasport.com/sys/
     return [df_data_runners, df_data_runs]
 
 
-df_data_runners, df_data_runs = get_runners_information(acode_file='./acode.csv', store_runners_information_file='./runners.csv', store_runs_information_file='./runs.csv')
+df_data_runners, df_data_runs = get_runners_information(acode_file='./selected_runners_2009.csv', store_runners_information_file='./runners_2009.csv', store_runs_information_file='./runs_2009.csv')
+
 
 print('End at: ' + str(datetime.now()), flush=True)
