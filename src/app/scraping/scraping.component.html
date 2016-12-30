@@ -1,9 +1,38 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <h1 class="text-center">Part 1: Scraping data from DataSport</h1>
 
-      <!-- Scraping section -->
+      <img src="./assets/images/web-data-extraction.png" alt="Image representing the processing to extract data from the web" class="img-responsive"/>
+
+      <h1 class="title">Scraping data from DataSport</h1>
+
+      <p>Your goal is to get data from the <a href="https://www.datasport.com/en/">DataSport</a>, specially runs over years. But there is a lot (more than 2200 runs), so we focus at the beginning on a single run: the Lausanne Marathon 2016. This will help us to understand how data are presented and how to get them. Then we will try to get all Marathon Lausanne (between 1999 and 2016), by applying the same approach than before. Finally, we will try to get all runs of some people with a different technique that use a little bit of reverse engineering to decode the DataSport API.</p>
+
+      <div class="thumbnail thumbnail-medium">
+        <img src="./assets/images/datasport-screenshot.png" alt="Screenshot of the datasport website"/>
+        <div class="caption">
+          <p>Screenshot of the datasport website</p>
+        </div>
+      </div>
+
+      <h2 id="lamara-2016">Lausanne Marathon 2016</h2>
+
+      <p>First, we begin with the <a href="https://services.datasport.com/2016/lauf/lamara/">Lausanne Marathon 2016</a>. There is a lot of possibilities to get all runners information, but the easiest is to use the alphabetical order, so we are sure to have everybody.</p>
+
+      <div class="thumbnail thumbnail-large">
+        <img src="./assets/images/datasport-lausanne-marathon-2016-runners-a-screenshot.png" alt="Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport"/>
+        <div class="caption">
+          <p>Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport</p>
+        </div>
+      </div>
+
+      <p>The data is not very easy to read by a program, because even if it is presentable for human, there is no structure behind, only spaces.</p>
+
+      <h2 id="lamara-all">Lausanne Marathon 1999 to 2016</h2>
+
+      <h2 id="runners">Runners</h2>
+
+      <!-- Scraping section
       <div class="cell border-box-sizing text_cell rendered">
         <div class="prompt input_prompt">
         </div>
@@ -457,8 +486,9 @@ Write file: ./Data/Lausanne_Marathon_2016/services.datasport.com_2016_lauf_lamar
         </div>
 
       </div>
+      -->
 
-      <!-- Cleaning section -->
+      <!-- Cleaning section
       <div class="cell border-box-sizing text_cell rendered">
         <div class="prompt input_prompt">
         </div>
@@ -750,6 +780,7 @@ Read and clean: services.datasport.com_2016_lauf_lamara_ALFAF.HTM.csv
         </div>
 
       </div>
+      -->
 
     </div>
   </div>

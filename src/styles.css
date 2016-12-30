@@ -9,3 +9,29 @@ body {
   min-height: 100vh;
   background-color: #1C1B1B;
 }
+
+p {
+  text-align: justify;
+}
+
+h1.title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.thumbnail {
+  margin: 15px auto;
+}
+
+.thumbnail-medium {
+  max-width: 500px;
+}
+
+.thumbnail-large {
+  max-width: 800px;
+}
+
+.img-responsive {
+  margin: 0 auto;
+}

@@ -12,7 +12,16 @@
         <a routerLink="/main" routerLinkActive="active">The Project</a>
       </li>
       <li>
-        <a routerLink="/scraping" routerLinkActive="active">Part 1: Scraping Data</a>
+        <a routerLink="/scraping" routerLinkActive="active">Scraping Data</a>
+      </li>
+      <li>
+        <a href="#">Lausanne 2016</a>
+      </li>
+      <li>
+        <a href="#">Lausanne 1999-2016</a>
+      </li>
+      <li>
+        <a href="#">Runners</a>
       </li>
     </ul>
 
@@ -27,7 +36,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12">
-          <a class="btn btn-default pull-left" (click)="menuToggled = !menuToggled">
+          <a class="btn btn-default toggle-menu" (click)="menuToggled = !menuToggled">
             <i *ngIf="!menuToggled" class="fa fa-chevron-left" aria-hidden="true"></i>
             <i *ngIf="menuToggled" class="fa fa-chevron-right" aria-hidden="true"></i>
           </a>

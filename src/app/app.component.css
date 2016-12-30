@@ -141,6 +141,12 @@
   }
 }
 
+.toggle-menu {
+  z-index: 99999;
+  position: absolute;
+
+}
+
 @media(max-height:400px) {
   .sidebar-footer {
     display: none;
