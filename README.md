@@ -4,7 +4,27 @@
 
 ## Abstract
 
-The objectives are to understand how athlete performances evolve over time for different age and gender categories as well as how external factors (e.g., weather, location, etc.) influence athletic performances.
+This project aims to focus on Lausanne Marathon and, more precisely, on the analysis of the different runs (10km, semi-marathon and marathon).
+
+To do so, we plan to manipulate available data, from 1999 to 2016, and use different information stored about the runners and provided by DataSport.
+
+### First part: analysis of Lausanne Marathon of 2016
+
+In the present part, we will study performance of runners according to different parameters, like the sex or the age.  We also plan to analyze the behavior of runners in different contexts (speed following the type of running, speed of male and female runners, ...) and see if we can find some statistical differences or some patterns.
+
+### Second part: analysis over the years (1999-2016)
+
+This part of the study will focus on all runnings of Lausanne Marathon, between 1999 and 2016.
+
+Among the analysis we plan to do, there will be a presentation of the evolution of the performance following the years. We will also verify if being in group ensure better score/time or not, and possibly, we'll check if, for identified groups, we can identify an improvement of performance over the years.
+
+We also plan to conduct basic analysis as in the first part.
+
+Finally, and if possible, we'll check the influence of the weather if possible.
+
+### Third part: analysis of some runners
+
+In the third and last part, we will select sufficient number of runners to conduct statistical analysis, like the evolution of individual performance (type of running chosen, average speed, etc.).
 
 ## Data description
 
