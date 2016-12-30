@@ -24,6 +24,10 @@ h1.title {
   margin: 15px auto;
 }
 
+.thumbnail-small {
+  max-width: 300px;
+}
+
 .thumbnail-medium {
   max-width: 500px;
 }

@@ -143,8 +143,8 @@
 
 .toggle-menu {
   z-index: 99999;
-  position: absolute;
-
+  position: fixed;
+  top: 15px;
 }
 
 @media(max-height:400px) {
