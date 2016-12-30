@@ -20,7 +20,7 @@ Among the analysis we plan to do, there will be a presentation of the evolution 
 
 We also plan to conduct basic analysis as in the first part.
 
-Finally, and if possible, we'll check the influence of the weather if possible.
+Finally, and if possible, we'll check the influence of the weather.
 
 ### Third part: analysis of some runners
 
