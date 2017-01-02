@@ -6,12 +6,19 @@
 
       <h1 class="title">Scraping data from DataSport</h1>
 
-      <p>Your goal is to get data from the <a href="https://www.datasport.com/en/">DataSport</a>, specially runs over years. But there is a lot (more than 2200 runs events), so we focus at the beginning on a single run: the Lausanne Marathon 2016. This will help us to understand how data are presented and how to get them. Then we will try to get all Marathon Lausanne (between 1999 and 2016), by applying the same approach than before. Finally, we will try to get all runs of some people with a different technique that use a little bit of reverse engineering to decode the DataSport API.</p>
+      <div class="row">
+        <div class="col-sm-6 introduction">
+          <p>Your goal is to get data from the <a href="https://www.datasport.com/en/">DataSport</a>, specially runs over years. But there is a lot (more than 2200 runs events), so we focus at the beginning on a single run: the Lausanne Marathon 2016. This will help us to understand how data are presented and how to get them. Then we will try to get all Marathon Lausanne (between 1999 and 2016), by applying the same approach than before. Finally, we will try to get all runs of some people with a different technique that use a little bit of reverse engineering to decode the DataSport API.</p>
 
-      <div class="thumbnail thumbnail-medium">
-        <img src="./assets/images/datasport-screenshot.png" alt="Screenshot of the datasport website"/>
-        <div class="caption">
-          <p>Screenshot of the datasport website</p>
+          <p>This presentation gives some excerpts from the code used to get information from DataSport, the full version is present on <a href="https://github.com/antitoine/ADAEPFL-Project">Github <i aria-hidden="true" class="fa fa-github"></i> here</a>.</p>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/datasport-screenshot.png" alt="Screenshot of the datasport website"/>
+            <div class="caption">
+              <p>Screenshot of the datasport website</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -443,32 +450,172 @@
       </div>
 
       <p>All final tables are available here:</p>
-      <ul>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2016</a> (13 557 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2015.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2015</a> (13 075 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2014.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2014</a> (12 851 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2013.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2013</a> (12 013 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2012.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2012</a> (9 648 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2011.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2011</a> (10 643 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2010.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2010</a> (10 122 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2009</a> (9 544 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2008.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2008</a> (8 161 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2007.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2007</a> (8 407 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2006.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2006</a> (8 661 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2005.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2005</a> (8 233 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2004.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2004</a> (8 459 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2003.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2003</a> (7 260 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2002.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2002</a> (6 229 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2001.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2001</a> (13 185 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2000.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2000</a> (6 101 runners)</li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_1999.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 1999</a> (5 423 runners)</li>
-
-
-      </ul>
+      <div class="table-responsive">
+        <table class="table  table-condensed">
+          <thead>
+          <tr>
+            <th>File</th>
+            <th>Number of runners (rows)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2016</a></td>
+            <td>13 557 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2015.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2015</a></td>
+            <td>13 075 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2014.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2014</a></td>
+            <td>12 851 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2013.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2013</a></td>
+            <td>12 013 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2012.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2012</a></td>
+            <td>9 648 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2011.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2011</a></td>
+            <td>10 643 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2010.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2010</a></td>
+            <td>10 122 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2009</a></td>
+            <td>9 544 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2008.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2008</a></td>
+            <td>8 161 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2007.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2007</a></td>
+            <td>8 407 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2006.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2006</a></td>
+            <td>8 661 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2005.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2005</a></td>
+            <td>8 233 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2004.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2004</a></td>
+            <td>8 459 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2003.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2003</a></td>
+            <td>7 260 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2002.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2002</a></td>
+            <td>6 229 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2001.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2001</a></td>
+            <td>13 185 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2000.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2000</a></td>
+            <td>6 101 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_1999.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 1999</a></td>
+            <td>5 423 runners</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
 
       <h2 id="runners">Runners</h2>
 
-      <p>WIP</p>
+      <p>We also want to study a historical background of some runners. For example, who have made all Lausanne Marathon, when it was the best time and why... DataSport doesn't provide any possibilities from the table provide to join a runner with other tables. The name is not sufficient, there are homonyms. But we found another way that we can use to get this kind of information. DataSport have a webservice that give for a given runner his history, if and only if he kept the same registration ID during multiple runs. For an experimented runner, is probably the case because the bib number is also given regarding historical background. We can see this information in all runs from 2009, when we select a runner name's in a table like the screenshot below.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/datasport-acode-display-service-screenshot.png" alt="Screenshot of a runner information given by the DataSport API"/>
+            <div class="caption">
+              <p>Screenshot of a runner information given by the DataSport API</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/datasport-acode-display-service-single-screenshot.png" alt="Screenshot of a runner information given by the DataSport API with URL"/>
+            <div class="caption">
+              <p>Screenshot of a runner information given by the DataSport API with URL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>We search how to use it directly, all is present in the HTML/Javascript given by DataSport. After getting all "acode" (a unique identifier of a runner), available directly at the link on the runner name's, we can access to all pages corresponding to a runner, like this one by changing the GET parameter.</p>
+
+      <p>This page gives all links to get information about this runner at an event that it was presented. In order to use them, we had to also decrypt the answers given by the DataSport API. The code used was present in JavaScript and we transform it in python.</p>
+
+      <div class="thumbnail thumbnail-medium">
+        <img src="./assets/images/datasport-acode-javascript-decode-screenshot.png" alt="Screenshot of the code used to decrypt responses from DataSport API"/>
+        <div class="caption">
+          <p>Screenshot of the code used to decrypt responses from DataSport API</p>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+            <pre><span></span><span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;0187fcdf7ac3d90d68334afa03b87efe&#39;</span>
+<span class="n">IV</span> <span class="o">=</span> <span class="s1">&#39;33a39433e4dde7c4ddb9d4502b8905d4&#39;</span>
+<span class="n">KEY_BYTES</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">KEY</span><span class="p">)</span>
+<span class="n">IV_BYTES</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">IV</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">unpad</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Remove the PKCS#7 padding from a text string</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="n">pad_size</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">return</span> <span class="n">string</span><span class="p">[:</span><span class="n">length</span> <span class="o">-</span> <span class="n">pad_size</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">decrypt_data</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">):</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    Decrypt data given key and iv</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<span class="n">decrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">a2b_base64</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+<span class="k">return</span> <span class="n">unpad</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
+
+<span></span><span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;3zxaer+64X4MlhwuD6brwClAgmm46IWbdo+vg+1p6+A3Og6ugY/KVQAogTCv34A7HOvz4oGJKqEYzQLFoi5shtCBJkc1ftSlLsnl+lI8mrOMKiJ3KLItdYODgDj52XA3lAVw2TI5ITwmwCIMFaSVi13z0ZMif2VlsTvBiOGGc2sDrmfGNPwG0dHTc1ub0+580Ro0kTShNyLwcvCRAYK5LrLEMqW9wBCc7/+l28IWLQTKM9iIakZdIYhbUKbZuY7Z62+o3GjPzu6uNAMeS8WWLgsIfcIwkjhvfveg68rXMTKW3qmp9DtRjEnTTiE/VVCtrck3e7bJAwGZMTXKUYCb2HzzFoREJ+PmJ8l7NjS9emPpZeHOVC52lXPYivLozBtbkzkdreOQoXVZ33LM228GgEyAQmln3RtD84Pqg8rtYnhlSKHTotmhw49u+s6XhDQ+1QFTaDFQ0Q9xMtGfRUcCY4A9jjIUbstnOA1clDfNMzn29VXoKmTz0nVUstd+jlN0dHAedZUl0t57Ml64vSZNxQ5Zda5ckZAsXhdTKhAuO91mR1TEdTXBChX+ngjacdLCO3e6FGO/YMT6WM5whFvamW4D3Ls/zcSYGMoUeIOr068=&#39;</span>
+<span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY_BYTES</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CBC</span><span class="p">,</span> <span class="n">IV_BYTES</span><span class="p">,</span> <span class="n">segment_size</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">decrypt_data</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+            <pre>&#39;{{ '{' }}&#34;eventRaceNr&#34;:&#34;82AC26FB103154E3C868A28C85B3D712&#34;,&#34;catRank&#34;:358,&#34;eventName&#34;:&#34;Lausanne Marathon&#34;,&#34;categoryName&#34;:&#34;Semi Hommes H20&#34;,&#34;eventDate&#34;:&#34;24.10.2015&#34;,&#34;raceNr&#34;:17110,&#34;racePayload&#34;:&#34;AB36F4C561CEE89876D769AED4ED7C144C440A5216CCF7F36D1D1EED82663891&#34;,&#34;resultState&#34;:&#34;Klassiert&#34;,&#34;entryArt&#34;:&#34;Bezahlt&#34;,&#34;startNumber&#34;:7773,&#34;provider&#34;:&#34;Datasport&#34;,&#34;overCategoryName&#34;:&#34;Semi Marathon Hommes Overall&#34;,&#34;entryPayart&#34;:&#34;Online&#34;,&#34;runtime&#34;:&#34;1:51.57,8&#34;,&#34;overRank&#34;:1602}&#39;</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/decrypt_ajax_response_python.ipynb">here</a>
+        </div>
+      </div>
+
+      <p>DataSport make a lot of effort to keep this service very hard to use for other people, when we try to get some information from this webservice, a lot of our IP were definitely banned. So we have made the choice to use this service only for few people (selected from Lausanne Marathon with a lot a run), to avoid any problem the extraction for 61 runners took 7 hours (in addition to timers, we also change our header information and IP). You can find this extracted data there, the 'runners.csv' have all runners information (name, birthday, location...) and 'runs.csv' contain all runs corresponding to a runner:</p>
+
+      <ul>
+        <li><a href="https://github.com/antitoine/ADAEPFL-Project/raw/master/Scraping/DataSport/Data/Runners/runners_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runners.csv (runners information)</a></li>
+        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Runners/runs_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runs.csv (runs information)</a></li>
+      </ul>
 
       <h2 id="weather">Weather</h2>
 

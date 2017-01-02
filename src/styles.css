@@ -62,6 +62,10 @@ h1.title {
   text-align: right;
 }
 
+.thumbnail .caption {
+  color: #545454 !important;
+}
+
 /*****************************
  ** iPython Notebook Styles **
  *****************************/
