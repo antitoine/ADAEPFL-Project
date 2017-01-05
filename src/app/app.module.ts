@@ -7,10 +7,12 @@ import { CollapseModule } from 'ng2-bootstrap';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
 import { ScrapingComponent } from './scraping/scraping.component';
+import { Lausanne2016Component } from './lausanne2016/lausanne2016.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'scraping', component: ScrapingComponent },
+  { path: 'lausanne2016', component: Lausanne2016Component },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '**', redirectTo: '/main', pathMatch: 'full' }
 ];
@@ -19,7 +21,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MainComponent,
-    ScrapingComponent
+    ScrapingComponent,
+    Lausanne2016Component
   ],
   imports: [
     BrowserModule,
