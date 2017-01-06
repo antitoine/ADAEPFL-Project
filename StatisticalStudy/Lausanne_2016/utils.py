@@ -206,10 +206,25 @@ def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_ra
         - nb_plot: index of the plot in the figure
         - y_range: range for ordinate (by default, (0, 900, 100))
     '''
-
+    
     ax = fig.add_subplot(310 + nb_plot)
+    running_male =  running[running['sex'] == 'male']
+    running_female =  running[running['sex'] == 'female']
+    race_female = running_female['Speed (m/s)'].tolist()
+    race_male = running_male['Speed (m/s)'].tolist()
     race = running['Speed (m/s)'].tolist()
-    ax.hist(race, bins=25)
+    
+    
+    ax.hist([race_male, race_female],
+         bins=30,
+         stacked=True,
+         rwidth=1.0,
+         label=['male', 'female'])
+    
+    # Legend.
+    if nb_plot == 1: 
+        ax.legend(loc='upper left')
+
     ax.set_ylabel('Number of Runners')
     ax.set_title('Distance = ' + running_type, fontsize=20)
     ax.set_xlabel('Speed (m/s)')
