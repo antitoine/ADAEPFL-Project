@@ -272,7 +272,7 @@ def plot_distribution_age_distance(fig, data, title, place):
         ax.set_ylabel('Number of runners')
 
     # Calculation of age distribution statistics by gender
-    age_stats = 'Mean Age: ' + str(round(mean, 2)) + '\n' + 'SD: ' + str(round(np.std(data['age']), 2)) 
+    age_stats = 'Mean Age: ' + str(round(mean, 2)) + ' years\n' + 'SD: ' + str(round(np.std(data['age']), 2)) 
     age_stats = age_stats
 
     # Add of legend text
