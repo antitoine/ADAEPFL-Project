@@ -11,8 +11,6 @@ blockquote {
 }
 
 .textContainer {
-	/* vertical-align attribute does not work */
-	margin-top: 15em;
     vertical-align: middle;
     display: block;
 }
