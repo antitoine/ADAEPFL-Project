@@ -17,7 +17,7 @@ from matplotlib.pyplot import show
 
 # category can be find at http://fr.lausanne-marathon.com/palmares/
 ILINE_REGEX = '[R]'#Iline male / Iline female
-KIDS_REGEX = 'K'
+KIDS_REGEX = '(K)|(Fille)|(Gar)'
 WHEEL_CHAIR_REGEX = '(FD)|(FH)|(HB)|(Hand)' # Wheelchair male / Wheelchair female / handybike
 FEMALE_CATEGORY_REGEX = '([D])|(JunF)'
 MALE_CATEGORY_REGEX = '([H])|(JunG)'
@@ -31,6 +31,27 @@ QUARTER_MARATHON_DISTANCE_REGEX = '(10)|(Q)'
 # ----------------------------------------------------------------------------------------------------------
 # Functions
     
+def filter_participants(runner):
+    '''
+    If participant is part of a specific category, function returns false (i.e. participant is excluded).
+    Specific categories are: people in wheelchair and kids (not representative) and categories such as Pink_Ch, 10W-Walk or 10W-NW (not part of Lausanne Marathon).
+
+    Parameters
+        - runner: row representing the runner
+
+    Return
+        - boolean: true if participant is part of analysis, false otherwise
+    '''
+
+    if ((runner['category'] == '10W-NW' or runner['category'] == '10W-Walk' or runner['category'] == 'Pink-Ch')
+        or (re.search(WHEEL_CHAIR_REGEX, runner['category']) != None)
+        or (re.search(KIDS_REGEX, runner['category']) != None)
+        or (re.search(ILINE_REGEX, runner['category']) != None)):
+        return False
+    else:
+        return True
+
+    
 def get_sex_of_runner(runner):
     '''
     Returns the sex of runner based on the category in which runner has done the marathon.
@@ -42,27 +63,10 @@ def get_sex_of_runner(runner):
         - string ('female'/'male') or None if sex was not retrieved
     '''
     
-    # We ignore this specific category as it is not useful and as it can be misleading
-    if (runner['category'] == '10W-NW' or runner['category'] == '10W-Walk'):
-        return None
-    
-    # We remove person in wheelchair because there are only few runners and a study form the Lausanne
-    # should not representative
-    if (re.search(WHEEL_CHAIR_REGEX, runner['category']) != None):
-        return None
-    
-    # We remove Kids from our study.
-    if (re.search(KIDS_REGEX, runner['category']) != None):
-        return None
-    
-    if (re.search(ILINE_REGEX, runner['category']) != None):
-        return None
-    
     if (re.search(FEMALE_CATEGORY_REGEX, runner['category']) != None):
         return 'female'
     elif (re.search(MALE_CATEGORY_REGEX, runner['category']) != None):
         return 'male'
-    
     else:
         return None
 
@@ -189,6 +193,52 @@ def plot_performance_according_to_running_type(data, nb_km):
         ax.set_yticklabels(labels)
     plt.title('Distribution of time of ' + str(nb_km) + 'km running following age of participants')
     plt.show()
+
+
+def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_range=np.arange(0, 900, 100)):
+    '''
+    This function adds plot of speed distribution for a given running, in a figure.
+
+    Parameters
+        - fig: figure in which plot will be added
+        - running: data for a given running
+        - running_type: number of kilometers of the running (for display)
+        - nb_plot: index of the plot in the figure
+        - y_range: range for ordinate (by default, (0, 900, 100))
+    '''
+
+    ax = fig.add_subplot(310 + nb_plot)
+    race = running['Speed (m/s)'].tolist()
+    ax.hist(race, bins=25)
+    ax.set_ylabel('Number of Runners')
+    ax.set_title('Distance = ' + running_type)
+    ax.set_xlabel('Speed (m/s)')
+    ax.xaxis.set_label_coords(1.15, -0.025)
+
+    # Set of axis
+    plt.xticks(np.arange(0,6.5,0.5))
+    plt.yticks(y_range)
+
+    # Computing of important information
+    avg_time = round(np.mean(race), 4)
+    median_time = round(np.median(race), 4)
+    max_speed = round(np.max(race), 2)
+    min_speed = round(np.min(race), 2)
+    total = len(race)
+    ax.axvline(median_time, 0, 1750, color='r', linestyle='--')
+
+    # Creation of string with statistics
+    mean_str = 'Mean: ' + str(avg_time) + ' m/s'
+    median_str = 'Median: ' + str(median_time)  + ' m/s'
+    max_str = 'Max: ' + str(max_speed)   + ' m/s'
+    min_str = 'Min: ' + str(min_speed)   + ' m/s'
+    total_str = 'Total: ' + str(total)   + ' runners'
+    std_str = 'SD: ' + str(round(np.std(race), 2)) + 'm/s'
+    stats_str = total_str + '\n' + mean_str + '\n' + median_str + '\n' + max_str + '\n' + min_str + '\n' + std_str
+
+    # Add of information in the graph
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    ax.text(.95, .95, stats_str, fontsize=12, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
     
     
 def compute_overall_rank(data):
