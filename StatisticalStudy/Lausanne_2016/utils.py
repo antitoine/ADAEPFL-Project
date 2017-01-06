@@ -211,7 +211,7 @@ def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_ra
     race = running['Speed (m/s)'].tolist()
     ax.hist(race, bins=25)
     ax.set_ylabel('Number of Runners')
-    ax.set_title('Distance = ' + running_type)
+    ax.set_title('Distance = ' + running_type, fontsize=20)
     ax.set_xlabel('Speed (m/s)')
     ax.xaxis.set_label_coords(1.15, -0.025)
 
@@ -239,6 +239,45 @@ def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_ra
     # Add of information in the graph
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
     ax.text(.95, .95, stats_str, fontsize=12, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
+    
+    
+def plot_distribution_age_distance(fig, data, title, place):
+
+    ax  = fig.add_subplot(place)
+    ax.hist([data['age'][data['sex'] == 'male'], data['age'][data['sex'] == 'female']],
+         bins=30,
+         stacked=True,
+         rwidth=1.0,
+         label=['male', 'female'])
+
+    plt.xticks(np.arange(10,100,10))
+    
+    # Legend.
+    if place == 311: 
+        ax.legend(loc='upper left')
+        
+    # Computing of the mean of age selected by gender
+    mean = np.mean(data['age'])
+
+    # Display of the median and titles
+    ax.axvline(mean, 0, 1750, color='r', linestyle='--')
+    ax.set_title(title)
+    
+    # Legend
+    if place == 313:
+        ax.set_xlabel('Age')
+    
+    # Legend
+    if place == 312:
+        ax.set_ylabel('Number of runners')
+
+    # Calculation of age distribution statistics by gender
+    age_stats = 'Mean Age: ' + str(round(mean, 2)) + '\n' + 'SD: ' + str(round(np.std(data['age']), 2)) 
+    age_stats = age_stats
+
+    # Add of legend text
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    ax.text(.95, .95, age_stats, fontsize=11, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
     
     
 def compute_overall_rank(data):
