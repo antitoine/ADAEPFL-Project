@@ -72,6 +72,27 @@ h1.title {
   color: #545454 !important;
 }
 
+@media (min-width: 768px) {
+  .row-sm-align-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .row-md-align-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .row-lg-align-center {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /*****************************
  ** iPython Notebook Styles **
  *****************************/
