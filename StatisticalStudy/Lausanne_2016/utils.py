@@ -158,6 +158,17 @@ def format_time(runner):
     if time:
         return datetime.timedelta(hours=formatted_time.hour, minutes=formatted_time.minute, seconds=formatted_time.second).total_seconds()
     
+    
+def compute_time_to_best_in_team(runner, data):
+    
+    if runner.type_team == 'Individual runners':
+        return None
+    
+    else:
+        # select best performances in the team by sex and  distance
+        team_performance = np.min(data['time'][(data['team'] == runner.team) & (data['sex'] == runner.sex) & (data['distance (km)'] == runner['distance (km)'])])        
+        return abs(team_performance - runner.time)
+    
 
 def convert_seconds_to_time(seconds):
     '''
@@ -347,4 +358,48 @@ def compute_overall_rank(data):
     
     # return the all dataframe.
     return pd.concat(all_races)
+
+def plot_time_difference_distribution (data):
+
+    ax = data['time difference team'].hist(bins=30,figsize=(10,6))
+
+    print(utils.convert_seconds_to_time(x) for x in (np.arange(0,10000,1000)))
+
+    # Computing of the mean of age selected by gender
+    mean = np.mean(data['time difference team'])
+    max_time_diff = np.max(data['time difference team'])
+
+    # Display of the median and titles
+    ax.axvline(mean, 0, 1750, color='r', linestyle='--')
+    ax.set_title('Time difference in team distribution')
+
+
+    # Calculation of age distribution statistics by gender
+    time_stats = 'Mean time difference : ' + convert_seconds_to_time(mean) + '\n' + 'Max time difference : ' +  convert_seconds_to_time(max_time_diff)
+
+    # Add of legend text
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    ax.text(.95, .95, time_stats, fontsize=11, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
+
+def display_information_speed(data):
+    '''
+    dsiplay data on the speed repartition between team/individuals runners.
+    
+    Parameters
+        - data: DataFrame containing records for a given running
+    '''
+    distances = [10,21,42]
+    type_runners = ['Individual runners','Runners in teams']
+    
+    for distance in distances: 
+        median_distance = []
+        lausanne_by_distance = data[data['distance (km)'] == distance]
+        for type_runner in type_runners:      
+            median_distance.append(np.median(lausanne_by_distance['Speed (m/s)'][
+                                                                        lausanne_by_distance['type_team'] == type_runner]))
+        print ('Median speed for '+ str(distance) +
+               'Km race is for individual runners = ' + str(median_distance[0]) + ' m/s' +
+               ' and for team runners = ' + str(median_distance[1]) +' m/s ')
+    
+    return
 
