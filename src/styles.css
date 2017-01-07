@@ -36,6 +36,12 @@ h1.title {
   max-width: 800px;
 }
 
+.thumbnail-fit {
+  border: none;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
 .img-responsive {
   margin: 0 auto;
 }
