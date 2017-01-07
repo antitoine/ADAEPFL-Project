@@ -11,6 +11,7 @@ blockquote {
 }
 
 .textContainer {
+    margin-top: 9em;
     vertical-align: middle;
     display: block;
 }
