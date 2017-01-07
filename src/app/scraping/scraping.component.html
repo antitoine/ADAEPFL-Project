@@ -603,7 +603,7 @@
     <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chromedriver</span>
     <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">chromedriver</span><span class="p">)</span>
     <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FILTER_URL</span><span class="p">)</span>
-    
+
     <span class="c1"># Retrieve of information</span>
     <span class="n">result_screen_scraping</span> <span class="o">=</span> <span class="n">multiselect_set_selections</span><span class="p">(</span><span class="n">driver</span><span class="p">, </span><span class="s1">&#39;select_station&#39;</span><span class="p">, </span><span class="n">availableStation</span><span class="p">)</span>
     <span class="n">result_screen_scraping</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./Data/InformationStation.csv&#39;</span><span class="p">)</span>
@@ -690,7 +690,7 @@
   <p>The first thing to do is to find the station which is the nearest to Lausanne Marathon. For better result, this is done using an algorithm, but in our case, select of <a href="http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html">Lausanne - Pully</a>'s station manually is sufficient (note that the automatic select would be more interesting for a global analysis of running around Switzerland or even other European countries).</p>
   <p>Then, we retrieve the detailed information of the station for the given date, and we clean the obtained DataFrame (i.e., among other things, we remove unecessary columns and format the data). At the end of the process, we obtain similar - but formatted and ready-to-use - data. Here an example for Lausanne Marathon of 2016 (comparison between data offered by Infoclimat and data retrieved and formatted by us).</p>
   <div class="thumbnail thumbnail-fit">
-    <img src="./assets/images/Lausanne_30_october_2016.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
+    <img src="./assets/images/lausanne-2016-10-30.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
     <div class="caption">
       <p>Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)</p>
     </div>
