@@ -206,6 +206,69 @@ def plot_performance_according_to_running_type(data, nb_km):
     plt.show()
 
 
+def plot_time_distribution(ax, running, age):
+    '''
+    This function create a subplot containing the time distribution for a given age, and for the 3 types of runnings (10 km, 21km, 42km).
+
+    Parameters
+        - ax: subplot to use for the histogram (Matplotlib axes)
+        - running: data for a given set of participants of same age (DataFrameGroupby)
+        - age: age of the participants (int)
+    '''
+
+    # Creation of histogram
+    running_10k = running[running['distance (km)'] == 10]
+    race_10k = running_10k['time'].tolist()
+    running_21k = running[running['distance (km)'] == 21]
+    race_21k = running_21k['time'].tolist()
+    running_42k = running[running['distance (km)'] == 42]
+    race_42k = running_42k['time'].tolist()
+    ax.hist([race_10k, race_21k, race_42k], bins=30, stacked=True, rwidth=1.0, label=['10 km', '21 km', '42 km'])
+    ax.legend()
+    ax.set_ylabel('Number of Runners')
+    ax.set_title('Time distribution for ' + str(age) + '-year participants')
+    ax.xaxis.set_label_coords(1.15, -0.025)
+    
+    # Creation of texts
+    total_10k = len(race_10k)
+    total_10k_str = '10 km: ' + str(total_10k)   + ' runners'
+    total_21k = len(race_21k)
+    total_21k_str = '21 km: ' + str(total_21k)   + ' runners'
+    total_42k = len(race_42k)
+    total_42k_str = '42 km: ' + str(total_42k)   + ' runners'
+    total = len(running['time'].tolist())
+    total_str = 'Total: ' + str(total)   + ' runners'
+    stats_str = total_10k_str + '\n' + total_21k_str + '\n' + total_42k_str + '\n' + total_str
+    plt.xticks(ax.get_xticks(), [convert_seconds_to_time(label) for label in ax.get_xticks()], rotation=90)
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5) 
+    ax.annotate(stats_str, xy=(0, 1), xytext=(12, -12), va='top', xycoords='axes fraction', textcoords='offset points', bbox=props)
+
+    
+def plot_time_distribution_by_age(df):
+    '''
+    This function plots the distribution of time for all ages regarding participants of a Lausanne Marathon.
+    3 subplots are displayed per rows.
+
+    Parameters
+        - df: DataFrame containing all the information of a Lausanne Marathon
+    '''
+
+    distributions_by_age = df.groupby('age')
+    i = 1
+    for age, group in distributions_by_age:
+        plt.subplots_adjust(left=None, bottom=None, right=2, top=None, wspace=None, hspace=None)
+        if i % 3 == 0:
+            ax = plt.subplot(1, 3, 1)
+        elif i % 3 == 1:
+            ax = plt.subplot(1, 3, 2)
+        else:
+            ax = plt.subplot(1, 3, 3)
+        plot_time_distribution(ax, group, age)
+        if i % 3 == 0:
+            plt.show()
+        i += 1
+
+
 def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_range=np.arange(0, 900, 100)):
     '''
     This function adds plot of speed distribution for a given running, in a figure.
