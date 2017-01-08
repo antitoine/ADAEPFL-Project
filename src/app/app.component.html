@@ -5,6 +5,7 @@
     <ul class="sidebar-nav">
       <li class="sidebar-brand">
         <a routerLink="/">
+          <i class="fa fa-home" aria-hidden="true"></i>
           <img src="./assets/images/ada-logo.png" title="ADA (Applied Data Analysis)" alt="Logo ADA (Applied Data Analysis) - The name of the EPFL's course" width="210">
         </a>
       </li>
@@ -15,7 +16,7 @@
         <a routerLink="/scraping" routerLinkActive="active"><i class="fa fa-globe fa-fw" aria-hidden="true"></i>&nbsp;&nbsp; Scraping Data</a>
       </li>
       <li>
-        <a routerLink="/lausanne2016" routerLinkActive="active" ><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>&nbsp;&nbsp; Lausanne 2016</a>
+        <a routerLink="/lausanne2016" routerLinkActive="active"><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>&nbsp;&nbsp; Lausanne 2016</a>
       </li>
       <li>
         <a href="#"><i class="fa fa-bar-chart fa-fw" aria-hidden="true"></i>&nbsp;&nbsp; Lausanne 1999-2016</a>
@@ -33,24 +34,17 @@
 
   <!-- Page Content -->
   <div id="page-content-wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12">
-          <a class="btn btn-default toggle-menu" (click)="menuToggled = !menuToggled">
-            <i *ngIf="!menuToggled" class="fa fa-chevron-left" aria-hidden="true"></i>
-            <i *ngIf="menuToggled" class="fa fa-chevron-right" aria-hidden="true"></i>
-          </a>
-          <router-outlet></router-outlet>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="footer">
-            <a href="https://github.com/antitoine">Antoine Chabert</a>, <a href="https://github.com/arnaudDup">Arnaud Dupeyrat</a>, <a href="https://github.com/asalihi">Arbër Salihi</a> - <a href="http://ada.epfl.ch/">Applied Data Analysis</a> - <a href="http://epfl.ch/">EPFL</a> - Copyright 2016/2017
-          </p>
-        </div>
-      </div>
+    <a class="btn btn-default toggle-menu" (click)="menuToggled = !menuToggled">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </a>
+    <div id="main-content">
+      <router-outlet></router-outlet>
     </div>
+    <footer id="footer">
+      <p>
+        <a href="https://github.com/antitoine">Antoine Chabert</a>, <a href="https://github.com/arnaudDup">Arnaud Dupeyrat</a>, <a href="https://github.com/asalihi">Arbër Salihi</a> - <a href="http://ada.epfl.ch/">Applied Data Analysis</a> - <a href="http://epfl.ch/">EPFL</a> - Copyright 2016/2017
+      </p>
+    </footer>
   </div>
 
 </div>
