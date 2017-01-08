@@ -11,6 +11,7 @@ from IPython.display import display
 from datetime import date
 from dateutil.relativedelta import relativedelta
 from matplotlib.pyplot import show
+from sklearn import preprocessing
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -434,8 +435,9 @@ def plot_time_difference_distribution (data):
 
     # Display of the median and titles
     ax.axvline(mean, 0, 1750, color='r', linestyle='--')
-    ax.set_title('Time difference in team distribution')
+    ax.set_title('Time difference with best runner in the team distribution')
 
+    plt.xticks(ax.get_xticks(), [convert_seconds_to_time(label) for label in ax.get_xticks()], rotation=90)
 
     # Calculation of age distribution statistics by gender
     time_stats = 'Mean time difference : ' + convert_seconds_to_time(mean) + '\n' + 'Max time difference : ' +  convert_seconds_to_time(max_time_diff)
@@ -444,6 +446,56 @@ def plot_time_difference_distribution (data):
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
     ax.text(.95, .95, time_stats, fontsize=11, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
 
+    
+def plot_scatter_difference_time_number (fig, data, distance, time_mini, place, annotation = []):
+    
+    # Map string name of the team to 
+    race_team = data[data['team'].notnull()].copy()
+    race_team = race_team[race_team["distance (km)"] == distance]
+
+    # remove time equal to zero not interesting for the study.
+    race_team = (race_team[race_team['time difference team'] > time_mini])
+
+    # remove team with one runner.
+    for team in race_team['team']: 
+        race_team_selected = race_team[race_team['team'] == team]
+        if len(race_team_selected['team']) == 1:
+            race_team = race_team[race_team['team'] != team]
+
+
+    # map team name to team number.
+    team_label_encode = preprocessing.LabelEncoder()
+    team_label = team_label_encode.fit_transform(race_team['team'])
+    race_team['team_code'] = team_label
+    
+        
+    # plotting the results.
+    plot = fig.add_subplot(place)
+    sns.swarmplot(x="team_code", y="time difference team", hue="sex", data=race_team, ax = plot )
+    
+    plot.set_title('Distance = '+ str(distance))
+    plot.set_xlabel('')
+    plot.set_ylabel('')
+    plot.legend(loc='upper left')
+    
+    # add annotation
+    if len(annotation) != 0 :
+        if place == annotation [0]:
+            plot.annotate(annotation[1], annotation[2], annotation[3], arrowprops=dict(facecolor='red', shrink=0.05))
+        
+    # Legend.
+    if place != 311: 
+        plot.legend_.remove()
+        
+    if place == 312:
+        plot.set_ylabel('time difference with best in team')
+    
+    if place == 313:
+        plot.set_xlabel('Team number')
+        
+    plt.yticks(plot.get_yticks(), [convert_seconds_to_time(label) for label in plot.get_yticks()])
+    
+    
 def display_information_speed(data):
     '''
     dsiplay data on the speed repartition between team/individuals runners.
