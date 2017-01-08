@@ -18,8 +18,12 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     // Make scroll to top when changing route
     this.routerSubscription = this.router.events
-      .filter(event => event instanceof NavigationEnd)
-      .subscribe(event => window.scrollTo(0, 0));
+      .subscribe(event => {
+        if (!(event instanceof NavigationEnd)) {
+          return;
+        }
+        window.scrollTo(0, 0);
+      });
   }
 
   ngOnDestroy() {
