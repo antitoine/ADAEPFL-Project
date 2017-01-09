@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ChartsModule } from 'ng2-charts';
-import { CollapseModule } from 'ng2-bootstrap/collapse';
+import { CollapseModule, TabsModule } from 'ng2-bootstrap';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -35,6 +35,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     ChartsModule,
     CollapseModule.forRoot(),
+    TabsModule.forRoot(),
     HttpModule
   ],
   providers: [

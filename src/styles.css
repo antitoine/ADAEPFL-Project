@@ -14,10 +14,6 @@ p {
   text-align: justify;
 }
 
-.text-centered {
-  text-align: center;
-}
-
 h1.title {
   text-align: center;
   margin-top: 30px;
@@ -42,8 +38,8 @@ h1.title {
 
 .thumbnail-fit {
   border: none;
-  margin-bottom: 0px;
-  padding: 0px;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .img-responsive {
@@ -95,6 +91,18 @@ h1.title {
     display: flex;
     align-items: center;
   }
+}
+
+tab.tab-pane {
+  background: #fff;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 10px 5px 10px;
+}
+
+div.chart-container {
+  display: block;
 }
 
 /*****************************

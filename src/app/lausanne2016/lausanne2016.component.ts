@@ -7,12 +7,8 @@ import { CsvReaderService } from '../csv-reader.service';
   styleUrls: ['./lausanne2016.component.css']
 })
 export class Lausanne2016Component implements OnInit {
-  public isDetailedStatisticalAnalysisCollapsed:boolean = true;
-  public is10kmTukeyHSDTableCollapsed:boolean = true;
-  public is21kmTukeyHSDTableCollapsed:boolean = true;
-  public is42kmTukeyHSDTableCollapsed:boolean = true;
 
-  constructor(private csvReader: CsvReaderService) {}
+  isDetailedStatisticalAnalysisCollapsed:boolean = true;
 
   availableLabels: any = {};
   availableSeries: any = {};
@@ -25,6 +21,8 @@ export class Lausanne2016Component implements OnInit {
     animationEasing: 'easeOutBounce',
     responsive: true
   };
+
+  constructor(private csvReader: CsvReaderService) {}
 
   ngOnInit() {
     this.csvReader.readCsvData('./assets/csv/marathon-lausanne-2016-speed-by-age.csv')
