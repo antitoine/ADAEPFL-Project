@@ -13,6 +13,9 @@ from dateutil.relativedelta import relativedelta
 from matplotlib.pyplot import show
 from sklearn import preprocessing
 from collections import Counter
+from scipy import stats
+from io import StringIO
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -188,16 +191,19 @@ def convert_seconds_to_time(seconds):
     return "%d:%02d:%02d" % (h, m, s)
 
 
-def plot_performance_according_to_running_type(data, nb_km):
+def plot_performance_according_to_running_type(data, nb_km, column, size=4.5, aspect=2):
     '''
     Plots the performance according to age of participants for a given running
     
     Parameters
         - data: DataFrame containing records for a given running
         - nb_km: km of the running
+        - column: column to use for x axis
+        - size: size of the graph (by default, 4.5)
+        - aspect: aspect of the graph (by default, 2)
     '''
     
-    g = sns.factorplot(data=data, x='age', y='time', kind='box', size=10, aspect=1.5)
+    g = sns.factorplot(data=data, x=column, y='time', kind='box', size=size, aspect=aspect)
     for ax in g.axes.flat:
         labels = []
         for label in ax.get_yticklabels():
@@ -208,14 +214,14 @@ def plot_performance_according_to_running_type(data, nb_km):
     plt.show()
 
 
-def plot_time_distribution(ax, running, age):
+def plot_time_distribution(ax, running, name):
     '''
     This function create a subplot containing the time distribution for a given age, and for the 3 types of runnings (10 km, 21km, 42km).
 
     Parameters
         - ax: subplot to use for the histogram (Matplotlib axes)
         - running: data for a given set of participants of same age (DataFrameGroupby)
-        - age: age of the participants (int)
+        - name: name of the category
     '''
 
     # Creation of histogram
@@ -228,7 +234,7 @@ def plot_time_distribution(ax, running, age):
     ax.hist([race_10k, race_21k, race_42k], bins=30, stacked=True, rwidth=1.0, label=['10 km', '21 km', '42 km'])
     ax.legend()
     ax.set_ylabel('Number of Runners')
-    ax.set_title('Time distribution for ' + str(age) + '-year participants')
+    ax.set_title('Time distribution (' + str(name) + ')')
     ax.xaxis.set_label_coords(1.15, -0.025)
     
     # Creation of texts
@@ -245,8 +251,8 @@ def plot_time_distribution(ax, running, age):
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.5) 
     ax.annotate(stats_str, xy=(0, 1), xytext=(12, -12), va='top', xycoords='axes fraction', textcoords='offset points', bbox=props)
 
-    
-def plot_time_distribution_by_age(df):
+
+def plot_time_distribution_by_age(df, column):
     '''
     This function plots the distribution of time for all ages regarding participants of a Lausanne Marathon.
     3 subplots are displayed per rows.
@@ -255,20 +261,38 @@ def plot_time_distribution_by_age(df):
         - df: DataFrame containing all the information of a Lausanne Marathon
     '''
 
-    distributions_by_age = df.groupby('age')
+    distributions = df.groupby(column)
     i = 1
-    for age, group in distributions_by_age:
+    for name, group in distributions:
         plt.subplots_adjust(left=None, bottom=None, right=2, top=None, wspace=None, hspace=None)
-        if i % 3 == 0:
+        if i % 3 == 1:
             ax = plt.subplot(1, 3, 1)
-        elif i % 3 == 1:
+        elif i % 3 == 2:
             ax = plt.subplot(1, 3, 2)
         else:
             ax = plt.subplot(1, 3, 3)
-        plot_time_distribution(ax, group, age)
+        plot_time_distribution(ax, group, name)
         if i % 3 == 0:
             plt.show()
         i += 1
+
+
+def compute_anova_and_tukey_hsd(df, categories, values):
+    '''
+    This function computes the ANOVA test for different distributions.
+
+    Parameters
+        - df: DataFrame containing data
+        - categories: column containing the categories on which ANOVA will be performed
+        - values: column containing the values
+    '''
+
+    results = {}
+    all_values_by_category = [df[df[categories] == category][values] for category in pd.unique(df[categories].unique())]
+    results['f_value'], results['p_value'] = stats.f_oneway(*all_values_by_category)
+    tukey_hsd_string = StringIO(pairwise_tukeyhsd(df[values], df[categories]).summary().as_csv())
+    results['tukey_hsd'] = pd.read_csv(tukey_hsd_string, skiprows=1)
+    return results
 
 
 def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_range=np.arange(0, 900, 100)):
