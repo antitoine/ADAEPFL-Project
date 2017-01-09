@@ -59,6 +59,8 @@
 
       <h2 id="performance">Performance analysis</h2>
 
+      <h3 id="performance-by-age">Performance by age</h3>
+
       <p>
         The below charts show time distributions by age and distance. For every races at the age of 60 the median times started to increase more steeply as age increased (with the exception of the 64 year old in marathon who beat most of 25 years old guys).
       </p>
@@ -74,22 +76,1140 @@
         <div class="form-group">
           <label for="distanceSelector" class="col-sm-offset-2 col-sm-2 control-label">Select Distance:</label>
           <div class="col-sm-4">
-            <select class="form-control" id="distanceSelector" [(ngModel)]="ageDistriByDistImgPath" name="distanceSelector">
-              <option value="./assets/images/time-age-distribution-10.png" selected>10 Km</option>
-              <option value="./assets/images/time-age-distribution-21.png">21 Km</option>
-              <option value="./assets/images/time-age-distribution-42.png">42 Km</option>
+            <select class="form-control" id="distanceSelector" [(ngModel)]="distributionByRunningType" name="distanceSelector">
+              <option value="time-distribution-10" selected>10 Km</option>
+              <option value="time-distribution-21">21 Km</option>
+              <option value="time-distribution-42">42 Km</option>
             </select>
           </div>
         </div>
       </form>
 
-      <p *ngIf="!ageDistriByDistImgPath" class="text-center lead">
+      <p *ngIf="!distributionByRunningType" class="text-center lead">
         Select a distance above to see the distribution graph
       </p>
 
-      <div *ngIf="ageDistriByDistImgPath" class="thumbnail thumbnail-large">
-        <img [src]="ageDistriByDistImgPath" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
+      <div *ngIf="distributionByRunningType" class="thumbnail thumbnail-large">
+        <img [src]="'./assets/images/' + distributionByRunningType + '-ages.png'" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
+        <img [src]="'./assets/images/' + distributionByRunningType + '-categories.png'" alt="Distibution categories selected by distance of the Lausanne marathon 2016"/>
       </div>
+
+      <h4 id="statistical-anlysis">Statistical analysis</h4>
+
+      <p>An interesting fact is that distributions seem to be quite homogeneous globally, while we observe real changes at the extremes. One can then ask if we can assume that the different categories of runners are similar or not, statistically speaking. To verify this assumption, we decide to use <a href="https://en.wikipedia.org/wiki/Analysis_of_variance">ANOVA</a>, which is quite popular and useful when comparing multiple populations. More specifically, we will use <a href="https://en.wikipedia.org/wiki/One-way_analysis_of_variance">one-way ANOVA</a> as in our case, we only have one factor to study over the different distributions.</p>
+      <p>ANOVA requires at least three conditions to be respected. Those conditions are the following:</p>
+
+      <ul>
+        <li>independence of the observations</li>
+        <li>normality of the observations</li>
+        <li>homogeneity/homoscedasticity (same variance for data in groups)</li>
+      </ul>
+
+      <p>Clearly, the first condition is satisfied as the different categories of runners don't have nothing in common (people are different). What about the others? As Minitab explain <a href="http://blog.minitab.com/blog/applying-statistics-in-quality-projects/how-could-you-benefit-from-a-box-cox-transformation">in its blog</a>, when it comes to analyze runnings, we can observe some kind of specific pattern in the data. Thus, we decide to plot the distribution according the age categories to obtain a visual, immediate, intuition about the type of distribution and check if we can assume normal distribution or not.</p>
+
+      <div class="thumbnail thumbnail-large">
+        <img src="./assets/images/time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
+        <img src="./assets/images/time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
+        <img src="./assets/images/time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
+      </div>
+      <div class="thumbnail thumbnail-small">
+        <img src="./assets/images/time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
+      </div>
+
+      <p>If we pay attention to the graphes, we see that sometimes, and even if we group carefully the data according to the types of races (10 km/semi-marathon/marathon) to avoid edge effects, distributions are not normal at all or suffer of heteroscedasticity, as explained in the article from Minitab quoted before. However, we observe that for each category and race, we have significant number of runners. Thus, we can apply the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>. Notice that ANOVA is, by default and thanks to CLT, robust against normality assumption (and thus violation of such property is quite well tolerated).</p>
+
+      <p>Here are the two hypothesis we have for our one-way ANOVA:</p>
+
+      <ul>
+        <li>H0 (null hypothesis): samples of all groups are drawn from populations with the same mean values</li>
+        <li>H1 (alternative hypothesis): mean values are different</li>
+      </ul>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <caption>Results of one-way ANOVA</caption>
+          <tr>
+            <th class="text-centered">Distance</th>
+            <th class="text-centered">f-value</th>
+            <th class="text-centered">p-value</th>
+          </tr>
+
+          <tr class="text-centered">
+            <td>10 km</td>
+            <td>10.9576688214</td>
+            <td>4.36331120016e-17</td>
+          </tr>
+          <tr class="text-centered">
+            <td>21 km</td>
+            <td>13.1462717114</td>
+            <td>5.89701883835e-21</td>
+          </tr>
+
+          <tr class="text-centered">
+            <td>42 km</td>
+            <td>11.5770412514</td>
+            <td>1.23630215228e-17</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>As we can see, p-value is extremly low (<< 5%). Thus, we can safely reject H0. Put in other words, it means that we can assume significant differences between the different age categories (statistical differences between mean values). Such conclusion tends to confirm our initial assumption about the distributions presented before. But if ANOVA permitted us to conclude about heterogeneity of runners' categories, it does not provide precise results. For this reason, we decided to also use <a href="https://en.wikipedia.org/wiki/Tukey's_range_test">Tukey HSD</a> as post-hoc analysis.</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <caption>Tukey HSD results for 10 km</caption>
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th></th>
+              <th>Mean difference</th>
+              <th>Lower</th>
+              <th>Upper</th>
+              <th>Reject</th>
+            </tr>
+            <tr>
+              <th>Group 1</th>
+              <th>Group 2</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="9" valign="top">15-25 years</th>
+              <th class="font-weight-bold text-danger">26-30 years</th>
+              <td class="font-weight-bold text-danger">117.2616</td>
+              <td class="font-weight-bold text-danger">32.6283</td>
+              <td class="font-weight-bold text-danger">201.8948</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>31-35 years</th>
+              <td>88.0898</td>
+              <td>2.6341</td>
+              <td>173.5454</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>36-40 years</th>
+              <td>111.7553</td>
+              <td>24.9677</td>
+              <td>198.5429</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>41-45 years</th>
+              <td>157.4489</td>
+              <td>67.0349</td>
+              <td>247.8629</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>46-50 years</th>
+              <td>112.5583</td>
+              <td>15.6765</td>
+              <td>209.4402</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>51-55 years</th>
+              <td>126.0221</td>
+              <td>25.4772</td>
+              <td>226.5671</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>199.3958</td>
+              <td>73.1830</td>
+              <td>325.6086</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>199.0383</td>
+              <td>28.8731</td>
+              <td>369.2036</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>470.0417</td>
+              <td>291.3838</td>
+              <td>648.6996</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="8" valign="top">26-30 years</th>
+              <th class="font-weight-bold text-success">31-35 years</th>
+              <td class="font-weight-bold text-success">-29.1718</td>
+              <td class="font-weight-bold text-success">-118.9123</td>
+              <td class="font-weight-bold text-success">60.5687</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>36-40 years</th>
+              <td>-5.5063</td>
+              <td>-96.5160</td>
+              <td>85.5034</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>40.1873</td>
+              <td>-54.2869</td>
+              <td>134.6615</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>-4.7032</td>
+              <td>-105.3848</td>
+              <td>95.9783</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>8.7606</td>
+              <td>-95.4506</td>
+              <td>112.9718</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>82.1342</td>
+              <td>-47.0182</td>
+              <td>211.2866</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>81.7768</td>
+              <td>-90.5802</td>
+              <td>254.1337</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>352.7801</td>
+              <td>172.0336</td>
+              <td>533.5267</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="7" valign="top">31-35 years</th>
+              <th class="font-weight-bold text-success">36-40 years</th>
+              <td class="font-weight-bold text-success">23.6655</td>
+              <td class="font-weight-bold text-success">-68.1094</td>
+              <td class="font-weight-bold text-success">115.4405</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>69.3592</td>
+              <td>-25.8525</td>
+              <td>164.5708</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>24.4686</td>
+              <td>-76.9053</td>
+              <td>125.8425</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>37.9324</td>
+              <td>-66.9478</td>
+              <td>142.8126</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>111.3060</td>
+              <td>-18.3868</td>
+              <td>240.9989</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>110.9486</td>
+              <td>-61.8137</td>
+              <td>283.7108</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>381.9520</td>
+              <td>200.8188</td>
+              <td>563.0851</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="6" valign="top">36-40 years</th>
+              <th class="font-weight-bold text-success">41-45 years</th>
+              <td class="font-weight-bold text-success">45.6936</td>
+              <td class="font-weight-bold text-success">-50.7153</td>
+              <td class="font-weight-bold text-success">142.1025</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>0.8030</td>
+              <td>-101.6961</td>
+              <td>103.3022</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>14.2668</td>
+              <td>-91.7014</td>
+              <td>120.2351</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>87.6405</td>
+              <td>-42.9338</td>
+              <td>218.2148</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>87.2830</td>
+              <td>-86.1419</td>
+              <td>260.7080</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>358.2864</td>
+              <td>176.5211</td>
+              <td>540.0517</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="5" valign="top">41-45 years</th>
+              <th class="font-weight-bold text-success">46-50 years</th>
+              <td class="font-weight-bold text-success">-44.8906</td>
+              <td class="font-weight-bold text-success">-150.4779</td>
+              <td class="font-weight-bold text-success">60.6968</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>-31.4268</td>
+              <td>-140.3849</td>
+              <td>77.5314</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>41.9469</td>
+              <td>-91.0654</td>
+              <td>174.9591</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>41.5894</td>
+              <td>-133.6784</td>
+              <td>216.8573</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>312.5928</td>
+              <td>129.0684</td>
+              <td>496.1173</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="4" valign="top">46-50 years</th>
+              <th class="font-weight-bold text-success">51-55 years</th>
+              <td class="font-weight-bold text-success">13.4638</td>
+              <td class="font-weight-bold text-success">-100.9184</td>
+              <td class="font-weight-bold text-success">127.8460</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>86.8374</td>
+              <td>-50.6532</td>
+              <td>224.3280</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>86.4800</td>
+              <td>-92.2103</td>
+              <td>265.1703</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>357.4834</td>
+              <td>170.6877</td>
+              <td>544.2791</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="3" valign="top">51-55 years</th>
+              <th class="font-weight-bold text-success">56-60 years</th>
+              <td class="font-weight-bold text-success">73.3736</td>
+              <td class="font-weight-bold text-success">-66.7222</td>
+              <td class="font-weight-bold text-success">213.4695</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>73.0162</td>
+              <td>-107.6864</td>
+              <td>253.7188</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>344.0196</td>
+              <td>155.2980</td>
+              <td>532.7411</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="2" valign="top">56-60 years</th>
+              <th class="font-weight-bold text-success">61-65 years</th>
+              <td class="font-weight-bold text-success">-0.3574</td>
+              <td class="font-weight-bold text-success">-196.5048</td>
+              <td class="font-weight-bold text-success">195.7900</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>270.6459</td>
+              <td>67.0871</td>
+              <td>474.2048</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th>61-65 years</th>
+              <th class="font-weight-bold text-danger">65+ years</th>
+              <td class="font-weight-bold text-danger">271.0034</td>
+              <td class="font-weight-bold text-danger">37.6308</td>
+              <td class="font-weight-bold text-danger">504.3760</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>As we can see, the differences between categories are observed for the extreme. This means that 15-25 years category and 65+ years category have, on average, a performance which is significantly different from the one of other categories.</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <caption>Tukey HSD results for semi-marathon</caption>
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th></th>
+              <th>Mean difference</th>
+              <th>Lower</th>
+              <th>Upper</th>
+              <th>Reject</th>
+            </tr>
+            <tr>
+              <th>Group 1</th>
+              <th>Group 2</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="9" valign="top">15-25 years</th>
+              <th class="font-weight-bold text-success">26-30 years</th>
+              <td class="font-weight-bold text-success">41.5578</td>
+              <td class="font-weight-bold text-success">-164.4656</td>
+              <td class="font-weight-bold text-success">247.5812</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>31-35 years</th>
+              <td>-11.0349</td>
+              <td>-217.8625</td>
+              <td>195.7927</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>36-40 years</th>
+              <td>17.9740</td>
+              <td>-188.6207</td>
+              <td>224.5688</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>-2.9173</td>
+              <td>-213.9137</td>
+              <td>208.0790</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>82.0283</td>
+              <td>-132.8454</td>
+              <td>296.9019</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>66.3169</td>
+              <td>-166.2866</td>
+              <td>298.9205</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>384.4849</td>
+              <td>114.0333</td>
+              <td>654.9366</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>598.5031</td>
+              <td>211.6107</td>
+              <td>985.3956</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>1018.5976</td>
+              <td>607.6403</td>
+              <td>1429.5548</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="8" valign="top">26-30 years</th>
+              <th class="font-weight-bold text-success">31-35 years</th>
+              <td class="font-weight-bold text-success">-52.5927</td>
+              <td class="font-weight-bold text-success">-232.1839</td>
+              <td class="font-weight-bold text-success">126.9984</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>36-40 years</th>
+              <td>-23.5838</td>
+              <td>-202.9067</td>
+              <td>155.7392</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>-44.4752</td>
+              <td>-228.8519</td>
+              <td>139.9016</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>40.4704</td>
+              <td>-148.3311</td>
+              <td>229.2720</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>24.7591</td>
+              <td>-183.9985</td>
+              <td>233.5168</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>342.9271</td>
+              <td>92.6884</td>
+              <td>593.1659</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>556.9453</td>
+              <td>183.9023</td>
+              <td>929.9883</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>977.0397</td>
+              <td>579.0936</td>
+              <td>1374.9859</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="7" valign="top">31-35 years</th>
+              <th class="font-weight-bold text-success">36-40 years</th>
+              <td class="font-weight-bold text-success">29.0090</td>
+              <td class="font-weight-bold text-success">-151.2374</td>
+              <td class="font-weight-bold text-success">209.2553</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>8.1176</td>
+              <td>-177.1573</td>
+              <td>193.3925</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>93.0632</td>
+              <td>-96.6156</td>
+              <td>282.7420</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>77.3519</td>
+              <td>-132.1995</td>
+              <td>286.9032</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>395.5199</td>
+              <td>144.6186</td>
+              <td>646.4211</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>609.5381</td>
+              <td>236.0503</td>
+              <td>983.0258</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>1029.6325</td>
+              <td>631.2694</td>
+              <td>1427.9956</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="6" valign="top">36-40 years</th>
+              <th class="font-weight-bold text-success">41-45 years</th>
+              <td class="font-weight-bold text-success">-20.8914</td>
+              <td class="font-weight-bold text-success">-205.9063</td>
+              <td class="font-weight-bold text-success">164.1236</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>64.0542</td>
+              <td>-125.3707</td>
+              <td>253.4791</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>48.3429</td>
+              <td>-160.9786</td>
+              <td>257.6645</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>366.5109</td>
+              <td>115.8015</td>
+              <td>617.2203</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>580.5291</td>
+              <td>207.1703</td>
+              <td>953.8880</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>1000.6235</td>
+              <td>602.3812</td>
+              <td>1398.8658</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="5" valign="top">41-45 years</th>
+              <th class="font-weight-bold text-success">46-50 years</th>
+              <td class="font-weight-bold text-success">84.9456</td>
+              <td class="font-weight-bold text-success">-109.2704</td>
+              <td class="font-weight-bold text-success">279.1616</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>69.2343</td>
+              <td>-144.4327</td>
+              <td>282.9013</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>387.4023</td>
+              <td>133.0536</td>
+              <td>641.7509</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>601.4205</td>
+              <td>225.6082</td>
+              <td>977.2328</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>1021.5149</td>
+              <td>620.9716</td>
+              <td>1422.0583</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="4" valign="top">46-50 years</th>
+              <th class="font-weight-bold text-success">51-55 years</th>
+              <td class="font-weight-bold text-success">-15.7113</td>
+              <td class="font-weight-bold text-success">-233.2080</td>
+              <td class="font-weight-bold text-success">201.7854</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>302.4567</td>
+              <td>44.8824</td>
+              <td>560.0309</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>516.4749</td>
+              <td>138.4721</td>
+              <td>894.4777</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>936.5693</td>
+              <td>533.9700</td>
+              <td>1339.1686</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="3" valign="top">51-55 years</th>
+              <th class="font-weight-bold text-danger">56-60 years</th>
+              <td class="font-weight-bold text-danger">318.1680</td>
+              <td class="font-weight-bold text-danger">45.6277</td>
+              <td class="font-weight-bold text-danger">590.7083</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>532.1862</td>
+              <td>143.8309</td>
+              <td>920.5415</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>952.2806</td>
+              <td>539.9459</td>
+              <td>1364.6154</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="2" valign="top">56-60 years</th>
+              <th class="font-weight-bold text-success">61-65 years</th>
+              <td class="font-weight-bold text-success">214.0182</td>
+              <td class="font-weight-bold text-success">-198.1220</td>
+              <td class="font-weight-bold text-success">626.1584</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>634.1126</td>
+              <td>199.3028</td>
+              <td>1068.9225</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th>61-65 years</th>
+              <th class="font-weight-bold text-success">65+ years</th>
+              <td class="font-weight-bold text-success">420.0944</td>
+              <td class="font-weight-bold text-success">-95.2708</td>
+              <td class="font-weight-bold text-success">935.4596</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>For semi-marathon, we see that we can again make two big categories. Indeed, significant differences are shown between "<56 years" category and ">56 years" category.</p>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <caption>Tukey HSD results for marathon</caption>
+          <thead>
+            <tr style="text-align: right;">
+              <th></th>
+              <th></th>
+              <th>Mean difference</th>
+              <th>Lower</th>
+              <th>Upper</th>
+              <th>Reject</th>
+            </tr>
+            <tr>
+              <th>Group 1</th>
+              <th>Group 2</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th rowspan="9" valign="top">15-25 years</th>
+              <th class="font-weight-bold text-success">26-30 years</th>
+              <td class="font-weight-bold text-success">132.1337</td>
+              <td class="font-weight-bold text-success">-979.8138</td>
+              <td class="font-weight-bold text-success">1244.0811</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>31-35 years</th>
+              <td>-429.3595</td>
+              <td>-1468.8914</td>
+              <td>610.1725</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>36-40 years</th>
+              <td>-653.1896</td>
+              <td>-1702.3295</td>
+              <td>395.9504</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>-273.2375</td>
+              <td>-1283.9452</td>
+              <td>737.4701</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>185.1530</td>
+              <td>-856.8041</td>
+              <td>1227.1102</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>567.6432</td>
+              <td>-521.8862</td>
+              <td>1657.1725</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>1061.9956</td>
+              <td>-81.0005</td>
+              <td>2204.9918</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>835.2964</td>
+              <td>-575.3748</td>
+              <td>2245.9676</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>2937.9845</td>
+              <td>1132.5458</td>
+              <td>4743.4232</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="8" valign="top">26-30 years</th>
+              <th class="font-weight-bold text-success">31-35 years</th>
+              <td class="font-weight-bold text-success">-561.4931</td>
+              <td class="font-weight-bold text-success">-1364.8981</td>
+              <td class="font-weight-bold text-success">241.9118</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>36-40 years</th>
+              <td>-785.3232</td>
+              <td>-1601.1219</td>
+              <td>30.4755</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>-405.3712</td>
+              <td>-1171.1145</td>
+              <td>360.3721</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>53.0194</td>
+              <td>-753.5211</td>
+              <td>859.5599</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>51-55 years</th>
+              <td>435.5095</td>
+              <td>-431.6163</td>
+              <td>1302.6353</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>56-60 years</th>
+              <td>929.8620</td>
+              <td>-3.5581</td>
+              <td>1863.2821</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>703.1627</td>
+              <td>-543.7639</td>
+              <td>1950.0894</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>2805.8508</td>
+              <td>1125.2433</td>
+              <td>4486.4584</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="7" valign="top">31-35 years</th>
+              <th class="font-weight-bold text-success">36-40 years</th>
+              <td class="font-weight-bold text-success">-223.8301</td>
+              <td class="font-weight-bold text-success">-937.7817</td>
+              <td class="font-weight-bold text-success">490.1215</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>41-45 years</th>
+              <td>156.1219</td>
+              <td>-500.0505</td>
+              <td>812.2943</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>46-50 years</th>
+              <td>614.5125</td>
+              <td>-88.8416</td>
+              <td>1317.8666</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>51-55 years</th>
+              <td>997.0026</td>
+              <td>224.9233</td>
+              <td>1769.0820</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>1491.3551</td>
+              <td>645.4990</td>
+              <td>2337.2112</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>1264.6558</td>
+              <td>81.8517</td>
+              <td>2447.4600</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>3367.3439</td>
+              <td>1733.7463</td>
+              <td>5000.9416</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="6" valign="top">36-40 years</th>
+              <th class="font-weight-bold text-success">41-45 years</th>
+              <td class="font-weight-bold text-success">379.9520</td>
+              <td class="font-weight-bold text-success">-291.3379</td>
+              <td class="font-weight-bold text-success">1051.2419</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>46-50 years</th>
+              <td>838.3426</td>
+              <td>120.8644</td>
+              <td>1555.8208</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>51-55 years</th>
+              <td>1220.8327</td>
+              <td>435.8649</td>
+              <td>2005.8006</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>1715.1852</td>
+              <td>857.5486</td>
+              <td>2572.8218</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>61-65 years</th>
+              <td>1488.4859</td>
+              <td>297.2288</td>
+              <td>2679.7431</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>3591.1740</td>
+              <td>1951.4456</td>
+              <td>5230.9024</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="5" valign="top">41-45 years</th>
+              <th class="font-weight-bold text-success">46-50 years</th>
+              <td class="font-weight-bold text-success">458.3906</td>
+              <td class="font-weight-bold text-success">-201.6171</td>
+              <td class="font-weight-bold text-success">1118.3983</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>51-55 years</th>
+              <td>840.8807</td>
+              <td>108.0712</td>
+              <td>1573.6902</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>1335.2332</td>
+              <td>525.0630</td>
+              <td>2145.4034</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>1108.5339</td>
+              <td>-49.0190</td>
+              <td>2266.0869</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>3211.2220</td>
+              <td>1595.8136</td>
+              <td>4826.6305</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="4" valign="top">46-50 years</th>
+              <th class="font-weight-bold text-success">51-55 years</th>
+              <td class="font-weight-bold text-success">382.4901</td>
+              <td class="font-weight-bold text-success">-392.8514</td>
+              <td class="font-weight-bold text-success">1157.8317</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>56-60 years</th>
+              <td>876.8426</td>
+              <td>28.0078</td>
+              <td>1725.6774</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>650.1433</td>
+              <td>-534.7928</td>
+              <td>1835.0795</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>2752.8314</td>
+              <td>1117.6895</td>
+              <td>4387.9734</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="3" valign="top">51-55 years</th>
+              <th class="font-weight-bold text-success">56-60 years</th>
+              <td class="font-weight-bold text-success">494.3525</td>
+              <td class="font-weight-bold text-success">-412.2456</td>
+              <td class="font-weight-bold text-success">1400.9506</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-success">
+              <th>61-65 years</th>
+              <td>267.6532</td>
+              <td>-959.3240</td>
+              <td>1494.6305</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>2370.3413</td>
+              <td>704.4815</td>
+              <td>4036.2011</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th rowspan="2" valign="top">56-60 years</th>
+              <th class="font-weight-bold text-success">61-65 years</th>
+              <td class="font-weight-bold text-success">-226.6993</td>
+              <td class="font-weight-bold text-success">-1501.3910</td>
+              <td class="font-weight-bold text-success">1047.9925</td>
+              <td class="bg-success font-weight-bold text-success">False</td>
+            </tr>
+            <tr class="font-weight-bold text-danger">
+              <th>65+ years</th>
+              <td>1875.9888</td>
+              <td>174.6791</td>
+              <td>3577.2986</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+            <tr>
+              <th>61-65 years</th>
+              <th class="font-weight-bold text-danger">65+ years</th>
+              <td class="font-weight-bold text-danger">2102.6881</td>
+              <td class="font-weight-bold text-danger">211.1258</td>
+              <td class="font-weight-bold text-danger">3994.2504</td>
+              <td class="bg-danger font-weight-bold text-danger">True</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 id="performance-by-sex">Performance by sex</h3>
 
       <div class="row row-sm-align-center">
         <div class="col-sm-6">
