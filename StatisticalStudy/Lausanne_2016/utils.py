@@ -12,6 +12,7 @@ from datetime import date
 from dateutil.relativedelta import relativedelta
 from matplotlib.pyplot import show
 from sklearn import preprocessing
+from collections import Counter
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -167,7 +168,7 @@ def compute_time_to_best_in_team(runner, data):
     
     else:
         # select best performances in the team by sex and  distance
-        team_performance = np.min(data['time'][(data['team'] == runner.team) & (data['sex'] == runner.sex) & (data['distance (km)'] == runner['distance (km)'])])        
+        team_performance = np.min(data['time'][(data['team'] == runner.team) & (data['distance (km)'] == runner['distance (km)'])])        
         return abs(team_performance - runner.time)
     
 
@@ -437,7 +438,7 @@ def plot_time_difference_distribution (data):
     ax.axvline(mean, 0, 1750, color='r', linestyle='--')
     ax.set_title('Time difference with best runner in the team distribution')
 
-    plt.xticks(ax.get_xticks(), [convert_seconds_to_time(label) for label in ax.get_xticks()], rotation=90)
+    plt.xticks(ax.get_xticks(), [convert_seconds_to_time(label) for label in ax.get_xticks()])
 
     # Calculation of age distribution statistics by gender
     time_stats = 'Mean time difference : ' + convert_seconds_to_time(mean) + '\n' + 'Max time difference : ' +  convert_seconds_to_time(max_time_diff)
@@ -447,6 +448,29 @@ def plot_time_difference_distribution (data):
     ax.text(.95, .95, time_stats, fontsize=11, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
 
     
+def display_legend(dict_team_runner, plot):
+    
+    # Creation of string with statistics
+    pairs_runners = 'Pair runners: ' + str(dict_team_runner.get(1))   + ' runners'
+    individual_runners = 'individual runners: ' + str(dict_team_runner.get(0)) + ' runners'
+    stats_str = pairs_runners + '\n' + individual_runners 
+
+    # Add of information in the graph
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    plot.text(.95, .95, stats_str, fontsize=12, transform=plot.transAxes, va='top', ha='center', bbox=props, multialignment='left')
+
+def compute_pair_runner (runner, data, time_second):
+    
+    # get all time in the team execpt its own personnal time
+    team_performance = data['time difference team'][(data['team'] == runner.team) & (data['acode'] != runner.acode)] 
+       
+    min_time = abs(min(team_performance, key=lambda x:abs(x-runner['time difference team'])) - runner['time difference team'])
+
+    if min_time > time_second:
+        return 0
+    
+    return 1
+
 def plot_scatter_difference_time_number (fig, data, distance, time_mini, place, annotation = []):
     
     # Map string name of the team to 
@@ -468,7 +492,10 @@ def plot_scatter_difference_time_number (fig, data, distance, time_mini, place, 
     team_label = team_label_encode.fit_transform(race_team['team'])
     race_team['team_code'] = team_label
     
-        
+    # compute paire runner
+    number_runner_in_pair = race_team.apply(compute_pair_runner,args=(race_team,60), axis=1)
+    counter_pair = Counter(number_runner_in_pair)
+    
     # plotting the results.
     plot = fig.add_subplot(place)
     sns.swarmplot(x="team_code", y="time difference team", hue="sex", data=race_team, ax = plot )
@@ -488,12 +515,13 @@ def plot_scatter_difference_time_number (fig, data, distance, time_mini, place, 
         plot.legend_.remove()
         
     if place == 312:
-        plot.set_ylabel('time difference with best in team')
+        plot.set_ylabel('time difference with the best runners in the team')
     
     if place == 313:
         plot.set_xlabel('Team number')
         
     plt.yticks(plot.get_yticks(), [convert_seconds_to_time(label) for label in plot.get_yticks()])
+    display_legend(counter_pair, plot)
     
     
 def display_information_speed(data):
