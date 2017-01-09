@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
+import { CollapseModule } from 'ng2-bootstrap/collapse';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    ChartsModule
+    ChartsModule,
+    CollapseModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

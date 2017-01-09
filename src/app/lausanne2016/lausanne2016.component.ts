@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lausanne2016.component.css']
 })
 export class Lausanne2016Component implements OnInit {
+  public isDetailedStatisticalAnalysisCollapsed:boolean = true;
+  public is10kmTukeyHSDTableCollapsed:boolean = true;
+  public is21kmTukeyHSDTableCollapsed:boolean = true;
+  public is42kmTukeyHSDTableCollapsed:boolean = true;
 
   constructor() { }
 

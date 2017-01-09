@@ -97,68 +97,88 @@
       <h4 id="statistical-anlysis">Statistical analysis</h4>
 
       <p>An interesting fact is that distributions seem to be quite homogeneous globally, while we observe real changes at the extremes. One can then ask if we can assume that the different categories of runners are similar or not, statistically speaking. To verify this assumption, we decide to use <a href="https://en.wikipedia.org/wiki/Analysis_of_variance">ANOVA</a>, which is quite popular and useful when comparing multiple populations. More specifically, we will use <a href="https://en.wikipedia.org/wiki/One-way_analysis_of_variance">one-way ANOVA</a> as in our case, we only have one factor to study over the different distributions.</p>
-      <p>ANOVA requires at least three conditions to be respected. Those conditions are the following:</p>
 
-      <ul>
-        <li>independence of the observations</li>
-        <li>normality of the observations</li>
-        <li>homogeneity/homoscedasticity (same variance for data in groups)</li>
-      </ul>
+      <p><strong>Results:</strong> For certain groups, significant differences are observed (i.e. we can't affirm that all the age categories are similar during the different runnings).</p>
 
-      <p>Clearly, the first condition is satisfied as the different categories of runners don't have nothing in common (people are different). What about the others? As Minitab explain <a href="http://blog.minitab.com/blog/applying-statistics-in-quality-projects/how-could-you-benefit-from-a-box-cox-transformation">in its blog</a>, when it comes to analyze runnings, we can observe some kind of specific pattern in the data. Thus, we decide to plot the distribution according the age categories to obtain a visual, immediate, intuition about the type of distribution and check if we can assume normal distribution or not.</p>
+      <button type="button" class="btn btn-primary" (click)="isDetailedStatisticalAnalysisCollapsed = !isDetailedStatisticalAnalysisCollapsed">{{ isDetailedStatisticalAnalysisCollapsed == true ? 'Display' : 'Hide' }} methodology and detailed results</button>
+      <br /><br />
+      <div [collapse]="isDetailedStatisticalAnalysisCollapsed" class="well well-sm" style="background:rgb(255, 255, 255)">
+        <h5>Detailed methodoly and results</h5>
+        <p>ANOVA requires at least three conditions to be respected. Those conditions are the following:</p>
 
-      <div class="thumbnail thumbnail-large">
-        <img src="./assets/images/time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
-        <img src="./assets/images/time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
-        <img src="./assets/images/time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
-      </div>
-      <div class="thumbnail thumbnail-small">
-        <img src="./assets/images/time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
-      </div>
+        <ul>
+          <li>independence of the observations</li>
+          <li>normality of the observations</li>
+          <li>homogeneity/homoscedasticity (same variance for data in groups)</li>
+        </ul>
 
-      <p>If we pay attention to the graphes, we see that sometimes, and even if we group carefully the data according to the types of races (10 km/semi-marathon/marathon) to avoid edge effects, distributions are not normal at all or suffer of heteroscedasticity, as explained in the article from Minitab quoted before. However, we observe that for each category and race, we have significant number of runners. Thus, we can apply the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>. Notice that ANOVA is, by default and thanks to CLT, robust against normality assumption (and thus violation of such property is quite well tolerated).</p>
+        <p>Clearly, the first condition is satisfied as the different categories of runners don't have nothing in common (people are different). What about the others? As Minitab explain <a href="http://blog.minitab.com/blog/applying-statistics-in-quality-projects/how-could-you-benefit-from-a-box-cox-transformation">in its blog</a>, when it comes to analyze runnings, we can observe some kind of specific pattern in the data. Thus, we decide to plot the distribution according the age categories to obtain a visual, immediate, intuition about the type of distribution and check if we can assume normal distribution or not.</p>
 
-      <p>Here are the two hypothesis we have for our one-way ANOVA:</p>
+        <div class="thumbnail thumbnail-large">
+          <img src="./assets/images/time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
+          <img src="./assets/images/time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
+          <img src="./assets/images/time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
+        </div>
+        <div class="thumbnail thumbnail-small">
+          <img src="./assets/images/time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
+        </div>
 
-      <ul>
-        <li>H0 (null hypothesis): samples of all groups are drawn from populations with the same mean values</li>
-        <li>H1 (alternative hypothesis): mean values are different</li>
-      </ul>
+        <p>If we pay attention to the graphes, we see that sometimes, and even if we group carefully the data according to the types of races (10 km/semi-marathon/marathon) to avoid edge effects, distributions are not normal at all or suffer of heteroscedasticity, as explained in the article from Minitab quoted before. However, we observe that for each category and race, we have significant number of runners. Thus, we can apply the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>. Notice that ANOVA is, by default and thanks to CLT, robust against normality assumption (and thus violation of such property is quite well tolerated).</p>
 
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <caption>Results of one-way ANOVA</caption>
-          <tr>
-            <th class="text-centered">Distance</th>
-            <th class="text-centered">f-value</th>
-            <th class="text-centered">p-value</th>
-          </tr>
+        <p>Here are the two hypothesis we have for our one-way ANOVA:</p>
 
-          <tr class="text-centered">
-            <td>10 km</td>
-            <td>10.9576688214</td>
-            <td>4.36331120016e-17</td>
-          </tr>
-          <tr class="text-centered">
-            <td>21 km</td>
-            <td>13.1462717114</td>
-            <td>5.89701883835e-21</td>
-          </tr>
+        <ul>
+          <li>H0 (null hypothesis): samples of all groups are drawn from populations with the same mean values</li>
+          <li>H1 (alternative hypothesis): mean values are different</li>
+        </ul>
 
-          <tr class="text-centered">
-            <td>42 km</td>
-            <td>11.5770412514</td>
-            <td>1.23630215228e-17</td>
-          </tr>
-        </table>
-      </div>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <caption>Results of one-way ANOVA</caption>
+            <tr>
+              <th class="text-centered">Distance</th>
+              <th class="text-centered">f-value</th>
+              <th class="text-centered">p-value</th>
+            </tr>
 
-      <p>As we can see, p-value is extremly low (<< 5%). Thus, we can safely reject H0. Put in other words, it means that we can assume significant differences between the different age categories (statistical differences between mean values). Such conclusion tends to confirm our initial assumption about the distributions presented before. But if ANOVA permitted us to conclude about heterogeneity of runners' categories, it does not provide precise results. For this reason, we decided to also use <a href="https://en.wikipedia.org/wiki/Tukey's_range_test">Tukey HSD</a> as post-hoc analysis.</p>
+            <tr class="text-centered">
+              <td>10 km</td>
+              <td>10.9576688214</td>
+              <td>4.36331120016e-17</td>
+            </tr>
+            <tr class="text-centered">
+              <td>21 km</td>
+              <td>13.1462717114</td>
+              <td>5.89701883835e-21</td>
+            </tr>
 
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <caption>Tukey HSD results for 10 km</caption>
-          <thead>
+            <tr class="text-centered">
+              <td>42 km</td>
+              <td>11.5770412514</td>
+              <td>1.23630215228e-17</td>
+            </tr>
+          </table>
+        </div>
+
+        <p>As we can see, p-value is extremly low (<< 5%). Thus, we can safely reject H0. Put in other words, it means that we can assume significant differences between the different age categories (statistical differences between mean values). Such conclusion tends to confirm our initial assumption about the distributions presented before. But if ANOVA permitted us to conclude about heterogeneity of runners' categories, it does not provide precise results. For this reason, we decided to also use <a href="https://en.wikipedia.org/wiki/Tukey's_range_test">Tukey HSD</a> as post-hoc analysis.</p>
+
+        <div class="row">
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary {{ is10kmTukeyHSDTableCollapsed == true ? '' : 'active' }}" (click)="is10kmTukeyHSDTableCollapsed = !is10kmTukeyHSDTableCollapsed">{{ is10kmTukeyHSDTableCollapsed == true ? 'Display' : 'Hide' }} Tukey HSD results table (10 km running)</button>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary {{ is21kmTukeyHSDTableCollapsed == true ? '' : 'active' }}" (click)="is21kmTukeyHSDTableCollapsed = !is21kmTukeyHSDTableCollapsed">{{ is21kmTukeyHSDTableCollapsed == true ? 'Display' : 'Hide' }} Tukey HSD results table (21 km running)</button>
+          </div>
+          <div class="col-sm-4">
+            <button type="button" class="btn btn-primary {{ is42kmTukeyHSDTableCollapsed == true ? '' : 'active' }}" (click)="is42kmTukeyHSDTableCollapsed = !is42kmTukeyHSDTableCollapsed">{{ is42kmTukeyHSDTableCollapsed == true ? 'Display' : 'Hide' }} Tukey HSD results table (42 km running)</button>
+          </div>
+        </div>
+        <br />
+        <div [collapse]="is10kmTukeyHSDTableCollapsed">
+          <div class="table-responsive">
+          <table class="table table-bordered">
+            <caption>Tukey HSD results for 10 km</caption>
+            <thead>
             <tr style="text-align: right;">
               <th></th>
               <th></th>
@@ -175,8 +195,8 @@
               <th></th>
               <th></th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr>
               <th rowspan="9" valign="top">15-25 years</th>
               <th class="font-weight-bold text-danger">26-30 years</th>
@@ -501,16 +521,18 @@
               <td class="font-weight-bold text-danger">504.3760</td>
               <td class="bg-danger font-weight-bold text-danger">True</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
 
-      <p>As we can see, the differences between categories are observed for the extreme. This means that 15-25 years category and 65+ years category have, on average, a performance which is significantly different from the one of other categories.</p>
+          <p>As we can see, the differences between categories are observed for the extreme. This means that 15-25 years category and 65+ years category have, on average, a performance which is significantly different from the one of other categories.</p>
+        </div>
 
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <caption>Tukey HSD results for semi-marathon</caption>
-          <thead>
+        <div [collapse]="is21kmTukeyHSDTableCollapsed">
+          <div class="table-responsive">
+          <table class="table table-bordered">
+            <caption>Tukey HSD results for semi-marathon</caption>
+            <thead>
             <tr style="text-align: right;">
               <th></th>
               <th></th>
@@ -527,8 +549,8 @@
               <th></th>
               <th></th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr>
               <th rowspan="9" valign="top">15-25 years</th>
               <th class="font-weight-bold text-success">26-30 years</th>
@@ -853,16 +875,18 @@
               <td class="font-weight-bold text-success">935.4596</td>
               <td class="bg-success font-weight-bold text-success">False</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
 
-      <p>For semi-marathon, two observations can be made. First, we see that we can again make two big categories. Indeed, significant differences are shown between "<56 years" category and ">56 years" category. Second, we see that "56-60 years" and "65+ years" categories are statistically different, while we can't reject null hypothesis H0 when comparing "56-60 years" and "61-65 years" categories, and "61-65 years" and "65+ years" categories, respectively. Such result means that for the non-contiguous categories, we observe significant difference, but when we consider contiguous categories, the difference are not sufficient to conclude that distributions are different.</p>
+          <p>For semi-marathon, two observations can be made. First, we see that we can again make two big categories. Indeed, significant differences are shown between "<56 years" category and ">56 years" category. Second, we see that "56-60 years" and "65+ years" categories are statistically different, while we can't reject null hypothesis H0 when comparing "56-60 years" and "61-65 years" categories, and "61-65 years" and "65+ years" categories, respectively. Such result means that for the non-contiguous categories, we observe significant difference, but when we consider contiguous categories, the difference are not sufficient to conclude that distributions are different.</p>
+        </div>
 
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <caption>Tukey HSD results for marathon</caption>
-          <thead>
+        <div [collapse]="is42kmTukeyHSDTableCollapsed">
+          <div class="table-responsive">
+          <table class="table table-bordered">
+            <caption>Tukey HSD results for marathon</caption>
+            <thead>
             <tr style="text-align: right;">
               <th></th>
               <th></th>
@@ -879,8 +903,8 @@
               <th></th>
               <th></th>
             </tr>
-          </thead>
-          <tbody>
+            </thead>
+            <tbody>
             <tr>
               <th rowspan="9" valign="top">15-25 years</th>
               <th class="font-weight-bold text-success">26-30 years</th>
@@ -1205,11 +1229,13 @@
               <td class="font-weight-bold text-danger">3994.2504</td>
               <td class="bg-danger font-weight-bold text-danger">True</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
+            </tbody>
+          </table>
+        </div>
 
-      <p>Finally, for the complete marathon, it seems that the results are more heterogeneous than before. Indeed, if we still have statistical differences between the extreme and no reject of H0 between two contiguous group, we see different patterns for the groups that are in the middle. One of the extreme exemple is for the group of "41-45 years" group: while we observe significant differences with "51-55 years", "56-60 years" and "65+ years" groups (which are not all contiguous), we can't reject H0 when we compare the group with "46-50 years" and "61-65 years" ones...</p>
+          <p>Finally, for the complete marathon, it seems that the results are more heterogeneous than before. Indeed, if we still have statistical differences between the extreme and no reject of H0 between two contiguous group, we see different patterns for the groups that are in the middle. One of the extreme example is for the group of "41-45 years" group: while we observe significant differences with "51-55 years", "56-60 years" and "65+ years" groups (which are not all contiguous), we can't reject H0 when we compare the group with "46-50 years" and "61-65 years" ones...</p>
+        </div>
+      </div>
 
       <h3 id="performance-by-sex">Performance by sex</h3>
 
