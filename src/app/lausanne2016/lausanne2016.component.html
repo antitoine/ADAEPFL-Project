@@ -175,9 +175,12 @@
         </div>
         <br />
         <div [collapse]="is10kmTukeyHSDTableCollapsed">
+          <strong>Tukey HSD results for 10 km</strong>
+
+          <p>As we can see, the differences between categories are observed for the extreme. This means that 15-25 years category and 65+ years category have, on average, a performance which is significantly different from the one of other categories.</p>
+
           <div class="table-responsive">
           <table class="table table-bordered">
-            <caption>Tukey HSD results for 10 km</caption>
             <thead>
             <tr style="text-align: right;">
               <th></th>
@@ -524,14 +527,15 @@
             </tbody>
           </table>
         </div>
-
-          <p>As we can see, the differences between categories are observed for the extreme. This means that 15-25 years category and 65+ years category have, on average, a performance which is significantly different from the one of other categories.</p>
         </div>
 
         <div [collapse]="is21kmTukeyHSDTableCollapsed">
+          <strong>Tukey HSD results for semi-marathon</strong>
+
+          <p>For semi-marathon, two observations can be made. First, we see that we can again make two big categories. Indeed, significant differences are shown between "<56 years" category and ">56 years" category. Second, we see that "56-60 years" and "65+ years" categories are statistically different, while we can't reject null hypothesis H0 when comparing "56-60 years" and "61-65 years" categories, and "61-65 years" and "65+ years" categories, respectively. Such result means that for the non-contiguous categories, we observe significant difference, but when we consider contiguous categories, the difference are not sufficient to conclude that distributions are different.</p>
+
           <div class="table-responsive">
           <table class="table table-bordered">
-            <caption>Tukey HSD results for semi-marathon</caption>
             <thead>
             <tr style="text-align: right;">
               <th></th>
@@ -878,14 +882,15 @@
             </tbody>
           </table>
         </div>
-
-          <p>For semi-marathon, two observations can be made. First, we see that we can again make two big categories. Indeed, significant differences are shown between "<56 years" category and ">56 years" category. Second, we see that "56-60 years" and "65+ years" categories are statistically different, while we can't reject null hypothesis H0 when comparing "56-60 years" and "61-65 years" categories, and "61-65 years" and "65+ years" categories, respectively. Such result means that for the non-contiguous categories, we observe significant difference, but when we consider contiguous categories, the difference are not sufficient to conclude that distributions are different.</p>
-        </div>
+          </div>
 
         <div [collapse]="is42kmTukeyHSDTableCollapsed">
+          <strong>Tukey HSD results for marathon</strong>
+
+          <p>Finally, for the complete marathon, it seems that the results are more heterogeneous than before. Indeed, if we still have statistical differences between the extreme and no reject of H0 between two contiguous group, we see different patterns for the groups that are in the middle. One of the extreme example is for the group of "41-45 years" group: while we observe significant differences with "51-55 years", "56-60 years" and "65+ years" groups (which are not all contiguous), we can't reject H0 when we compare the group with "46-50 years" and "61-65 years" ones...</p>
+
           <div class="table-responsive">
           <table class="table table-bordered">
-            <caption>Tukey HSD results for marathon</caption>
             <thead>
             <tr style="text-align: right;">
               <th></th>
@@ -1232,9 +1237,7 @@
             </tbody>
           </table>
         </div>
-
-          <p>Finally, for the complete marathon, it seems that the results are more heterogeneous than before. Indeed, if we still have statistical differences between the extreme and no reject of H0 between two contiguous group, we see different patterns for the groups that are in the middle. One of the extreme example is for the group of "41-45 years" group: while we observe significant differences with "51-55 years", "56-60 years" and "65+ years" groups (which are not all contiguous), we can't reject H0 when we compare the group with "46-50 years" and "61-65 years" ones...</p>
-        </div>
+          </div>
       </div>
 
       <h3 id="performance-by-sex">Performance by sex</h3>
