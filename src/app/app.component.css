@@ -94,25 +94,6 @@
   color: #333;
 }
 
-.sidebar-footer {
-  position: absolute;
-  bottom: 10px;
-  width: 250px;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  text-indent: 20px;
-  font-size: 2em;
-}
-
-.sidebar-footer li a {
-  color: #616161;
-}
-
-.sidebar-footer li a:hover {
-  color: #333;
-}
-
 @media(min-width:768px) {
   #wrapper {
     padding-left: 250px;
@@ -170,6 +151,10 @@
   #wrapper.toggled .sidebar-nav > .sidebar-brand a img {
     display: none;
   }
+
+  #main-content {
+    padding-left: 25px;
+  }
 }
 
 .toggle-menu {
@@ -178,14 +163,7 @@
   top: 15px;
 }
 
-@media(max-height:400px) {
-  .sidebar-footer {
-    display: none;
-  }
-}
-
 #main-content {
-  padding-left: 25px;
   min-height: 100vh;
 }
 
