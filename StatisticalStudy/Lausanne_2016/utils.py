@@ -295,6 +295,27 @@ def compute_anova_and_tukey_hsd(df, categories, values):
     return results
 
 
+def plot_time_distribution_by_bib_numbers(df):
+    '''
+    This function display the time distribution of runners according to the BIB numbers
+
+    Parameters
+        - df: DataFrame containing data to use to generate the graph
+    '''
+
+    ax = df.plot(kind='scatter', x='number', y='time', xlim=(-1000, 18000));
+    lines = [-200, 2000, 8800, 9800, 17000]
+    annotations = [('10 km', 12500), ('21 km', 4500), ('42 km', 150)]
+    for line in lines:
+        ax.axvline(line, color='b', linestyle='--')
+    for annotation in annotations:
+        annotation_obj = [annotation[0],(0, 0), (annotation[1], 28000)]
+        ax.annotate(annotation_obj[0], annotation_obj[1], annotation_obj[2], color='b')
+    plt.yticks(ax.get_yticks(), [convert_seconds_to_time(label) for label in ax.get_yticks()])
+    plt.title('Running time according to BIB number of participants')
+    plt.show()
+
+
 def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_range=np.arange(0, 900, 100)):
     '''
     This function adds plot of speed distribution for a given running, in a figure.
@@ -451,8 +472,6 @@ def compute_overall_rank(data):
 def plot_time_difference_distribution (data):
 
     ax = data['time difference team'].hist(bins=30,figsize=(10,6))
-
-    print(utils.convert_seconds_to_time(x) for x in (np.arange(0,10000,1000)))
 
     # Computing of the mean of age selected by gender
     mean = np.mean(data['time difference team'])
