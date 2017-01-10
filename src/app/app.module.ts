@@ -12,11 +12,13 @@ import { ScrapingComponent } from './scraping/scraping.component';
 import { Lausanne2016Component } from './lausanne2016/lausanne2016.component';
 import { CsvReaderService } from './csv-reader.service';
 import { MapToIterablePipe } from './map-to-iterable.pipe';
+import { Lausanne19992016Component } from './lausanne-1999-2016/lausanne-1999-2016.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'scraping', component: ScrapingComponent },
   { path: 'lausanne2016', component: Lausanne2016Component },
+  { path: 'lausanne-1999-2016', component: Lausanne19992016Component },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '**', redirectTo: '/main', pathMatch: 'full' }
 ];
@@ -27,7 +29,9 @@ const appRoutes: Routes = [
     MainComponent,
     ScrapingComponent,
     Lausanne2016Component,
-    MapToIterablePipe
+    MapToIterablePipe,
+    Lausanne19992016Component,
+    Lausanne19992016Component
   ],
   imports: [
     BrowserModule,
