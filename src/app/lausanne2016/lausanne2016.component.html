@@ -1324,7 +1324,7 @@
             <label for="labelSelector" class="col-sm-2 control-label">Select x:</label>
             <div class="col-sm-4">
               <select class="form-control" id="labelSelector" name="labelSelector" [(ngModel)]="labelSelected"  (change)="onSelectLabelChange($event.target.value)">
-                <option [value]="label.key" *ngFor="let label of availableLabels | mapToIterable">{{label.value.label}}</option>
+                <option [value]="label.key" *ngFor="let label of availableLabels | mapToIterable" [disabled]="seriesSelected && !label.value.series.includes(seriesSelected)">{{label.value.name}}</option>
               </select>
             </div>
           </div>
@@ -1332,7 +1332,7 @@
             <label for="seriesSelector" class="col-sm-2 control-label">Select y:</label>
             <div class="col-sm-4">
               <select class="form-control" id="seriesSelector" name="seriesSelector" [(ngModel)]="seriesSelected"  (change)="onSelectSeriesChange($event.target.value)">
-                <option [value]="series.key" *ngFor="let series of availableSeries | mapToIterable">{{series.value.label}}</option>
+                <option [value]="series.key" *ngFor="let series of availableSeries | mapToIterable" [disabled]="labelSelected && !series.value.labels.includes(labelSelected)">{{series.value.name}}</option>
               </select>
             </div>
           </div>
