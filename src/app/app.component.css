@@ -186,6 +186,7 @@
 
 #main-content {
   padding-left: 25px;
+  min-height: 100vh;
 }
 
 footer#footer p {
