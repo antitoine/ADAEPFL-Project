@@ -83,7 +83,7 @@ export class Lausanne2016Component implements OnInit {
     // Generate data for 'age' in x axis
     this.csvReader.readCsvData('./assets/csv/marathon-lausanne-2016-by-speed.csv')
       .subscribe(data => {
-        this.appendNewLabel('speed', 'Speed (m/s) of runners', this.csvReader.getColumn(data, 'Speed (m/s)'));
+        this.appendNewLabel('speed', 'Speed (m/s) of runners', this.csvReader.getColumn(data, 'Speed (m/s) Rounded'));
 
         this.appendNewSeries('count', 'speed', [
           {data: this.csvReader.getColumn(data, 'count'), label: 'Number of runners'}
@@ -99,6 +99,21 @@ export class Lausanne2016Component implements OnInit {
           {data: this.csvReader.getColumn(data, 'female count'), label: 'Female runners - Number of runners'},
           {data: this.csvReader.getColumn(data, 'male count'), label: 'Male runners - Number of runners'}
         ], 'Number of runners by sex');
+
+        this.appendNewSeries('time', 'speed', [
+          {data: this.csvReader.getColumn(data, 'time'), label: 'Time (s)'}
+        ], 'Average time (seconds)');
+
+        this.appendNewSeries('timeDistance', 'speed', [
+          {data: this.csvReader.getColumn(data, '42km time'), label: '42 km - Time (s)'},
+          {data: this.csvReader.getColumn(data, '21km time'), label: '21 km - Time (s)'},
+          {data: this.csvReader.getColumn(data, '10km time'), label: '10 km - Time (s)'}
+        ], 'Average time (seconds) by distance');
+
+        this.appendNewSeries('timeSex', 'speed', [
+          {data: this.csvReader.getColumn(data, 'female time'), label: 'Female runners - Time (s)'},
+          {data: this.csvReader.getColumn(data, 'male time'), label: 'Male runners - Time (s)'}
+        ], 'Average time (seconds) by sex');
       });
   }
 
