@@ -1316,6 +1316,41 @@
         </div>
       </div>
 
+
+      <p>
+        As we can notice most of people in team have finished the race in pair/group (mean difference time equal to 10 minutes). But the maximum difference time between the best and the worst time in the team is equal to 2h40, however this person could have been finished the race in pair.
+        In order to go further, It is very unlikely that any two runners would have the exact same start and end time (within 30 sec) unless they ran together, so these visual clusters should be very accurate in showing running pairs/groups.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-6">
+
+          <p>
+            Based on the graph there are distinct differences in "belong to a team" in the difference race:
+          </p>
+          <ul>
+            <li> <b> 10 Km : </b>  where most people in a team ran in pair/group (326 runners compared to 60 runners who have finished alone), the race seems more like a friend challenge or associations (as we can notice to the important size of the different teams) </li>
+            <li> <b> 21 Km : </b>  where almost half of people in team ran in pair/group (162 pairs runners compared to 158 individual runners) </li>
+            <li> <b> 42 Km : </b>  where the challenge seems more individual where 51 runners finished alone compared to 17 runners in teams/groups. </li>
+          </ul>
+
+          An other interesting fact is for the 10k we have studied 105 female and 281 male, on the 60 person who have finished alone, there were 22 females and 38 males, the rapport (#male / #female) decrease by 1 point (2,7 to 1,7).
+          For the 20 Km we have a sample of 101 females and 111 males and on the 106 persons who have raced alone, 51 are female and 55 are male. (the rapport is quite equivalent)
+          One conclusion could be that men who participate at the 10km in team, raced not too seriously and have more the "team spirit" staying in group unlike womens because we don't have these effects in the 21km were the proportions female/male are keeped.
+          (This is a supposition derived from the data of Lausanne Marathon, we would need to confirm on other races)
+
+
+          <div class="thumbnail">
+            <img src="./assets/images/time_difference-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/time_difference_swarmplot.png" alt="swarmplot time difference by team number"/>
+          </div>
+        </div>
+      </div>
+
       <h2 id="dynamic-graph">Take the control of the data</h2>
 
       <div *ngIf="availableLabels && availableSeries">
