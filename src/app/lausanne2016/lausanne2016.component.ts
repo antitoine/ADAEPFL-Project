@@ -14,6 +14,7 @@ export class Lausanne2016Component implements OnInit {
   availableSeries: any = {};
 
   labelSelected: string;
+  seriesSelected: string;
 
   chartLabels: number[] = null;
   chartSeries: Array<any> = null;
@@ -103,6 +104,8 @@ export class Lausanne2016Component implements OnInit {
 
   onSelectLabelChange(key: string) {
     this.chartLabels = this.availableLabels[key].data;
+    this.chartSeries = null;
+    this.seriesSelected = null;
   }
 
   onSelectSeriesChange(key: string) {
