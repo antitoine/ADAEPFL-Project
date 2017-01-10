@@ -53,7 +53,5 @@ def compute_overall_rank(data):
         
         # We add results for all types
         all_races.append(pd.concat(all_type))
-
-    #pd.options.mode.chained_assignment = 'warn'
     
     return pd.concat(all_races)

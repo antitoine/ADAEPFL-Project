@@ -30,12 +30,6 @@ QUARTER_MARATHON_DISTANCE_REGEX = '(10)|(Q)'
 # ----------------------------------------------------------------------------------------------------------
 # Functions
 
-def test():
-    print('Hello world')
-
-def test2():
-    print('Bla')
-
 def filter_participants(runner):
     '''
     If participant is part of a specific category, function returns false (i.e. participant is excluded).
