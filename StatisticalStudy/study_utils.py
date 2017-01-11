@@ -1,8 +1,9 @@
 # ----------------------------------------------------------------------------------------------------------
-# Import
+# Imports
 
 import pandas as pd
 import numpy as np
+import itertools
 import re
 import datetime
 from datetime import date
@@ -29,6 +30,106 @@ QUARTER_MARATHON_DISTANCE_REGEX = '(10)|(Q)'
 
 # ----------------------------------------------------------------------------------------------------------
 # Functions
+
+def get_data(path, common_name='Lausanne_Marathon_', extension='pickle', identifiers=range(1999, 2017), id_name='year'):
+    '''
+    This function retrieves all data stored given files and concatenate them to create a single DataFrame.
+
+    Parameters
+        - path: Directory containing files
+        - common_name: Common beginning name between the different files to import (by default, 'LAUSANNE_MARATHON_')
+        - extension: extension of considered files ('csv' or 'pickle' / by default, 'pickle')
+        - identifiers: Unique identifiers of files to import (by default, range from 1999 to 2017)
+        - id_name: Name of identifier (by default, 'year' / if value is set, column will be added in the DataFrame accordingly to identify origin of row)
+
+    Return
+        - DataFrame containing all the data for the given files to import
+    '''
+
+    if (extension != 'pickle') and (extension != 'csv'):
+        raise ValueError('Incorrect extension. Extension must be \'csv\' or \'pickle\'.')
+
+    df = []
+
+    for identifier in identifiers:
+        filename = path + common_name + str(identifier) + '.' + extension
+        if extension == 'pickle':
+            current_df = pd.read_pickle(filename)
+        else:
+            current_df = pd.read_csv(filename)
+        if id_name:
+            current_df[id_name] =  identifier
+        df.append(current_df)
+    
+    return pd.concat(df)
+
+
+def apply_computations(df):
+    '''
+    This function applies different computations in order to clean DataFrame.
+
+    Parameters:
+        - df: DataFrame on which computations will be applied
+
+    Return
+        - df_cleaned: Cleaned DataFrame
+    '''
+    
+    df_cleaned = df.copy()
+
+    # We compute gender of runners and exclude those for whom sex was not retrieved accordingly
+    df_cleaned['sex'] = df_cleaned.apply(get_sex_of_runner, axis=1)
+    df_cleaned = df_cleaned[df_cleaned['sex'].notnull()]
+
+    # We clean the rank attribute 
+    df_cleaned.drop('rank', axis=1, inplace=True)
+
+        # We then compute age using birthdate of runners
+    # Runners without birthday are excluded from analysis
+    df_cleaned = df_cleaned[df_cleaned['birthday'].notnull()]
+    df_cleaned['age'] = df_cleaned.apply(compute_age_of_runner, axis=1)
+    df_cleaned['age'] = df_cleaned['age'].apply(lambda x : int(float(x)))
+    df_cleaned['age category'] = pd.cut(df_cleaned['age'], [15, 26, 31, 36, 41, 46, 51, 56, 61, 66, 100], labels=['15-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years'], right=False)
+    
+    # We then format time
+    # Runners without time are excluded from analysis
+    df_cleaned = df_cleaned[df_cleaned['time'].notnull()]
+    df_cleaned['time'] = df_cleaned.apply(format_time, axis=1)
+    
+    # We create global categories (Adult / Junior) and mark type of runners (in temas/individual)
+    df_cleaned['type'] = df_cleaned.apply(get_type_of_runner, axis=1)
+    df_cleaned['type_team'] = df_cleaned.apply(compute_run_in_team, axis=1)
+    
+    # We also compute running type and average speed
+    df_cleaned['distance (km)'] = df_cleaned.apply(compute_distance_from_category, axis=1)
+    df_cleaned['speed (m/s)'] = df_cleaned['distance (km)'] * 1000 / df_cleaned['time']
+    
+    return df_cleaned
+
+
+def get_statistics_outliers(df, columns, check_subsets=True):
+    '''
+    This function displays statistics about outliers for given set of parameters.
+
+    Parameters
+        - df: DataFrame containing datas
+        - columns: columns to check for missing values (i.e. to consider runner as outlier)
+        - check_subsets: Check of all subsets when considering outliers (by default, True)
+    '''
+
+    combinations = []
+    if check_subsets:
+        for i in range(1, len(columns)+1):
+            elements = [list(x) for x in itertools.combinations(columns, i)]
+            combinations.append(elements)
+    else:
+        combinations.append(columns)
+
+    for subsets in combinations:
+        for subset in subsets:
+            print('Subset: ' + str(subset))
+            print('Runners with NAN: ' + str(len(df[pd.isnull(df[subset]).all(axis=1)])))
+
 
 def filter_participants(runner):
     '''
@@ -137,7 +238,7 @@ def compute_run_in_team(runner):
     
     if pd.isnull(runner['team']):
         return 'Individual runner'
-    else:
+    elif :
         return 'Runner in teams'
 
     
