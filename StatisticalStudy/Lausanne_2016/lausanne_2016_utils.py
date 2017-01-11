@@ -447,12 +447,15 @@ def plot_distribution_team_individuals(df, total_10, total_21, total_42):
 
 def plot_time_difference_distribution(data):
     '''
-    # TODO: Add description of the function
+    display a histogram showing the time difference bewteen team members and best time of the team.
+    
+    Parameters
+        - data: DataFrame containing the data relative to a given running.
     '''
 
     ax = data['time difference team'].hist(bins=30,figsize=(10,6))
 
-    # Computing of the mean of ages selected by gender # TODO: check comment
+    # Computing of the mean and max for bowplot. 
     mean = np.mean(data['time difference team'])
     max_time_diff = np.max(data['time difference team'])
 
@@ -490,8 +493,7 @@ def display_legend(dict_team_runner, plot):
 
 def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annotation=[], time_mini=1000):
     '''
-    # TODO: Check description
-    This function plots the difference between time according to the different groups.
+    This function plots the difference time between team members who have finished late compared to the best time of the team.
 
     Parameters
         - fig: Figure on which subplots are displayed
@@ -499,12 +501,13 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
         - distance: number of kilometers of the considered running (10/21/42)
         - subplot_idx: Index of the subplot in the figure
         - annotation: Annotation to add in the graph (by default, no annotation)
-        - time_mini: Minimal time to consider (1000 by default)
+        - time_mini: Minimal time to consider (how much runners are late compare to the first)
+                    (1000 by default) 
     '''
 
-    # Map string name of the team to # TODO: Check comment
-    race_team = data[data['team'].notnull()].copy()
-    race_team = race_team[race_team["distance (km)"] == distance]
+    # select runner in teams and with the selected distance
+    race_team = data[ (data['team'].notnull()) & (data['distance (km)'] == distance)]
+
 
     # Remove of times which are lower than minimal time considered
     race_team = (race_team[race_team['time difference team'] > time_mini])
