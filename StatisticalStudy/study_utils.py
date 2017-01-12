@@ -22,6 +22,8 @@ WHEEL_CHAIR_REGEX = '(FD)|(FH)|(HB)|(Hand)' # Wheelchair male / Wheelchair femal
 FEMALE_CATEGORY_REGEX = '([D])|(JunF)'
 MALE_CATEGORY_REGEX = '([H])|(JunG)'
 
+OTHER_SPORT = '(Bike)'
+
 MARATHON_DISTANCE_REGEX = '(42)|(M)|(52)' # 52 come from a mistake on datasport site
 # https://services.datasport.com/2010/lauf/lamara/rang035.htm
 
@@ -81,10 +83,8 @@ def apply_computations(df):
     df_cleaned['sex'] = df_cleaned.apply(get_sex_of_runner, axis=1)
     df_cleaned = df_cleaned[df_cleaned['sex'].notnull()]
 
-    # We clean the rank attribute 
-    df_cleaned.drop('rank', axis=1, inplace=True)
 
-        # We then compute age using birthdate of runners
+    # We then compute age using birthdate of runners
     # Runners without birthday are excluded from analysis
     df_cleaned = df_cleaned[df_cleaned['birthday'].notnull()]
     df_cleaned['age'] = df_cleaned.apply(compute_age_of_runner, axis=1)
@@ -146,6 +146,7 @@ def filter_participants(runner):
     if ((runner['category'] == '10W-NW' or runner['category'] == '10W-Walk' or runner['category'] == 'Pink-Ch')
         or (re.search(WHEEL_CHAIR_REGEX, runner['category']) != None)
         or (re.search(KIDS_REGEX, runner['category']) != None)
+        or (re.search(OTHER_SPORT, runner['category']) != None)
         or (re.search(ILINE_REGEX, runner['category']) != None)):
         return False
     else:
@@ -238,7 +239,7 @@ def compute_run_in_team(runner):
     
     if pd.isnull(runner['team']):
         return 'Individual runner'
-    elif :
+    else:
         return 'Runner in teams'
 
     

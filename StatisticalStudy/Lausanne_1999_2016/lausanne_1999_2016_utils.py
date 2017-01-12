@@ -9,26 +9,7 @@ import numpy as np
 # ----------------------------------------------------------------------------------------------------------
 # Functions
 
-def compute_overall_rank_all(df):
-    '''
-    This function computes the overall rank by distance for all years.
-    
-    Parameters
-        - df: DataFrame containing records
-
-    Return
-        - DataFrame with overall rank calculated for all the years
-    '''
-    
-    years = df['year'].unique()
-    df_with_overall_rank = []
-    
-    for year in years:
-        marathon_current_year = df[df['year'] == year]
-        df_with_overall_rank.append(compute_overall_rank(marathon_current_year))
-    
-    return pd.concat(df_with_overall_rank)
-
+# winners name can be found:
 
 def compute_overall_rank(data):
     '''
@@ -43,43 +24,91 @@ def compute_overall_rank(data):
     
     # Definition of the discriminators for the selection
     distances = [42,21,10]
-    type_runners =  ['Individual runners', 'Runner in teams']
     genders = ['male', 'female']
 
     # List containing each dataframe by distance
-    all_races = []
+    all_years = []
     
-    # Loop on distance
-    for distance in distances:
-        all_type = []
-        distance_selection  = data[data['distance (km)'] == distance]
+    for year in data['year'].unique():
+        all_races = []
+
+        # Year selection
+        year_selection = data[data['year'] == year]
         
-        # Loop on runner type
-        for type_runner in type_runners:
+        # Loop on distance
+        for distance in distances:
             all_gender = []
-            type_selection = distance_selection[distance_selection['type_team'] == type_runner]
-            
-            # Loop on gender
+
+            # Distance selction
+            distance_selection  = year_selection[year_selection['distance (km)'] == distance]
+
             for gender in genders:
-                gender_selection = type_selection[type_selection['sex'] == gender]
-                
+                # Sex Selection
+                gender_selection = distance_selection[distance_selection['sex'] == gender]
+
                 # Sorting by gender
                 gender_selection.sort_values('time', ascending=True, inplace=True)
-                
+
                 # Computation of the overall rank for the running
                 gender_selection['overall_rank'] = range (1, len(gender_selection)+1)
-                
+
                 # We append result
                 all_gender.append(gender_selection)
-           
-            # We add results for all genders
-            all_type.append(pd.concat(all_gender))
-        
-        # We add results for all types
-        all_races.append(pd.concat(all_type))
-    
-    return pd.concat(all_races)
 
+            all_races.append(pd.concat(all_gender))
+            
+        all_years.append(pd.concat(all_races))
+       
+    # We remove the SettingWithCopyWarning
+    pd.options.mode.chained_assignment = 'warn' 
+    
+    return pd.concat(all_years)
+
+def remove_outliers(data):
+    '''
+    The method removes the outliers on the data, precisly for each category, the method remove all time smaller than the best 
+    runners in the category
+
+    The problem come from that certain people have resinged after the first loop.
+    
+    Parameters
+        - data: DataFrame containing records for a given running
+    '''
+    
+    all_races = []
+
+    for year in data['year'].unique():
+        total_remove = 0
+        all_cate = []
+        
+        # Select year
+        year_selected = data[data['year'] == year]
+        
+        for category in data['category'].unique():
+            # Select by category
+            category_selection = year_selected[year_selected['category'] == category]
+            
+            # best time of the category
+            best_time = (category_selection['time']
+                                 [(category_selection['category'] == category) & (category_selection['rank'] == 1)])
+            if best_time.empty:
+                continue
+            
+            best_time = best_time.values[0]
+            # remove all time smaller than the best time of the category
+            without_outliers = category_selection[(category_selection['time'] >= best_time )] 
+            
+            total_remove = total_remove + (len(category_selection.index) - len(without_outliers.index))
+            
+            all_cate.append(without_outliers)
+
+        print('remove outliers for ' + str(year) + ' : ' + str(total_remove) + ' runners')
+        
+        if len(all_cate) == 0 : 
+            continue
+        all_races.append(pd.concat(all_cate))   
+                              
+    return pd.concat(all_races)
 
 def generate_gender_distributions_over_years(df_10km, df_21km, df_42km):
     '''
