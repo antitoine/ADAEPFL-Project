@@ -75,8 +75,15 @@ def remove_outliers(data):
         - data: DataFrame containing records for a given running
     '''
     
+    # remove resigners runners.
+    data = data[~(data['rank'].isin(['DNF', 'OUT']))]
+    
+    # convert to float.
+    data['rank'] = data['rank'].apply(lambda x : int(float(x)))
+    
     all_races = []
 
+    # loop on every years.
     for year in data['year'].unique():
         total_remove = 0
         all_cate = []
@@ -84,20 +91,26 @@ def remove_outliers(data):
         # Select year
         year_selected = data[data['year'] == year]
         
+        # loop on every category.
         for category in data['category'].unique():
+            
             # Select by category
             category_selection = year_selected[year_selected['category'] == category]
             
             # best time of the category
             best_time = (category_selection['time']
                                  [(category_selection['category'] == category) & (category_selection['rank'] == 1)])
-            if best_time.empty:
-                continue
             
-            best_time = best_time.values[0]
+            # there is no person fist ranked in this category.
+            if best_time.empty:
+                best_time = np.min(category_selection['time'][category_selection['category'] == category])
+            else:
+                best_time = best_time.values[0]
+                
             # remove all time smaller than the best time of the category
             without_outliers = category_selection[(category_selection['time'] >= best_time )] 
             
+            # Compute numbers rank in
             total_remove = total_remove + (len(category_selection.index) - len(without_outliers.index))
             
             all_cate.append(without_outliers)
