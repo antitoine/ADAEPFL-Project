@@ -244,6 +244,7 @@ def plot_distribution_age_distance(fig, data, title, subplot_idx):
     ax.axvline(mean, 0, 1750, color='r', linestyle='--')
     ax.set_title(title)
 
+
 def plot_performance_according_to_running_type(data, nb_km, column, size=4.5, aspect=2):
     '''
     Plots the performance according to age of participants for a given running

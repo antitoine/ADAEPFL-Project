@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
+import collections
 
 # ----------------------------------------------------------------------------------------------------------
 # Functions
@@ -253,8 +254,58 @@ def plot_gender_distributions_over_years(data, runnings=['Marathon', '10 km', 'S
         df = df[runnings]
         axe = plt.subplot(1, 2, i)
         axe = df.plot(kind="bar", linewidth=0, stacked=True, ax=axe, grid=False)
-        axe.set_title('Distribution of ' + sex + ' runners over the years by runnings')
+        axe.set_title('Distribution of ' + sex + ' runners over the years')
         axe.set_xlabel('Years')
         axe.set_ylabel('Number of runners')
         i += 1
+    plt.show()
+
+
+def generate_median_age_statistics(df):
+    '''
+    This function generates median age statistics for Lausanne Marathon.
+
+    Parameters:
+        - df: DataFrame containing all the information about runners
+
+    Return
+        - statistics: Global and detailed results by gender for median age of runners
+    '''
+
+    data = {'10km': df[df['distance (km)'] == 10], '21km': df[df['distance (km)'] == 21], '42km': df[df['distance (km)'] == 42], 'All runnings': df}
+    series, series_with_gender = [{key: {} for key in data} for i in range(1, 3)]
+    for year in range(1999, 2017):
+        for df_name, df in data.items():
+            series[df_name][str(year)] = df[(df['year'] == year)]['age'].median()
+            for sex in ['female', 'male']:
+                series_with_gender[df_name][(sex, str(year))] = df[(df['year'] == year) & (df['sex'] == sex)]['age'].median()
+    statistics = {}
+    for stats, results in {'global': series, 'detailed': series_with_gender}.items():
+        statistics[stats] = pd.DataFrame(collections.OrderedDict([('Median age (10 km)', pd.Series(results['10km'])), ('Median age (semi-marathon)', pd.Series(results['21km'])), ('Median age (marathon)', pd.Series(results['42km'])), ('Median age (all runnings)', pd.Series(results['All runnings']))]))
+    return statistics
+
+
+def plot_median_age_evolution(data, x=None, y='Median age (all runnings)', groupby_column='Gender', title='Evolution of median age over the years'):
+    '''
+    This function displays a graph showing evolution of median ages for male and female runners over the years.
+
+    Parameters
+        - data: DataFrame containing data to use for graph
+        - x: Name of the column to use for x axis (by default None / if None, index will be used)
+        - y: Name of the column to use for y axis (by default, 'Median age (all runnings)')
+        - groupby_column: Name of the column to use for grouping data (by default, 'Gender')
+        - title: Title of the graph (by default, 'Evolution of median age over the years')
+    '''
+
+    fig, ax = plt.subplots()
+    labels = []
+    for key, group in data.groupby(['Gender']):
+        if not x:
+            x_axis = x if x else group.index
+        ax = group.plot(ax=ax, kind='line', x=x_axis, y=y)
+        labels.append(key + ' runners')
+    lines, _ = ax.get_legend_handles_labels()
+    ax.legend(lines, labels, loc='best')
+    ax.set_title(title)
+    ax.set_ylabel('Mean age')
     plt.show()

@@ -5,6 +5,7 @@ import pandas as pd
 import numpy as np
 import itertools
 import re
+import statsmodels.api as sm
 import datetime
 from datetime import date
 from sklearn import preprocessing
@@ -328,4 +329,25 @@ def compute_anova_and_tukey_hsd(df, categories, values):
     results['f_value'], results['p_value'] = stats.f_oneway(*all_values_by_category)
     tukey_hsd_string = StringIO(pairwise_tukeyhsd(df[values], df[categories]).summary().as_csv())
     results['tukey_hsd'] = pd.read_csv(tukey_hsd_string, skiprows=1)
+    return results
+
+
+def run_ols_test(data, x, y):
+    '''
+    This function runs OLS test for each dataset given in data.
+
+    Parameters
+        - data: Dictionary containing datasets on which OLS must be executed
+        - x: Name of column containing x values
+        - y: Name of column containing y values
+
+    Return
+        - results: Dictionary containing results of OLS for each dataset given in data
+    '''
+
+    results = {}
+    for key, values in data.items():
+        y_data = values[y]
+        x_data = sm.add_constant(values[x])
+        results[key] = sm.OLS(y_data, x_data).fit()
     return results
