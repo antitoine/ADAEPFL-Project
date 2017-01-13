@@ -63,17 +63,17 @@ def compute_overall_rank(data):
     return pd.concat(all_years)
 
 
-def remove_outliers(data):
+def remove_outliers(df):
     '''
     The method removes outliers present in the data. More precisely, for each category, the method removes all times which are smaller than the best runner in the considered category.
     Nota-bene: Remove of such outliers is necessary as certain people have resigned after the first loop, while their time was still considered.
     
     Parameters
-        - data: DataFrame containing records for a given running
+        - df: DataFrame containing records for a given running
     '''
     
     # remove resigners runners.
-    data = data[~(data['rank'].isin(['DNF', 'OUT']))]
+    data = df[~(df['rank'].isin(['DNF', 'OUT']))].copy()
     
     # convert to float.
     data['rank'] = data['rank'].apply(lambda x : int(float(x)))
@@ -244,9 +244,9 @@ def plot_gender_distributions_over_years(data, runnings=['Marathon', '10 km', 'S
         formatted_label = "$\u2640$     $\u2642$\n" + label._text
         labels.append(formatted_label)
     axe.set_xticklabels(labels)
-
     plt.show()
-    
+
+    # Creation of subgraphes
     i = 1
     figure = plt.figure(figsize=(15, 5))
     for sex, df in data.items():
@@ -257,5 +257,4 @@ def plot_gender_distributions_over_years(data, runnings=['Marathon', '10 km', 'S
         axe.set_xlabel('Years')
         axe.set_ylabel('Number of runners')
         i += 1
-    
     plt.show()
