@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-declare var Plotly:any;
+declare let Plotly:any;
 
 @Component({
   selector: 'app-lausanne-1999-2016',
