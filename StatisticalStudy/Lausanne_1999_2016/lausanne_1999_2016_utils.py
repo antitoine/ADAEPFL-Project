@@ -66,31 +66,36 @@ def compute_overall_rank(data):
 
 def remove_outliers(df):
     '''
-    The method removes outliers present in the data. More precisely, for each category, the method removes all times which are smaller than the best runner in the considered category.
-    Nota-bene: Remove of such outliers is necessary as certain people have resigned after the first loop, while their time was still considered.
+    The method removes outliers present in the data. More precisely, for each category, the method removes all times which are 
+    smaller than the best runner in the considered category.
     
     Parameters
-        - df: DataFrame containing records for a given running
+        - df : DataFrame containing records for a given running
     '''
     
+        
+    # We remove the SettingWithCopyWarning
+    pd.options.mode.chained_assignment = None 
+    
     # remove resigners runners.
-    data = df[~(df['rank'].isin(['DNF', 'OUT']))].copy()
+    df = df[~(df['rank'].isin(['DNF', 'OUT']))]
     
     # convert to float.
-    data['rank'] = data['rank'].apply(lambda x : int(float(x)))
+    df['rank'] = df['rank'].apply(lambda x : int(float(x)))
     
     all_races = []
 
-    # Loop over years
-    for year in data['year'].unique():
+    # loop over years.
+    for year in df['year'].unique():
         total_remove = 0
         all_cate = []
         
         # We select year
         year_selected = data[data['year'] == year]
         
-        # Loop over categories
+        # loop over category.
         for category in data['category'].unique():
+            
             # We select by category
             category_selection = year_selected[year_selected['category'] == category]
             
@@ -101,24 +106,69 @@ def remove_outliers(df):
             # There is no person first ranked in this category
             if best_time.empty:
                 best_time = np.min(category_selection['time'][category_selection['category'] == category])
+                
             else:
                 best_time = best_time.values[0]
                 
             # We remove all times smaller than the best time of the category
             without_outliers = category_selection[(category_selection['time'] >= best_time )] 
+
+            # clean some problem due to late resigners.
+            without_outliers.sort_values('time', ascending=True,inplace=True)
+            rank_list = without_outliers['rank'].tolist()
             
+            # remove outliers if the rank is not stricly increasing
+            if len(rank_list) > 1:
+                # Test if the list is strictly incrasing or not.
+                if not (all(x < y for x, y in zip(rank_list, rank_list[1:]))):
+                    
+                    # remove additional outliers
+                    without_outliers = without_outliers[Serie_to_increasing(rank_list)]
+              
             # Compute numbers rank in
             total_remove = total_remove + (len(category_selection.index) - len(without_outliers.index))
-            
             all_cate.append(without_outliers)
 
         print('Number of outliers removed for ' + str(year) + ': ' + str(total_remove) + ' runners')
         
         if len(all_cate) == 0 : 
             continue
-        all_races.append(pd.concat(all_cate))   
+        all_races.append(pd.concat(all_cate))  
+        
+                
+    # We remove the SettingWithCopyWarning
+    pd.options.mode.chained_assignment = 'warn'
                               
     return pd.concat(all_races)
+
+
+def Serie_to_increasing (list_rank):
+    '''
+    method allow to find value at the wrong positon in order to have a list a stricly increasing values
+    
+    Parameters
+        - list_rank: list of integer.
+        
+    return:
+        list contains True or False, False mean the value is greater than the following.
+    '''
+    
+    # cointains retunrn value
+    ordering = []
+    
+    for idx, rank in enumerate(list_rank):
+        
+        # We remove value not stricly increasing
+        if idx < (len(list_rank)-1):
+            # Current value is smaller than the following one.
+            if(list_rank[idx] < list_rank[idx + 1]):
+                ordering.append(True)
+            # The value is greater.
+            else:
+                ordering.append(False) 
+
+    ordering.append(True)
+    return ordering
 
 
 def filter_by_years(data, series):
