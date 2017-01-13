@@ -63,15 +63,13 @@ def compute_overall_rank(data):
     return pd.concat(all_years)
 
 
-def remove_outliers(data):
+def remove_outliers(df):
     '''
-    The method removes the outliers on the data, precisly for each category, the method remove all time smaller than the best 
-    runners in the category
-
-    The problem come from that certain people have resinged after the first loop.
+    The method removes outliers present in the data. More precisely, for each category, the method removes all times which are 
+    smaller than the best runner in the considered category.
     
     Parameters
-        - data: DataFrame containing records for a given running
+        - df : DataFrame containing records for a given running
     '''
     
         
@@ -79,38 +77,39 @@ def remove_outliers(data):
     pd.options.mode.chained_assignment = None 
     
     # remove resigners runners.
-    data = data[~(data['rank'].isin(['DNF', 'OUT']))]
+    df = df[~(df['rank'].isin(['DNF', 'OUT']))]
     
     # convert to float.
-    data['rank'] = data['rank'].apply(lambda x : int(float(x)))
+    df['rank'] = df['rank'].apply(lambda x : int(float(x)))
     
     all_races = []
 
-    # loop on every years.
-    for year in data['year'].unique():
+    # loop over years.
+    for year in df['year'].unique():
         total_remove = 0
         all_cate = []
         
-        # Select year
+        # We select year
         year_selected = data[data['year'] == year]
         
-        # loop on every category.
+        # loop over category.
         for category in data['category'].unique():
             
-            # Select by category
+            # We select by category
             category_selection = year_selected[year_selected['category'] == category]
             
-            # best time of the category
+            # We retrieve best time of the category
             best_time = (category_selection['time']
                                  [(category_selection['category'] == category) & (category_selection['rank'] == 1)])
             
-            # there is no person fist ranked in this category.
+            # There is no person first ranked in this category
             if best_time.empty:
                 best_time = np.min(category_selection['time'][category_selection['category'] == category])
+                
             else:
                 best_time = best_time.values[0]
                 
-            #remove all time smaller than the best time of the category
+            # We remove all times smaller than the best time of the category
             without_outliers = category_selection[(category_selection['time'] >= best_time )] 
 
             # clean some problem due to late resigners.
@@ -129,7 +128,7 @@ def remove_outliers(data):
             total_remove = total_remove + (len(category_selection.index) - len(without_outliers.index))
             all_cate.append(without_outliers)
 
-        print('remove outliers for ' + str(year) + ' : ' + str(total_remove) + ' runners')
+        print('Number of outliers removed for ' + str(year) + ': ' + str(total_remove) + ' runners')
         
         if len(all_cate) == 0 : 
             continue
@@ -153,17 +152,17 @@ def Serie_to_increasing (list_rank):
         list contains True or False, False mean the value is greater than the following.
     '''
     
-    # contains value
+    # cointains retunrn value
     ordering = []
     
     for idx, rank in enumerate(list_rank):
         
-        # remove value not stricly increasing
+        # We remove value not stricly increasing
         if idx < (len(list_rank)-1):
-            # the current value is smaller than the following one.
+            # Current value is smaller than the following one.
             if(list_rank[idx] < list_rank[idx + 1]):
                 ordering.append(True)
-            # the value is greater.
+            # The value is greater.
             else:
                 ordering.append(False) 
 
