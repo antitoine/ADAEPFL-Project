@@ -12,6 +12,8 @@ from sklearn import preprocessing
 from scipy import stats
 from io import StringIO
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -271,7 +273,7 @@ def convert_seconds_to_time(seconds):
     Return
         - formatted time (HH:mm:ss format, string)
     '''
-    
+    seconds = int(float(seconds))
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
     return "%d:%02d:%02d" % (h, m, s)
@@ -351,3 +353,43 @@ def run_ols_test(data, x, y):
         x_data = sm.add_constant(values[x])
         results[key] = sm.OLS(y_data, x_data).fit()
     return results
+
+
+def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=None, size=5, aspect=2):
+    '''
+    This function displays a Seaborn boxplot.
+
+    Parameters
+        - data: DataFrame to use for graph
+        - x: Name of column to use for x axis
+        - y: Name of column to use for y axis
+        - hue: Column name of the categorical data to use (by default, None)
+        - title: Title of the graph (by default, None)
+        - x_format: Function to use to format x labels (by default, None)
+        - y_format: Function to use to format y labels (by default, None)
+        - size: Size of the boxplot (by default, 5)
+        - aspect: Aspect of the boxplot (by default, 2)
+    '''
+
+    g = sns.factorplot(data=data, x=x, y=y, kind='box', hue=hue, size=size, aspect=aspect)
+    
+    if x_format:
+        for ax in g.axes.flat:
+            labels = []
+            for label in ax.get_xticklabels():
+                formatted_label = x_format(label._x)
+                labels.append(formatted_label)
+            ax.set_xticklabels(labels)
+
+    if y_format:
+        for ax in g.axes.flat:
+            labels = []
+            for label in ax.get_yticklabels():
+                formatted_label = y_format(label._y)
+                labels.append(formatted_label)
+            ax.set_yticklabels(labels)
+
+    if title:
+        plt.title(title)
+
+    plt.show()

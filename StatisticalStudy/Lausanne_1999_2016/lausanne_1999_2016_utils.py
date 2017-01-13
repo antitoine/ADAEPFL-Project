@@ -77,26 +77,26 @@ def remove_outliers(df):
     # We remove the SettingWithCopyWarning
     pd.options.mode.chained_assignment = None 
     
-    # remove resigners runners.
+    # We remove runners who abandonned
     df = df[~(df['rank'].isin(['DNF', 'OUT']))]
     
-    # convert to float.
+    # We convert rank values to float
     df['rank'] = df['rank'].apply(lambda x : int(float(x)))
     
     all_races = []
 
-    # loop over years.
+    # Loop over the years
     for year in df['year'].unique():
         total_remove = 0
         all_cate = []
         
-        # We select year
-        year_selected = data[data['year'] == year]
+        # We select current year
+        year_selected = df[df['year'] == year]
         
-        # loop over category.
-        for category in data['category'].unique():
+        # Loop over categories
+        for category in df['category'].unique():
             
-            # We select by category
+            # We select current category
             category_selection = year_selected[year_selected['category'] == category]
             
             # We retrieve best time of the category
@@ -113,17 +113,16 @@ def remove_outliers(df):
             # We remove all times smaller than the best time of the category
             without_outliers = category_selection[(category_selection['time'] >= best_time )] 
 
-            # clean some problem due to late resigners.
-            without_outliers.sort_values('time', ascending=True,inplace=True)
+            # Handle specific problems due to late withdrawn runners
+            without_outliers.sort_values('time', ascending=True, inplace=True)
             rank_list = without_outliers['rank'].tolist()
             
-            # remove outliers if the rank is not stricly increasing
+            # We remove outliers if the rank is not stricly increasing
             if len(rank_list) > 1:
-                # Test if the list is strictly incrasing or not.
+                # Test if the list is strictly increasing or not
                 if not (all(x < y for x, y in zip(rank_list, rank_list[1:]))):
-                    
-                    # remove additional outliers
-                    without_outliers = without_outliers[Serie_to_increasing(rank_list)]
+                    # We remove additional outliers
+                    without_outliers = without_outliers[remove_outliers_in_increasing_series(rank_list)]
               
             # Compute numbers rank in
             total_remove = total_remove + (len(category_selection.index) - len(without_outliers.index))
@@ -142,38 +141,36 @@ def remove_outliers(df):
     return pd.concat(all_races)
 
 
-def Serie_to_increasing (list_rank):
+def remove_outliers_in_increasing_series(list_rank):
     '''
-    method allow to find value at the wrong positon in order to have a list a stricly increasing values
+    This function allows to find values at the wrong positon in order to have a list with stricly increasing values.
     
     Parameters
-        - list_rank: list of integer.
+        - list_rank: List of ranks of runners to clean
         
-    return:
-        list contains True or False, False mean the value is greater than the following.
+    Return
+        ordered: List filled with boolean values (True/False) for each rank. False means that associated rank is greater than the following (outlier)
     '''
     
-    # cointains retunrn value
-    ordering = []
+    ordered = []
     
     for idx, rank in enumerate(list_rank):
-        
-        # We remove value not stricly increasing
+        # We mark values with False-value boolean when they are not strictly inferior to the previous ones
         if idx < (len(list_rank)-1):
-            # Current value is smaller than the following one.
+            # Current value is smaller than the following one: ok
             if(list_rank[idx] < list_rank[idx + 1]):
-                ordering.append(True)
-            # The value is greater.
+                ordered.append(True)
+            # Value is greater than the following one: error (outlier)
             else:
-                ordering.append(False) 
+                ordered.append(False) 
 
-    ordering.append(True)
-    return ordering
+    ordered.append(True)
+    return ordered
 
 
 def filter_by_years(data, series):
     '''
-    This function iterates over a set of data and creates series by filtering by years
+    This function iterates over a set of data and creates series by filtering by years.
 
     Parameters
         - data: DataFrame containing information about runners
@@ -191,7 +188,7 @@ def filter_by_years(data, series):
 
 def filter_by_sex_and_years(data, series):
     '''
-    This function iterates over a set of data and creates series by filtering by years and sex of runners
+    This function iterates over a set of data and creates series by filtering by years and sex of runners.
 
     Parameters
         - data: DataFrame containing information about runners
