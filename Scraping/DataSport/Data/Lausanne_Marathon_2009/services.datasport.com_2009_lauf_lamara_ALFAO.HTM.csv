@@ -1,109 +1,109 @@
 ,catégorie,rang,nom,an,lieu,temps,retard,doss,acode
-0,21-SH1,345.,O'Brien Kieran,19,2 Lausanne,"1:58.06,3","52.08,1",(3627),FHBXZPMZ
-1,21-SH4,174.,O Connor Diarmuid,19,8 Lausanne,"1:51.26,0","31.49,6",(5401),AHBNNPMG
-2,10-QH2,163.,O Connor Marcus,19,0 Aran,"46.04,6","14.42,2",(3082),HLH57B47
-3,10-QH3,97.,Obataya Yuji,19,9 Genève,"43.22,8","9.59,4",(8394),DG4AGMJP
-4,10-QH3,110.,Oberhofer Laurent,19,6 Fribourg,"44.18,1","10.54,7",(8232),G4MGU7DC
-5,10-QH1,46.,Oberlin Oliver,19,7 Oberthal,"40.19,4","10.23,6",(8147),HBP3Q3A9
-6,42-MH2,248.,Oberson Jean-Michel,19,1 Genève,"3:58.46,6","1:21.15,1",(1371),U1S1XUKH
-7,21-SD4,28.,Oberson Rita,19,8 Genève,"1:55.52,1","19.28,8",(6133),QBPW5UAA
-8,10-QH1,55.,Oboni Jean-Baptiste,19,2 Lausanne,"41.03,4","11.07,6",(12396),MX6YX9Y2
-9,10-QH2,506.,Obrecht Frederic,19,2 Echallens,"1:05.52,0","34.29,6",(11062),3HBK5PMU
-10,10-QH3,331.,Obrecht Philippe,19,8 Ecublens VD,"53.51,0","20.27,6",(9485),7BP91GAS
-11,42-MH3,340.,Ocampo Miguel,19,8 Penthalaz,"4:27.28,9","1:51.42,1",(772),DNWESQB9
-12,10W-Walk,,Ocana Narciza,19,0 Renens VD,"1:37.28,3",,(13299),GHBCZPMN
-13,21-SH4,64.,Occelli Thierry,19,9 Pully,"1:39.36,7","20.00,3",(2402),SSU9BB7H
-14,42-MD3,36.,Ochieng Pernet Awilo,19,5 Ecuvillens,"3:59.35,7","1:04.36,7",(663),XPRJ9R2G
-15,21-SH4,184.,Ochsenbein Eric,19,3 Morrens VD,"1:52.30,1","32.53,7",(6808),4LHLLL48
-16,21-SD3,67.,Ochsner Bernadette,19,9 Olten,"1:49.21,9","18.49,0",(6344),569NFGTZ
-17,21-SH2,800.,Ochsner Christophe,19,2 Belmont-sur-Lausanne,"2:04.14,1","49.50,6",(6777),HPRR7427
-18,21-SD3,233.,Oddsen Anne Mette,19,4 Jægerspris,"2:07.17,5","36.44,6",(6600),5G4BYMJC
-19,10-QD3,7.,Odegaard Anne Lene,19,8 Gland,"43.33,8","5.58,3",(8362),R4M78TDA
-20,21-SD2,143.,Ödman Jaques Micaela,19,6 Morges,"1:57.23,5","41.36,2",(4167),TMACT2E3
-21,21-SH4,190.,Odonnell Kelly,19,6 Cessy,"1:53.01,0","33.24,6",(5232),U75QH2LX
-22,10-QD4,47.,Odor Truda,19,6 Chamonix Mont Blanc,"59.12,9","18.20,1",(10141),CU3Q9C5B
-23,21-SH3,387.,Oehen Erich,19,5 St Julien en Genevois,"1:45.54,2","33.16,5",(7264),F3CRTKNU
-24,10-QD1,87.,Oehler Michele,19,8 Genève,"51.45,5","16.40,2",(9280),TX67R9YW
-25,21-SD2,277.,Oehler Nicole,19,9 Genève,"2:10.49,3","55.02,0",(7392),4Z8UZL9Z
-26,21-SH2,416.,Oester Patrick,19,5 Genève,"1:45.16,5","30.53,0",(4291),TX6WR9YW
-27,21-SH4,114.,Oestreicher Marc,19,9 Neuchâtel,"1:45.40,3","26.03,9",(2429),LDE1AX3K
-28,21-SH1,245.,Oestreicher Max,19,9 Neuchâtel,"1:47.00,9","41.02,7",(2437),TU3DDC5R
-29,10-QD2,287.,Offreda Deborah,19,7 Genève,"1:02.29,5","26.18,7",(12456),J69DMGTJ
-30,21-SJG,31.,Ogame Hiroki,19,2 Leysin,"1:53.04,2","33.48,4",(5003),BQ15QSR3
-31,10W-Walk,,Ogata Juri,19,2 Leysin,"1:39.09,9",,(13014),269PEGTD
-32,21-SH3,481.,Ogay André,19,3 Pully,"1:50.39,2","38.01,5",(3459),J9GEW4FC
-33,21-SH3,446.,Ogier Ian,19,6 Founex,"1:48.43,7","36.06,0",(3540),4DE4GX3W
-34,21-SJG,14.,Ohama Toshiya,19,2 Leysin,"1:41.14,3","21.58,5",(6001),UEX2Q6CG
-35,10-QD5,5.,Okamura Mieko,19,0 Tokyo,"52.04,4","4.25,5",(10010),JU3SFC5G
-36,10-QH5,48.,Okamura Niroku,19,0 Tokyo,"52.50,9","14.23,3",(10009),FSUQT379
-37,21-SH2,39.,Olart Stephane,19,4 Cheny,"1:25.05,3","10.41,8",(2140),AHB56PMM
-38,21-SH2,422.,Oliach Michael,19,5 Plan-les-Ouates,"1:45.21,0","30.57,5",(3568),ZU317C55
-39,42-MH1,59.,Olivares Jibril,19,0 Etoy,"3:45.29,9","1:24.29,7",(1549),1DENXX37
-40,42-MH2,17.,Oliveira Antonio,19,5 Ecublens VD,"3:02.26,2","24.54,7",(7),NNWQ4NBP
-41,10-QH4,2.,Oliveira Narciso,19,7 Genève,"33.54,7","1.06,6",(8038),CX66KXYM
-42,21-SH2,414.,Oliveira Paulo Jorge,19,2 Genève,"1:45.06,8","30.43,3",(5330),ZBPUGRAS
-43,21-SH3,501.,Olivetta Hermann,19,2 Servion,"1:51.38,4","39.00,7",(7265),5BPE9RAE
-44,10-QD2,281.,Olivier Nadia,19,1 Lausanne,"1:01.48,9","25.38,1",(12030),YQ1GPSRU
-45,10-QH5,12.,Olivieri Giuliano,19,9 Ballaigues,"46.51,1","8.23,5",(9086),QG4S2RJX
-46,21-SD3,20.,Ollier Edmea,19,4 Morgex (AO),"1:43.18,7","12.45,8",(6711),NSURD37Y
-47,10-QD1,81.,Ollivier Alison,19,7 Echallens,"51.05,2","15.59,9",(9271),MLHWQL42
-48,42-MH4,15.,Ollivier Patrick,19,9 Echallens,"3:14.51,3","24.34,0",(413),GZ899Z9C
-49,21-SD5,12.,Olnhoff Elisabeth Sofie,19,5 Zug,"2:07.03,4","37.07,1",(7599),TEXU86CD
-50,10-QD2,369.,Olsen Helen,19,5 Fredensborg,"1:07.27,3","31.16,5",(12196),G1SPTUKH
-51,42-MD4,13.,Olsson Solveig,19,6 Karlskrona,"4:13.43,1","44.45,9",(212),CHBAFPMP
-52,42-MD3,59.,Onaran Marianne,19,8 Berg TG,"4:25.04,2","1:30.05,2",(1532),2SU6S379
-53,10-QD2,71.,Ong Lena,19,5 Lausanne,"52.03,1","15.52,3",(11542),2SUDH37J
-54,10-QH3,126.,Onkel Eric,19,3 Illzach,"45.18,0","11.54,6",(8374),4692KGTP
-55,10W-Walk,,Onoda Ryo,19,2 Leysin,"1:34.55,6",,(13015),WPR9CK2E
-56,21-SH3,578.,Oppici Giorgio,19,1 Parma (PR),"1:55.00,2","42.22,5",(7528),G69KYGTE
-57,4-K7,25.,Oppliger Alana,20,0 Bournens,"12.39,2","2.49,4",(15185),269YNGT4
-58,21-SD2,316.,Oppliger Anne Françoise,19,0 Bossonnens,"2:17.56,3","1:02.09,0",(6386),YQ18FSRQ
-59,42-MH2,11.,Oppliger Christophe,19,2 Lonay,"2:58.57,8","21.26,3",(695),ASU53S71
-60,10-QD2,250.,Oppliger Cinthia,19,4 Bournens,"1:00.27,6","24.16,8",(10317),91SLBUKM
-61,4-K8,7.,Oppliger Emmy,19,8 Bournens,"17.39,5","0.56,8",(14212),CCYAGTW6
-62,21-SH5,86.,Oppliger Etienne,19,0 Morges,"2:13.13,0","51.01,1",(6277),EEX5HECJ
-63,21-SH1,319.,Orange Yves,19,1 Genève,"1:54.44,6","48.46,4",(4281),AHBP6PM2
-64,42-MH2,48.,Orazi Christophe,19,4 Torcy,"3:12.16,8","34.45,3",(296),AHB4ZPMC
-65,10-QH2,409.,Orchis Marcelo,19,8 Neuchâtel,"55.38,8","24.16,4",(10554),Y8L1WHG9
-66,21-SH2,878.,Ordonez Aguilar Guillermo,19,5 Adlikon-Zürich,"2:17.22,4","1:02.58,9",(7044),NU3A7C5Q
-67,21-SH4,244.,Oreiller Etienne,19,0 Muraz (Collombey),"1:59.44,9","40.08,5",(5071),1HBG6UMF
-68,4-K8,2.,Orellana Sara,19,7 Lonay,"16.49,5","0.06,8",(14408),51SSPUKM
-69,21-SH3,241.,Oria Santiago,19,9 Genolier,"1:39.42,9","27.05,2",(3553),N69AWGT3
-70,42-MH1,8.,Oriet Gilian,19,4 Delémont,"2:56.54,0","35.53,8",(241),H1SMCHK1
-71,10W-Walk,,Ormsby Justine,19,2 Leysin,"1:56.41,1",,(13016),WPRM9K2L
-72,21-SH2,156.,Oro Emmanuel,19,6 Lausanne,"1:34.05,2","19.41,7",(2138),71SJ4UK9
-73,21-SH2,252.,Oro Miguel,19,6 Lausanne,"1:39.25,9","25.02,4",(3599),RPR7UG2J
-74,10-QD3,54.,Oronova Daniela,19,5 Lausanne,"51.03,2","13.27,7",(9272),Y69N3PTA
-75,10-QH2,356.,Orquera Roberto,19,6 Lausanne,"53.22,6","22.00,2",(12197),4X6NK9YC
-76,10-QH1,166.,Ortega Delgadillo Oscar,19,4 Lausanne,"47.39,8","17.44,0",(12351),Q3CZFYNW
-77,42-MH3,278.,Ortiz Luis Alberto,19,6 Lausanne,"4:02.53,6","1:27.06,8",(1012),NPRY4C27
-78,21-SH2,233.,Ortiz Marcelo,19,4 Lausanne,"1:38.21,2","23.57,7",(3349),ECYTM7WD
-79,10W-Walk,,Ortiz Trujillo Elsa,19,1 Lausanne,"1:42.37,2",,(13017),D3CJTYNQ
-80,21-SH2,423.,Orton Ian,19,8 Geneva,"1:45.21,6","30.58,1",(3422),569HJGTC
-81,10-QH3,300.,Oruzio Daniel,19,5 Aystetten,"52.33,7","19.10,3",(12319),TEXPE6CK
-82,21-SH2,277.,Oschwald Romain,19,5 Yverdon-les-Bains,"1:40.10,4","25.46,9",(4049),A3CE8YNC
-83,21-SJF,11.,Oshima Sanae,19,2 Leysin,"2:05.15,0","28.50,7",(2019),5HBT5PMJ
-84,10-QH2,172.,Osmani Naim,19,3 Orbe,"46.34,6","15.12,2",(9564),K8L8CHGR
-85,10-QH2,490.,Ostertag Stéphane,19,8 Bussigny-près-Lausanne,"1:02.41,5","31.19,1",(11347),5HB5QPMR
-86,10-QD2,400.,Osterwalder Saskia,19,6 Thalwil,"1:13.03,5","36.52,7",(12048),YQ1FWSRH
-87,10-QD3,177.,Ostorero Chantal,19,3 Grandvaux,"58.13,9","20.38,4",(9453),6BPADUA9
-88,21-SJG,46.,Otsuka Fumihiro,19,1 Leysin,"2:05.38,0","46.22,2",(6003),39GJ34FD
-89,4-K8,71.,Ott Klea,19,7 Oron-la-Ville,"24.04,4","7.21,7",(14213),4U38BC5H
-90,10-QH3,134.,Ott Marcel,19,0 Oron-la-Ville,"45.55,4","12.32,0",(8475),CBPWWRAX
-91,10-QD4,11.,Ott Vessaz Marianne,19,8 Neuchâtel,"51.34,7","10.41,9",(9371),AHBBRPMG
-92,21-SH2,293.,Ott Vitalij,19,6 Bad Kreuznach,"1:40.47,1","26.23,6",(4006),M1SHWUKR
-93,21-SH1,61.,Ottens Brammert,19,2 Lausanne,"1:29.50,4","23.52,2",(2286),7SUMQ37W
-94,10-QH3,113.,Oulevey Thierry,19,4 Morges,"44.27,4","11.04,0",(12494),K69XJ6TN
-95,21-SH3,160.,Oumaziz Hamid,19,8 Châtel-St-Denis,"1:36.21,6","23.43,9",(2464),AX6NR9Y3
-96,10-QH3,455.,Ouzeau Alexis,19,9 Lausanne,"1:07.06,5","33.43,1",(11790),M9GEA4F9
-97,10-QH2,23.,Overney Alexandre,19,2 Vuadens,"36.54,8","5.32,4",(8519),MHBX5PMN
-98,10-QH1,123.,Oviedo Hector,19,8 Randogne,"45.48,1","15.52,3",(9014),T1SMPUKT
-99,4-K5,15.,Owlya Alexandre,19,4 Lausanne,"16.51,1","2.27,4",(14214),YU34A35E
-100,4-K2,85.,Owlya Julien,19,9 Lausanne,"12.49,5","3.23,5",(15186),RRK4F7ZH
-101,4-K4,59.,Owlya Nicolas,19,6 Lausanne,"20.58,2","6.33,5",(14215),FG4BWYJ1
-102,10-QJF,28.,Oyama Yoshika,19,3 Leysin,"51.01,4","12.26,1",(8020),8G4HUMJ1
-103,10-QD5,16.,Oyex Marie,19,6 Lausanne,"1:01.28,5","13.49,6",(9557),GZ891L9J
-104,10W-Walk,,Ozaki Chihiro,19,2 Leysin,"1:34.52,9",,(13018),NBPGFRA8
-105,21-SJG,50.,Ozawa Masanori,19,2 Leysin,"2:12.33,0","53.17,2",(4012),LNW7NQBS
-106,4-K1,43.,Özbekler Okan Erol,20,1 La Tour-de-Peilz,"13.03,8","2.46,1",(15187),N69KTGTA
+0,21-SH1,345.,O'Brien Kieran,1982,Lausanne,"1:58.06,3","52.08,1",(3627),FHBXZPMZ
+1,21-SH4,174.,O Connor Diarmuid,1958,Lausanne,"1:51.26,0","31.49,6",(5401),AHBNNPMG
+2,10-QH2,163.,O Connor Marcus,1970,Aran,"46.04,6","14.42,2",(3082),HLH57B47
+3,10-QH3,97.,Obataya Yuji,1969,Genève,"43.22,8","9.59,4",(8394),DG4AGMJP
+4,10-QH3,110.,Oberhofer Laurent,1966,Fribourg,"44.18,1","10.54,7",(8232),G4MGU7DC
+5,10-QH1,46.,Oberlin Oliver,1987,Oberthal,"40.19,4","10.23,6",(8147),HBP3Q3A9
+6,42-MH2,248.,Oberson Jean-Michel,1971,Genève,"3:58.46,6","1:21.15,1",(1371),U1S1XUKH
+7,21-SD4,28.,Oberson Rita,1958,Genève,"1:55.52,1","19.28,8",(6133),QBPW5UAA
+8,10-QH1,55.,Oboni Jean-Baptiste,1982,Lausanne,"41.03,4","11.07,6",(12396),MX6YX9Y2
+9,10-QH2,506.,Obrecht Frederic,1972,Echallens,"1:05.52,0","34.29,6",(11062),3HBK5PMU
+10,10-QH3,331.,Obrecht Philippe,1968,Ecublens VD,"53.51,0","20.27,6",(9485),7BP91GAS
+11,42-MH3,340.,Ocampo Miguel,1968,Penthalaz,"4:27.28,9","1:51.42,1",(772),DNWESQB9
+12,10W-Walk,,Ocana Narciza,1970,Renens VD,"1:37.28,3",,(13299),GHBCZPMN
+13,21-SH4,64.,Occelli Thierry,1959,Pully,"1:39.36,7","20.00,3",(2402),SSU9BB7H
+14,42-MD3,36.,Ochieng Pernet Awilo,1965,Ecuvillens,"3:59.35,7","1:04.36,7",(663),XPRJ9R2G
+15,21-SH4,184.,Ochsenbein Eric,1953,Morrens VD,"1:52.30,1","32.53,7",(6808),4LHLLL48
+16,21-SD3,67.,Ochsner Bernadette,1969,Olten,"1:49.21,9","18.49,0",(6344),569NFGTZ
+17,21-SH2,800.,Ochsner Christophe,1972,Belmont-sur-Lausanne,"2:04.14,1","49.50,6",(6777),HPRR7427
+18,21-SD3,233.,Oddsen Anne Mette,1964,Jægerspris,"2:07.17,5","36.44,6",(6600),5G4BYMJC
+19,10-QD3,7.,Odegaard Anne Lene,1968,Gland,"43.33,8","5.58,3",(8362),R4M78TDA
+20,21-SD2,143.,Ödman Jaques Micaela,1976,Morges,"1:57.23,5","41.36,2",(4167),TMACT2E3
+21,21-SH4,190.,Odonnell Kelly,1956,Cessy,"1:53.01,0","33.24,6",(5232),U75QH2LX
+22,10-QD4,47.,Odor Truda,1956,Chamonix Mont Blanc,"59.12,9","18.20,1",(10141),CU3Q9C5B
+23,21-SH3,387.,Oehen Erich,1965,St Julien en Genevois,"1:45.54,2","33.16,5",(7264),F3CRTKNU
+24,10-QD1,87.,Oehler Michele,1988,Genève,"51.45,5","16.40,2",(9280),TX67R9YW
+25,21-SD2,277.,Oehler Nicole,1979,Genève,"2:10.49,3","55.02,0",(7392),4Z8UZL9Z
+26,21-SH2,416.,Oester Patrick,1975,Genève,"1:45.16,5","30.53,0",(4291),TX6WR9YW
+27,21-SH4,114.,Oestreicher Marc,1959,Neuchâtel,"1:45.40,3","26.03,9",(2429),LDE1AX3K
+28,21-SH1,245.,Oestreicher Max,1989,Neuchâtel,"1:47.00,9","41.02,7",(2437),TU3DDC5R
+29,10-QD2,287.,Offreda Deborah,1977,Genève,"1:02.29,5","26.18,7",(12456),J69DMGTJ
+30,21-SJG,31.,Ogame Hiroki,1992,Leysin,"1:53.04,2","33.48,4",(5003),BQ15QSR3
+31,10W-Walk,,Ogata Juri,1992,Leysin,"1:39.09,9",,(13014),269PEGTD
+32,21-SH3,481.,Ogay André,1963,Pully,"1:50.39,2","38.01,5",(3459),J9GEW4FC
+33,21-SH3,446.,Ogier Ian,1966,Founex,"1:48.43,7","36.06,0",(3540),4DE4GX3W
+34,21-SJG,14.,Ohama Toshiya,1992,Leysin,"1:41.14,3","21.58,5",(6001),UEX2Q6CG
+35,10-QD5,5.,Okamura Mieko,1940,Tokyo,"52.04,4","4.25,5",(10010),JU3SFC5G
+36,10-QH5,48.,Okamura Niroku,1940,Tokyo,"52.50,9","14.23,3",(10009),FSUQT379
+37,21-SH2,39.,Olart Stephane,1974,Cheny,"1:25.05,3","10.41,8",(2140),AHB56PMM
+38,21-SH2,422.,Oliach Michael,1975,Plan-les-Ouates,"1:45.21,0","30.57,5",(3568),ZU317C55
+39,42-MH1,59.,Olivares Jibril,1980,Etoy,"3:45.29,9","1:24.29,7",(1549),1DENXX37
+40,42-MH2,17.,Oliveira Antonio,1975,Ecublens VD,"3:02.26,2","24.54,7",(7),NNWQ4NBP
+41,10-QH4,2.,Oliveira Narciso,1957,Genève,"33.54,7","1.06,6",(8038),CX66KXYM
+42,21-SH2,414.,Oliveira Paulo Jorge,1972,Genève,"1:45.06,8","30.43,3",(5330),ZBPUGRAS
+43,21-SH3,501.,Olivetta Hermann,1962,Servion,"1:51.38,4","39.00,7",(7265),5BPE9RAE
+44,10-QD2,281.,Olivier Nadia,1971,Lausanne,"1:01.48,9","25.38,1",(12030),YQ1GPSRU
+45,10-QH5,12.,Olivieri Giuliano,1949,Ballaigues,"46.51,1","8.23,5",(9086),QG4S2RJX
+46,21-SD3,20.,Ollier Edmea,1964,Morgex (AO),"1:43.18,7","12.45,8",(6711),NSURD37Y
+47,10-QD1,81.,Ollivier Alison,1987,Echallens,"51.05,2","15.59,9",(9271),MLHWQL42
+48,42-MH4,15.,Ollivier Patrick,1959,Echallens,"3:14.51,3","24.34,0",(413),GZ899Z9C
+49,21-SD5,12.,Olnhoff Elisabeth Sofie,1945,Zug,"2:07.03,4","37.07,1",(7599),TEXU86CD
+50,10-QD2,369.,Olsen Helen,1975,Fredensborg,"1:07.27,3","31.16,5",(12196),G1SPTUKH
+51,42-MD4,13.,Olsson Solveig,1956,Karlskrona,"4:13.43,1","44.45,9",(212),CHBAFPMP
+52,42-MD3,59.,Onaran Marianne,1968,Berg TG,"4:25.04,2","1:30.05,2",(1532),2SU6S379
+53,10-QD2,71.,Ong Lena,1975,Lausanne,"52.03,1","15.52,3",(11542),2SUDH37J
+54,10-QH3,126.,Onkel Eric,1963,Illzach,"45.18,0","11.54,6",(8374),4692KGTP
+55,10W-Walk,,Onoda Ryo,1992,Leysin,"1:34.55,6",,(13015),WPR9CK2E
+56,21-SH3,578.,Oppici Giorgio,1961,Parma (PR),"1:55.00,2","42.22,5",(7528),G69KYGTE
+57,4-K7,25.,Oppliger Alana,2000,Bournens,"12.39,2","2.49,4",(15185),269YNGT4
+58,21-SD2,316.,Oppliger Anne Françoise,1970,Bossonnens,"2:17.56,3","1:02.09,0",(6386),YQ18FSRQ
+59,42-MH2,11.,Oppliger Christophe,1972,Lonay,"2:58.57,8","21.26,3",(695),ASU53S71
+60,10-QD2,250.,Oppliger Cinthia,1974,Bournens,"1:00.27,6","24.16,8",(10317),91SLBUKM
+61,4-K8,7.,Oppliger Emmy,1998,Bournens,"17.39,5","0.56,8",(14212),CCYAGTW6
+62,21-SH5,86.,Oppliger Etienne,1940,Morges,"2:13.13,0","51.01,1",(6277),EEX5HECJ
+63,21-SH1,319.,Orange Yves,1981,Genève,"1:54.44,6","48.46,4",(4281),AHBP6PM2
+64,42-MH2,48.,Orazi Christophe,1974,Torcy,"3:12.16,8","34.45,3",(296),AHB4ZPMC
+65,10-QH2,409.,Orchis Marcelo,1978,Neuchâtel,"55.38,8","24.16,4",(10554),Y8L1WHG9
+66,21-SH2,878.,Ordonez Aguilar Guillermo,1975,Adlikon-Zürich,"2:17.22,4","1:02.58,9",(7044),NU3A7C5Q
+67,21-SH4,244.,Oreiller Etienne,1950,Muraz (Collombey),"1:59.44,9","40.08,5",(5071),1HBG6UMF
+68,4-K8,2.,Orellana Sara,1997,Lonay,"16.49,5","0.06,8",(14408),51SSPUKM
+69,21-SH3,241.,Oria Santiago,1969,Genolier,"1:39.42,9","27.05,2",(3553),N69AWGT3
+70,42-MH1,8.,Oriet Gilian,1984,Delémont,"2:56.54,0","35.53,8",(241),H1SMCHK1
+71,10W-Walk,,Ormsby Justine,1972,Leysin,"1:56.41,1",,(13016),WPRM9K2L
+72,21-SH2,156.,Oro Emmanuel,1976,Lausanne,"1:34.05,2","19.41,7",(2138),71SJ4UK9
+73,21-SH2,252.,Oro Miguel,1976,Lausanne,"1:39.25,9","25.02,4",(3599),RPR7UG2J
+74,10-QD3,54.,Oronova Daniela,1965,Lausanne,"51.03,2","13.27,7",(9272),Y69N3PTA
+75,10-QH2,356.,Orquera Roberto,1976,Lausanne,"53.22,6","22.00,2",(12197),4X6NK9YC
+76,10-QH1,166.,Ortega Delgadillo Oscar,1984,Lausanne,"47.39,8","17.44,0",(12351),Q3CZFYNW
+77,42-MH3,278.,Ortiz Luis Alberto,1966,Lausanne,"4:02.53,6","1:27.06,8",(1012),NPRY4C27
+78,21-SH2,233.,Ortiz Marcelo,1974,Lausanne,"1:38.21,2","23.57,7",(3349),ECYTM7WD
+79,10W-Walk,,Ortiz Trujillo Elsa,1951,Lausanne,"1:42.37,2",,(13017),D3CJTYNQ
+80,21-SH2,423.,Orton Ian,1978,Geneva,"1:45.21,6","30.58,1",(3422),569HJGTC
+81,10-QH3,300.,Oruzio Daniel,1965,Aystetten,"52.33,7","19.10,3",(12319),TEXPE6CK
+82,21-SH2,277.,Oschwald Romain,1975,Yverdon-les-Bains,"1:40.10,4","25.46,9",(4049),A3CE8YNC
+83,21-SJF,11.,Oshima Sanae,1992,Leysin,"2:05.15,0","28.50,7",(2019),5HBT5PMJ
+84,10-QH2,172.,Osmani Naim,1973,Orbe,"46.34,6","15.12,2",(9564),K8L8CHGR
+85,10-QH2,490.,Ostertag Stéphane,1978,Bussigny-près-Lausanne,"1:02.41,5","31.19,1",(11347),5HB5QPMR
+86,10-QD2,400.,Osterwalder Saskia,1976,Thalwil,"1:13.03,5","36.52,7",(12048),YQ1FWSRH
+87,10-QD3,177.,Ostorero Chantal,1963,Grandvaux,"58.13,9","20.38,4",(9453),6BPADUA9
+88,21-SJG,46.,Otsuka Fumihiro,1991,Leysin,"2:05.38,0","46.22,2",(6003),39GJ34FD
+89,4-K8,71.,Ott Klea,1997,Oron-la-Ville,"24.04,4","7.21,7",(14213),4U38BC5H
+90,10-QH3,134.,Ott Marcel,1960,Oron-la-Ville,"45.55,4","12.32,0",(8475),CBPWWRAX
+91,10-QD4,11.,Ott Vessaz Marianne,1958,Neuchâtel,"51.34,7","10.41,9",(9371),AHBBRPMG
+92,21-SH2,293.,Ott Vitalij,1976,Bad Kreuznach,"1:40.47,1","26.23,6",(4006),M1SHWUKR
+93,21-SH1,61.,Ottens Brammert,1982,Lausanne,"1:29.50,4","23.52,2",(2286),7SUMQ37W
+94,10-QH3,113.,Oulevey Thierry,1964,Morges,"44.27,4","11.04,0",(12494),K69XJ6TN
+95,21-SH3,160.,Oumaziz Hamid,1968,Châtel-St-Denis,"1:36.21,6","23.43,9",(2464),AX6NR9Y3
+96,10-QH3,455.,Ouzeau Alexis,1969,Lausanne,"1:07.06,5","33.43,1",(11790),M9GEA4F9
+97,10-QH2,23.,Overney Alexandre,1972,Vuadens,"36.54,8","5.32,4",(8519),MHBX5PMN
+98,10-QH1,123.,Oviedo Hector,1988,Randogne,"45.48,1","15.52,3",(9014),T1SMPUKT
+99,4-K5,15.,Owlya Alexandre,1994,Lausanne,"16.51,1","2.27,4",(14214),YU34A35E
+100,4-K2,85.,Owlya Julien,1999,Lausanne,"12.49,5","3.23,5",(15186),RRK4F7ZH
+101,4-K4,59.,Owlya Nicolas,1996,Lausanne,"20.58,2","6.33,5",(14215),FG4BWYJ1
+102,10-QJF,28.,Oyama Yoshika,1993,Leysin,"51.01,4","12.26,1",(8020),8G4HUMJ1
+103,10-QD5,16.,Oyex Marie,1946,Lausanne,"1:01.28,5","13.49,6",(9557),GZ891L9J
+104,10W-Walk,,Ozaki Chihiro,1992,Leysin,"1:34.52,9",,(13018),NBPGFRA8
+105,21-SJG,50.,Ozawa Masanori,1992,Leysin,"2:12.33,0","53.17,2",(4012),LNW7NQBS
+106,4-K1,43.,Özbekler Okan Erol,2001,La Tour-de-Peilz,"13.03,8","2.46,1",(15187),N69KTGTA
 107,total 107,,,,,,,,

@@ -5,12 +5,18 @@ import pandas as pd
 import numpy as np
 import itertools
 import re
+import statsmodels.api as sm
 import datetime
 from datetime import date
 from sklearn import preprocessing
 from scipy import stats
 from io import StringIO
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import plotly
+plotly.offline.init_notebook_mode()
+import plotly.graph_objs as go
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -270,7 +276,7 @@ def convert_seconds_to_time(seconds):
     Return
         - formatted time (HH:mm:ss format, string)
     '''
-    
+    seconds = int(float(seconds))
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
     return "%d:%02d:%02d" % (h, m, s)
@@ -329,3 +335,110 @@ def compute_anova_and_tukey_hsd(df, categories, values):
     tukey_hsd_string = StringIO(pairwise_tukeyhsd(df[values], df[categories]).summary().as_csv())
     results['tukey_hsd'] = pd.read_csv(tukey_hsd_string, skiprows=1)
     return results
+
+
+def run_ols_test(data, x, y):
+    '''
+    This function runs OLS test for each dataset given in data.
+
+    Parameters
+        - data: Dictionary containing datasets on which OLS must be executed
+        - x: Name of column containing x values
+        - y: Name of column containing y values
+
+    Return
+        - results: Dictionary containing results of OLS for each dataset given in data
+    '''
+
+    results = {}
+    for key, values in data.items():
+        y_data = values[y]
+        x_data = sm.add_constant(values[x])
+        results[key] = sm.OLS(y_data, x_data).fit()
+    return results
+
+
+def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=None, size=5, aspect=2):
+    '''
+    This function displays a Seaborn boxplot.
+
+    Parameters
+        - data: DataFrame to use for graph
+        - x: Name of column to use for x axis
+        - y: Name of column to use for y axis
+        - hue: Column name of the categorical data to use (by default, None)
+        - title: Title of the graph (by default, None)
+        - x_format: Function to use to format x labels (by default, None)
+        - y_format: Function to use to format y labels (by default, None)
+        - size: Size of the boxplot (by default, 5)
+        - aspect: Aspect of the boxplot (by default, 2)
+    '''
+
+    g = sns.factorplot(data=data, x=x, y=y, kind='box', hue=hue, size=size, aspect=aspect)
+    
+    if x_format:
+        for ax in g.axes.flat:
+            labels = []
+            for label in ax.get_xticklabels():
+                formatted_label = x_format(label._x)
+                labels.append(formatted_label)
+            ax.set_xticklabels(labels)
+
+    if y_format:
+        for ax in g.axes.flat:
+            labels = []
+            for label in ax.get_yticklabels():
+                formatted_label = y_format(label._y)
+                labels.append(formatted_label)
+            ax.set_yticklabels(labels)
+
+    if title:
+        plt.title(title)
+
+    plt.show()
+
+
+def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_format=None, y_format=None):
+    '''
+    This function displays boxplots using Plotly.
+
+    Parameters
+        - data: DataFrame containing data to use for graph
+        - x: Name of column used for x axis
+        - y: Name of column used for y axis
+        - hue: Column name of the categorical data to use (by default, None)
+        - hue_names: Dictionary containing name to display for an associated value available in data[hue] (by default, None)
+        - title: Title of the graph (by default, None)
+        - x_name: Name of x axis (by default, None)
+        - y_name: Name of y axis (by default, None)
+        - x_values: Array containing x values to display (by default, None / if None, Plotly creates axis automatically)
+        - y_values: Array containing y values to display (by default, None / if None, Plotly creates axis automatically)
+        - x_format: Function to use to format x_values (by default, None / if None, x_values is used for x labels)
+        - y_format: Function to use to format x_values (by default, None / if None, y_values is used for y labels)
+    '''
+    
+    hue_values = data[hue].unique()
+    all_boxes = []
+    if hue:
+        for value in hue_values:
+            filtered_data = data[data[hue] == value]
+            current_x = filtered_data[x]
+            current_y = filtered_data[y]
+            box = go.Box(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value))
+            all_boxes.append(box)
+    else:
+        box = go.Box(y=data[y], x=data[x])
+        all_boxes.append(box)
+
+    if x_values:
+        x_labels = [(x_format(v) if x_format else v) for v in x_values]
+    
+    if y_values:
+        y_labels = [(y_format(v) if y_format else v) for v in y_values]
+    
+    x_axis = go.XAxis(title=x_name, mirror="ticks", ticks="inside", ticktext=x_labels, tickvals=x_values, showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    y_axis = go.YAxis(title=y_name, mirror="ticks", ticks="inside", ticktext=y_labels, tickvals=y_values, showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+
+    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode='group')
+    fig = go.Figure(data=all_boxes, layout=layout)
+    plotly.offline.iplot(fig)

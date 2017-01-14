@@ -244,27 +244,20 @@ def plot_distribution_age_distance(fig, data, title, subplot_idx):
     ax.axvline(mean, 0, 1750, color='r', linestyle='--')
     ax.set_title(title)
 
-def plot_performance_according_to_running_type(data, nb_km, column, size=4.5, aspect=2):
+
+def plot_performance_according_to_running_type(data, nb_km, x, size=4.5, aspect=2):
     '''
     Plots the performance according to age of participants for a given running
     
     Parameters
         - data: DataFrame containing records for a given running
-        - nb_km: km of the running
-        - column: column to use for x axis
-        - size: size of the graph (by default, 4.5)
-        - aspect: aspect of the graph (by default, 2)
+        - nb_km: Number of km of the running
+        - x: Name of column to use for x axis
+        - size: Size of the graph (by default, 4.5)
+        - aspect: Aspect of the graph (by default, 2)
     '''
-    
-    g = sns.factorplot(data=data, x=column, y='time', kind='box', size=size, aspect=aspect)
-    for ax in g.axes.flat:
-        labels = []
-        for label in ax.get_yticklabels():
-            formatted_label = study_utils.convert_seconds_to_time(int(float(label._y)))
-            labels.append(formatted_label)
-        ax.set_yticklabels(labels)
-    plt.title('Distribution of time of ' + str(nb_km) + 'km running following age of participants')
-    plt.show()
+    title = 'Distribution of time of ' + str(nb_km) + ' running following age of participants'
+    study_utils.display_boxplot(data=data, x=x, y='time', size=size, aspect=aspect, title=title, y_format=study_utils.convert_seconds_to_time)
 
 
 def plot_time_distribution(ax, running, name):
