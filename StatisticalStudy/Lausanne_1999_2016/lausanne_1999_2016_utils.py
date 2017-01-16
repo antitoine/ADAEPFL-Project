@@ -8,6 +8,11 @@ import numpy as np
 import collections
 
 # ----------------------------------------------------------------------------------------------------------
+# Constants
+
+RUNNINGS_KM = {'10 km': 10, 'Semi-marathon': 21, 'Marathon': 42}
+
+# ----------------------------------------------------------------------------------------------------------
 # Functions
 
 def compute_overall_rank(data):
@@ -356,3 +361,35 @@ def plot_median_age_evolution(data, x=None, y='Median age (all runnings)', group
     ax.set_title(title)
     ax.set_ylabel('Mean age')
     plt.show()
+
+
+def update_plotly_figure_according_to_age_categories(figure, df, age_category):
+    '''
+    This function updates Plotly figure according to selected age category.
+
+    Parameters
+        - figure: Plotly figure to update
+        - df: DataFrame containing information on runners
+        - age_category: String representing selected age category
+
+    Return
+        - figure: Updated Plotly figure
+    '''
+    
+    figure_data = figure['data']
+    
+    if age_category == 'All':
+        data = df
+    else:
+        data = df[df['age category'] == age_category]
+    
+    for d in figure_data:
+        filtered_data = data[data['distance (km)'] == RUNNINGS_KM[d['name']]]
+        current_x = filtered_data['year']
+        current_y = filtered_data['time']
+        d['x'] = current_x
+        d['y'] = current_y
+    
+    figure['data'] = figure_data
+
+    return figure

@@ -15,7 +15,6 @@ from statsmodels.stats.multicomp import pairwise_tukeyhsd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import plotly
-plotly.offline.init_notebook_mode()
 import plotly.graph_objs as go
 
 # ----------------------------------------------------------------------------------------------------------
@@ -398,9 +397,9 @@ def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=No
     plt.show()
 
 
-def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_format=None, y_format=None):
+def create_plotly_boxplots_figure(data, x, y, hue=None, hue_names=None, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_values_format=None, y_values_format=None, x_type=None, y_type=None, x_format=None, y_format=None):
     '''
-    This function displays boxplots using Plotly.
+    This function creates Plotly figure containing boxplots.
 
     Parameters
         - data: DataFrame containing data to use for graph
@@ -413,12 +412,20 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, title=None, x_n
         - y_name: Name of y axis (by default, None)
         - x_values: Array containing x values to display (by default, None / if None, Plotly creates axis automatically)
         - y_values: Array containing y values to display (by default, None / if None, Plotly creates axis automatically)
-        - x_format: Function to use to format x_values (by default, None / if None, x_values is used for x labels)
-        - y_format: Function to use to format x_values (by default, None / if None, y_values is used for y labels)
+        - x_values_format: Function to use to format x_values (by default, None / if None, x_values is used for x labels)
+        - y_values_format: Function to use to format x_values (by default, None / if None, y_values is used for y labels)
+        - x_type: String representing type of x axis (by default, None / type must be supported by Plotly)
+        - y_type: String representing type of y axis (by default, None / type must be supported by Plotly)
+        - x_format: String representing format of x axis (by default, None / format must be supported by Plotly)
+        - y_format: String representing format of y axis (by default, None / format must be supported by Plotly)
+
+    Return
+        - fig: Plotly figure
     '''
     
     hue_values = data[hue].unique()
     all_boxes = []
+
     if hue:
         for value in hue_values:
             filtered_data = data[data[hue] == value]
@@ -431,14 +438,19 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, title=None, x_n
         all_boxes.append(box)
 
     if x_values:
-        x_labels = [(x_format(v) if x_format else v) for v in x_values]
+        x_labels = [(x_values_format(v) if x_format else v) for v in x_values]
+    else:
+        x_labels = None
     
     if y_values:
-        y_labels = [(y_format(v) if y_format else v) for v in y_values]
+        y_labels = [(y_values_format(v) if y_format else v) for v in y_values]
+    else:
+        y_labels = None
     
-    x_axis = go.XAxis(title=x_name, mirror="ticks", ticks="inside", ticktext=x_labels, tickvals=x_values, showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
-    y_axis = go.YAxis(title=y_name, mirror="ticks", ticks="inside", ticktext=y_labels, tickvals=y_values, showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    x_axis = go.XAxis(title=x_name, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    y_axis = go.YAxis(title=y_name, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
 
     layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode='group')
     fig = go.Figure(data=all_boxes, layout=layout)
-    plotly.offline.iplot(fig)
+    return fig
+
