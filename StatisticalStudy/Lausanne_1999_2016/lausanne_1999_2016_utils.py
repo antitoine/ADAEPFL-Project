@@ -6,6 +6,9 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 import collections
+import sys
+sys.path.append('..')
+import study_utils
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -363,7 +366,7 @@ def plot_median_age_evolution(data, x=None, y='Median age (all runnings)', group
     plt.show()
 
 
-def update_plotly_figure_according_to_age_categories(figure, df, age_category):
+def update_plotly_figure_according_to_parameters(figure, df, age_category, performance_criterion):
     '''
     This function updates Plotly figure according to selected age category.
 
@@ -371,6 +374,7 @@ def update_plotly_figure_according_to_age_categories(figure, df, age_category):
         - figure: Plotly figure to update
         - df: DataFrame containing information on runners
         - age_category: String representing selected age category
+        - performance_criterion: String representing selected performance criterion
 
     Return
         - figure: Updated Plotly figure
@@ -386,10 +390,57 @@ def update_plotly_figure_according_to_age_categories(figure, df, age_category):
     for d in figure_data:
         filtered_data = data[data['distance (km)'] == RUNNINGS_KM[d['name']]]
         current_x = filtered_data['year']
-        current_y = filtered_data['time']
+        current_y = filtered_data[performance_criterion.lower()]
         d['x'] = current_x
         d['y'] = current_y
     
     figure['data'] = figure_data
 
     return figure
+
+def generate_all_performance_figures(df, age_categories, performance_criteria):
+    '''
+    This function generate all performance figures according a set of age categories and a set of performance criteria.
+
+    Parameters
+        - df: DataFrame containing records about runners
+        - age_categories: Array containing age categories to be displayed
+        - performance_criteria: Array containing performance criteria to consider
+
+    Return
+        - figures: Dict containing all performance figures
+    '''
+
+    # We define the considered runnings and the years interval
+    runnings = {10: '10 km', 21: 'Semi-marathon', 42: 'Marathon'}
+    year_values = [v for v in df['year'].unique() if v]
+    
+    # We define options and the final Dict
+    figures = {}
+    default_options = {'x': 'year', 'hue': 'distance (km)', 'hue_names': runnings, 'title': 'Performance over years for runnings of Lausanne Marathon', 'x_name': 'Years', 'x_values': year_values}
+    time_options = {'y': 'time', 'y_name': 'Time', 'y_type': 'date', 'y_format': '%H:%M:%S'}
+    speed_options = {'y': 'speed (m/s)', 'y_name': 'Speed (m/s)'}
+    time_options.update(default_options)
+    speed_options.update(default_options)
+
+    for age_category in age_categories:
+        # We select data according to age category
+        if age_category == 'All':
+            data = df
+        else:
+            data = df[df['age category'] == age_category]
+        figures[age_category] = {}
+
+        # We create a figure for each performance criterion
+        for performance_criterion in performance_criteria:
+            criterion = performance_criterion.lower()
+            if criterion == 'time':
+                figure = study_utils.create_plotly_boxplots_figure(data=data, **time_options)
+            elif criterion == 'speed (m/s)':
+                figure = study_utils.create_plotly_boxplots_figure(data=data, **speed_options)
+            else:
+                # By default, two specific criteria are allowed: 'time' and 'speed (m/s)'. If any other criterion is provided, we throw an exception.
+                raise ValueError('Invalid performance criterion encountered. Performance criterion must be either \'Time\' or \'Speed (m/s)\'')
+            figures[age_category][performance_criterion] = figure
+
+    return figures
