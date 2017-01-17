@@ -7,6 +7,8 @@ import re
 from dateutil import parser
 import datetime as dt
 from datetime import date
+from scipy import stats
+
 
 QUART_MARATHON = '(Quart)|(1/4)' 
 SEMI_MARATHON = '(Semi)|(1/2)|(Halbmarathon)'
@@ -247,6 +249,10 @@ def preprocess_runners(df):
         - df: DataFrame containing data
     '''
     df['gender'] = np.nan
+    
+    
+def r2(x, y):
+    return stats.pearsonr(x, y)[0] ** 2
     
     
 def presentation_performance_runners(fig, data, annotation = []):
