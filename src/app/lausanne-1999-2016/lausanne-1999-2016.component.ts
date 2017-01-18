@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonReaderService } from '../json-reader.service';
 declare let Plotly:any;
 
 @Component({
@@ -8,21 +9,12 @@ declare let Plotly:any;
 })
 export class Lausanne19992016Component implements OnInit {
 
-  data = [{
-    values: [19, 26, 55],
-    labels: ['Residential', 'Non-Residential', 'Utility'],
-    type: 'pie'
-  }];
-
-  layout = {
-    height: 380,
-    width: 480
-  };
-
-  constructor() { }
+  constructor(private jsonReader: JsonReaderService) {}
 
   ngOnInit() {
-    Plotly.newPlot('myDiv', this.data, this.layout);
+    this.jsonReader.readJsonData('./assets/json/marathon-lausanne-1999-2016-ages-performances.json')
+      .subscribe(json => {
+        Plotly.newPlot('testPlotlyGraphFromNotebook', json['All']['Time']);
+      });
   }
-
 }

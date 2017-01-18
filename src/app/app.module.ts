@@ -15,6 +15,7 @@ import { ScrapingComponent } from './scraping/scraping.component';
 import { Lausanne2016Component } from './lausanne-2016/lausanne-2016.component';
 import { Lausanne19992016Component } from './lausanne-1999-2016/lausanne-1999-2016.component';
 import { RunnersComponent } from './runners/runners.component';
+import { JsonReaderService } from './json-reader.service';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -47,7 +48,8 @@ const appRoutes: Routes = [
     HttpModule
   ],
   providers: [
-    CsvReaderService
+    CsvReaderService,
+    JsonReaderService
   ],
   bootstrap: [AppComponent]
 })
