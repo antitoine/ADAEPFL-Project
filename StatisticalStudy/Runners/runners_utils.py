@@ -8,10 +8,12 @@ from dateutil import parser
 import datetime as dt
 from datetime import date
 from scipy import stats
+import warnings
+warnings.filterwarnings('ignore')
 
 
-QUART_MARATHON = '(Quart)|(1/4)' 
-SEMI_MARATHON = '(Semi)|(1/2)|(Halbmarathon)'
+QUART_MARATHON = '(Quart)|(1\/4)|(Filles)' 
+SEMI_MARATHON = '(Semi)|(Halbmarathon)|(1\/2)'
 MARATHON = 'Marathon'
 KILOMETER = '\d*(\.?|\,?)\d*(\s?|-?)[kK][mM]'
 
@@ -249,6 +251,8 @@ def preprocess_runners(df):
         - df: DataFrame containing data
     '''
     df['gender'] = np.nan
+    df.drop('name', axis=1, inplace=True)
+    df['number_acode'] = df.index.values
     
     
 def r2(x, y):
@@ -284,3 +288,56 @@ def presentation_performance_runners(fig, data, annotation = []):
     sns.swarmplot(x="distance (km)", y="speed (m/s)", data=data[2], ax=plot3)
     plot3.set_title('Runner 3')
     plot3.set_ylabel('')
+    
+    
+def compute_dataframe_marathon_performance(df_runs, df_overall, eventName = 'Lausanne Marathon', distance = 42):
+    '''
+    This function compute new pamareter like 'distance (km)', number of event, year of each event for each runners.
+
+    Parameters
+        - df_runs: DataFrame containing data
+        - df_overall: DataFrame containing all data collected
+        - eventName: Name of the event 
+        - distance: Distance related to the event.
+        
+    return dataframe selecting of all runners.
+    '''
+    
+    # compute the sum of kilimoter in one year for the preparation of marathon.
+    df_runs['year'] = df_runs['eventDate'].apply(lambda x: int(x.year))
+    group_by_runs_sum_kilometer = df_runs.groupby(['acode', 'year']).sum()[['distance (km)']]
+    group_by_runs_sum_kilometer.columns = ['sum distance (km)']
+    
+    # compute the number of events
+    group_by_runs_before_process = df_overall.groupby(['acode', 'year']).size().reset_index().groupby(['acode', 'year'])[[0]].max()
+    group_by_runs_before_process.columns = ['overall number events']
+    
+    # compute the returning dataframe
+    result = pd.concat([group_by_runs_sum_kilometer,group_by_runs_before_process], axis = 1)
+    result.fillna(value=0,  inplace=True)
+    result.reset_index(inplace=True)
+
+    result = pd.merge(result, df_runs, on=['acode', 'year'])
+    
+    return result[(result['eventName'] == eventName) & (result['distance (km)'] == distance)]
+
+def diplay_comparaison_runners_performance(fig, data): 
+    '''
+    Plot a scatter plot between the total number of kilometer and the speed of each runners.
+
+    Parameters
+        - fig: Figure on which subplots are displayed
+        - data: DataFrame containing the data relative to a given running
+        
+    '''
+    
+    # This is the first plot with the total number (Km) raced in the year.
+    ax1  = fig.add_subplot(211)
+    ax1.scatter(data['speed (m/s)'], data['sum distance (km)'], c=data['number_acode'], cmap=plt.cm.Paired)
+    plt.ylabel('Sum distance (Km)')
+
+    # This is the second plot with the total event in the year.
+    ax2  = fig.add_subplot(212)
+    ax2.scatter(data['speed (m/s)'], data['overall number events'], c=data['number_acode'], cmap=plt.cm.Paired)
+    plt.xlabel('Speed (m/s)')
+    plt.ylabel('Total number Event')
