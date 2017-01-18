@@ -400,7 +400,7 @@ def update_plotly_figure_according_to_parameters(figure, df, age_category, perfo
 
 def generate_all_performance_figures(df, age_categories, performance_criteria):
     '''
-    This function generate all performance figures according a set of age categories and a set of performance criteria.
+    This function generates all performance figures according a set of age categories and a set of performance criteria.
 
     Parameters
         - df: DataFrame containing records about runners
@@ -417,9 +417,9 @@ def generate_all_performance_figures(df, age_categories, performance_criteria):
     
     # We define options and the final Dict
     figures = {}
-    default_options = {'x': 'year', 'hue': 'distance (km)', 'hue_names': runnings, 'title': 'Performance over years for runnings of Lausanne Marathon', 'x_name': 'Years', 'x_values': year_values}
-    time_options = {'y': 'time', 'y_name': 'Time', 'y_type': 'date', 'y_format': '%H:%M:%S'}
-    speed_options = {'y': 'speed (m/s)', 'y_name': 'Speed (m/s)'}
+    default_options = {'title': 'Performance over years for runnings of Lausanne Marathon', 'x_name': 'Years', 'x_values': year_values}
+    time_options = {'y_name': 'Time', 'y_type': 'date', 'y_format': '%H:%M:%S'}
+    speed_options = {'y_name': 'Speed (m/s)'}
     time_options.update(default_options)
     speed_options.update(default_options)
 
@@ -434,13 +434,43 @@ def generate_all_performance_figures(df, age_categories, performance_criteria):
         # We create a figure for each performance criterion
         for performance_criterion in performance_criteria:
             criterion = performance_criterion.lower()
+            boxplots = study_utils.create_plotly_boxplots(data=data, x='year', y=criterion, hue='distance (km)', hue_names=runnings)
             if criterion == 'time':
-                figure = study_utils.create_plotly_boxplots_figure(data=data, **time_options)
+                figure = study_utils.create_plotly_legends_and_layout(data=boxplots, **time_options)
             elif criterion == 'speed (m/s)':
-                figure = study_utils.create_plotly_boxplots_figure(data=data, **speed_options)
+                figure = study_utils.create_plotly_legends_and_layout(data=boxplots, **speed_options)
             else:
                 # By default, two specific criteria are allowed: 'time' and 'speed (m/s)'. If any other criterion is provided, we throw an exception.
                 raise ValueError('Invalid performance criterion encountered. Performance criterion must be either \'Time\' or \'Speed (m/s)\'')
             figures[age_category][performance_criterion] = figure
 
     return figures
+
+
+def generate_all_bib_performance_figure(df):
+    '''
+    This function generates all BIB/performance scatters for each year of Lausanne Marathon.
+
+    Parameters
+        - df: DataFrame containing records about runners
+
+    Return
+        - figure: Dict containing all BIB/performance figures
+    '''
+
+    # We define the considered the years interval, colors and visibility
+    years_range = range(1999, 2017)
+    years = {year: str(year) for year in years_range}
+    colors = {str(year): 'hsl(' + str(np.linspace(0, 360, len(years_range))[index]) + ', 50%' + ', 50%)' for index, year in enumerate(years_range)}
+    visibility = {str(year): (True if year > 2015 else 'legendonly') for year in years_range}
+
+    # We define options and the final Dict
+    figures = {}
+    default_options = {'title': 'Distribution of performance according to BIB numbers over the years', 'x_name': 'BIB numbers', 'hovermode':'closest'}
+    time_options = {'y_name': 'Time', 'y_type': 'date', 'y_format': '%H:%M'}
+    time_options.update(default_options)
+
+    scatters = study_utils.create_plotly_scatters(data=df, x='number', y='time', hue='year', hue_names=years, text='name', color=colors, visibility=visibility)
+    figure = study_utils.create_plotly_legends_and_layout(data=scatters, **time_options)
+
+    return figure

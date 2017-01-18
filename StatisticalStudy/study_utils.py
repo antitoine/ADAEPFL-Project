@@ -397,16 +397,12 @@ def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=No
     plt.show()
 
 
-def create_plotly_boxplots_figure(data, x, y, hue=None, hue_names=None, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_values_format=None, y_values_format=None, x_type=None, y_type=None, x_format=None, y_format=None):
+def create_plotly_legends_and_layout(data, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_values_format=None, y_values_format=None, x_type=None, y_type=None, x_format=None, y_format=None, hovermode=None):
     '''
-    This function creates Plotly figure containing boxplots.
+    This function creates Plotly legends and layout.
 
     Parameters
-        - data: DataFrame containing data to use for graph
-        - x: Name of column used for x axis
-        - y: Name of column used for y axis
-        - hue: Column name of the categorical data to use (by default, None)
-        - hue_names: Dictionary containing name to display for an associated value available in data[hue] (by default, None)
+        - data: Plotly data
         - title: Title of the graph (by default, None)
         - x_name: Name of x axis (by default, None)
         - y_name: Name of y axis (by default, None)
@@ -418,6 +414,41 @@ def create_plotly_boxplots_figure(data, x, y, hue=None, hue_names=None, title=No
         - y_type: String representing type of y axis (by default, None / type must be supported by Plotly)
         - x_format: String representing format of x axis (by default, None / format must be supported by Plotly)
         - y_format: String representing format of y axis (by default, None / format must be supported by Plotly)
+        - hovermode: String representing the type of mode to use on hover (by default, None)
+
+    Return
+        - figure: Plotly figure
+    '''
+
+    if x_values:
+        x_labels = [(x_values_format(v) if x_format else v) for v in x_values]
+    else:
+        x_labels = None
+    
+    if y_values:
+        y_labels = [(y_values_format(v) if y_format else v) for v in y_values]
+    else:
+        y_labels = None
+    
+    x_axis = go.XAxis(title=x_name, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    y_axis = go.YAxis(title=y_name, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+
+    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode='group', hovermode=hovermode)
+    figure = go.Figure(data=data, layout=layout)
+
+    return figure
+
+
+def create_plotly_boxplots(data, x, y, hue=None, hue_names=None):
+    '''
+    This function creates Plotly figure containing boxplots.
+
+    Parameters
+        - data: DataFrame containing data to use for graph
+        - x: Name of column used for x axis
+        - y: Name of column used for y axis
+        - hue: Column name of the categorical data to use (by default, None)
+        - hue_names: Dictionary containing name to display for an associated value available in data[hue] (by default, None)
 
     Return
         - fig: Plotly figure
@@ -436,21 +467,40 @@ def create_plotly_boxplots_figure(data, x, y, hue=None, hue_names=None, title=No
     else:
         box = go.Box(y=data[y], x=data[x])
         all_boxes.append(box)
-
-    if x_values:
-        x_labels = [(x_values_format(v) if x_format else v) for v in x_values]
-    else:
-        x_labels = None
     
-    if y_values:
-        y_labels = [(y_values_format(v) if y_format else v) for v in y_values]
-    else:
-        y_labels = None
+    return all_boxes
+
+
+def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, color=None, visibility=None):
+    '''
+    This function creates Plotly figure containing boxplots.
+
+    Parameters
+        - data: DataFrame containing data to use for graph
+        - x: Name of column used for x axis
+        - y: Name of column used for y axis
+        - hue: Column name of the categorical data to use (by default, None)
+        - hue_names: Dictionary containing name to display for an associated value available in data[hue] (by default, None)
+        - text: Column name of data to display on hover (by default, None)
+        - color: Dictionary containing color to use for an associated value in data[hue] (if hue provided) or String (rgba) representing color of bins
+        - visibility: Dictionary containing visibility to set for an associated value in data[hue] (by default, None)
+
+    Return
+        - fig: Plotly figure
+    '''
     
-    x_axis = go.XAxis(title=x_name, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
-    y_axis = go.YAxis(title=y_name, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    hue_values = data[hue].unique()
+    all_scatters = []
 
-    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode='group')
-    fig = go.Figure(data=all_boxes, layout=layout)
-    return fig
+    if hue:
+        for value in hue_values:
+            filtered_data = data[data[hue] == value]
+            current_x = filtered_data[x]
+            current_y = filtered_data[y]
+            scatter = go.Scattergl(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value), text=data[text], visible=(visibility[hue_names.get(value, value) if hue_names else value] if visibility else None), mode='markers', marker=dict(size=10, color=(color[hue_names.get(value, value) if hue_names else value] if color else None), line = dict(width = 2)))
+            all_scatters.append(scatter)
+    else:
+        scatter = go.Scattergl(y=data[y], x=data[x], text=text, mode='markers', marker=dict(size=10, color=color, line = dict(width = 2)))
+        all_scatters.append(scatter)
 
+    return all_scatters
