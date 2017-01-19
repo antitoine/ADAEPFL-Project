@@ -9,6 +9,9 @@ import collections
 import sys
 sys.path.append('..')
 import study_utils
+import plotly
+import plotly.graph_objs as go
+from plotly import tools
 
 # ----------------------------------------------------------------------------------------------------------
 # Constants
@@ -474,3 +477,86 @@ def generate_all_bib_performance_figure(df):
     figure = study_utils.create_plotly_legends_and_layout(data=scatters, **time_options)
 
     return figure
+
+
+def generate_performance_comparison(df, performance_criteria, year_to_compare):
+    '''
+    This function generates all performance boxplots according to a set of performance criteria and according to a given year to use for comparison.
+    Final Dict has the following pattern:
+    {
+        <performance_criterion_1>: {'10 km': [boxplots], 'Semi-marathon': [boxplots], 'Marathon': [boxplots]}
+        [, <performance_criterion_2>: {'10 km': [boxplots], 'Semi-marathon': [boxplots], 'Marathon': [boxplots]}
+         , ...]
+    }
+
+    Parameters
+        - df: DataFrame containing records about runners
+        - performance_criteria: Array containing performance criteria to consider
+        - year_to_compare: Integer representing the year to use for comparison
+
+    Return
+        - data: Dict containing all boxplots
+    '''
+
+    # We define the considered runnings and the years interval
+    runnings = {10: '10 km', 21: 'Semi-marathon', 42: 'Marathon'}
+    year_values = [v for v in df['year'].unique() if v]
+    
+    data = {}
+
+    # Loop over performance criteria
+    for performance_criterion in performance_criteria:
+
+        criterion = performance_criterion.lower()
+        data[criterion] = {}
+        i = 0 # Integer used to manage legends (display of first legend only for each group, for better readability)
+
+        # Loop over runnings of Lausanne Marathon
+        for km, running in runnings.items():
+            boxplots = []
+
+            # We filter initial DataFrame to select current running and year used for comparison
+            df_filtered = df[df['distance (km)'] == km]
+            df_filtered_year = df_filtered[df_filtered['year'] == year_to_compare]
+            
+            # We create x values (see definition of generate_x_data for more information)
+            x_variables = collections.OrderedDict([(variable, variable.capitalize()) for variable in ['all', 'female', 'male']])
+            x_all = study_utils.generate_x_data(df_filtered, x_variables, 'sex')
+            x_filtered = study_utils.generate_x_data(df_filtered_year, x_variables, 'sex')
+
+            # We retrieve y values (see definition of generate_y_data for more information)
+            y_all = study_utils.generate_y_data(df_filtered, ['all', 'female', 'male'], 'sex', criterion)
+            y_filtered = study_utils.generate_y_data(df_filtered_year, ['all', 'female', 'male'], 'sex', criterion)
+
+            # We create boxplot for All years and for year_to_compare
+            boxplots.append(go.Box(y=y_all, x=x_all, name='All', legendgroup='All', marker=dict(color='rgb(102, 179, 255)'), showlegend=(i == 0)))
+            boxplots.append(go.Box(y=y_filtered, x=x_filtered, name=str(year_to_compare), legendgroup=str(year_to_compare), marker=dict(color='rgb(255, 179, 102)'), showlegend=(i == 0)))
+
+            # We append all the boxplots for current running, and according to considered criterion
+            data[criterion][running] = boxplots
+
+            i += 1
+    
+    return data
+
+
+def plot_performance_comparison(data, performance_criterion):
+    '''
+    This function displays performance comparison graph given a set of data and a performance criterion.
+
+    Parameters
+        - data: Dict containing all the data used for performance comparison (see generate_performance_comparison)
+        - performance_criterion: Criterion to use for y axis
+    '''
+    
+    criterion = performance_criterion.lower()
+    figure = tools.make_subplots(rows=1, cols=3, subplot_titles=([key for key, value in data[criterion].items()]))
+    for index, boxplots in enumerate(data[criterion]):
+        for boxplot in data[criterion][boxplots]:
+            figure.append_trace(boxplot, 1, index+1)
+    if criterion == 'time':
+        for axis, attributes in {k: v for k, v in figure['layout'].items() if 'yaxis' in k}.items():
+            figure['layout'][axis].update(type='date', tickformat='%H:%M:%S')
+    figure['layout']['yaxis1'].update(title=performance_criterion)
+    figure['layout'].update(title='Performance comparison between Lausanne Marathon 2016 and all Lausanne Marathon')
+    plotly.offline.iplot(figure)

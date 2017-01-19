@@ -504,3 +504,54 @@ def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, colo
         all_scatters.append(scatter)
 
     return all_scatters
+
+
+def generate_x_data(data, variables, column_filter):
+    '''
+    This function instantiates an array with following pattern: [<variable1_name> * len(data[variable1_value])[, <variable2_name> * len(data[variable2_value]), ...]].
+
+    Parameters
+        - data: DataFrame containing data to use
+        - variables: Dict containing variables to use for generation of array (key is used for filtering, value is used for filling final array / if 'all' as key, then no filtering in data)
+        - column_filter: Column name to use during filtering in data
+
+    Return
+        - x_values: Array containing generated data
+    '''
+
+    x_values = []
+
+    for key, value in variables.items():
+        if key == 'all':
+            x_values.extend([value]*len(data))
+        else:
+            x_values.extend([value]*len(data[data[column_filter] == key]))
+
+    return x_values
+
+
+def generate_y_data(data, variables, column_filter, column_select):
+    '''
+    This function instantiates a Series containing data[column_select] for all rows containing one of any variable in data[column_filter].
+
+    Parameters
+        - data: DataFrame containing data to use
+        - variables: Array containing variables to use during filtering (if 'all', then no filtering in data)
+        - column_filter: Column name to use during filtering in data
+        - column_select: Column name to use for selection of data
+
+    Return
+        - y_values: Series containing filtered data
+    '''
+
+    y_values = pd.Series()
+
+    for value in variables:
+        if value == 'all':
+            y_values = y_values.append(data[column_select])
+        else:
+            y_values = y_values.append(data[data[column_filter] == value][column_select])
+
+    return y_values
+
+
