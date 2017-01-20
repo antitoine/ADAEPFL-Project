@@ -24,7 +24,8 @@
       ],
       "scripts": [
         "../node_modules/plotly.js/dist/plotly.js",
-        "../node_modules/chart.js/dist/Chart.js"
+        "../node_modules/chart.js/dist/Chart.js",
+        "../node_modules/lodash/lodash.js"
       ],
       "environments": {
         "source": "environments/environment.ts",

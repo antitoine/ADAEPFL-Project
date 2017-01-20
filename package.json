@@ -25,6 +25,7 @@
     "chart.js": "^2.4.0",
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
+    "lodash": "^4.17.4",
     "ng2-bootstrap": "^1.1.16-10",
     "ng2-charts": "^1.4.4",
     "plotly.js": "^1.21.3",
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "^2.3.1",
     "@types/jasmine": "2.5.38",
+    "@types/lodash": "^4.14.50",
     "@types/node": "^6.0.42",
     "@types/plotly.js": "0.0.5",
     "angular-cli": "^1.0.0-beta.25.5",
