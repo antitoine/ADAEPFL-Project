@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CsvReaderService } from '../csv-reader.service';
+import { CsvReaderService } from '../util/csv-reader.service';
 
 @Component({
   selector: 'app-lausanne-2016',
