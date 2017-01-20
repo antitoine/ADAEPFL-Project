@@ -105,6 +105,19 @@ div.chart-container {
   display: block;
 }
 
+.row.same-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+
+.row.same-height > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+
 /*****************************
  ** iPython Notebook Styles **
  *****************************/

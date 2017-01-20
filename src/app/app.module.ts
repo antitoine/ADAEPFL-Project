@@ -17,6 +17,7 @@ import { Lausanne19992016Component } from './lausanne-1999-2016/lausanne-1999-20
 import { RunnersComponent } from './runners/runners.component';
 import { JsonReaderService } from './util/json-reader.service';
 import { PlotlyComponent } from './util/plotly/plotly.component';
+import { RangePipe } from './util/range.pipe';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -38,7 +39,8 @@ const appRoutes: Routes = [
     Lausanne19992016Component,
     Lausanne19992016Component,
     RunnersComponent,
-    PlotlyComponent
+    PlotlyComponent,
+    RangePipe
   ],
   imports: [
     BrowserModule,
