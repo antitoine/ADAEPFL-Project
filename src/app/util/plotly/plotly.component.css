@@ -1,5 +1,10 @@
-#loader {
+#plotly-container #loader {
   display: flex;
   align-items: center;
   height: 100%;
+}
+
+#plotly-container #plotly .plot-container {
+  display: flex;
+  justify-content: center;
 }

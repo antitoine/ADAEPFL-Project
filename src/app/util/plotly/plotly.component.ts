@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { JsonReaderService } from '../json-reader.service';
 declare let _:any;
 //import * as _ from 'lodash';
@@ -7,7 +7,8 @@ declare let Plotly:any;
 @Component({
   selector: 'plotly',
   templateUrl: './plotly.component.html',
-  styleUrls: ['./plotly.component.css']
+  styleUrls: ['./plotly.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PlotlyComponent implements OnInit {
 
