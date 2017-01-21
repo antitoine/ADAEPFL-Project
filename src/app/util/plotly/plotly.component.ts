@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { JsonReaderService } from '../json-reader.service';
+declare let _:any;
+//import * as _ from 'lodash';
 declare let Plotly:any;
 
 @Component({
@@ -12,8 +14,8 @@ export class PlotlyComponent implements OnInit {
   @Input('url') url: string;
   @Input('labels') labels: string[] = [];
 
-  labelSelected: string[] = new Array(2);
-  labelValues: string[][] = [];
+  labelSelected: string[] = [];
+  labelValues: string[][];
 
   schema: any;
 
@@ -27,43 +29,56 @@ export class PlotlyComponent implements OnInit {
     this.jsonReader.readJsonData(this.url)
       .subscribe(json => {
         this.schema = json;
-
         if (this.labels.length == 0) {
           Plotly.newPlot('plotly', json);
-
-        } else if (0 < this.labels.length && this.labels.length < 3) {
-          let firstLabelValues = Object.keys(json);
-          this.labelValues.push(firstLabelValues);
-
-          if (this.labels.length == 2) {
-            this.labelValues.push(Object.keys(json[firstLabelValues[0]]));
-          }
-
         } else {
-          console.error('Plotly module helper doesn\'t handle more than 3 dimensions (2 labels).')
+          this.labelValues = new Array(this.labels.length);
+          this.labelValues[0] = Object.keys(json);
         }
-        this.setLoading();
+        this.loading = false;
       });
   }
 
   onLabelSelectedChange(index: number, label: string, newValue: string) {
-    this.loading = true;
-    this.labelSelected[index] = newValue;
-    if (this.labels.length > 0 && this.labelSelected[0]) {
 
-      if (this.labels.length == 1) {
-        Plotly.newPlot('plotly',
-          this.schema[this.labelSelected[this.labels[0]]]
-        );
-
-      } else if (this.labels.length == 2 && this.labelSelected[1]) {
-
-        Plotly.newPlot('plotly',
-          this.schema[this.labelSelected[0]][this.labelSelected[1]]
-        );
-      }
-      this.setLoading(200);
+    if (index < 0 || index >= this.labels.length) {
+      console.error('Index out of range');
+      return;
     }
+
+    this.setLoading(300);
+
+    // Remove upper old selected values
+    for (let i = index + 1; i < this.labelSelected.length; i++) {
+      this.labelSelected[i] = null;
+      this.labelValues[i] = [];
+    }
+
+    // Set the new selected value
+    this.labelSelected[index] = newValue;
+
+    if (this.labels.length > index + 1) {
+
+      // Populate upper selector
+      let subData = this.schema[this.labelSelected[0]];
+      for (let i = 1; i <= index; i++) {
+        subData = subData[this.labelSelected[i]];
+      }
+      this.labelValues[index+1] = Object.keys(subData);
+
+    } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
+
+      // Check if all labels are selected in order to generate the Plotly graph
+      let finalData = this.schema[this.labelSelected[0]];
+      for (let i = 1; i < this.labels.length; i++) {
+        finalData = finalData[this.labelSelected[i]];
+      }
+      Plotly.newPlot('plotly', finalData);
+    }
+  }
+
+  hasLabelSelected(index: number) {
+    return this.labelSelected.length > index && this.labelSelected[index];
   }
 
   private setLoading(time: number = 1000) {
