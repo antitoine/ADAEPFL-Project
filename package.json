@@ -26,7 +26,6 @@
     "core-js": "^2.4.1",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
-    "lz4": "^0.5.3",
     "ng2-bootstrap": "^1.1.16-10",
     "ng2-charts": "^1.4.4",
     "plotly.js": "^1.21.3",
