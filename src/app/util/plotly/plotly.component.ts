@@ -27,7 +27,7 @@ export class PlotlyComponent implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.jsonReader.readJsonData(this.url)
+    this.jsonReader.readJson(this.url)
       .subscribe(json => {
         this.schema = json;
         if (this.labels.length == 0) {

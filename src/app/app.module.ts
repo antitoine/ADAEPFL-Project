@@ -18,6 +18,7 @@ import { RunnersComponent } from './runners/runners.component';
 import { JsonReaderService } from './util/json-reader.service';
 import { PlotlyComponent } from './util/plotly/plotly.component';
 import { RangePipe } from './util/range.pipe';
+import { ZipService } from './util/zip.service';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     CsvReaderService,
-    JsonReaderService
+    JsonReaderService,
+    ZipService
   ],
   bootstrap: [AppComponent]
 })
