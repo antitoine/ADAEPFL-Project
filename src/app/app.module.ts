@@ -19,6 +19,7 @@ import { JsonReaderService } from './util/json-reader.service';
 import { PlotlyComponent } from './util/plotly/plotly.component';
 import { RangePipe } from './util/range.pipe';
 import { ZipService } from './util/zip.service';
+import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -50,7 +51,8 @@ const appRoutes: Routes = [
     ChartsModule,
     CollapseModule.forRoot(),
     TabsModule.forRoot(),
-    HttpModule
+    HttpModule,
+    SlimLoadingBarModule.forRoot()
   ],
   providers: [
     CsvReaderService,
