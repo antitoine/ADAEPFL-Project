@@ -27,7 +27,7 @@ export class JsonReaderService {
   private static handleError(error: any): string {
     let errMsg = (error.message) ? error.message :
       error.status ? `${error.status} - ${error.statusText}` : 'Server error';
-    console.error(errMsg); // log to console instead
+    console.error(errMsg, error); // log to console instead
     return errMsg;
   }
 

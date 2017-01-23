@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation, AfterViewInit } from '@angular/core';
 import { JsonReaderService } from '../json-reader.service';
+import { UUID } from 'angular2-uuid';
 declare let _:any;
 //import * as _ from 'lodash';
 declare let Plotly:any;
@@ -10,7 +11,9 @@ declare let Plotly:any;
   styleUrls: ['./plotly.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class PlotlyComponent implements OnInit {
+export class PlotlyComponent implements AfterViewInit {
+
+  plotlyId: string = 'plotly-' + UUID.UUID();
 
   @Input('url') url: string;
   @Input('labels') labels: string[] = [];
@@ -25,13 +28,14 @@ export class PlotlyComponent implements OnInit {
 
   constructor(private jsonReader: JsonReaderService) {}
 
-  ngOnInit() {
+  // Need to wait that plotly container id are set in the DOM
+  ngAfterViewInit() {
     this.loading = true;
     this.jsonReader.readJson(this.url)
       .subscribe(json => {
         this.schema = json;
         if (this.labels.length == 0) {
-          Plotly.newPlot('plotly', json);
+          Plotly.newPlot(this.plotlyId, json);
         } else {
           this.labelValues = new Array(this.labels.length);
           this.labelValues[0] = Object.keys(json);
@@ -74,7 +78,7 @@ export class PlotlyComponent implements OnInit {
       for (let i = 1; i < this.labels.length; i++) {
         finalData = finalData[this.labelSelected[i]];
       }
-      Plotly.newPlot('plotly', finalData);
+      Plotly.newPlot(this.plotlyId, finalData);
     }
   }
 

@@ -20,12 +20,10 @@ export class ZipService {
     });
   }
 
-  getContentFirstFile(urlZipFile: string, fileFilter: (value: string, index: number, array: string[]) => any = () => true): Promise<string> {
+  getContentFirstFile(urlZipFile: string, fileFilter: (value: string, index: number, array: string[]) => any = () => true, type: string = 'string'): Promise<any> {
     return this.load(urlZipFile)
       .then((data) =>
-        JSZip.loadAsync(data).then((zip) =>
-          zip.file(Object.keys(zip.files).filter(fileFilter)[0]).async('string')
-        )
+        JSZip.loadAsync(data).then((zip) => zip.file(Object.keys(zip.files).filter(fileFilter)[0]).async(type))
       );
   }
 }
