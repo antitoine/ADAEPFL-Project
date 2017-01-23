@@ -646,6 +646,7 @@ def convert_to_JSON(object, file_name, path='.', encoder=None, indent=4, sort_ke
     file_exists = os.path.isfile(full_path)
 
     if file_exists and not override:
+        print('File: ' + full_path)
         print('Conversion was aborded. File already exists. To force override of file, set \'override\' to True.')
         return
 
