@@ -9,6 +9,12 @@ import datetime as dt
 from datetime import date
 from scipy import stats
 import warnings
+
+from IPython import get_ipython
+from nbformat import read
+from IPython.core.interactiveshell import InteractiveShell
+import io, os, sys, types
+
 warnings.filterwarnings('ignore')
 
 
@@ -290,7 +296,7 @@ def presentation_performance_runners(fig, data, annotation = []):
     plot3.set_ylabel('')
     
     
-def compute_dataframe_marathon_performance(df_runs, df_overall, eventName = 'Lausanne Marathon', distance = 42):
+def compute_dataframe_marathon_performance(df_runs, df_overall):
     '''
     This function compute new pamareter like 'distance (km)', number of event, year of each event for each runners.
 
@@ -317,9 +323,7 @@ def compute_dataframe_marathon_performance(df_runs, df_overall, eventName = 'Lau
     result.fillna(value=0,  inplace=True)
     result.reset_index(inplace=True)
 
-    result = pd.merge(result, df_runs, on=['acode', 'year'])
-    
-    return result[(result['eventName'] == eventName) & (result['distance (km)'] == distance)]
+    return pd.merge(result, df_runs, on=['acode', 'year'])
 
 def diplay_comparaison_runners_performance(fig, data): 
     '''
@@ -341,3 +345,101 @@ def diplay_comparaison_runners_performance(fig, data):
     ax2.scatter(data['speed (m/s)'], data['overall number events'], c=data['number_acode'], cmap=plt.cm.Paired)
     plt.xlabel('Speed (m/s)')
     plt.ylabel('Total number Event')
+    
+def compute_weakness_coefficient(runner, runs_dataFrame, colums_selection):
+    '''
+    compute coefficient dependending of columns.
+    
+    Parameters
+        - runner: row represents a race.
+        - runs_dataFrame: dataframe containing all runs of the
+        - colums_selection: select columns for comparaison
+        
+    '''
+    # find the best time for the coresponding entry
+    same_race = runs_dataFrame[(runs_dataFrame['eventName'] == runner['eventName']) & (runs_dataFrame['distance (km)'] == runner['distance (km)']) & (runs_dataFrame['acode'] == runner['acode'])]
+    best_time_index = same_race['time (s)'].idxmin()
+    
+    
+    # compute difference between the sum kilometer
+    #    - If the runner have run less in the year than his best time the coeficient is positive
+    #    - if the runner have run more in the year than his best time the coeficient is negative 
+    return (runner[colums_selection] - same_race.ix[[best_time_index]][colums_selection].values[0])
+
+
+#######################################################################################
+#                        Import Notebook as submodule
+#######################################################################################
+
+#######################################################################################
+#  credit to : 
+#  http://nbviewer.jupyter.org/github/jupyter/notebook/blob/master/docs/source/examples/Notebook/Importing%20Notebooks.ipynb
+#######################################################################################
+
+class NotebookLoader(object):
+    """Module Loader for Jupyter Notebooks"""
+    def __init__(self, path=None):
+        self.shell = InteractiveShell.instance()
+        self.path = path
+    
+    def load_module(self, fullname):
+        """import a notebook as a module"""
+        path = find_notebook(fullname, self.path)
+        
+        print ("importing Jupyter notebook from %s" % path)
+                                       
+        # load the notebook object
+        with io.open(path, 'r', encoding='utf-8') as f:
+            nb = read(f, 4)
+        
+        
+        # create the module and add it to sys.modules
+        # if name in sys.modules:
+        #    return sys.modules[name]
+        mod = types.ModuleType(fullname)
+        mod.__file__ = path
+        mod.__loader__ = self
+        mod.__dict__['get_ipython'] = get_ipython
+        sys.modules[fullname] = mod
+        
+        # extra work to ensure that magics that would affect the user_ns
+        # actually affect the notebook module's ns
+        save_user_ns = self.shell.user_ns
+        self.shell.user_ns = mod.__dict__
+        
+        try:
+          for cell in nb.cells:
+            if cell.cell_type == 'code':
+                # transform the input to executable Python
+                code = self.shell.input_transformer_manager.transform_cell(cell.source)
+                # run the code in themodule
+                exec(code, mod.__dict__)
+        finally:
+            self.shell.user_ns = save_user_ns
+        return mod
+    
+    
+    
+def find_notebook(fullname, path=None):
+    """find a notebook, given its fully qualified name and an optional path
+    
+    This turns "foo.bar" into "foo/bar.ipynb"
+    and tries turning "Foo_Bar" into "Foo Bar" if Foo_Bar
+    does not exist.
+    """
+    
+    print(fullname)
+    name = fullname.rsplit('.', 1)[-1]
+    print(name)
+    if not path:
+        path = ['']
+    for d in path:
+        nb_path = os.path.join(d, name + ".ipynb")
+        print(nb_path)
+        if os.path.isfile(nb_path):
+            return nb_path
+        # let import Notebook_Name find "Notebook Name.ipynb"
+        nb_path = nb_path.replace("_", " ")
+        if os.path.isfile(nb_path):
+            return nb_path
+    
