@@ -20,6 +20,7 @@ import { PlotlyComponent } from './util/plotly/plotly.component';
 import { RangePipe } from './util/range.pipe';
 import { ZipService } from './util/zip.service';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   { path: 'main', component: MainComponent },
@@ -27,6 +28,7 @@ const appRoutes: Routes = [
   { path: 'lausanne-2016', component: Lausanne2016Component },
   { path: 'lausanne-1999-2016', component: Lausanne19992016Component },
   { path: 'runners', component: RunnersComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/main', pathMatch: 'full' },
   { path: '**', redirectTo: '/main', pathMatch: 'full' }
 ];
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     Lausanne19992016Component,
     RunnersComponent,
     PlotlyComponent,
-    RangePipe
+    RangePipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
