@@ -24,13 +24,13 @@ export class PlotlyComponent implements AfterViewInit {
   schema: any;
 
   loading: boolean = false;
-  loadingTime: any;
+  loadingMsg: string;
 
   constructor(private jsonReader: JsonReaderService) {}
 
   // Need to wait that plotly container id are set in the DOM
   ngAfterViewInit() {
-    this.loading = true;
+    this.setLoadingOn(0, 'Download and decompress data');
     this.jsonReader.readJson(this.url)
       .subscribe(json => {
         this.schema = json;
@@ -43,7 +43,7 @@ export class PlotlyComponent implements AfterViewInit {
             this.onLabelSelectedChange(i, this.labelValues[i][0]);
           }
         }
-        this.loading = false;
+        this.setLoadingOff();
       });
   }
 
@@ -54,7 +54,7 @@ export class PlotlyComponent implements AfterViewInit {
       return;
     }
 
-    this.setLoading(300);
+    this.setLoadingOn(300, 'Generate graph');
 
     // Remove upper old selected values
     for (let i = index + 1; i < this.labelSelected.length; i++) {
@@ -89,12 +89,21 @@ export class PlotlyComponent implements AfterViewInit {
     return this.labelSelected.length > index && this.labelSelected[index];
   }
 
-  private setLoading(time: number = 1000) {
+  private setLoadingOn(time: number = 0, msg: string = '') {
+    this.loadingMsg = msg;
     this.loading = true;
-    this.loadingTime = setTimeout(() => {
-      this.loading = false;
-    }, time);
+    if (time > 0) {
+      setTimeout(() => {
+        this.setLoadingOff();
+      }, time);
+    }
   }
+
+  private setLoadingOff() {
+    this.loading = false;
+    this.loadingMsg = '';
+  }
+
 
   private static sortValues(a: any, b: any) {
     let upperA = a.toUpperCase();
