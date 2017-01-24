@@ -8,15 +8,22 @@ export class JsonReaderService {
 
   constructor(private http: Http, private zip: ZipService) {}
 
-  readJson(jsonFileUrl: string): Observable<any> {
+  readJson(jsonFileUrl: string, downloadCallback: (data: any) => any = () => {}, decompressCallback: (data: any) => any = () => {}, parseJsonCallback: (data: any) => any = () => {}): Observable<any> {
     if (jsonFileUrl.endsWith('.json.zip')) {
       return Observable.fromPromise(
-        this.zip.getContentFirstFile(jsonFileUrl, (value: String) => value.endsWith('.json'))
-      ).map((data: string) => JSON.parse(data))
-        .catch(JsonReaderService.handleError);
+        this.zip.getContentFirstFile(jsonFileUrl, (value: String) => value.endsWith('.json'), 'string', downloadCallback)
+      ).map((data: string) => {
+        decompressCallback(data);
+        let json = JSON.parse(data);
+        parseJsonCallback(json);
+        return json;
+      }).catch(JsonReaderService.handleError);
     } else if (jsonFileUrl.endsWith('.json')) {
       return this.http.get(jsonFileUrl)
-        .map((res: Response) => res.json())
+        .map((res: Response) => {
+          downloadCallback(res);
+          return res.json();
+        })
         .catch(JsonReaderService.handleError);
     } else {
       console.error('The url to the json file need to end with ".json" extension or ".json.zip" to be handle by the service.');

@@ -30,9 +30,12 @@ export class PlotlyComponent implements AfterViewInit {
 
   // Need to wait that plotly container id are set in the DOM
   ngAfterViewInit() {
-    this.setLoadingOn(0, 'Download and decompress data');
-    this.jsonReader.readJson(this.url)
-      .subscribe(json => {
+    this.setLoadingOn(0, 'Download data');
+    this.jsonReader.readJson(this.url,
+      () => this.loadingMsg = 'Decompress data',
+      () => this.loadingMsg = 'Decode graph',
+      () => this.loadingMsg = 'Generate graph',
+    ).subscribe(json => {
         this.schema = json;
         if (this.labels.length == 0) {
           Plotly.newPlot(this.plotlyId, json);
@@ -40,21 +43,23 @@ export class PlotlyComponent implements AfterViewInit {
           this.labelValues = new Array(this.labels.length);
           this.labelValues[0] = Object.keys(json).sort(PlotlyComponent.sortValues);
           for(let i = 0; i < this.labels.length; i++) {
-            this.onLabelSelectedChange(i, this.labelValues[i][0]);
+            this.onLabelSelectedChange(i, this.labelValues[i][0], false);
           }
         }
         this.setLoadingOff();
       });
   }
 
-  onLabelSelectedChange(index: number, newValue: string) {
+  onLabelSelectedChange(index: number, newValue: string, loading: boolean = true) {
 
     if (index < 0 || index >= this.labels.length) {
       console.error('Index out of range');
       return;
     }
 
-    this.setLoadingOn(300, 'Generate graph');
+    if (loading) {
+      this.setLoadingOn();
+    }
 
     // Remove upper old selected values
     for (let i = index + 1; i < this.labelSelected.length; i++) {
@@ -74,6 +79,10 @@ export class PlotlyComponent implements AfterViewInit {
       }
       this.labelValues[index+1] = Object.keys(subData).sort(PlotlyComponent.sortValues);
 
+      if (loading) {
+        this.setLoadingOff();
+      }
+
     } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
 
       // Check if all labels are selected in order to generate the Plotly graph
@@ -82,6 +91,10 @@ export class PlotlyComponent implements AfterViewInit {
         finalData = finalData[this.labelSelected[i]];
       }
       Plotly.newPlot(this.plotlyId, finalData);
+
+      if (loading) {
+        this.setLoadingOn(500, 'Generate graph');
+      }
     }
   }
 
