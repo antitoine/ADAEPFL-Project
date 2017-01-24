@@ -38,13 +38,16 @@ export class PlotlyComponent implements AfterViewInit {
           Plotly.newPlot(this.plotlyId, json);
         } else {
           this.labelValues = new Array(this.labels.length);
-          this.labelValues[0] = Object.keys(json);
+          this.labelValues[0] = Object.keys(json).sort(PlotlyComponent.sortValues);
+          for(let i = 0; i < this.labels.length; i++) {
+            this.onLabelSelectedChange(i, this.labelValues[i][0]);
+          }
         }
         this.loading = false;
       });
   }
 
-  onLabelSelectedChange(index: number, label: string, newValue: string) {
+  onLabelSelectedChange(index: number, newValue: string) {
 
     if (index < 0 || index >= this.labels.length) {
       console.error('Index out of range');
@@ -69,7 +72,7 @@ export class PlotlyComponent implements AfterViewInit {
       for (let i = 1; i <= index; i++) {
         subData = subData[this.labelSelected[i]];
       }
-      this.labelValues[index+1] = Object.keys(subData);
+      this.labelValues[index+1] = Object.keys(subData).sort(PlotlyComponent.sortValues);
 
     } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
 
@@ -91,5 +94,22 @@ export class PlotlyComponent implements AfterViewInit {
     this.loadingTime = setTimeout(() => {
       this.loading = false;
     }, time);
+  }
+
+  private static sortValues(a: any, b: any) {
+    let upperA = a.toUpperCase();
+    let upperB = b.toUpperCase();
+    if (upperA.startsWith('ALL') && !upperB.startsWith('ALL')) {
+      return -1;
+    } else if (upperB.startsWith('ALL')) {
+      return 1;
+    }
+    if (upperA < upperB) {
+      return -1;
+    }
+    if (upperA > upperB) {
+      return 1;
+    }
+    return 0;
   }
 }

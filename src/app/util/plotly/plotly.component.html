@@ -6,7 +6,7 @@
         <div class="form-group" *ngFor="let label of labels; let i = index">
           <label [for]="'labelSelector-' + i" class="col-sm-4 control-label">{{ label }}:</label>
           <div class="col-sm-8">
-            <select class="form-control" [id]="'labelSelector-' + i" [name]="'labelSelector-' + i" [(ngModel)]="labelSelected[i]" (change)="onLabelSelectedChange(i, label, $event.target.value)" [disabled]="loading || i > 0 && !hasLabelSelected(i-1)">
+            <select class="form-control" [id]="'labelSelector-' + i" [name]="'labelSelector-' + i" [(ngModel)]="labelSelected[i]" (change)="onLabelSelectedChange(i, $event.target.value)" [disabled]="loading || i > 0 && !hasLabelSelected(i-1)">
               <template [ngIf]="labelValues && labelValues.length > i && labelValues[i]  && labelValues[i].length">
                 <option [value]="value" *ngFor="let value of labelValues[i]">{{value}}</option>
               </template>
