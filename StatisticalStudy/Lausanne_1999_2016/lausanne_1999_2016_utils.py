@@ -1,14 +1,13 @@
 # ----------------------------------------------------------------------------------------------------------
 # Imports
 
-from datetime import datetime
+import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
 import collections
 import copy
-import colorlover as cl
 import sys
 sys.path.append('..')
 import study_utils
@@ -556,8 +555,7 @@ def generate_all_bib_performance_figure(df):
     # We define the considered the years interval, colors and visibility
     years_range = range(1999, 2017)
     years = {year: str(year) for year in years_range}
-    colors_spectral = cl.interp(cl.scales['11']['div']['Spectral'], len(years))
-    colors = {str(year): colors_spectral[index] for index, year in enumerate(years_range)}
+    colors = study_utils.generate_colors_palette(data=years_range, isDict=False, forceString=True)
     visibility = {str(year): (True if year > 2015 else 'legendonly') for year in years_range}
 
     # We define options
@@ -944,9 +942,7 @@ def generate_performance_distribution_figure(data, age_category, sex_category, c
     runnings = collections.OrderedDict([(10, {'name': '10 km', 'position': 1}), (21, {'name': 'Semi-marathon', 'position': 2}), (42, {'name': 'Marathon', 'position': 3})])
     years_range = range(1999, 2017)
     years = {year: str(year) for year in years_range}
-    colors = cl.interp(cl.scales['11']['div']['Spectral'], len(years))
-
-    #annotations = [Annotation(y=1.1, text='Age category: ' + age_category + '    Sex category: ' + sex_category + ' runners', xref='paper', yref='paper', showarrow=False)]
+    colors = study_utils.generate_colors_palette(years)
 
     # We ignore outputs of Plotly
     with study_utils.ignore_stdout():
@@ -954,17 +950,17 @@ def generate_performance_distribution_figure(data, age_category, sex_category, c
 
         for km, attributes in runnings.items():
 
-            for index, year in enumerate(years_range):
+            for year in years_range:
                 data_filtered = data[(data['distance (km)'] == km) & (data['year'] == year)]
 
                 if criterion == 'time':
                     group_data_filtered = data_filtered.set_index('time').groupby(pd.TimeGrouper(freq='5Min'))
-                    x_values = [datetime.strptime(str(name), '%Y-%m-%d %H:%M:%S') for name, group in group_data_filtered]
+                    x_values = [datetime.datetime.strptime(str(name), '%Y-%m-%d %H:%M:%S') for name, group in group_data_filtered]
                 elif criterion == 'speed (m/s)':
                     group_data_filtered = data_filtered.round({'speed (m/s)': 1}).groupby('speed (m/s)')
                     x_values = [name for name, group in group_data_filtered]
 
-                line = go.Scatter(mode='lines', x=x_values, y=[len(group) for name, group in group_data_filtered], name=str(year), legendgroup=str(year), marker={'color': colors[index]}, showlegend=(attributes['position'] == 1))
+                line = go.Scatter(mode='lines', x=x_values, y=[len(group) for name, group in group_data_filtered], name=str(year), legendgroup=str(year), marker={'color': colors[year]}, showlegend=(attributes['position'] == 1))
 
                 figure.append_trace(line, attributes['position'], 1)
 
@@ -979,3 +975,82 @@ def generate_performance_distribution_figure(data, age_category, sex_category, c
         figure['layout']['legend'].update(y=0.5)
 
         return figure
+
+
+def generate_teams_evolution_figures(data, title='Evolution of teams performance over the years', runnings=None, team_column_name='team', year_column_name='year', min_years=6, nb_teams=8, threshold_bins_size=50, display_annotations=True):
+    '''
+    This function generate teams_evolution figures for all runnings.
+    Final Dict has the following pattern:
+    {
+        <running_1: {
+            <Plotly figure>
+        }
+        [, <running_2: {
+            <Plotly figure>
+        }, ...]
+    }
+
+    Parameters
+        - data: DataFrame containing results
+        - title: Title of figure
+        - runnings: Dict containing name of column containing runnings (key: column_name) and set of runnings (key: values, value: dict() with key: value in column, value: name of running)
+                    By default, None. If None, default values will be set by function.
+        - team_column_name: Name of column containing teams (by default, 'teams')
+        - year_column_name: Name of column containing year associated to a given result (by default, 'year')
+        - min_years: Minimum of participations when considering a team (by default, 6)
+        - nb_teams: Number of teams to consider among teams with number of participations > min_years (by default, 8)
+                    Note: Teams are filtered by number of participants.
+        - threshold_bins_size: Maximum size of a bin (by default, 25)
+                    Note: Size of bin is related to number of participants of a considered team and for a given year. If None, no limitation is used.
+        - display_annotations: Boolean used to display annotations (by default, True)
+
+    Return
+        - figures: Dict containing all teams evolution figures 
+    '''
+
+    # Default runnings
+    if not runnings:
+        runnings = {'column_name': 'distance (km)', 'values': {10: '10 km', 21: 'Semi-marathon', 42: 'Marathon'}}
+
+    figures = {}
+
+    # Loop over runnings
+    for key, value in runnings['values'].items():
+        # We retrieve data related to current running
+        filtered_data = data[data[runnings['column_name']] == key]
+        # We retrieve names of the <nb_teams> most important groups with at least <min_years> participations in Lausanne Marathon
+        top_teams = filtered_data.groupby(team_column_name).filter(lambda x: x[year_column_name].nunique() >= min_years).groupby('team').size().sort_values(ascending=False).nlargest(nb_teams)
+        # We keep only data linked with such groups
+        data_top_teams = filtered_data[filtered_data[team_column_name].isin(top_teams.index.values)]
+        # We finally groupby teams after complete filter
+        groups_top_teams = data_top_teams.groupby(team_column_name)
+
+        # We generate colors for each group and we initialize array that will contain traces
+        colors = study_utils.generate_colors_palette(groups_top_teams.groups)
+        traces = []
+
+        # Loop over groups
+        for name, groups in groups_top_teams:
+            x_values, y_values, size_values, texts = [], [], [], []
+            # Loop over participation years for current group
+            for year, results in groups.groupby(year_column_name):
+                x_values.append(year)
+                y = study_utils.compute_average_time(results)
+                y_values.append(y)
+                text = '<b>Team: ' + name + '</b><br>Average time: ' + y.strftime('%H:%M:%S') + '<br>Participants: ' + str(len(results)) + '<br>Median age: ' + str(int(results['age'].median()))
+                texts.append(text)
+                size = len(results) if not threshold_bins_size or (len(results) < threshold_bins_size) else threshold_bins_size
+                size_values.append(size)
+            trace = go.Scatter(x=x_values, y=y_values, name=name, mode='lines+markers', hoverinfo='text', text=texts, marker=dict(size=size_values, color=colors[name], line=dict(width = 1.5, color = 'rgb(0, 0, 0)')))
+            traces.append(trace)
+
+        # For each running, we create annotations if asked by user, we set multiple options accordingly and we store figure
+        if display_annotations:
+            annotations = [Annotation(y=1.1, text='Running: ' + str(value) + ' | Top teams: ' + str(nb_teams) + ' | Minimum participations: ' + str(min_years) + ' | Maximum bins size: ' + str(threshold_bins_size), xref='paper', yref='paper', showarrow=False)]
+        else:
+            annotations = None
+        options = {'title': title, 'hovermode': 'closest', 'x_name': 'Year', 'y_name': 'Median time', 'y_type': 'time', 'y_format': '%H:%M:%S', 'annotations': annotations}
+        figure = study_utils.create_plotly_legends_and_layout(data=traces, **options)
+        figures[value] = figure
+
+    return figures

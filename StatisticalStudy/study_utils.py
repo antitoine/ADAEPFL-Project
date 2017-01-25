@@ -7,6 +7,7 @@ import pandas as pd
 import numpy as np
 import itertools
 import re
+import colorlover as cl
 import statsmodels.api as sm
 import datetime
 import json
@@ -504,7 +505,7 @@ def create_plotly_legends_and_layout(data, title=None, x_name=None, y_name=None,
     x_axis = go.XAxis(title=x_name, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
     y_axis = go.YAxis(title=y_name, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
 
-    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode=boxmode, barmode=barmode, hovermode=hovermode)
+    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode=boxmode, barmode=barmode, hovermode=hovermode, annotations=Annotations(annotations) if annotations else Annotations())
     figure = go.Figure(data=data, layout=layout)
 
     return figure
@@ -625,6 +626,53 @@ def generate_y_data(data, variables, column_filter, column_select):
             y_values = y_values.append(data[data[column_filter] == value][column_select])
 
     return y_values
+
+
+def generate_colors_palette(data, isDict=True, forceString=False):
+    '''
+    This function builds a dict containing color for each element in data.
+
+    Parameters
+        - data: Container of objects containing name of objects which need specific color
+        - isDict: Boolean which indicates if data is a Dict (if True, keys will be used / by default, True)
+        - forceString: Boolean which indicates if key of colors dictionary must be converted to string (by default, False)
+
+    Return
+        - colors: Dict containing color for each object (key: name of object, value: color (string))
+    '''
+
+    palette = None
+    if len(data) <=8:
+        palette = cl.scales['8']['qual']['Paired']
+    else:
+        size = len(data)
+        # Bug in colorlover (see issues on GitHub page of project)
+        # We artificially increase size until no exception is thrown (i.e. mapping has been successfully created)
+        while not palette:
+            try:
+                palette = cl.interp(cl.scales['11']['div']['Spectral'], size)
+            except:
+                size += 1
+    colors = {(name if not forceString else str(name)): palette[index] for index, name in enumerate(data.keys() if isDict else data)}
+    return colors
+
+
+def compute_average_time(results, time_column_name='time'):
+    '''
+    This function computes the average time given a set of results.
+
+    Parameters
+        - results: DataFrame containing results for a given running
+        - time_column_name: Name of column containing time results (by default, 'time')
+
+    Return
+        - datetime object representing median time of given results set
+    '''
+
+    median_in_seconds = (results[time_column_name]-results[time_column_name].min()).median() / np.timedelta64(1, 's')
+    min_time = results[time_column_name].min().time()
+    min_time_in_seconds = datetime.timedelta(hours=min_time.hour, minutes=min_time.minute, seconds=min_time.second).total_seconds()
+    return datetime.datetime.strptime(convert_seconds_to_time(median_in_seconds + min_time_in_seconds), '%H:%M:%S')
 
 
 def convert_to_JSON(object, file_name, path='.', encoder=None, indent=4, sort_keys=True, separators=(',', ':'), override=False):
