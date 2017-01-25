@@ -59,7 +59,86 @@
 
       <h3>Exporting graph</h3>
 
-      <p>Work in progress</p>
+      <p>
+        We search a lot to find a lib to make dynamics graphics that work with python and also with javascript.
+        The only one today that is free, is Plotly.
+        But the documentation is relatively poor and there is anything that indicate the possibility to make export from python to javascript.
+        The solution we will provide is certainly the best one without reproduce any javascript code but keep using the Plotly.js API.
+      </p>
+
+      <h4>Export from Python</h4>
+
+      <p>
+        When the final graph is done in the python side, we can notice that the graphic schema given to plotly is a large dictionary, similar as a <i>json</i> with all data and configurations for the layout.
+        We remarque that this dictionary has same attributes of the Plotly.js API, and it's the case after some analysis in the source code of plotly.
+        The first thing to do is to transform the dictionary in a <i>json</i> file.
+        We found in the open source plotly for python project, that all dictionaries are transform with a custom <i>json encoder</i>, like you can see <a href="https://github.com/plotly/plotly.py/blob/0b6e0109defc1a0257dd98e20ff1e31504b887bb/plotly/plotly/plotly.py#L652">here</a>.
+        So we do the same:
+      </p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">obj</span><span class="o">=</span><span class="n">plotly_data</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="n">plotly</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">PlotlyJSONEncoder</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="s1">&#39;plotly_graph.json&#39;</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+<pre>{{'{'}}
+    "15-25 years":{{'{'}}
+        "All":{{'{'}}
+            "data":[
+                {{'{'}}
+                    "mode":"lines",
+                    "name":"10 km",
+                    "type":"scatter",
+                    "x":[
+                        1999,
+                        2000,
+                        2001,
+                        [...]
+                    ],
+                }
+            ],
+            "layout":[
+                [...]
+            ]
+        }
+    }
+}</pre>
+          </div>
+        </div>
+      </div>
+
+      <h4>Import in website</h4>
+
+      <p>
+        Now, it is very easy to display the same graphic displayed in notebook, we just need to give the <i>json</i> to the Plotly.js API (javascript):
+      </p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">Plotly</span><span class="o">.</span><span class="n">newPlot</span><span class="p">(</span><span class="s1">&#39;demo-plotly-container&#39;</span><span class="p">,</span> <span class="n">json</span><span class="p">[</span><span class="s1">&#39;15-25 years&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">]);</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <plotly [url]="'./assets/json/demo-plotly-from-python-to-javascript.json'"></plotly>
+        </div>
+      </div>
+
+      <h4>Improve portability</h4>
+
+      <p>
+        In appearance all seam to be right, but with a large graph like in Marathon Lausanne 1999-2016 study the json file is to big (more than 130 MB for the comparisons performances minified json file).
+        The <i>json</i> schema is not very efficient when we look the size.
+        To fix this issue, we built a system that download a compressed version of the <i>json</i> (in a simple <i>zip</i> file), we decompress it from the client side and then display the graph.
+        With this technique we increase the rapidity and decrease the size of the page.
+        The 130 MB <i>json</i> file take only 7 MB in the <i>zip</i> file (available <a href="./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip">here</a>) and we need to wait 20 seconds of decompression (for comparison, to have the same speed without compressed file, the user need a network connection of 52 Mb/s).
+        The full procedure is in the TypeScript/Angular code inside the website branch of our repository (<a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>).
+      </p>
 
       <h2>Team</h2>
 
