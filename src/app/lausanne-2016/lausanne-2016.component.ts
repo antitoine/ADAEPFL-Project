@@ -8,6 +8,8 @@ import { CsvReaderService } from '../util/csv-reader.service';
 })
 export class Lausanne2016Component implements OnInit {
 
+  distributionByRunningType:string = 'time-distribution-42';
+
   isDetailedStatisticalAnalysisCollapsed:boolean = true;
 
   availableLabels: any = {};
@@ -78,6 +80,11 @@ export class Lausanne2016Component implements OnInit {
           {data: this.csvReader.getColumn(data, 'female time'), label: 'Female runners - Time (s)'},
           {data: this.csvReader.getColumn(data, 'male time'), label: 'Male runners - Time (s)'}
         ], 'Average time (seconds) by sex');
+
+        this.labelSelected = 'age';
+        this.onSelectLabelChange('age');
+        this.seriesSelected = 'speed';
+        this.onSelectSeriesChange('speed');
       });
 
     // Generate data for 'age' in x axis

@@ -85,10 +85,6 @@
         </div>
       </form>
 
-      <p *ngIf="!distributionByRunningType" class="text-center lead">
-        Select a distance above to see the distribution graph
-      </p>
-
       <div *ngIf="distributionByRunningType" class="thumbnail thumbnail-large">
         <img [src]="'./assets/images/' + distributionByRunningType + '-ages.png'" alt="Age distribution by distance of the Lausanne marathon 2016"/>
         <img [src]="'./assets/images/' + distributionByRunningType + '-categories.png'" alt="Categories of ages distribution by distance of the Lausanne marathon 2016"/>
