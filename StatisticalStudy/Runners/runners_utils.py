@@ -10,6 +10,21 @@ from datetime import date
 from scipy import stats
 import warnings
 
+import math
+import scipy
+
+import plotly.plotly as py
+import plotly.graph_objs as go
+from plotly.tools import FigureFactory as FF
+import plotly.plotly as py
+import plotly.graph_objs as gobj
+import plotly.tools as tls
+import plotly.graph_objs as go
+
+import plotly
+from sklearn import preprocessing
+plotly.offline.init_notebook_mode()
+
 from IPython import get_ipython
 from nbformat import read
 from IPython.core.interactiveshell import InteractiveShell
@@ -24,6 +39,8 @@ MARATHON = 'Marathon'
 KILOMETER = '\d*(\.?|\,?)\d*(\s?|-?)[kK][mM]'
 
 OTHER_SPORT = 'Triathlon|Skating|Walking|Duathlon|Marche|Cycling' 
+
+OTHER_RACE = 'Courir pour le plaisir'
 
 # https://live.escalade.ch/the-race/timetable-prizes-and-courses
 GENEVE_RACE = 'Course de l\'Escalade, Genève'
@@ -70,6 +87,9 @@ def compute_distance_from_category(runner):
             return None
         
         elif (re.search(CYCLIC_RACE, runner[attribute]) != None):
+            return None
+        
+        elif (re.search(OTHER_RACE, runner[attribute]) != None):
             return None
     
     for attribute in attributes:
@@ -367,6 +387,194 @@ def compute_weakness_coefficient(runner, runs_dataFrame, colums_selection):
     return (runner[colums_selection] - same_race.ix[[best_time_index]][colums_selection].values[0])
 
 
+def plot_coefficient_distribution(data, inexperienced_runners, experienced_runners, name_coefficient, bin_size=0.05):
+    '''
+    Plot the distribution of coefficient 'name_coefficient'.
+        - the distibution is splitted into two group experience runners and inexperience runner 
+        - the plot contain:
+            - one table (Kolmogorov-Smirnov statistic test) on the total races.
+            - one displot on experienced runners
+            - one displot on inexperienced runners
+
+    Parameters
+        - data: DataFrame containing information about the race.
+        - inexperienced_runners: List containing acode of inexperienced runner
+        - experienced_runners: List containing acode of experienced runner
+        - name_coefficient: Name of the coefficient studied
+        - bin_size: Bin_size of the displot
+    '''
+        
+    data_copied = data.copy()
+    
+    # remove null value.
+    data_copied = data_copied[data_copied[name_coefficient].notnull()]
+    
+    # We do an kolmogorov test
+    #kolmogorov_results = scipy.stats.kstest(normalize_data, cdf='norm')
+    shapiro_results = scipy.stats.shapiro(data_copied[name_coefficient])
+
+    matrix_dp = [
+        ['', 'DF', 'Test Statistic', 'p-value'],
+        ['Sample Data', len(data_copied[name_coefficient]) - 1, shapiro_results[0], shapiro_results[1]]
+    ]
+    
+    # apply max min scaller to have the same disparity in coefficient.
+    min_max_scaler = preprocessing.MinMaxScaler((-1, 1))
+    data_copied[name_coefficient] = min_max_scaler.fit_transform(data_copied[name_coefficient])
+    runs_experienced = data_copied[name_coefficient][data_copied['acode'].isin(experienced_runners)]
+    runs_inexperienced = data_copied[name_coefficient][data_copied['acode'].isin(inexperienced_runners)]
+
+    # We compute differents parameters for siplaying usefull informations
+    mean_experienced = round(runs_experienced.mean(), 3)
+    mean_inexperienced = round(runs_inexperienced.mean(), 3)
+    lenght_experienced = len(runs_experienced)
+    lenght_inexperienced = len(runs_inexperienced)
+    
+    #build the graph
+    displot_experienced = FF.create_distplot([runs_experienced], [''], bin_size=bin_size)
+    displot_inexperienced = FF.create_distplot([runs_inexperienced], [''], bin_size=bin_size)
+    shapiro_table = FF.create_table(matrix_dp, index=False)
+    
+    
+    # We make the subplot.
+    my_fig = tls.make_subplots( subplot_titles=('Experienced Runners', 'Inexperienced runners'),                       
+            rows = 1,
+            cols = 2,
+            print_grid=False
+    )
+    
+    add_figure_from_displot(my_fig, displot_experienced, displot_inexperienced)
+
+    # We compute the maximum of y axis
+    max_yaxis = math.ceil(max([max(my_fig['data'][1]['y'] + 1), max(my_fig['data'][3]['y'] + 1)]))
+    
+
+    # We add informations to the graph.
+    add_text_to_plot(my_fig, mean_experienced, lenght_experienced, mean_inexperienced, lenght_inexperienced, max_yaxis)
+    
+    
+    # We add vertical line to visualize easily
+    add_line_to_plot(my_fig, mean_experienced, mean_inexperienced, max_yaxis)
+    
+    # modify legend and label
+    modify_layout(my_fig, max_yaxis, name_coefficient)
+    
+    # display plot.
+    plotly.offline.iplot(shapiro_table)
+    plotly.offline.iplot(my_fig)
+    return
+
+def add_figure_from_displot(my_fig, displot_experienced, displot_inexperienced):
+    '''
+    Add the displot to the subplot my_fig.
+    
+    Parameters
+        - my_fig                : Figure containing the two displot.
+        - displot_experienced   : Displot of experienced runners
+        - displot_inexperienced : Displot of inexperienced runners
+    '''
+    
+    data_displot_experienced = displot_experienced['data']
+    for item in data_displot_experienced:
+        item.pop('xaxis', None)
+        item.pop('yaxis', None)
+        
+    data_displot_inexperienced = displot_inexperienced['data']
+    for item in data_displot_inexperienced:
+        item.pop('xaxis', None)
+        item.pop('yaxis', None)
+        
+    # We add the displot in the subplot.    
+    my_fig.append_trace(data_displot_experienced[0], 1, 1)
+    my_fig.append_trace(data_displot_experienced[1], 1, 1)
+
+    my_fig.append_trace(data_displot_inexperienced[0], 1, 2)
+    my_fig.append_trace(data_displot_inexperienced[1], 1, 2)
+    return
+
+def modify_layout(my_fig, max_yaxis, name_coefficient):
+    '''
+    Modify axis value of the subplot my_fig.
+        - Change the value of yaxis1 and yaxis2
+        - Change title and value of xaxis1 and xaxis2, the title is the name of the coefficient
+        - remove the legend
+    
+    Parameters
+        - my_fig           : Figure containing the two displot.
+        - max_yaxis        : maximum value in y axis
+        - name_coefficient : name of the coefficient studied
+    '''
+    my_fig['layout']['yaxis1'].update(range=[0, max_yaxis])
+    my_fig['layout']['yaxis2'].update(range=[0, max_yaxis])
+    my_fig['layout']['xaxis1'].update(title=name_coefficient, range=[-1, 1])
+    my_fig['layout']['xaxis2'].update(title=name_coefficient, range=[-1, 1])
+    my_fig['layout']['yaxis1'].update(title='density')
+    my_fig['layout']['showlegend'] = False
+    return
+
+def add_text_to_plot(my_fig, mean_experienced, lenght_experienced, mean_inexperienced, lenght_inexperienced, max_yaxis):
+    '''
+    Add text information on the subplot.
+        - add information on mean
+        - add information on number of races
+    
+    Parameters
+        - my_fig                : Figure containing the two displot.
+        - mean_experienced      : mean of the experienced runners value
+        - lenght_experienced    : lenght of experienced runners value
+        - mean_inexperienced    : mean of the inexperienced runners
+        - lenght_inexperienced  : lenght of inexperienced runners value
+        - max_yaxis             : maximum value in y axis
+    '''
+    
+    information_experienced = go.Scatter(
+        x=[1 - 0.5, 1 - 0.5 ],
+        y=[max_yaxis - 0.5, max_yaxis - 0.7 ],
+        mode='text',
+        text=['mean = ' + str(mean_experienced), 'total races = ' + str(lenght_experienced)]
+    )
+
+    information_inexperienced = go.Scatter(
+        x=[1 - 0.5, 1 - 0.5 ],
+        y=[max_yaxis - 0.5, max_yaxis - 0.7 ],
+        mode='text',
+        text=['mean = ' + str(mean_inexperienced) ,' total races = ' + str(lenght_inexperienced)]
+    )
+
+    my_fig.append_trace(information_experienced, 1, 1)
+    my_fig.append_trace(information_inexperienced, 1, 2)
+    return
+
+def add_line_to_plot(my_fig, mean_experienced, mean_inexperienced, max_yaxis):
+    '''
+    Add line indicating the mean of the distribution.
+    
+    Parameters
+        - my_fig                : Figure containing the two displot.
+        - mean_experienced      : mean of the experienced runners value
+        - mean_inexperienced    : mean of the inexperienced runners value
+        - max_yaxis             : maximum value in y axis
+    '''
+    
+    line_experience = go.Scatter(
+        x = [mean_experienced, mean_experienced],
+        y = [0, max_yaxis],
+        mode = 'lines',
+        name = 'lines'
+    )
+    
+    line_inexperience = go.Scatter(
+        x = [mean_inexperienced, mean_inexperienced],
+        y = [0, max_yaxis],
+        mode = 'lines',
+        name = 'lines'
+    )
+
+    my_fig.append_trace(line_experience, 1, 1)
+    my_fig.append_trace(line_inexperience, 1, 2)
+    return
+    
+
 #######################################################################################
 #                        Import Notebook as submodule
 #######################################################################################
@@ -408,12 +616,12 @@ class NotebookLoader(object):
         self.shell.user_ns = mod.__dict__
         
         try:
-          for cell in nb.cells:
-            if cell.cell_type == 'code':
-                # transform the input to executable Python
-                code = self.shell.input_transformer_manager.transform_cell(cell.source)
-                # run the code in themodule
-                exec(code, mod.__dict__)
+            for cell in nb.cells:
+                if cell.cell_type == 'code':
+                    # transform the input to executable Python
+                    code = self.shell.input_transformer_manager.transform_cell(cell.source)
+                    # run the code in themodule
+                    exec(code, mod.__dict__)
         finally:
             self.shell.user_ns = save_user_ns
         return mod

@@ -1,0 +1,5 @@
+,Hour,Humidity (%),Rain (mm/1h),Temperature (°C),Visibility (km),Wind (average) (km/h),eventDate,eventName
+0,11.5,43.083333333333336,0.0,20.554166666666667,0.0,7.25,2015-07-04,"Zermatt Marathon, Zermatt"
+0,11.5,76.33333333333333,0.0,12.579166666666666,0.0,8.416666666666666,2014-07-05,"Zermatt Marathon, Zermatt"
+0,11.5,92.95652173913044,5.25,8.856521739130434,,7.7,2002-07-06,"Zermatt Marathon, Zermatt"
+0,11.5,57.0,0.0,15.275,0.0,7.5,2013-07-06,"Zermatt Marathon, Zermatt"
