@@ -1,17 +1,19 @@
-import { Component, OnInit, OnDestroy, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
   Router, NavigationEnd, NavigationStart, NavigationCancel, NavigationError,
   ActivatedRoute
 } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { SlimLoadingBarService } from 'ng2-slim-loading-bar';
+declare let smoothScroll:any;
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy, AfterViewChecked {
+export class AppComponent implements OnInit, OnDestroy {
 
   menuToggled: boolean = false;
 
@@ -21,7 +23,7 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewChecked {
   constructor(private router: Router, private slimLoader: SlimLoadingBarService, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // Make scroll to top when changing route
+
     this.routerEventsSubscription = this.router.events
       .subscribe(event => {
         if (event instanceof NavigationStart) {
@@ -32,20 +34,19 @@ export class AppComponent implements OnInit, OnDestroy, AfterViewChecked {
         if (!(event instanceof NavigationEnd)) {
           return;
         }
-        window.scrollTo(0, 0);
       }, (error: any) => {
         this.slimLoader.complete();
       });
-  }
 
-  ngAfterViewChecked() {
     this.routeFragmentSubscription = this.route.fragment
       .subscribe(fragment => {
         if (fragment) {
           let element = document.getElementById(fragment);
           if (element) {
-            element.scrollIntoView();
+            smoothScroll(element);
           }
+        } else {
+          smoothScroll(0);
         }
       });
   }
