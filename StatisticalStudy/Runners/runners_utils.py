@@ -184,6 +184,32 @@ def select_runners_by_numbers_of_runs(data, nb_min_runs):
     # return the data with only runners with nb_min_runs minimal numbers of runs.
     return data[data['acode'].isin(group_by_acode.index.values)]
 
+
+def compute_dataframe_groupby(data, data_before_Processing):
+    '''
+    Compute new features like 'overall number race' and 'number abandon'.
+    
+    Parameters
+        - data: Dataframe of all races
+        - data_before_Processing : Dataframe before the preprocessing
+        
+    Return
+        - Dataframe with total runs and total abandon
+    '''
+    
+    group_by_runs = data.groupby(['acode']).size().reset_index().groupby('acode')[[0]].max()
+    group_by_runs_before_process = data_before_Processing.groupby(['acode']).size().reset_index().groupby('acode')[[0]].max()
+    group_by_runs_resign = data_before_Processing[(data_before_Processing['resultState'] == 'non classé')].groupby(['acode']).size().reset_index().groupby('acode')[[0]].max()
+
+    group_by_runs.columns = ['number_race']
+    group_by_runs_before_process.columns = ['overall number race']
+    group_by_runs_resign.columns = ['number abandon']
+
+    result = group_by_runs.join(group_by_runs_before_process)
+    result = pd.merge(result, group_by_runs_resign, how='left', right_index=True, left_index=True)
+    result.fillna(value=0,  inplace=True)
+    return result
+
 def transform_string_to_second(runner):
     '''
     Returns the time in second of runner, based on this string time.
@@ -345,6 +371,39 @@ def compute_dataframe_marathon_performance(df_runs, df_overall):
 
     return pd.merge(result, df_runs, on=['acode', 'year'])
 
+def display_age_distribution(data, title):
+    '''
+    Display the age distribution.
+
+    Parameters
+        - data: Serie of age
+    '''
+    data = [
+        go.Histogram(
+            x=data
+        )
+    ]
+
+    layout = go.Layout(
+        title=title,
+        xaxis=dict(
+            title='Age',
+            titlefont=dict(
+                size=18
+            )
+        ),
+        yaxis=dict(
+            title='number of runners',
+            titlefont=dict(
+                size=18
+            )
+        )
+    )
+
+    fig = go.Figure(data=data, layout=layout)
+    plotly.offline.iplot(fig)
+    return
+
 def diplay_comparaison_runners_performance(fig, data): 
     '''
     Plot a scatter plot between the total number of kilometer and the speed of each runners.
@@ -366,9 +425,13 @@ def diplay_comparaison_runners_performance(fig, data):
     plt.xlabel('Speed (m/s)')
     plt.ylabel('Total number Event')
     
-def compute_weakness_coefficient(runner, runs_dataFrame, colums_selection):
+def compute_coefficient(runner, runs_dataFrame, colums_selection):
     '''
-    compute coefficient dependending of columns.
+    compute coefficient dependending of colums_selection.
+    - The coefficient is defined by the difference between value for the current row and the value obtained for best time race
+    for the same specific race.
+    
+    The value return is None is the curent race is the best time race.
     
     Parameters
         - runner: row represents a race.
@@ -380,11 +443,28 @@ def compute_weakness_coefficient(runner, runs_dataFrame, colums_selection):
     same_race = runs_dataFrame[(runs_dataFrame['eventName'] == runner['eventName']) & (runs_dataFrame['distance (km)'] == runner['distance (km)']) & (runs_dataFrame['acode'] == runner['acode'])]
     best_time_index = same_race['time (s)'].idxmin()
     
-    
     # compute difference between the sum kilometer
     #    - If the runner have run less in the year than his best time the coeficient is positive
     #    - if the runner have run more in the year than his best time the coeficient is negative 
+    if runner['eventDate'] == same_race.ix[[best_time_index]]['eventDate'].values[0]:
+        return None
+    
     return (runner[colums_selection] - same_race.ix[[best_time_index]][colums_selection].values[0])
+
+def compute_best_time (runner, runs_dataFrame):
+    '''
+    Compute the difference between the current row and the best time.
+    
+    Parameters
+        - runner: row represents a race.
+        - runs_dataFrame: dataframe containing all runs of the
+        
+    '''
+    # find the best time for the coresponding entry
+    same_race = runs_dataFrame[(runs_dataFrame['eventName'] == runner['eventName']) & (runs_dataFrame['distance (km)'] == runner['distance (km)']) & (runs_dataFrame['acode'] == runner['acode'])]
+    best_time_index = same_race['time (s)'].idxmin()
+    
+    return (runner['time (s)'] - same_race.ix[[best_time_index]]['time (s)'].values[0])
 
 
 def plot_coefficient_distribution(data, inexperienced_runners, experienced_runners, name_coefficient, bin_size=0.05):
@@ -414,7 +494,6 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     shapiro_results = scipy.stats.shapiro(data_copied[name_coefficient])
 
     matrix_dp = [
-        ['', 'DF', 'Test Statistic', 'p-value'],
         ['Sample Data', len(data_copied[name_coefficient]) - 1, shapiro_results[0], shapiro_results[1]]
     ]
     
