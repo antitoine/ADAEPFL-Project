@@ -26,9 +26,29 @@
 
       <h1 class="title">About technologies and team<br><small>Antoine, Arnaud and Arbër</small></h1>
 
-      <h2>Technologies</h2>
+      <h2>Summary</h2>
+      <ul>
+        <li>
+          <a routerLink="/about" fragment="technologies">Technologies</a>
+          <ul>
+            <li><a routerLink="/about" fragment="tech-study">Study</a></li>
+            <li><a routerLink="/about" fragment="tech-website">Website</a></li>
+            <li>
+              <a routerLink="/about" fragment="tech-plotly">Plotly Graph</a>
+              <ul>
+                <li><a routerLink="/about" fragment="tech-plotly-export">Export from Python</a></li>
+                <li><a routerLink="/about" fragment="tech-plotly-import">Import into Javascript</a></li>
+                <li><a routerLink="/about" fragment="tech-plotly-portability">Improve portability</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a routerLink="/about" fragment="team">Team</a></li>
+      </ul>
 
-      <h3>Study</h3>
+      <h2 id="technologies">Technologies</h2>
+
+      <h3 id="tech-study">Study</h3>
 
       <p>
         The full study has been made with <a href="https://www.python.org/">Python 3</a> and <a href="http://jupyter.org/">iPython Jupyter Notebook</a>. You can find the full code directly on your github repository <a href="https://github.com/antitoine/ADAEPFL-Project">here</a>.
@@ -38,7 +58,7 @@
         Visualisation part has been made with <a href="http://seaborn.pydata.org/">Seaborn</a> but also with <a href="https://plot.ly/">Plotly</a> library for Python to facilitate the passage to the presentation website.
       </p>
 
-      <h3>Website</h3>
+      <h3 id="tech-website">Website</h3>
 
       <p>
         This website has been built with <a href="https://angular.io/">Angular 2 (2.3.1)</a>.
@@ -57,7 +77,7 @@
         Website sources are also available on our repository <a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>.
       </p>
 
-      <h3>Exporting graph</h3>
+      <h3 id="tech-plotly">Plotly Graph</h3>
 
       <p>
         We search a lot to find a lib to make dynamics graphics that work with python and also with javascript.
@@ -66,7 +86,7 @@
         The solution we will provide is certainly the best one without reproduce any javascript code but keep using the Plotly.js API.
       </p>
 
-      <h4>Export from Python</h4>
+      <h4 id="tech-plotly-export">Export from Python</h4>
 
       <p>
         When the final graph is done in the python side, we can notice that the graphic schema given to plotly is a large dictionary, similar as a <i>json</i> with all data and configurations for the layout.
@@ -111,7 +131,7 @@
         </div>
       </div>
 
-      <h4>Import in website</h4>
+      <h4 id="tech-plotly-import">Import into Javascript</h4>
 
       <p>
         Now, it is very easy to display the same graphic displayed in notebook, we just need to give the <i>json</i> to the Plotly.js API (javascript):
@@ -129,18 +149,20 @@
         </div>
       </div>
 
-      <h4>Improve portability</h4>
+      <h4 id="tech-plotly-portability">Improve portability</h4>
 
       <p>
         In appearance all seam to be right, but with a large graph like in Marathon Lausanne 1999-2016 study the json file is to big (more than 130 MB for the comparisons performances minified json file).
         The <i>json</i> schema is not very efficient when we look the size.
+        <br>
         To fix this issue, we built a system that download a compressed version of the <i>json</i> (in a simple <i>zip</i> file), we decompress it from the client side and then display the graph.
         With this technique we increase the rapidity and decrease the size of the page.
         The 130 MB <i>json</i> file take only 7 MB in the <i>zip</i> file (available <a href="./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip">here</a>) and we need to wait 20 seconds of decompression (for comparison, to have the same speed without compressed file, the user need a network connection of 52 Mb/s).
+        <br>
         The full procedure is in the TypeScript/Angular code inside the website branch of our repository (<a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>).
       </p>
 
-      <h2>Team</h2>
+      <h2 id="team">Team</h2>
 
       <p>
         We are three exchange students of the EPFL (École Polytechnique Fédérale de Lausanne) in IC master section (computer sciences). We all come from the INSA Lyon (Institut National des Sciences Appliquées de Lyon) where we follow our engineering degree.
