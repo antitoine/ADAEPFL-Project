@@ -6,6 +6,26 @@
 
       <h1 class="title">Statistical study of Lausanne marathon 2016</h1>
 
+      <h2>Summary</h2>
+      <ul>
+        <li><a routerLink="/lausanne-2016" fragment="demographic">Demographic analysis</a></li>
+        <li>
+          <a routerLink="/lausanne-2016" fragment="performance">Performance analysis</a>
+          <ul>
+            <li>
+              <a routerLink="/lausanne-2016" fragment="performance-by-age">Performance by age</a>
+              <ul>
+                <li><a routerLink="/lausanne-2016" fragment="statistical-anlysis">Statistical analysis</a></li>
+              </ul>
+            </li>
+            <li><a routerLink="/lausanne-2016" fragment="performance-by-sex">Performance by sex</a></li>
+            <li><a routerLink="/lausanne-2016" fragment="performance-by-bib">Performance by BIB numbers</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/lausanne-2016" fragment="team">Team analysis</a></li>
+        <li><a routerLink="/lausanne-2016" fragment="dynamic-graph">Take the control of the data</a></li>
+      </ul>
+
       <h2 id="demographic">Demographic analysis</h2>
 
       <p>
@@ -1258,7 +1278,7 @@
         </div>
       </div>
 
-      <h2 id="bib">Performance by BIB numbers</h2>
+      <h3 id="performance-by-bib">Performance by BIB numbers</h3>
 
       <div class="thumbnail thumbnail-medium">
         <img src="./assets/images/time-distribution-by-bib.png" alt="Distribution of time performance according to BIB numbers of participants"/>
