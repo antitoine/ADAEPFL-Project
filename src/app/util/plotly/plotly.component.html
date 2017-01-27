@@ -1,8 +1,8 @@
 <div class="ng-plotly-container">
 
   <div class="row same-height">
-    <div class="col-md-8">
-      <form class="form-horizontal" *ngIf="labels.length">
+    <div class="col-md-8" *ngIf="labels.length">
+      <form class="form-horizontal">
         <div class="form-group" *ngFor="let label of labels; let i = index">
           <label [for]="'labelSelector-' + i" class="col-sm-4 control-label">{{ label }}:</label>
           <div class="col-sm-8">
@@ -16,7 +16,7 @@
       </form>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-4" [class.col-md-offset-4]="!labels.length">
       <div class="loader" *ngIf="loading">
         <i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i>
         <span class="sr-only">Loading...</span>
