@@ -381,7 +381,13 @@ def display_age_distribution(data, title):
     data = [
         go.Histogram(
             x=data
-        )
+        ),
+        go.Scatter(
+            x=[75],
+            y=[120],
+               mode='text',
+               text=['mean age :' + str(round(data.mean(),2))]
+         )
     ]
 
     layout = go.Layout(
@@ -397,11 +403,13 @@ def display_age_distribution(data, title):
             titlefont=dict(
                 size=18
             )
-        )
+        ),
+        showlegend=False
     )
 
     fig = go.Figure(data=data, layout=layout)
     plotly.offline.iplot(fig)
+
     return
 
 def diplay_comparaison_runners_performance(fig, data): 
@@ -493,9 +501,11 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     #kolmogorov_results = scipy.stats.kstest(normalize_data, cdf='norm')
     shapiro_results = scipy.stats.shapiro(data_copied[name_coefficient])
 
-    matrix_dp = [
+    matrix_sw = [
+        ['', 'DF', 'Test Statistic', 'p-value'],
         ['Sample Data', len(data_copied[name_coefficient]) - 1, shapiro_results[0], shapiro_results[1]]
     ]
+
     
     # apply max min scaller to have the same disparity in coefficient.
     min_max_scaler = preprocessing.MinMaxScaler((-1, 1))
@@ -512,8 +522,7 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     #build the graph
     displot_experienced = FF.create_distplot([runs_experienced], [''], bin_size=bin_size)
     displot_inexperienced = FF.create_distplot([runs_inexperienced], [''], bin_size=bin_size)
-    shapiro_table = FF.create_table(matrix_dp, index=False)
-    
+    shapiro_table = FF.create_table(matrix_sw, index=False)
     
     # We make the subplot.
     my_fig = tls.make_subplots( subplot_titles=('Experienced Runners', 'Inexperienced runners'),                       
@@ -542,6 +551,18 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     plotly.offline.iplot(shapiro_table)
     plotly.offline.iplot(my_fig)
     return
+
+def display_scatter_matrix(data): 
+    '''
+    plot a scattter mtrix of data
+    
+    Parameters
+        - data : Dataframe containing the data.
+    '''
+    fig = FF.create_scatterplotmatrix(data, height=800, width=800)
+    plotly.offline.iplot(fig)
+    return
+
 
 def add_figure_from_displot(my_fig, displot_experienced, displot_inexperienced):
     '''
@@ -588,6 +609,7 @@ def modify_layout(my_fig, max_yaxis, name_coefficient):
     my_fig['layout']['xaxis1'].update(title=name_coefficient, range=[-1, 1])
     my_fig['layout']['xaxis2'].update(title=name_coefficient, range=[-1, 1])
     my_fig['layout']['yaxis1'].update(title='density')
+    my_fig['layout'].update(title='Coefficient distribution')
     my_fig['layout']['showlegend'] = False
     return
 
