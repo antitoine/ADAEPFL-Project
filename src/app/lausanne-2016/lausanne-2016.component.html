@@ -39,24 +39,37 @@
         Moreover the particitipation of stanger is around 50 à 60 %. This two fact can explain the difference of gender distribution in the marathon of lausanne.
       </p>
 
-      <div class="thumbnail thumbnail-large">
-        <img src="./assets/images/gender-distribution.png" alt="Distibution gender marathon lausanne 2016"/>
-      </div>
+      <tabset [justified]="true">
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-gender-distribution.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="thumbnail thumbnail-large">
+            <img src="./assets/images/gender-distribution.png" alt="Distibution gender marathon lausanne 2016"/>
+          </div>
+        </tab>
+      </tabset>
 
-      <div class="row row-sm-align-center">
-        <div class="col-sm-4">
-          <p>
-            In this condition there is a boom of average distance (21 km - 10 km), as we can notice from the graph the marathon (the longest distance 42 Km) seems to be a race of specialists, tey arez few people and specially men runners. <br/>
-            unlike the 10 Km is the most approachable race for beginner the distibution between gender seems well balanced.
-            The following distribution seems in agreement with the turn over of 2009 to limit the budget for professionals runners (mainly marathon runners).
-          </p>
-        </div>
-        <div class="col-sm-8">
-          <div class="thumbnail">
+      <p>
+        In this condition there is a boom of average distance (21 km - 10 km), as we can notice from the graph the marathon (the longest distance 42 Km) seems to be a race of specialists, tey arez few people and specially men runners. <br/>
+        unlike the 10 Km is the most approachable race for beginner the distibution between gender seems well balanced.
+        The following distribution seems in agreement with the turn over of 2009 to limit the budget for professionals runners (mainly marathon runners).
+      </p>
+
+      <tabset [justified]="true">
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-gender-distribution-runnings.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="thumbnail thumbnail-large">
             <img src="./assets/images/gender-distribution-distance.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
           </div>
-        </div>
-      </div>
+        </tab>
+      </tabset>
 
       <p>
         Runner ages seem to be distributed normally with a mean age of 38.98 (41.65 for males and 36,87 for females ). But if we look clooser we can notice marathon get older runners (with a mean equal to 42,47 years ) and the 10Km get the younger runners (with a mean equal to 37,63 years).
@@ -64,18 +77,29 @@
         From  <a href="https://en.wikipedia.org/wiki/Marathon"> Wikipdia </a> a large number of top marathon runners are right around 35 years old. this is l ate enough in the game that your body can use the training years that you have put into it.
       </p>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="thumbnail">
-            <img src="./assets/images/age-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
+      <tabset [justified]="true">
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-age-distribution.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="./assets/images/age-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="./assets/images/age-distance-distribution.png" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="thumbnail">
-            <img src="./assets/images/age-distance-distribution.png" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
-          </div>
-        </div>
-      </div>
+        </tab>
+      </tabset>
+
+
 
       <h2 id="performance">Performance analysis</h2>
 
