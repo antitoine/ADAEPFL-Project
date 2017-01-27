@@ -7,63 +7,360 @@
 
       <h2>Summary</h2>
       <ul>
-        <li><a routerLink="/lausanne-1999-2016" fragment="link">Titre</a></li>
-        <li><a routerLink="/lausanne-1999-2016" fragment="link">Titre</a></li>
         <li>
-          <a routerLink="/lausanne-1999-2016" fragment="link">Titre</a>
+          <a routerLink="/lausanne-1999-2016" fragment="general-analysis">General analysis</a>
           <ul>
-            <li><a routerLink="/lausanne-1999-2016" fragment="link">Titre</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="global-evolution-participants-numbers">Global evolution of number of participants</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="global-evolution-participants-numbers-by-gender">Global evolution by gender</a></li>
             <li>
-              <a routerLink="/lausanne-1999-2016" fragment="link">Titre</a>
+              <a routerLink="/lausanne-1999-2016" fragment="global-evolution-participants-numbers-by-age">Global evolution by age</a>
               <ul>
-                <li><a routerLink="/lausanne-1999-2016" fragment="link">Titre</a></li>
+                <li><a routerLink="/lausanne-1999-2016" fragment="global-evolution-participants-numbers-by-age-ols-check">Statistical Test (OLS)</a></li>
+                <li><a routerLink="/lausanne-1999-2016" fragment="estimation-2017-median-age">Estimation of the median age on 2017</a></li>
               </ul>
             </li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="synthesis-global-evolution-participants-numbers">Synthesis of the global evolution of number of participants</a></li>
           </ul>
         </li>
+        <li>
+          <a routerLink="/lausanne-1999-2016" fragment="performances-analysis">Analysis of performance of Lausanne Marathon editions</a>
+          <ul>
+            <li><a routerLink="/lausanne-1999-2016" fragment="performances-evolution-over-years">Evolution of performance over the years</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="distribution-of-the-performance">Distribution of the performance</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="evolution-nb-runners-performances">Perspective evolution number of runners and performances</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="teams-performances">Teams performances</a></li>
+          </ul>
+        </li>
+        <li><a routerLink="/lausanne-1999-2016" fragment="globals-comparisons-of-each-year">Globals comparisons of each year</a></li>
       </ul>
 
-      <p>Work in progress</p>
+      <h2 id="general-analysis">General analysis</h2>
 
-      <h2>Runners distribution</h2>
+      <p>
+        After some cleaning of the <a routerLink="/scraping" title="See the Scraping part">scraped data</a>, we made a general analysis of the evolution over years.
+      </p>
+
+      <h3 id="global-evolution-participants-numbers">Global evolution of number of participants</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-distribution-runners-over-years.json.zip'"></plotly>
 
-      <h2>Number of runners evolutions</h2>
+      <p>
+        We easily see some changes over the years thanks to the graph. Among other things, we identify the new direction of Lausanne Marathon as for 2009, number of participants started to increase again. We also notice that number of runners of the marathon is decreasing over the years, as RTSSport mentioned it <a href="https://www.rts.ch/sport/athletisme/1258113-le-marathon-de-lausanne-change-dorientation.html">in an article dedicated to Lausanne Marathon</a>, while, in the meantime, the number of runners of the 10 km running increases (and is now higher than the one for semi-marathon).
+      </p>
 
-      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolutions.json.zip'" [labels]="['Age category', 'Sex']"></plotly>
-
-      <h2>Gender distribution</h2>
+      <h3 id="global-evolution-participants-numbers-by-gender">Global evolution by gender</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-gender-distributions-over-years.json.zip'"></plotly>
 
-      <h2>Age median evolution</h2>
+      <p>
+        What we have seen for Lausanne Marathon 2016 can be generalized here. First, we see that women tend to prefer 10 km running, while for men, the number of participants among the different runnings is better divided. Second, we see that globally, for 10 km running and marathon, evolution is similar among the two genders. However, we observe much more variations for men than for women when we consider semi-marathon, and this even if we consider the new direction of Lausanne Marathon established in 2009.
+      </p>
+
+      <h3 id="global-evolution-participants-numbers-by-age">Global evolution by age</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-age-median-evolution.json.zip'"></plotly>
 
-      <h2>OLS fitted true</h2>
+      <p>
+        What an interesting thing!
+        <br>
+        We clearly see that over the years, participants of Lausanne Marathon are younger and younger! In 1999, median age was about 54 years for women and 57 years for men, while, in 2016, it was 36 years and 40 years, respectively!
+      </p>
+
+      <h4 id="global-evolution-participants-numbers-by-age-ols-check">Statistical test (OLS)</h4>
+
+      <p>
+        Globally, it seems that the decrease is linear. To verify this assumption, we use <a href="https://en.wikipedia.org/wiki/Ordinary_least_squares">Ordinary least squares</a> method on the two datasets.
+        <br>
+        You can find a summary of the results below:
+      </p>
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h5 class="text-center">Female age OLS test</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-condensed">
+              <caption>OLS Regression Results</caption>
+              <tbody>
+              <tr>
+                <th>Dep. Variable:</th>
+                <td>Median age (all runnings)</td>
+                <th> R-squared:</th>
+                <td> 0.960</td>
+              </tr>
+              <tr>
+                <th>Model:</th>
+                <td>OLS</td>
+                <th> Adj. R-squared:</th>
+                <td> 0.958</td>
+              </tr>
+              <tr>
+                <th>Method:</th>
+                <td>Least Squares</td>
+                <th> F-statistic:</th>
+                <td> 387.3</td>
+              </tr>
+              <tr>
+                <th>Date:</th>
+                <td>Thu, 26 Jan 2017</td>
+                <th> Prob (F-statistic):</th>
+                <td>1.23e-12</td>
+              </tr>
+              <tr>
+                <th>Time:</th>
+                <td>20:34:24</td>
+                <th> Log-Likelihood:</th>
+                <td> -28.348</td>
+              </tr>
+              <tr>
+                <th>No. Observations:</th>
+                <td> 18</td>
+                <th> AIC:</th>
+                <td> 60.70</td>
+              </tr>
+              <tr>
+                <th>Df Residuals:</th>
+                <td> 16</td>
+                <th> BIC:</th>
+                <td> 62.48</td>
+              </tr>
+              <tr>
+                <th>Df Model:</th>
+                <td> 1</td>
+                <th></th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Covariance Type:</th>
+                <td>nonrobust</td>
+                <th></th>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="table table-bordered table-condensed">
+              <tbody>
+              <tr>
+                <td></td>
+                <th>coef</th>
+                <th>std err</th>
+                <th>t</th>
+                <th>P&gt;|t|</th>
+                <th>[95.0% Conf. Int.]</th>
+              </tr>
+              <tr>
+                <th>const</th>
+                <td> 2271.1421</td>
+                <td> 113.063</td>
+                <td> 20.087</td>
+                <td> 0.000</td>
+                <td> 2031.460 2510.825</td>
+              </tr>
+              <tr>
+                <th>Year</th>
+                <td> -1.1084</td>
+                <td> 0.056</td>
+                <td> -19.680</td>
+                <td> 0.000</td>
+                <td> -1.228 -0.989</td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="table table-bordered table-condensed">
+              <tbody>
+              <tr>
+                <th>Omnibus:</th>
+                <td> 0.182</td>
+                <th> Durbin-Watson:</th>
+                <td> 0.528</td>
+              </tr>
+              <tr>
+                <th>Prob(Omnibus):</th>
+                <td> 0.913</td>
+                <th> Jarque-Bera (JB):</th>
+                <td> 0.385</td>
+              </tr>
+              <tr>
+                <th>Skew:</th>
+                <td> 0.110</td>
+                <th> Prob(JB):</th>
+                <td> 0.825</td>
+              </tr>
+              <tr>
+                <th>Kurtosis:</th>
+                <td> 2.319</td>
+                <th> Cond. No.</th>
+                <td>7.77e+05</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h5 class="text-center">Male age OLS test</h5>
+          <div class="table-responsive">
+            <table class="table table-bordered table-condensed">
+              <caption>OLS Regression Results</caption>
+              <tbody>
+              <tr>
+                <th>Dep. Variable:</th>
+                <td>Median age (all runnings)</td>
+                <th> R-squared:</th>
+                <td> 0.968</td>
+              </tr>
+              <tr>
+                <th>Model:</th>
+                <td>OLS</td>
+                <th> Adj. R-squared:</th>
+                <td> 0.966</td>
+              </tr>
+              <tr>
+                <th>Method:</th>
+                <td>Least Squares</td>
+                <th> F-statistic:</th>
+                <td> 489.0</td>
+              </tr>
+              <tr>
+                <th>Date:</th>
+                <td>Thu, 26 Jan 2017</td>
+                <th> Prob (F-statistic):</th>
+                <td>2.02e-13</td>
+              </tr>
+              <tr>
+                <th>Time:</th>
+                <td>20:34:24</td>
+                <th> Log-Likelihood:</th>
+                <td> -24.601</td>
+              </tr>
+              <tr>
+                <th>No. Observations:</th>
+                <td> 18</td>
+                <th> AIC:</th>
+                <td> 53.20</td>
+              </tr>
+              <tr>
+                <th>Df Residuals:</th>
+                <td> 16</td>
+                <th> BIC:</th>
+                <td> 54.98</td>
+              </tr>
+              <tr>
+                <th>Df Model:</th>
+                <td> 1</td>
+                <th></th>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Covariance Type:</th>
+                <td>nonrobust</td>
+                <th></th>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="table table-bordered table-condensed">
+              <tbody>
+              <tr>
+                <td></td>
+                <th>coef</th>
+                <th>std err</th>
+                <th>t</th>
+                <th>P&gt;|t|</th>
+                <th>[95.0% Conf. Int.]</th>
+              </tr>
+              <tr>
+                <th>const</th>
+                <td> 2079.1778</td>
+                <td> 91.815</td>
+                <td> 22.645</td>
+                <td> 0.000</td>
+                <td> 1884.539 2273.817</td>
+              </tr>
+              <tr>
+                <th>Year</th>
+                <td> -1.0114</td>
+                <td> 0.046</td>
+                <td> -22.113</td>
+                <td> 0.000</td>
+                <td> -1.108 -0.914</td>
+              </tr>
+              </tbody>
+            </table>
+            <table class="table table-bordered table-condensed">
+              <tbody>
+              <tr>
+                <th>Omnibus:</th>
+                <td> 1.021</td>
+                <th> Durbin-Watson:</th>
+                <td> 0.493</td>
+              </tr>
+              <tr>
+                <th>Prob(Omnibus):</th>
+                <td> 0.600</td>
+                <th> Jarque-Bera (JB):</th>
+                <td> 0.898</td>
+              </tr>
+              <tr>
+                <th>Skew:</th>
+                <td> 0.338</td>
+                <th> Prob(JB):</th>
+                <td> 0.638</td>
+              </tr>
+              <tr>
+                <th>Kurtosis:</th>
+                <td> 2.140</td>
+                <th> Cond. No.</th>
+                <td>7.77e+05</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <h4 id="estimation-2017-median-age">Estimation of the median age on 2017</h4>
+
+      <p>
+        What are the equations of linear regressions?
+        <br>
+        From OLS, we find high R-squared values, so linear correlation can be assumed for the two genders. Graphically, we also see that original results are included in the interval defined by error bars associated with fitted values.
+      </p>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-ols-fitted-true.json.zip'"></plotly>
 
-      <h2>Performances</h2>
+      <p>
+        Each year, median age decreased by 1 year approximately.
+        <br>
+        If this evolution continues, this means that, for 2017, median age of runners would be approximately <strong>39 years old for male runners</strong> and <strong>36 years old for female runners</strong>.
+        <br>
+        It is important to note that even if during the past 18 years, median age continued to decrease, this evolution will obviously not continue to be linear in the following years. We expect stabilization, or inverse behavior (linear increase).
+      </p>
+
+      <h3 id="synthesis-global-evolution-participants-numbers">Synthesis of the global evolution of number of participants</h3>
+
+      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolutions.json.zip'" [labels]="['Age category', 'Sex']"></plotly>
+
+      <h2 id="performances-analysis">Analysis of performance of Lausanne Marathon editions</h2>
+
+      <h3 id="performances-evolution-over-years">Evolution of performance over the years</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
 
-      <h2>Performances evolutions</h2>
-
-      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolution-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
-
-      <h2>Performances distributions</h2>
+      <h3 id="distribution-of-the-performance">Distribution of the performance</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-performances-distribution.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
 
-      <h2>Comparisons</h2>
+      <h3 id="evolution-nb-runners-performances">Perspective evolution number of runners and performances</h3>
+
+      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolution-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
+
+      <h3 id="teams-performances">Teams performances</h3>
+
+      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-teams-performances.json.zip'" [labels]="['Type']"></plotly>
+
+      <h2 id="globals-comparisons-of-each-year">Globals comparisons of each year</h2>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip'" [labels]="['Year']"></plotly>
 
-      <h2>Teams performances</h2>
-
-      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-teams-performances.json.zip'" [labels]="['Type']"></plotly>
     </div>
   </div>
 </div>
