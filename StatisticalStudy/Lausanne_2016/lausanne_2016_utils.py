@@ -148,7 +148,7 @@ def plot_gender_distribution_according_to_running_type(df_10km, df_21km, df_42km
 
 def plot_distribution_between_adults_and_juniors(df):
     '''
-    This functions display the distribution of runners between adult and juniors ones.
+    This functions displays the distribution of runners between adults and juniors.
 
     Parameters
         - df: DataFrame containing information about runners
@@ -172,7 +172,7 @@ def plot_age_distribution(df):
     This function displays the distribution of runners according to their age.
 
     Parameters:
-        - df: DataFrame containing information about runners.
+        - df: DataFrame containing information about runners
     '''
 
     fig, ax = plt.subplots()
@@ -305,8 +305,9 @@ def plot_time_distribution_by_age(df, column):
 
     Parameters
         - df: DataFrame containing all the information of a Lausanne Marathon
+        - column: Column name containing ages/age categories
     '''
-
+    
     distributions = df.groupby(column)
     i = 1
     for name, group in distributions:
@@ -359,9 +360,9 @@ def plot_speed_distribution_by_running(fig, running, running_type, nb_plot, y_ra
     ax = fig.add_subplot(310 + nb_plot)
     running_male =  running[running['sex'] == 'male']
     running_female =  running[running['sex'] == 'female']
-    race_female = running_female['Speed (m/s)'].tolist()
-    race_male = running_male['Speed (m/s)'].tolist()
-    race = running['Speed (m/s)'].tolist()
+    race_female = running_female['speed (m/s)'].tolist()
+    race_male = running_male['speed (m/s)'].tolist()
+    race = running['speed (m/s)'].tolist()
     
     
     ax.hist([race_male, race_female],
@@ -421,7 +422,7 @@ def plot_distribution_team_individuals(df, total_10, total_21, total_42):
     fig.set_size_inches(10, 6)
 
     ax = fig.add_subplot(111)
-    ax = sns.countplot(x='type_team', hue='distance (km)', data=df)
+    ax = sns.countplot(x='profile', hue='distance (km)', data=df)
     ax.set_xlabel('')
     ax.set_ylabel('Number of Runners')
     ax.set_title('Team/indivual runners composition')
@@ -548,26 +549,25 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
     
 def display_information_speed(data):
     '''
-    This function generates medians of the speed's distribution for runners in team and individual ones.
+    This function generates median of the speed's distribution of runners in team and of individual ones.
     
     Parameters
-        - data: DataFrame containing records for a given running
+        - data: DataFrame containing information on runners
 
     Return
-        - string containing medians
+        - string (medians)
     '''
 
     distances = [10, 21, 42]
-    type_runners = ['Individual runner', 'Runner in teams']
+    type_runners = ['Individual', 'Team-mate']
     
     for distance in distances: 
         median_distance = []
         lausanne_by_distance = data[data['distance (km)'] == distance]
         for type_runner in type_runners:      
-            median_distance.append(np.median(lausanne_by_distance['Speed (m/s)'][lausanne_by_distance['type_team'] == type_runner]))
+            median_distance.append(np.median(lausanne_by_distance['speed (m/s)'][lausanne_by_distance['profile'] == type_runner]))
         
-        return 'Median speed for ' + str(distance) + \
-               'Km race is for individual runners = ' + \
-               str(median_distance[0]) + ' m/s' + \
-               ' and for team runners = ' + \
-               str(median_distance[1]) +' m/s'
+        print(str(distance) + '-km running' \
+               '\nMedian for individual runners: ' + str(median_distance[0]) + ' m/s' + \
+               '\nMedian for runners in team: ' + str(median_distance[1]) +' m/s' + \
+               '\n*************************************************')

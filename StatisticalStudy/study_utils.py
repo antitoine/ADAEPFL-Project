@@ -127,7 +127,7 @@ def apply_computations(df):
     
     # We create global categories (Adult / Junior) and mark type of runners (in temas/individual)
     df_cleaned['type'] = df_cleaned.apply(get_type_of_runner, axis=1)
-    df_cleaned['type_team'] = df_cleaned.apply(compute_run_in_team, axis=1)
+    df_cleaned['profile'] = df_cleaned.apply(compute_run_in_team, axis=1)
     
     # We also compute running type and average speed
     df_cleaned['distance (km)'] = df_cleaned.apply(compute_distance_from_category, axis=1)
@@ -267,9 +267,9 @@ def compute_run_in_team(runner):
     '''
     
     if pd.isnull(runner['team']):
-        return 'Individual runner'
+        return 'Individual'
     else:
-        return 'Runner in teams'
+        return 'Team-mate'
 
     
 def format_time(runner):
@@ -317,7 +317,7 @@ def compute_time_to_best_in_team(runner, data):
         - Difference (absolute) between runner's performance and best performance of the team (None if runner is not part of any team)
     '''
 
-    if runner.type_team == 'Individual runner':
+    if runner.profile == 'Individual':
         return None
     
     else:
@@ -466,27 +466,36 @@ def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=No
     plt.show()
 
 
-def create_plotly_legends_and_layout(data, title=None, x_name=None, y_name=None, x_values=None, y_values=None, x_values_format=None, y_values_format=None, x_type=None, y_type=None, x_format=None, y_format=None, boxmode=None, barmode=None, hovermode=None, annotations=None):
+def create_plotly_legends_and_layout(data, title=None, width=None, height=None, x_name=None, y_name=None, x_values=None, y_values=None, x_values_format=None, y_values_format=None, x_categoryarray=None, y_categoryarray=None, x_type=None, y_type=None, x_format=None, y_format=None, x_dtick=None, y_dtick=None,boxmode=None, barmode=None, bargap=None, bargroupgap=None, hovermode=None, annotations=None, shapes=None):
     '''
     This function creates Plotly legends and layout.
 
     Parameters
         - data: Plotly data
         - title: Title of the graph (by default, None)
+        - width: Width of the figure (by default, None)
+        - height: Height of the figure (by default, None)
         - x_name: Name of x axis (by default, None)
         - y_name: Name of y axis (by default, None)
         - x_values: Array containing x values to display (by default, None / if None, Plotly creates axis automatically)
         - y_values: Array containing y values to display (by default, None / if None, Plotly creates axis automatically)
         - x_values_format: Function to use to format x_values (by default, None / if None, x_values is used for x labels)
         - y_values_format: Function to use to format x_values (by default, None / if None, y_values is used for y labels)
+        - x_categoryarray: Array containing categories in order they must appear on x axis (by default, None)
+        - y_categoryarray: Array containing categories in order they must appear on y axis (by default, None)
         - x_type: String representing type of x axis (by default, None / type must be supported by Plotly)
         - y_type: String representing type of y axis (by default, None / type must be supported by Plotly)
         - x_format: String representing format of x axis (by default, None / format must be supported by Plotly)
         - y_format: String representing format of y axis (by default, None / format must be supported by Plotly)
+        - x_dtick: Integer representing the spacing between ticks for x axis (by default, None)
+        - y_dtick: Integer representing the spacing between ticks for y axis (by default, None)
         - boxmode: String representing the type of boxmode to use (by default, None)
         - barmode: String representing the type of barmode to use (by default, None)
+        . bargap: Float representing the gap between bars (by default, None)
+        . bargroupgap: Float representing the gap between group bars (by default, None)
         - hovermode: String representing the type of mode to use on hover (by default, None)
-        - annotations: Array containing all Annotation to add in layout (Annotations and Annotation are part of Plotly library)
+        - annotations: Array containing all Annotation to add in layout (Annotations and Annotation are part of Plotly library / by default, None)
+        - shapes: Array containing all shapes to add in layout (by default, None)
 
     Return
         - figure: Plotly figure
@@ -502,16 +511,16 @@ def create_plotly_legends_and_layout(data, title=None, x_name=None, y_name=None,
     else:
         y_labels = None
     
-    x_axis = go.XAxis(title=x_name, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
-    y_axis = go.YAxis(title=y_name, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    x_axis = go.XAxis(title=x_name, categoryorder=('array' if x_categoryarray else None), categoryarray=x_categoryarray, type=x_type, tickformat=x_format, ticktext=x_labels, tickvals=x_values, dtick=x_dtick, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
+    y_axis = go.YAxis(title=y_name, categoryorder=('array' if y_categoryarray else None), categoryarray=y_categoryarray, type=y_type, tickformat=y_format, ticktext=y_labels, tickvals=y_values, dtick=y_dtick, mirror='ticks', ticks='inside', showgrid=True, showline=True, zeroline=True, zerolinewidth=2)
 
-    layout = go.Layout(title=title, xaxis=x_axis, yaxis=y_axis, boxmode=boxmode, barmode=barmode, hovermode=hovermode, annotations=Annotations(annotations) if annotations else Annotations())
+    layout = go.Layout(title=title, width=width, height=height, xaxis=x_axis, yaxis=y_axis, boxmode=boxmode, barmode=barmode, bargap=bargap, bargroupgap=bargroupgap, hovermode=hovermode, annotations=Annotations(annotations) if annotations else Annotations(), shapes=shapes if shapes else [])
     figure = go.Figure(data=data, layout=layout)
 
     return figure
 
 
-def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None):
+def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None, visibility=None, use_hue_names=True, use_legend_group=False, show_legend=True):
     '''
     This function creates Plotly figure containing boxplots.
 
@@ -522,6 +531,10 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None):
         - hue: Column name of the categorical data to use (by default, None)
         - hue_names: Dictionary containing name to display for an associated value available in data[hue] (by default, None)
         - colors: Dictionary containing color for each value available in data[hue] (key must be hue name (see hue_names) or hue value (see hue) / by default, None)
+        - visibility: Dictionary containing visibility to set for an associated value in data[hue] (by default, None)
+        - use_hue_names: Boolean indicating if hue_names must be used to access attributes of other dictionaries (such colors) instead of value of hue_values (by default, True)
+        - use_legend_group: Boolean indicating if legendgroup must be used (by default, False / if True, legends are grouped by hue)
+        - show_legend: Boolean indicating if legend must be shown (by default, True)
 
     Return
         - fig: Plotly figure
@@ -535,7 +548,7 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None):
             filtered_data = data[data[hue] == value]
             current_x = filtered_data[x]
             current_y = filtered_data[y]
-            box = go.Box(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value), marker={'color': (colors.get(hue_names.get(value, value) if hue_names else value, None) if colors else None)})
+            box = go.Box(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value), marker={'color': (colors.get(hue_names.get(value, value) if (hue_names and use_hue_names) else value, None) if colors else None)}, visible=(visibility[hue_names.get(value, value) if (hue_names and use_hue_names) else value] if visibility else None), legendgroup=(value if use_legend_group else None), showlegend=show_legend)
             all_boxes.append(box)
     else:
         box = go.Box(y=data[y], x=data[x])
@@ -544,7 +557,7 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None):
     return all_boxes
 
 
-def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, color=None, visibility=None):
+def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, color=None, visibility=None, use_hue_names=True):
     '''
     This function creates Plotly figure containing boxplots.
 
@@ -557,6 +570,7 @@ def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, colo
         - text: Column name of data to display on hover (by default, None)
         - color: Dictionary containing color to use for an associated value in data[hue] (if hue provided) or String (rgba) representing color of bins
         - visibility: Dictionary containing visibility to set for an associated value in data[hue] (by default, None)
+        - use_hue_names: Boolean indicating if hue_names must be used to access attributes of other dictionaries (such colors) instead of value of hue_values (by default, True)
 
     Return
         - fig: Plotly figure
@@ -570,10 +584,10 @@ def create_plotly_scatters(data, x, y, hue=None, hue_names=None, text=None, colo
             filtered_data = data[data[hue] == value]
             current_x = filtered_data[x]
             current_y = filtered_data[y]
-            scatter = go.Scattergl(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value), text=data[text], visible=(visibility[hue_names.get(value, value) if hue_names else value] if visibility else None), mode='markers', marker=dict(size=10, color=(color[hue_names.get(value, value) if hue_names else value] if color else None), line = dict(width = 2)))
+            scatter = go.Scattergl(y=current_y, x=current_x, name=(hue_names.get(value, value) if hue_names else value), text=data[text], visible=(visibility[hue_names.get(value, value) if (hue_names and use_hue_names) else value] if visibility else None), mode='markers', marker=dict(size=10, color=(color[hue_names.get(value, value) if (hue_names and use_hue_names) else value] if color else None), line = dict(width = 2)))
             all_scatters.append(scatter)
     else:
-        scatter = go.Scattergl(y=data[y], x=data[x], text=text, mode='markers', marker=dict(color=color))
+        scatter = go.Scattergl(y=data[y], x=data[x], text=data[text], mode='markers', marker=dict(color=color))
         all_scatters.append(scatter)
 
     return all_scatters
