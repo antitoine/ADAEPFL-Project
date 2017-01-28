@@ -38,7 +38,7 @@ export class PlotlyComponent implements AfterViewInit {
     ).subscribe(json => {
         this.schema = json;
         if (this.labels.length == 0) {
-          Plotly.newPlot(this.plotlyId, json);
+          this.plot(json);
         } else {
           this.labelValues = new Array(this.labels.length);
           this.labelValues[0] = Object.keys(json).sort(PlotlyComponent.sortValues);
@@ -90,7 +90,7 @@ export class PlotlyComponent implements AfterViewInit {
       for (let i = 1; i < this.labels.length; i++) {
         finalData = finalData[this.labelSelected[i]];
       }
-      Plotly.newPlot(this.plotlyId, finalData);
+      this.plot(finalData);
 
       if (loading) {
         this.setLoadingOn(500, 'Generate graph');
@@ -133,5 +133,15 @@ export class PlotlyComponent implements AfterViewInit {
       return 1;
     }
     return 0;
+  }
+
+  private plot(data: any) {
+    if (document.getElementById(this.plotlyId)) {
+      try {
+        Plotly.newPlot(this.plotlyId, data);
+      } catch (e){
+        console.error('Can display Plotly charts', e);
+      }
+    }
   }
 }
