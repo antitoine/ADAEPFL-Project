@@ -410,7 +410,7 @@ def display_age_distribution(data, title):
     fig = go.Figure(data=data, layout=layout)
     plotly.offline.iplot(fig)
 
-    return
+    return fig
 
 def diplay_comparaison_runners_performance(fig, data): 
     '''
@@ -475,7 +475,7 @@ def compute_best_time (runner, runs_dataFrame):
     return (runner['time (s)'] - same_race.ix[[best_time_index]]['time (s)'].values[0])
 
 
-def plot_coefficient_distribution(data, inexperienced_runners, experienced_runners, name_coefficient, bin_size=0.05):
+def plot_coefficient_distribution(data, inexperienced_runners, experienced_runners, name_coefficient, display=True, bin_size=0.05):
     '''
     Plot the distribution of coefficient 'name_coefficient'.
         - the distibution is splitted into two group experience runners and inexperience runner 
@@ -518,7 +518,7 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     mean_inexperienced = round(runs_inexperienced.mean(), 3)
     lenght_experienced = len(runs_experienced)
     lenght_inexperienced = len(runs_inexperienced)
-    
+
     #build the graph
     displot_experienced = FF.create_distplot([runs_experienced], [''], bin_size=bin_size)
     displot_inexperienced = FF.create_distplot([runs_inexperienced], [''], bin_size=bin_size)
@@ -548,9 +548,10 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     modify_layout(my_fig, max_yaxis, name_coefficient)
     
     # display plot.
-    plotly.offline.iplot(shapiro_table)
-    plotly.offline.iplot(my_fig)
-    return
+    if display:
+        plotly.offline.iplot(shapiro_table)
+        plotly.offline.iplot(my_fig)
+    return my_fig
 
 def display_scatter_matrix(data): 
     '''
@@ -674,6 +675,21 @@ def add_line_to_plot(my_fig, mean_experienced, mean_inexperienced, max_yaxis):
     my_fig.append_trace(line_experience, 1, 1)
     my_fig.append_trace(line_inexperience, 1, 2)
     return
+
+
+def generate_plotly_figure(data, list_coefficient, inexperienced_runners, experienced_runners, bin_size=0.05):
+    '''
+    create dictionnary for plotly export.
+    
+    Parameters
+        - data                  : data which contain information on coefficient.
+        - list_coefficient      : list name coefficient
+    '''
+    result_dict = {}
+    for coefficient in list_coefficient:
+        result_dict[coefficient] = plot_coefficient_distribution(data, inexperienced_runners, experienced_runners, coefficient, display=False, bin_size=bin_size)
+    
+    return result_dict
     
 
 #######################################################################################
