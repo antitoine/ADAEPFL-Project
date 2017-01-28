@@ -81,6 +81,7 @@
         <tab>
           <template tabHeading>Dynamic chart</template>
           <plotly [url]="'./assets/json/marathon-lausanne-2016-age-distribution.json.zip'"></plotly>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-distribution-age-category.json.zip'"></plotly>
         </tab>
         <tab>
           <template tabHeading>Static chart</template>
@@ -98,8 +99,6 @@
           </div>
         </tab>
       </tabset>
-
-
 
       <h2 id="performance">Performance analysis</h2>
 
@@ -1304,9 +1303,21 @@
 
       <h3 id="performance-by-bib">Performance by BIB numbers</h3>
 
-      <div class="thumbnail thumbnail-medium">
-        <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-bib.png" alt="Distribution of time performance according to BIB numbers of participants"/>
-      </div>
+      <tabset [justified]="true">
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <p style="color: red;margin: 50px">
+            <strong>TODO PLOTLY GRAPH</strong>
+          </p>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="thumbnail thumbnail-large">
+            <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-bib.png" alt="Distribution of time performance according to BIB numbers of participants"/>
+          </div>
+        </tab>
+      </tabset>
+
 
       <p>We can recognize three major patterns following the BIB number of participants. These patterns are directly linked with the running categories. Moreover, we see that there is a correlation between the BIB number - and so estimated time - and the effective time of runners. Indeed, the higher the BIB number is, the lower the performance time is, globally. Notice that BIB numbers are given by the organizators of Lausanne Marathon, and as we can read <a href="http://fr.lausanne-marathon.com/inscription/inscriptions/inscription-online/">on the official website</a>, each participant is asked to indicate his "estimated time of running for the attribution of start blocks", in oder to categorize the runners accordingly.</p>
 
