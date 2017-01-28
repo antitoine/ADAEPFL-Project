@@ -34,6 +34,9 @@ export class AppComponent implements OnInit, OnDestroy {
         if (!(event instanceof NavigationEnd)) {
           return;
         }
+        if (!event.hasOwnProperty('url') || !event.url.match('^\/.*(#.*)$')) {
+          window.scroll(0, 0);
+        }
       }, (error: any) => {
         this.slimLoader.complete();
       });
@@ -45,8 +48,6 @@ export class AppComponent implements OnInit, OnDestroy {
           if (element) {
             smoothScroll(element);
           }
-        } else {
-          smoothScroll(0);
         }
       });
   }
