@@ -8,8 +8,8 @@
 
       <div class="row row-md-align-center">
         <div class="col-md-6">
-          <p>Our first goal was to get data from the <a href="https://www.datasport.com/en/">DataSport</a>, especially runs over years. But as there is a lot of running even for Switzerland only (more than 2200 events), we will firstly focus on a single run: Lausanne Marathon of 2016. Such approach will help us to understand how data are presented and how to get them. In a second part, we will then try to get all Lausanne Marathon's events (i.e. runnings between 1999 and 2016), by applying the same approach as before. Finally, we will try to get all runs of some people with a different technique which will require a little bit of reverse engineering to decode DataSport API.</p>
-          <p>This presentation gives some excerpts of the code used to get information from DataSport (and Infoclimat). The full version is present on <a href="https://github.com/antitoine/ADAEPFL-Project">Github <i aria-hidden="true" class="fa fa-github"></i> here</a>.</p>
+          <p>Our main goal was to get data from <a href="https://www.datasport.com/en/">DataSport</a> - especially runs over years. However, there is a lot of runnings, even if we consider only the ones from Switzerland (i.e. more than 2200 events). Thus, we firstly focused on a single run: Lausanne Marathon of 2016. Such approach helped us to understand how data are presented and how to get them. In a second part, we then got all Lausanne Marathon's events (i.e. runnings between 1999 and 2016), by applying the same approach as before. Finally, we tried to get all runs of some peoples using different techniques which required some reverse engineering to decode results from DataSport API.</p>
+          <p>The present page gives some excerpts of the code used to get information from DataSport (and Infoclimat). Full version is present on <a href="https://github.com/antitoine/ADAEPFL-Project">Github <i aria-hidden="true" class="fa fa-github"></i></a>.</p>
         </div>
         <div class="col-md-6">
           <div class="thumbnail">
@@ -31,16 +31,16 @@
 
       <h2 id="lamara-2016">Lausanne Marathon 2016</h2>
 
-      <p>First, we begin with the <a href="https://services.datasport.com/2016/lauf/lamara/">Lausanne Marathon of 2016</a>. There is a lot of possibilities to get all runners information, but the easiest one is to use the alphabetical order, so we are sure to retrieve all the participants.</p>
+      <p>First, we began with <a href="https://services.datasport.com/2016/lauf/lamara/">Lausanne Marathon of 2016</a>. There was a lot of possibilities to get all runners' information, but the easiest one was to use alphabetical order. Indeed, doing so permitted us to retrieve all the participants.</p>
 
       <div class="thumbnail thumbnail-large">
         <img src="./assets/images/scraping-datasport-lausanne-marathon-2016-runners-a-screenshot.png" alt="Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport" />
         <div class="caption">
-          <p>Screenshot of Datasport website representing the runners with last name starting with letter A for Lausanne Marathon 2016</p>
+          <p>Screenshot took from DataSport's website (information about runners of Lausanne Marathon 2016 for whom last name starts with letter A)</p>
         </div>
       </div>
 
-      <p>The data are not very easy to read by a program, even if it is presentable for human. Indeed, tere is no structure behind, but only spaces. Thus, we worked on a simple probabilistic algorithm that splits at the right place, in order to make columns. The main idea is that the algorithm counts the number of blanks (spaces) in a column. The larger the count, the higher the probability to split. We also improve the split part by checking the header, this in order to avoid a split in a middle of a column name. Finally, we use the <a href="http://docs.astropy.org/en/stable/io/ascii/">ASCII</a> part of the <a href="http://www.astropy.org/">astropy</a> library that rebuilds the table.</p>
+      <p>Data were not very easily readable by a program, even if there were presentable for human. Indeed, there is no structure behind these tables, but only spaces. For this reason, we worked on a probabilistic algorithm that splits at the right place, in order to create columns accordingly. Main idea behind such algorithm is to count the number of blanks (spaces) in a column. The larger the count, the higher the probability to split is. We also improved the split process by checking header of columns in order to avoid a split in a middle of a column name. Finally, we used <a href="http://docs.astropy.org/en/stable/io/ascii/">ASCII</a> part of the <a href="http://www.astropy.org/">astropy</a> library that rebuilds the table.</p>
 
       <div class="cell">
         <div class="input">
@@ -155,11 +155,11 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
         </div>
       </div>
 
-      <p>When the retrieve is done, we just need to extract links to all alphabetic lists and to extract data.</p>
+      <p>When the retrieve was done, we needed to extract links of all alphabetic lists and extract data.</p>
 
       <div class="cell">
         <div class="input">
@@ -199,11 +199,11 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
         </div>
       </div>
 
-      <p>As the reader can see, we need to make an extra work to clean and rename columns, parse dates and times and remove some unecessary fields.</p>
+      <p>As the reader can see, we needed to make an extra work to clean and rename columns, to parse dates and times and to remove some unnecessary fields.</p>
 
       <div class="cell">
         <div class="input">
@@ -288,11 +288,11 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
         </div>
       </div>
 
-      <p>Finally, we merge all tables in a single one.</p>
+      <p>Finally, we merged all tables into a single one.</p>
 
       <div class="cell">
         <div class="input">
@@ -384,15 +384,15 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
         </div>
       </div>
 
-      <p>The final CSV file containing formatted date is available <a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv">here <i class="fa fa-file-text-o" aria-hidden="true"></i></a></p>
+      <p>Final CSV file containing formatted date is available <a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv">here <i class="fa fa-file-text-o" aria-hidden="true"></i></a>.</p>
 
       <h2 id="lamara-all">Lausanne Marathon 1999 to 2016</h2>
 
-      <p>The main work was already done in the previous part. We simply apply the same algorithm for each Lausanne Marathon's event between 1999 to 2016.</p>
+      <p>Main work was already done in the previous part. We thus simply applied the same algorithm for each Lausanne Marathon's event between 1999 to 2016.</p>
 
       <div class="cell">
         <div class="input">
@@ -428,10 +428,10 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
         </div>
       </div>
-      <p>Some years (1999, 2000, 2006, 2007 and 2008) have a different format (german column names, extra columns, ...), so we changed a little bit some functions in order to achieve the extraction. Then, we cleaned and merged every table.</p>
+      <p>As some years (1999, 2000, 2006, 2007 and 2008) have a different format (german column names, extra columns, and so on), we changed a little bit some functions in order to achieve extraction. Then, we cleaned and merged every table.</p>
       <div class="cell">
         <div class="input">
           <div class=" highlight hl-ipython3">
@@ -448,7 +448,7 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
         </div>
       </div>
 
@@ -541,14 +541,14 @@
 
       <h2 id="runners">Runners</h2>
 
-      <p>In a third part, we want to make a historical background of some runners (for example, who has done all Lausanne Marathon, what is the best time of a given runner and why, and so one). But the main problem here is that DataSport doesn't provide any possibility to join a runner with other tables, from a provided table. Also, using the name is not sufficient as there are homonyms. However, we found another way to get this kind of information. Indeed, Datasport provides a webservice that proposes, for a given runner, a complete history if and only if he kept the same registration ID during multiple runs. For an experimented runner, this is probably the case as the BIB number is also given regarding historical background. We can see this information in all runs from 2009, when we select a runner name's in a table as presented in the screenshot below.</p>
+      <p>In a third part, we wanted to make an historical background of some runners (for examples: who participated to all Lausanne Marathon events, what is the best time of a given runner and for which reason(s), and so on). However, the main problem here was that DataSport doesn't provide any possibility to link a runner with other tables from a provided table. Also, using the name was not sufficient as there are homonyms in such events. For all that, we found another way to get this kind of information. Indeed, Datasport provides a web service that proposes, for a given runner, a complete history if and only if he kept the same registration ID during multiple runs. For an experimented runner, this is probably the case as the BIB number is also given regarding historical background. We can see this information in all runs from 2009, when we select a runner's name in a table as presented in the screenshot below.</p>
 
       <div class="row">
         <div class="col-sm-6">
           <div class="thumbnail">
             <img src="./assets/images/scraping-datasport-acode-display-service-screenshot.png" alt="Screenshot of a runner information given by the DataSport API" />
             <div class="caption">
-              <p>Screenshot of a runner information given by the DataSport API</p>
+              <p>Screenshot of information of a runner returned by DataSport API</p>
             </div>
           </div>
         </div>
@@ -556,15 +556,15 @@
           <div class="thumbnail">
             <img src="./assets/images/scraping-datasport-acode-display-service-single-screenshot.png" alt="Screenshot of a runner information given by the DataSport API with URL" />
             <div class="caption">
-              <p>Screenshot of a runner information given by the DataSport API with URL</p>
+              <p>Screenshot of information of a runner given by the DataSport API with URL</p>
             </div>
           </div>
         </div>
       </div>
 
-      <p>So, we checked how to use this webservice directly and figured out that all the information were present in the HTML/JavaScript code of pages generated by DataSport. After getting all "acode" (a unique identifier of a runner), which were available directly in the link related to a given runner, we could have access to all pages corresponding to a runner, like the following one, by changing the GET request.</p>
+      <p>So we checked how to use this web service directly and figured out that all the information were present in HTML/JavaScript code of the pages generated by DataSport. After having retrieved all "acode" (i.e. unique identifier of a runner), which were available directly in the link related to a given runner, we accessed to all pages corresponding to a given runner - like the following one - by manipulating GET requests.</p>
 
-      <p>Such pages give all the links that we can use to get information about a runner for an event that in which he has participed. In order to use the information, we also had to decrypt the answers given by the DataSport API. The code used was present in JavaScript and we transformed it in Python.</p>
+      <p>Note that such pages give all the links that we can use to get information about an event done by a considered runner. Also, and in order to use the information, we had to decrypt the answers returned by DataSport API. The code used was written in JavaScript so we exported it to Python.</p>
 
       <div class="thumbnail thumbnail-medium">
         <img src="./assets/images/scraping-datasport-acode-javascript-decode-screenshot.png" alt="Screenshot of the code used to decrypt responses from DataSport API" />
@@ -610,29 +610,29 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/decrypt_ajax_response_python.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/decrypt_ajax_response_python.ipynb">here</a>.
         </div>
       </div>
 
-      <p>Notice that DataSport makes a lot of effort to keep its service very hard to use by other people. When we tried to get some information from this webservice, a lot of our IP were definitely banned. Thus, we made the choice to use this service only for few people (selected from Lausanne Marathon, and whom have done a lot of runnings). To avoid any problem and further bans, the extraction of information of 61 runners took 7 hours (in addition to timers, we also changed the header information of GET requests and the IP). The reader can find the extracted data in the following files. The file 'runners.csv' contains all information of runners (name, birthday, location, and so on) while the file 'runs.csv' contains all runnings corresponding to a runner:</p>
+      <p>Notice that DataSport makes a lot of effort to keep its service very hard to use by other people. When we tried to get some information from this web service, a lot of our IP were definitely banned. Thus, we made the choice to use this service only for few people, selected from Lausanne Marathon and among those who done a lot of runnings). To avoid any problem and further bans, extraction of information of 61 runners took 7 hours (in addition to timers, we changed header information of GET requests and IP of servers). The reader can find extracted data in the following files. The file 'runners.csv' contains all information of runners (name, birthday, location, and so on) while the file 'runs.csv' contains all runnings corresponding to a participant:</p>
 
       <ul>
-        <li><a href="https://github.com/antitoine/ADAEPFL-Project/raw/master/Scraping/DataSport/Data/Runners/runners_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runners.csv (runners information)</a></li>
-        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Runners/runs_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runs.csv (runs information)</a></li>
+        <li><a href="https://github.com/antitoine/ADAEPFL-Project/raw/master/Scraping/DataSport/Data/Runners/runners_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runners.csv (information about runners)</a></li>
+        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Runners/runs_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runs.csv (information about runnings)</a></li>
       </ul>
 
       <h2 id="weather">Weather</h2>
 
-      <p>In addition to data from DataSport, we also want to retrieve the weather of the day during which runnings were done in order to conduct some analysis. To do so, we use the French website <a href="http://www.infoclimat.fr">www.infoclimat.fr</a>, which gives detailed weather information thanks to 85 stations based in Switzerland.</p>
+      <p>In addition to data from DataSport, we also wanted to retrieve the weather of the day during which runnings were done in order to conduct some analysis. To do so, we used French website <a href="http://www.infoclimat.fr">www.infoclimat.fr</a>, which gives detailed weather information thanks to 85 stations based in Switzerland.</p>
 
       <div class="thumbnail thumbnail-large">
         <img src="./assets/images/scraping-infoclimat.png" alt="Detailed weather information for Lausanne station (screenshot from infoclimat)" />
         <div class="caption">
-          <p>Detailed weather information for Lausanne station (screenshot from infoclimat)</p>
+          <p>Detailed weather information for station of Lausanne (screenshot from InfoClimat)</p>
         </div>
       </div>
 
-      <p>First, we retrieve all the information related to the available stations in Switzerland. To do so, we use <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> to retrieve all the list of these stations, and then, to retrieve the detailed page (see previous figure) containing, among other things, coordinates of each station.</p>
+      <p>First, we retrieved all the information related to the available stations in Switzerland. To do so, we used <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> to retrieve all the list of these stations, and then, to retrieve the detailed page (see previous figure) containing, among other things, coordinates of each station.</p>
 
       <div class="cell">
         <div class="input">
@@ -652,11 +652,11 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/Weather/get_information_station.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/Weather/get_information_station.ipynb">here</a>.
         </div>
       </div>
 
-      <p>For further use, we store the results in a CSV file. The content can still be loaded into a pandas' DataFrame.</p>
+      <p>For further use, we decided to store the results in a CSV file. Note that the content can still be loaded into a pandas' DataFrame.</p>
 
       <div class="cell">
         <div class="input">
@@ -727,13 +727,13 @@
           </div>
         </div>
         <div class="caption">
-          Full code available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
         </div>
       </div>
 
-      <p>The first thing to do is to find the station which is the nearest to Lausanne Marathon. For better result, this is done using an algorithm, but in our case, select of <a href="http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html">Lausanne - Pully</a>'s station manually is sufficient (note that the automatic select would be more interesting for a global analysis of running around Switzerland or even other European countries).</p>
+      <p>The first thing to do was to find the station which was the nearest to Lausanne Marathon. For better results, this can be done using an algorithm, but in our case we manually selected <a href="http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html">Lausanne - Pully</a>'s station and it was sufficient (note that the automatic select would be more interesting for a global analysis of runnings around Switzerland or even other European countries).</p>
 
-      <p>Then, we retrieve the detailed information of the station for the given date, and we clean the obtained DataFrame (i.e., among other things, we remove unecessary columns and format the data). At the end of the process, we obtain similar - but formatted and ready-to-use - data. Here an example for Lausanne Marathon of 2016 (comparison between data offered by Infoclimat and data retrieved and formatted by us).</p>
+      <p>Then, we retrieved the detailed information of the station for the given date and we cleaned the obtained DataFrame (i.e., among other things, we removed unnecessary columns and formatted the data). At the end of the process, we obtained similar - but formatted and ready-to-use - data. Here is an example for Lausanne Marathon of 2016 (comparison between data offered by Infoclimat and data retrieved and formatted by us).</p>
 
       <div class="thumbnail thumbnail-fit">
         <img src="./assets/images/scraping-lausanne-2016-10-30.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
