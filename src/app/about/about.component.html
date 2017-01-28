@@ -51,11 +51,11 @@
       <h3 id="tech-study">Study</h3>
 
       <p>
-        The full study has been made with <a href="https://www.python.org/">Python 3</a> and <a href="http://jupyter.org/">iPython Jupyter Notebook</a>. You can find the full code directly on your github repository <a href="https://github.com/antitoine/ADAEPFL-Project">here</a>.
+        Full study has been made with <a href="https://www.python.org/">Python 3</a> and <a href="http://jupyter.org/">iPython Jupyter Notebook</a>. You can find the full code directly on your GitHub repository <a href="https://github.com/antitoine/ADAEPFL-Project">here</a>.
         <br>
-        To manage data, the main work has been done with <a href="http://pandas.pydata.org/">Pandas</a>.
+        To manage data, major part of the work has been done with <a href="http://pandas.pydata.org/">Pandas</a>.
         <br>
-        Visualisation part has been made with <a href="http://seaborn.pydata.org/">Seaborn</a> but also with <a href="https://plot.ly/">Plotly</a> library for Python to facilitate the passage to the presentation website.
+        Visualisation part has been made with <a href="http://seaborn.pydata.org/">Seaborn</a> but also using <a href="https://plot.ly/">Plotly</a> library for Python to facilitate the migration to the website.
       </p>
 
       <h3 id="tech-website">Website</h3>
@@ -72,7 +72,7 @@
       </ul>
 
       <p>
-        In order to make visualisation graph, we have chosen the <a href="https://plot.ly/">Plotly</a> library for Javascript. See the extra part below explaining how we export graph from notebook to the website.
+        In order to make visualisation graphs, we chose <a href="https://plot.ly/">Plotly</a> library for JavaScript. Below, we explain how we managed to export graphs from Notebook to the website.
         <br>
         Website sources are also available on our repository <a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>.
       </p>
@@ -80,19 +80,19 @@
       <h3 id="tech-plotly">Plotly Graph</h3>
 
       <p>
-        We search a lot to find a lib to make dynamics graphics that work with python and also with javascript.
-        The only one today that is free, is Plotly.
-        But the documentation is relatively poor and there is anything that indicate the possibility to make export from python to javascript.
-        The solution we will provide is certainly the best one without reproduce any javascript code but keep using the Plotly.js API.
+        We did a lot of search to find a library which allows to create dynamic plots that work with both Python and JavaScript.
+        At present, the only one which is free, reliable and well-documented is Plotly.
+        However, use-cases were sometimes missing and, among other things, we found nothing that indicates the possibility to export figures from Python to JavaScript.
+        The solution we used (see below) is certainly the best one without as it does not produce any specific JavaScript code but only use Plotly.js API.
       </p>
 
       <h4 id="tech-plotly-export">Export from Python</h4>
 
       <p>
-        When the final graph is done in the python side, we can notice that the graphic schema given to plotly is a large dictionary, similar as a <i>json</i> with all data and configurations for the layout.
-        We remarque that this dictionary has same attributes of the Plotly.js API, and it's the case after some analysis in the source code of plotly.
-        The first thing to do is to transform the dictionary in a <i>json</i> file.
-        We found in the open source plotly for python project, that all dictionaries are transform with a custom <i>json encoder</i>, like you can see <a href="https://github.com/plotly/plotly.py/blob/0b6e0109defc1a0257dd98e20ff1e31504b887bb/plotly/plotly/plotly.py#L652">here</a>.
+        When a Plotly figure is created in Python, one can notice that the schema given to Plotly is a large dictionary - similar to a <i>JSON</i> one - which contains all data and parameters of the layout.
+        We remark that this dictionary has the same attributes of the ones of a figure created using Plotly.js API (this was definitively confirmed after a check of Plotly source code).
+        Thus, the first thing to do is to export the dictionary to a <i>JSON</i> file.
+        In source code of python library of Plotly, we see that all dictionaries are transformed used a custom <i>JSON encoder</i> (see <a href="https://github.com/plotly/plotly.py/blob/0b6e0109defc1a0257dd98e20ff1e31504b887bb/plotly/plotly/plotly.py#L652">here</a>).
         So we do the same:
       </p>
 
@@ -134,7 +134,7 @@
       <h4 id="tech-plotly-import">Import into Javascript</h4>
 
       <p>
-        Now, it is very easy to display the same graphic displayed in notebook, we just need to give the <i>json</i> to the Plotly.js API (javascript):
+        Now, it is very easy to display the same graphic that the one of Notebook; we just have to give the <i>JSON</i> object to the Plotly.js API (JavaScript):
       </p>
 
       <div class="cell">
@@ -149,25 +149,25 @@
         </div>
       </div>
 
-      <h4 id="tech-plotly-portability">Improve portability</h4>
+      <h4 id="tech-plotly-portability">Improvement of portability</h4>
 
       <p>
-        In appearance all seam to be right, but with a large graph like in Marathon Lausanne 1999-2016 study the json file is to big (more than 130 MB for the comparisons performances minified json file).
-        The <i>json</i> schema is not very efficient when we look the size.
+        In appearance, all seems to be right, but with a large graph like the one presented in Lausanne Marathon 1999-2016 study, generated JSON file is too big to be used (more than 130 MB for the minified JSON file containing the plot with comparison of performances).
+        The <i>JSON</i> schema is not very efficient when we look the size.
         <br>
         To fix this issue, we built a system that download a compressed version of the <i>json</i> (in a simple <i>zip</i> file), we decompress it from the client side and then display the graph.
         With this technique we increase the rapidity and decrease the size of the page.
-        The 130 MB <i>json</i> file take only 7 MB in the <i>zip</i> file (available <a href="./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip">here</a>) and we need to wait 20 seconds of decompression (for comparison, to have the same speed without compressed file, the user need a network connection of 52 Mb/s).
+        The <i>JSON</i> file of 130 MB takes only 7 MB after compression (it is available <a href="./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip">here</a>) and we need to wait 20 seconds of decompression (for comparison, to have the same speed without compressed file, the user need a network connection of 52 Mb/s).
         <br>
-        The full procedure is in the TypeScript/Angular code inside the website branch of our repository (<a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>).
+        The full procedure is in the TypeScript/Angular code inside the website branch of our repository (see <a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>).
       </p>
 
       <h2 id="team">Team</h2>
 
       <p>
-        We are three exchange students of the EPFL (École Polytechnique Fédérale de Lausanne) in IC master section (computer sciences). We all come from the INSA Lyon (Institut National des Sciences Appliquées de Lyon) where we follow our engineering degree.
+        We are three students doing their exchange at École Polytechnique Fédérale de Lausanne (EPFL) in IC Master section (computer sciences). We all come from Institut National des Sciences Appliquées de Lyon (INSA de Lyon), where we do an engineering degree.
         <br>
-        If your are interested to learn about us, you can find more details in the following links:
+        If your are interested to learn more about us, you can find details in the following links:
       </p>
 
       <div class="row">
