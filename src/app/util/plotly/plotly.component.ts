@@ -1,4 +1,4 @@
-import { Component, Input, ViewEncapsulation, AfterViewInit } from '@angular/core';
+import { Component, Input, ViewEncapsulation, AfterViewInit, HostListener } from '@angular/core';
 import { JsonReaderService } from '../json-reader.service';
 import { UUID } from 'angular2-uuid';
 declare let _:any;
@@ -48,6 +48,22 @@ export class PlotlyComponent implements AfterViewInit {
         }
         this.setLoadingOff();
       });
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    if (this.labels.length == 0) {
+      this.plot(this.schema);
+    } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
+      this.setLoadingOn();
+      // Check if all labels are selected in order to generate the Plotly graph
+      let finalData = this.schema[this.labelSelected[0]];
+      for (let i = 1; i < this.labels.length; i++) {
+        finalData = finalData[this.labelSelected[i]];
+      }
+      this.plot(finalData);
+      this.setLoadingOn(500, 'Generate graph');
+    }
   }
 
   onLabelSelectedChange(index: number, newValue: string, loading: boolean = true) {
