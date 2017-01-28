@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Lausanne19992016Component implements OnInit {
 
+  isDetailedStatisticalAnalysisCollapsed:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
