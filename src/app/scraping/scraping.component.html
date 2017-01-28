@@ -2,18 +2,18 @@
   <div class="row">
     <div class="col-lg-12">
 
-      <img src="./assets/images/web-data-extraction.png" alt="Image representing the processing to extract data from the web" class="img-responsive" />
+      <img src="./assets/images/scraping-header-web-data-extraction.png" alt="Image representing the processing to extract data from the web" class="img-responsive" />
 
       <h1 class="title">Scraping data from DataSport and Infoclimat</h1>
 
-      <div class="row row-sm-align-center">
-        <div class="col-sm-6">
+      <div class="row row-md-align-center">
+        <div class="col-md-6">
           <p>Our first goal was to get data from the <a href="https://www.datasport.com/en/">DataSport</a>, especially runs over years. But as there is a lot of running even for Switzerland only (more than 2200 events), we will firstly focus on a single run: Lausanne Marathon of 2016. Such approach will help us to understand how data are presented and how to get them. In a second part, we will then try to get all Lausanne Marathon's events (i.e. runnings between 1999 and 2016), by applying the same approach as before. Finally, we will try to get all runs of some people with a different technique which will require a little bit of reverse engineering to decode DataSport API.</p>
           <p>This presentation gives some excerpts of the code used to get information from DataSport (and Infoclimat). The full version is present on <a href="https://github.com/antitoine/ADAEPFL-Project">Github <i aria-hidden="true" class="fa fa-github"></i> here</a>.</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-md-6">
           <div class="thumbnail">
-            <img src="./assets/images/datasport-screenshot.png" alt="Screenshot of the datasport website" />
+            <img src="./assets/images/scraping-datasport-screenshot.png" alt="Screenshot of the datasport website" />
             <div class="caption">
               <p>Screenshot of Datasport's website</p>
             </div>
@@ -34,7 +34,7 @@
       <p>First, we begin with the <a href="https://services.datasport.com/2016/lauf/lamara/">Lausanne Marathon of 2016</a>. There is a lot of possibilities to get all runners information, but the easiest one is to use the alphabetical order, so we are sure to retrieve all the participants.</p>
 
       <div class="thumbnail thumbnail-large">
-        <img src="./assets/images/datasport-lausanne-marathon-2016-runners-a-screenshot.png" alt="Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport" />
+        <img src="./assets/images/scraping-datasport-lausanne-marathon-2016-runners-a-screenshot.png" alt="Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport" />
         <div class="caption">
           <p>Screenshot of Datasport website representing the runners with last name starting with letter A for Lausanne Marathon 2016</p>
         </div>
@@ -546,7 +546,7 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/datasport-acode-display-service-screenshot.png" alt="Screenshot of a runner information given by the DataSport API" />
+            <img src="./assets/images/scraping-datasport-acode-display-service-screenshot.png" alt="Screenshot of a runner information given by the DataSport API" />
             <div class="caption">
               <p>Screenshot of a runner information given by the DataSport API</p>
             </div>
@@ -554,7 +554,7 @@
         </div>
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/datasport-acode-display-service-single-screenshot.png" alt="Screenshot of a runner information given by the DataSport API with URL" />
+            <img src="./assets/images/scraping-datasport-acode-display-service-single-screenshot.png" alt="Screenshot of a runner information given by the DataSport API with URL" />
             <div class="caption">
               <p>Screenshot of a runner information given by the DataSport API with URL</p>
             </div>
@@ -567,7 +567,7 @@
       <p>Such pages give all the links that we can use to get information about a runner for an event that in which he has participed. In order to use the information, we also had to decrypt the answers given by the DataSport API. The code used was present in JavaScript and we transformed it in Python.</p>
 
       <div class="thumbnail thumbnail-medium">
-        <img src="./assets/images/datasport-acode-javascript-decode-screenshot.png" alt="Screenshot of the code used to decrypt responses from DataSport API" />
+        <img src="./assets/images/scraping-datasport-acode-javascript-decode-screenshot.png" alt="Screenshot of the code used to decrypt responses from DataSport API" />
         <div class="caption">
           <p>Screenshot of the code used to decrypt responses retrieved from DataSport API</p>
         </div>
@@ -626,7 +626,7 @@
       <p>In addition to data from DataSport, we also want to retrieve the weather of the day during which runnings were done in order to conduct some analysis. To do so, we use the French website <a href="http://www.infoclimat.fr">www.infoclimat.fr</a>, which gives detailed weather information thanks to 85 stations based in Switzerland.</p>
 
       <div class="thumbnail thumbnail-large">
-        <img src="./assets/images/infoclimat.png" alt="Detailed weather information for Lausanne station (screenshot from infoclimat)" />
+        <img src="./assets/images/scraping-infoclimat.png" alt="Detailed weather information for Lausanne station (screenshot from infoclimat)" />
         <div class="caption">
           <p>Detailed weather information for Lausanne station (screenshot from infoclimat)</p>
         </div>
@@ -736,7 +736,7 @@
       <p>Then, we retrieve the detailed information of the station for the given date, and we clean the obtained DataFrame (i.e., among other things, we remove unecessary columns and format the data). At the end of the process, we obtain similar - but formatted and ready-to-use - data. Here an example for Lausanne Marathon of 2016 (comparison between data offered by Infoclimat and data retrieved and formatted by us).</p>
 
       <div class="thumbnail thumbnail-fit">
-        <img src="./assets/images/lausanne-2016-10-30.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
+        <img src="./assets/images/scraping-lausanne-2016-10-30.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
         <div class="caption">
           <p>Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)</p>
         </div>
