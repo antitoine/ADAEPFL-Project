@@ -110,11 +110,10 @@
       <p>
         We have applied the <a href="https://plot.ly/python/normality-test/">Shapiro-Wilk</a>  test for comparing the distribution each coefficient to a gaussian.
         In an ideal world if the coefficient have no impact on the performance the coefficient should follow a normal law, which mean the parameter studied improve the performance as much as degrade it.
+        Please check our Notebook, if you want more information about it.
       </p>
 
-      <p style="color: red;margin: 50px">
-        <strong>TODO PLOTLY GRAPH: age distribution dynamic</strong>
-      </p>
+      <plotly [url]="'./assets/json/study-runners-distribution-age.json.zip'"></plotly>
 
       <p>
         The group of runners had a mean age of 52,67, which is very high but we have to keep in mind that we have data of runners from 1999.
@@ -137,9 +136,7 @@
         </li>
       </ul>
 
-      <p style="color: red;margin: 50px">
-        <strong>TODO PLOTLY GRAPH: dynamic performance coefficient</strong>
-      </p>
+      <plotly [url]="'./assets/json/study-runners-performance-coefficient.json.zip'" [labels]="['Performance coefficient']"></plotly>
 
       <h3 id="individual-study-weather-coefficient">Weather coefficient</h3>
 
@@ -163,9 +160,7 @@
         </li>
       </ul>
 
-      <p style="color: red;margin: 50px">
-        <strong>TODO PLOTLY GRAPH: weather coefficient graph</strong>
-      </p>
+      <plotly [url]="'./assets/json/study-runners-weather-coefficient.json.zip'" [labels]="['Weather coefficient']"></plotly>
 
       <p>
         As conclusion, there are no big difference between experienced runners and inexperienced runners.
