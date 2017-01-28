@@ -39,7 +39,7 @@
         Moreover the particitipation of stanger is around 50 à 60 %. This two fact can explain the difference of gender distribution in the marathon of lausanne.
       </p>
 
-      <tabset [justified]="true">
+      <tabset>
         <tab>
           <template tabHeading>Dynamic chart</template>
           <plotly [url]="'./assets/json/marathon-lausanne-2016-gender-distribution.json.zip'"></plotly>
@@ -58,7 +58,7 @@
         The following distribution seems in agreement with the turn over of 2009 to limit the budget for professionals runners (mainly marathon runners).
       </p>
 
-      <tabset [justified]="true">
+      <tabset>
         <tab>
           <template tabHeading>Dynamic chart</template>
           <plotly [url]="'./assets/json/marathon-lausanne-2016-gender-distribution-runnings.json.zip'"></plotly>
@@ -77,7 +77,7 @@
         From  <a href="https://en.wikipedia.org/wiki/Marathon"> Wikipdia </a> a large number of top marathon runners are right around 35 years old. this is l ate enough in the game that your body can use the training years that you have put into it.
       </p>
 
-      <tabset [justified]="true">
+      <tabset>
         <tab>
           <template tabHeading>Dynamic chart</template>
           <plotly [url]="'./assets/json/marathon-lausanne-2016-age-distribution.json.zip'"></plotly>
@@ -115,23 +115,32 @@
         Some explanations about the distibution of marathon performance can be found on <a href="http://www.runnersworld.com/masters/age-matters-for-marathoning">runnerworld</a>.
       </p>
 
-      <form class="form-horizontal">
-        <div class="form-group">
-          <label for="distanceSelector" class="col-sm-offset-2 col-sm-2 control-label">Select Distance:</label>
-          <div class="col-sm-4">
-            <select class="form-control" id="distanceSelector" [(ngModel)]="distributionByRunningType" name="distanceSelector">
-              <option value="10">10 Km</option>
-              <option value="21">21 Km</option>
-              <option value="42">42 Km</option>
-            </select>
-          </div>
-        </div>
-      </form>
+      <tabset>
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-performance-age.json.zip'" [labels]="['Running']"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="distanceSelector" class="col-sm-offset-2 col-sm-2 control-label">Running:</label>
+              <div class="col-sm-4">
+                <select class="form-control" id="distanceSelector" [(ngModel)]="distributionByRunningType" name="distanceSelector">
+                  <option value="10">10 Km</option>
+                  <option value="21">Semi-marathon</option>
+                  <option value="42">Marathon</option>
+                </select>
+              </div>
+            </div>
+          </form>
 
-      <div *ngIf="distributionByRunningType" class="thumbnail thumbnail-large">
-        <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-ages.png'" alt="Age distribution by distance of the Lausanne marathon 2016"/>
-        <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-categories.png'" alt="Categories of ages distribution by distance of the Lausanne marathon 2016"/>
-      </div>
+          <div *ngIf="distributionByRunningType" class="thumbnail thumbnail-large">
+            <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-ages.png'" alt="Age distribution by distance of the Lausanne marathon 2016"/>
+            <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-categories.png'" alt="Categories of ages distribution by distance of the Lausanne marathon 2016"/>
+          </div>
+        </tab>
+      </tabset>
 
       <h4 id="statistical-anlysis">Statistical analysis</h4>
 
@@ -158,12 +167,21 @@
 
         <p>Clearly, the first condition is satisfied as the different categories of runners don't have nothing in common (people are different). What about the others? As Minitab explain <a href="http://blog.minitab.com/blog/applying-statistics-in-quality-projects/how-could-you-benefit-from-a-box-cox-transformation">in its blog</a>, when it comes to analyze runnings, we can observe some kind of specific pattern in the data. Thus, we decide to plot the distribution according the age categories to obtain a visual, immediate, intuition about the type of distribution and check if we can assume normal distribution or not.</p>
 
-        <div class="thumbnail">
-          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
-          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
-          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
-          <img width="33%" src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
-        </div>
+        <tabset>
+          <tab>
+            <template tabHeading>Dynamic chart</template>
+            <plotly [url]="'./assets/json/marathon-lausanne-2016-time-distribution-age.json.zip'" [labels]="['Age Category']"></plotly>
+          </tab>
+          <tab>
+            <template tabHeading>Static chart</template>
+            <div class="thumbnail">
+              <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
+              <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
+              <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
+              <img width="33%" src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
+            </div>
+          </tab>
+        </tabset>
 
         <p>If we pay attention to the graphes, we see that sometimes, and even if we group carefully the data according to the types of races (10 km/semi-marathon/marathon) to avoid edge effects, distributions are not normal at all or suffer of heteroscedasticity, as explained in the article from Minitab quoted before. However, we observe that for each category and race, we have significant number of runners. Thus, we can apply the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>. Notice that ANOVA is, by default and thanks to CLT, robust against normality assumption (and thus violation of such property is quite well tolerated).</p>
 
@@ -206,7 +224,7 @@
 
         <p>As we can see, p-value is extremely low (<< 5%). Thus, we can safely reject H0. Put in other words, it means that we can assume significant differences between the different age categories (statistical differences between mean values). Such conclusion tends to confirm our initial assumption about the distributions presented before. But if ANOVA permitted us to conclude about heterogeneity of runners' categories, it does not provide precise results. For this reason, we decided to also use <a href="https://en.wikipedia.org/wiki/Tukey's_range_test">Tukey HSD</a> as post-hoc analysis.</p>
 
-        <tabset [justified]="true">
+        <tabset>
           <tab>
             <template tabHeading>Tukey HSD results table (10 km running)</template>
 
@@ -1283,32 +1301,34 @@
 
       <h3 id="performance-by-sex">Performance by sex</h3>
 
-      <div class="row row-sm-align-center">
-        <div class="col-sm-6">
-          <div class="thumbnail">
+      <tabset>
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-speed-distribution.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="thumbnail thumbnail-large">
             <img src="./assets/images/marathon-lausanne-2016-speed-distance-distribution.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <p>
-            Strangely the average speed isn't so different between different races of marathon Lausanne, We could expect the speed of 10km faster because the distance is smaller.
-            <br/>
-            Moreover, the average marathon speed was greater than the marathon of <a href="http://www.lepape-info.com/actualite/tous-les-chiffres-du-marathon-de-paris-2015/"> Paris </a> where the average speed was 2,55 m/s (let's go Lausanne :)).
-            <br/>
-            Finally, the speed gap between men and women tend to decrease as distance increases. One fact could be that women don't begin the distance if they not sure to perform on distance (cf. remark in demographic analysis' part).
-          </p>
-          <p><strong>Statistical result:</strong> After running ANOVA, we observe that difference between female and male runners is statistically significant. Detailed results are presented in the <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/StatisticalStudy/Lausanne_2016/Study_Lausanne_2016.ipynb">dedicated Notebook</a>.</p>
-        </div>
-      </div>
+        </tab>
+      </tabset>
+
+      <p>
+        Strangely the average speed isn't so different between different races of marathon Lausanne, We could expect the speed of 10km faster because the distance is smaller.
+        <br/>
+        Moreover, the average marathon speed was greater than the marathon of <a href="http://www.lepape-info.com/actualite/tous-les-chiffres-du-marathon-de-paris-2015/"> Paris </a> where the average speed was 2,55 m/s (let's go Lausanne :)).
+        <br/>
+        Finally, the speed gap between men and women tend to decrease as distance increases. One fact could be that women don't begin the distance if they not sure to perform on distance (cf. remark in demographic analysis' part).
+      </p>
+      <p><strong>Statistical result:</strong> After running ANOVA, we observe that difference between female and male runners is statistically significant. Detailed results are presented in the <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/StatisticalStudy/Lausanne_2016/Study_Lausanne_2016.ipynb">dedicated Notebook</a>.</p>
 
       <h3 id="performance-by-bib">Performance by BIB numbers</h3>
 
-      <tabset [justified]="true">
+      <tabset>
         <tab>
           <template tabHeading>Dynamic chart</template>
-          <p style="color: red;margin: 50px">
-            <strong>TODO PLOTLY GRAPH</strong>
-          </p>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-time-distribution-bib.json.zip'" [labels]="['Performance criteria']"></plotly>
         </tab>
         <tab>
           <template tabHeading>Static chart</template>
@@ -1318,10 +1338,10 @@
         </tab>
       </tabset>
 
-
       <p>We can recognize three major patterns following the BIB number of participants. These patterns are directly linked with the running categories. Moreover, we see that there is a correlation between the BIB number - and so estimated time - and the effective time of runners. Indeed, the higher the BIB number is, the lower the performance time is, globally. Notice that BIB numbers are given by the organizators of Lausanne Marathon, and as we can read <a href="http://fr.lausanne-marathon.com/inscription/inscriptions/inscription-online/">on the official website</a>, each participant is asked to indicate his "estimated time of running for the attribution of start blocks", in oder to categorize the runners accordingly.</p>
 
       <p><strong>Important:</strong> As reader can see, it seems that there are some 'outliers' in the present graph. Among other things, we observe that there are some runners that appear in the marathon's category, while their time is inferior to the world record (2h2min57s). In fact, these runners are not participants of the marathon. This means that for some of them, BIB number is not directly linked to the performance, as it can be expected in general!</p>
+
       <h2 id="team">Team analysis</h2>
 
       <p>
@@ -1365,18 +1385,29 @@
         For "average" people, to be part of a team seems to be a motivational factor, compared to excellent runners who prefer doing the race alone.
       </p>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="thumbnail">
-            <img src="./assets/images/marathon-lausanne-2016-type-runners-distance-histogram.png" alt="Number of runners in team or individual in the Lausanne marathon 2016"/>
+      <tabset>
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-runners-composition.json.zip'"></plotly>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-performance-comparison-profile.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="./assets/images/marathon-lausanne-2016-type-runners-distance-histogram.png" alt="Number of runners in team or individual in the Lausanne marathon 2016"/>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="./assets/images/marathon-lausanne-2016-speed-type-runners-distribution.png" alt="Speed of runners in team or individual in the Lausanne marathon 2016"/>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="thumbnail">
-            <img src="./assets/images/marathon-lausanne-2016-speed-type-runners-distribution.png" alt="Speed of runners in team or individual in the Lausanne marathon 2016"/>
-          </div>
-        </div>
-      </div>
+        </tab>
+      </tabset>
+
 
       <p><strong>Statistical result:</strong> After running ANOVA, we observe that difference between runners who are part of a team and individual participants is statistically significant. Detailed results are presented in the <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/StatisticalStudy/Lausanne_2016/Study_Lausanne_2016.ipynb">dedicated Notebook</a>.</p>
 
@@ -1385,33 +1416,38 @@
         In order to go further, It is very unlikely that any two runners would have the exact same start and end time (within 30 sec) unless they ran together, so these visual clusters should be very accurate in showing running pairs/groups.
       </p>
 
-      <div class="row">
-        <div class="col-sm-6">
-
-          <p>
-            Based on the graph there are distinct differences in "belong to a team" in the difference race:
-          </p>
-          <ul>
-            <li> <b> 10 Km : </b>  where most people in a team ran in pair/group (326 runners compared to 60 runners who have finished alone), the race seems more like a friend challenge or associations (as we can notice to the important size of the different teams) </li>
-            <li> <b> 21 Km : </b>  where almost half of people in team ran in pair/group (162 pairs runners compared to 158 individual runners) </li>
-            <li> <b> 42 Km : </b>  where the challenge seems more individual where 51 runners finished alone compared to 17 runners in teams/groups. </li>
-          </ul>
-
-          An other interesting fact is for the 10k we have studied 105 female and 281 male, on the 60 person who have finished alone, there were 22 females and 38 males, the rapport (#male / #female) decrease by 1 point (2,7 to 1,7).
-          For the 20 Km we have a sample of 101 females and 111 males and on the 106 persons who have raced alone, 51 are female and 55 are male. (the rapport is quite equivalent)
-          One conclusion could be that men who participate at the 10km in team, raced not too seriously and have more the "team spirit" staying in group unlike womens because we don't have these effects in the 21km were the proportions female/male are keeped.
-          (This is a supposition derived from the data of Lausanne Marathon, we would need to confirm on other races)
-
-
-          <div class="thumbnail">
+      <tabset>
+        <tab>
+          <template tabHeading>Dynamic chart</template>
+          <plotly [url]="'./assets/json/marathon-lausanne-2016-time-difference-distribution.json.zip'"></plotly>
+        </tab>
+        <tab>
+          <template tabHeading>Static chart</template>
+          <div class="thumbnail thumbnail-large">
             <img src="./assets/images/marathon-lausanne-2016-time-difference-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
           </div>
-        </div>
-        <div class="col-sm-6">
-          <div class="thumbnail">
-            <img src="./assets/images/marathon-lausanne-2016-time-difference-swarmplot.png" alt="Swarmplot time difference by team number"/>
-          </div>
-        </div>
+        </tab>
+      </tabset>
+
+      <p>
+        Based on the graph there are distinct differences in "belong to a team" in the difference race:
+      </p>
+      <ul>
+        <li> <b> 10 Km : </b>  where most people in a team ran in pair/group (326 runners compared to 60 runners who have finished alone), the race seems more like a friend challenge or associations (as we can notice to the important size of the different teams) </li>
+        <li> <b> 21 Km : </b>  where almost half of people in team ran in pair/group (162 pairs runners compared to 158 individual runners) </li>
+        <li> <b> 42 Km : </b>  where the challenge seems more individual where 51 runners finished alone compared to 17 runners in teams/groups. </li>
+      </ul>
+
+      <p>
+        An other interesting fact is for the 10k we have studied 105 female and 281 male, on the 60 person who have finished alone, there were 22 females and 38 males, the rapport (#male / #female) decrease by 1 point (2,7 to 1,7).
+        For the 20 Km we have a sample of 101 females and 111 males and on the 106 persons who have raced alone, 51 are female and 55 are male. (the rapport is quite equivalent)
+        One conclusion could be that men who participate at the 10km in team, raced not too seriously and have more the "team spirit" staying in group unlike womens because we don't have these effects in the 21km were the proportions female/male are keeped.
+        (This is a supposition derived from the data of Lausanne Marathon, we would need to confirm on other races)
+      </p>
+
+
+      <div class="thumbnail-large">
+        <img src="./assets/images/marathon-lausanne-2016-time-difference-swarmplot.png" alt="Swarmplot time difference by team number"/>
       </div>
 
       <h2 id="dynamic-graph">Take the control of the data</h2>
