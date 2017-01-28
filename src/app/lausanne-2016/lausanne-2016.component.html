@@ -47,7 +47,7 @@
         <tab>
           <template tabHeading>Static chart</template>
           <div class="thumbnail thumbnail-large">
-            <img src="./assets/images/gender-distribution.png" alt="Distibution gender marathon lausanne 2016"/>
+            <img src="./assets/images/marathon-lausanne-2016-gender-distribution.png" alt="Distibution gender marathon lausanne 2016"/>
           </div>
         </tab>
       </tabset>
@@ -66,7 +66,7 @@
         <tab>
           <template tabHeading>Static chart</template>
           <div class="thumbnail thumbnail-large">
-            <img src="./assets/images/gender-distribution-distance.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
+            <img src="./assets/images/marathon-lausanne-2016-gender-distribution-distance.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
           </div>
         </tab>
       </tabset>
@@ -87,12 +87,12 @@
           <div class="row">
             <div class="col-sm-6">
               <div class="thumbnail">
-                <img src="./assets/images/age-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
+                <img src="./assets/images/marathon-lausanne-2016-age-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="thumbnail">
-                <img src="./assets/images/age-distance-distribution.png" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
+                <img src="./assets/images/marathon-lausanne-2016-age-distance-distribution.png" alt="Distibution age selected by distance of the Lausanne marathon 2016"/>
               </div>
             </div>
           </div>
@@ -121,17 +121,17 @@
           <label for="distanceSelector" class="col-sm-offset-2 col-sm-2 control-label">Select Distance:</label>
           <div class="col-sm-4">
             <select class="form-control" id="distanceSelector" [(ngModel)]="distributionByRunningType" name="distanceSelector">
-              <option value="time-distribution-10">10 Km</option>
-              <option value="time-distribution-21">21 Km</option>
-              <option value="time-distribution-42">42 Km</option>
+              <option value="10">10 Km</option>
+              <option value="21">21 Km</option>
+              <option value="42">42 Km</option>
             </select>
           </div>
         </div>
       </form>
 
       <div *ngIf="distributionByRunningType" class="thumbnail thumbnail-large">
-        <img [src]="'./assets/images/' + distributionByRunningType + '-ages.png'" alt="Age distribution by distance of the Lausanne marathon 2016"/>
-        <img [src]="'./assets/images/' + distributionByRunningType + '-categories.png'" alt="Categories of ages distribution by distance of the Lausanne marathon 2016"/>
+        <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-ages.png'" alt="Age distribution by distance of the Lausanne marathon 2016"/>
+        <img [src]="'./assets/images/marathon-lausanne-2016-time-distribution-' + distributionByRunningType + '-categories.png'" alt="Categories of ages distribution by distance of the Lausanne marathon 2016"/>
       </div>
 
       <h4 id="statistical-anlysis">Statistical analysis</h4>
@@ -160,10 +160,10 @@
         <p>Clearly, the first condition is satisfied as the different categories of runners don't have nothing in common (people are different). What about the others? As Minitab explain <a href="http://blog.minitab.com/blog/applying-statistics-in-quality-projects/how-could-you-benefit-from-a-box-cox-transformation">in its blog</a>, when it comes to analyze runnings, we can observe some kind of specific pattern in the data. Thus, we decide to plot the distribution according the age categories to obtain a visual, immediate, intuition about the type of distribution and check if we can assume normal distribution or not.</p>
 
         <div class="thumbnail">
-          <img src="./assets/images/time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
-          <img src="./assets/images/time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
-          <img src="./assets/images/time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
-          <img width="33%" src="./assets/images/time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
+          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-1.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (15-25/26-30/31-35 years)"/>
+          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-2.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (36-40/41-45/46-50 years)"/>
+          <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-3.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (51-55/56-60/61-65 years)"/>
+          <img width="33%" src="./assets/images/marathon-lausanne-2016-time-distribution-by-categories-4.png" alt="Distribution of time performance according to age categories for Lausanne marathon 2016 (65+ years)"/>
         </div>
 
         <p>If we pay attention to the graphes, we see that sometimes, and even if we group carefully the data according to the types of races (10 km/semi-marathon/marathon) to avoid edge effects, distributions are not normal at all or suffer of heteroscedasticity, as explained in the article from Minitab quoted before. However, we observe that for each category and race, we have significant number of runners. Thus, we can apply the <a href="https://en.wikipedia.org/wiki/Central_limit_theorem">Central Limit Theorem</a>. Notice that ANOVA is, by default and thanks to CLT, robust against normality assumption (and thus violation of such property is quite well tolerated).</p>
@@ -1287,7 +1287,7 @@
       <div class="row row-sm-align-center">
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/speed-distance-distribution.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
+            <img src="./assets/images/marathon-lausanne-2016-speed-distance-distribution.png" alt="Distibution gender marathon lausanne 2016  selected by distance."/>
           </div>
         </div>
         <div class="col-sm-6">
@@ -1305,7 +1305,7 @@
       <h3 id="performance-by-bib">Performance by BIB numbers</h3>
 
       <div class="thumbnail thumbnail-medium">
-        <img src="./assets/images/time-distribution-by-bib.png" alt="Distribution of time performance according to BIB numbers of participants"/>
+        <img src="./assets/images/marathon-lausanne-2016-time-distribution-by-bib.png" alt="Distribution of time performance according to BIB numbers of participants"/>
       </div>
 
       <p>We can recognize three major patterns following the BIB number of participants. These patterns are directly linked with the running categories. Moreover, we see that there is a correlation between the BIB number - and so estimated time - and the effective time of runners. Indeed, the higher the BIB number is, the lower the performance time is, globally. Notice that BIB numbers are given by the organizators of Lausanne Marathon, and as we can read <a href="http://fr.lausanne-marathon.com/inscription/inscriptions/inscription-online/">on the official website</a>, each participant is asked to indicate his "estimated time of running for the attribution of start blocks", in oder to categorize the runners accordingly.</p>
@@ -1357,12 +1357,12 @@
       <div class="row">
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/type-runners-distance-histogram.png" alt="Number of runners in team or individual in the Lausanne marathon 2016"/>
+            <img src="./assets/images/marathon-lausanne-2016-type-runners-distance-histogram.png" alt="Number of runners in team or individual in the Lausanne marathon 2016"/>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/speed-type-runners-distribution.png" alt="Speed of runners in team or individual in the Lausanne marathon 2016"/>
+            <img src="./assets/images/marathon-lausanne-2016-speed-type-runners-distribution.png" alt="Speed of runners in team or individual in the Lausanne marathon 2016"/>
           </div>
         </div>
       </div>
@@ -1393,12 +1393,12 @@
 
 
           <div class="thumbnail">
-            <img src="./assets/images/time_difference-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
+            <img src="./assets/images/marathon-lausanne-2016-time-difference-distribution.png" alt="Distibution age of the Lausanne marathon 2016"/>
           </div>
         </div>
         <div class="col-sm-6">
           <div class="thumbnail">
-            <img src="./assets/images/time_difference_swarmplot.png" alt="swarmplot time difference by team number"/>
+            <img src="./assets/images/marathon-lausanne-2016-time-difference-swarmplot.png" alt="Swarmplot time difference by team number"/>
           </div>
         </div>
       </div>

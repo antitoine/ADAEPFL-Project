@@ -8,7 +8,7 @@ import { CsvReaderService } from '../util/csv-reader.service';
 })
 export class Lausanne2016Component implements OnInit {
 
-  distributionByRunningType:string = 'time-distribution-42';
+  distributionByRunningType:string = '42';
 
   isDetailedStatisticalAnalysisCollapsed:boolean = true;
 
