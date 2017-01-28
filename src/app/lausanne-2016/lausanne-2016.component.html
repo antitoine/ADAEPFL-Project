@@ -23,7 +23,6 @@
           </ul>
         </li>
         <li><a routerLink="/lausanne-2016" fragment="team">Team analysis</a></li>
-        <li><a routerLink="/lausanne-2016" fragment="dynamic-graph">Take the control of the data</a></li>
       </ul>
 
       <h2 id="demographic">Demographic analysis</h2>
@@ -1448,38 +1447,6 @@
 
       <div class="thumbnail-large">
         <img src="./assets/images/marathon-lausanne-2016-time-difference-swarmplot.png" alt="Swarmplot time difference by team number"/>
-      </div>
-
-      <h2 id="dynamic-graph">Take the control of the data</h2>
-
-      <div *ngIf="availableLabels && availableSeries">
-        <form class="form-horizontal" >
-          <div class="form-group">
-            <label for="labelSelector" class="col-sm-2 control-label">Select x:</label>
-            <div class="col-sm-4">
-              <select class="form-control" id="labelSelector" name="labelSelector" [(ngModel)]="labelSelected"  (change)="onSelectLabelChange($event.target.value)">
-                <option [value]="label.key" *ngFor="let label of availableLabels | mapToIterable">{{label.value.name}}</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group" *ngIf="labelSelected">
-            <label for="seriesSelector" class="col-sm-2 control-label">Select y:</label>
-            <div class="col-sm-4">
-              <select class="form-control" id="seriesSelector" name="seriesSelector" [(ngModel)]="seriesSelected"  (change)="onSelectSeriesChange($event.target.value)">
-                <option [value]="series.key" *ngFor="let series of availableSeries | mapToIterable" [disabled]="!series.value.series[labelSelected]">{{series.value.name}}</option>
-              </select>
-            </div>
-          </div>
-        </form>
-
-        <div class="chart-container" *ngIf="chartSeries && chartLabels">
-          <canvas baseChart height="200"
-                  [datasets]="chartSeries"
-                  [labels]="chartLabels"
-                  [options]="chartOptions"
-                  [legend]="chartLegend"
-                  [chartType]="chartType"></canvas>
-        </div>
       </div>
 
     </div>

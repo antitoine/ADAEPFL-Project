@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { ChartsModule } from 'ng2-charts';
 import { CollapseModule, TabsModule } from 'ng2-bootstrap';
 
 import { CsvReaderService } from './util/csv-reader.service';
@@ -51,7 +50,6 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
-    ChartsModule,
     CollapseModule.forRoot(),
     TabsModule.forRoot(),
     HttpModule,

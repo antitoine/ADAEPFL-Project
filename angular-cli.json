@@ -26,7 +26,6 @@
         "../node_modules/jszip/dist/jszip.js",
         "../node_modules/jszip-utils/dist/jszip-utils.js",
         "../node_modules/plotly.js/dist/plotly.js",
-        "../node_modules/chart.js/dist/Chart.js",
         "../node_modules/lodash/lodash.js",
         "../node_modules/smoothscroll/smoothscroll.js"
       ],
