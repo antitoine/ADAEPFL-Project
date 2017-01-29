@@ -21,6 +21,7 @@ export class PlotlyComponent implements AfterViewInit, OnChanges {
   @Input('url') url: string;
   @Input('labels') labels: string[] = [];
   @Input('display') display: boolean = true;
+  @Input('selected') selected: string[] = [];
 
   labelSelected: string[] = [];
   labelValues: string[][];
@@ -46,9 +47,7 @@ export class PlotlyComponent implements AfterViewInit, OnChanges {
         } else {
           this.labelValues = new Array(this.labels.length);
           this.labelValues[0] = Object.keys(json).sort(PlotlyComponent.sortValues);
-          for(let i = 0; i < this.labels.length; i++) {
-            this.onLabelSelectedChange(i, this.labelValues[i][0], false);
-          }
+          this.preselectChart();
         }
         this.setLoadingOff();
       });
@@ -141,6 +140,16 @@ export class PlotlyComponent implements AfterViewInit, OnChanges {
       return 1;
     }
     return 0;
+  }
+
+  private preselectChart() {
+    for(let i = 0; i < this.labels.length; i++) {
+      if (i < this.selected.length && this.labelValues[i].indexOf(this.selected[i]) >= 0) {
+        this.onLabelSelectedChange(i, this.selected[i], false);
+      } else {
+        this.onLabelSelectedChange(i, this.labelValues[i][0], false);
+      }
+    }
   }
 
   private generateChart(loading:boolean = true) {
