@@ -136,6 +136,12 @@ div.well-collapse {
   background: #fff;
 }
 
+.tab-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
 /*****************************
  ** iPython Notebook Styles **
  *****************************/

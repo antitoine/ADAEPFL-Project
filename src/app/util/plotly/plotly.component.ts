@@ -1,4 +1,7 @@
-import { Component, Input, ViewEncapsulation, AfterViewInit, HostListener } from '@angular/core';
+import {
+  Component, Input, ViewEncapsulation, AfterViewInit, HostListener, OnChanges,
+  SimpleChange
+} from '@angular/core';
 import { JsonReaderService } from '../json-reader.service';
 import { UUID } from 'angular2-uuid';
 declare let _:any;
@@ -11,12 +14,14 @@ declare let Plotly:any;
   styleUrls: ['./plotly.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-export class PlotlyComponent implements AfterViewInit {
+export class PlotlyComponent implements AfterViewInit, OnChanges {
 
   plotlyId: string = 'plotly-' + UUID.UUID();
 
   @Input('url') url: string;
   @Input('labels') labels: string[] = [];
+  @Input('display') display: boolean = true;
+  @Input('selected') selected: string[] = [];
 
   labelSelected: string[] = [];
   labelValues: string[][];
@@ -42,9 +47,7 @@ export class PlotlyComponent implements AfterViewInit {
         } else {
           this.labelValues = new Array(this.labels.length);
           this.labelValues[0] = Object.keys(json).sort(PlotlyComponent.sortValues);
-          for(let i = 0; i < this.labels.length; i++) {
-            this.onLabelSelectedChange(i, this.labelValues[i][0], false);
-          }
+          this.preselectChart();
         }
         this.setLoadingOff();
       });
@@ -52,17 +55,15 @@ export class PlotlyComponent implements AfterViewInit {
 
   @HostListener('window:resize')
   onResize() {
-    if (this.labels.length == 0) {
-      this.plot(this.schema);
-    } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
-      this.setLoadingOn();
-      // Check if all labels are selected in order to generate the Plotly graph
-      let finalData = this.schema[this.labelSelected[0]];
-      for (let i = 1; i < this.labels.length; i++) {
-        finalData = finalData[this.labelSelected[i]];
-      }
-      this.plot(finalData);
-      this.setLoadingOn(500, 'Generate graph');
+    this.generateChart();
+  }
+
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    if (changes.hasOwnProperty('display') && !changes['display'].previousValue && changes['display'].currentValue) {
+      // TODO : Improve this fix, we need to wait that the view is checked before generate chart
+      setTimeout(() => {
+        this.generateChart();
+      }, 500);
     }
   }
 
@@ -100,17 +101,7 @@ export class PlotlyComponent implements AfterViewInit {
       }
 
     } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
-
-      // Check if all labels are selected in order to generate the Plotly graph
-      let finalData = this.schema[this.labelSelected[0]];
-      for (let i = 1; i < this.labels.length; i++) {
-        finalData = finalData[this.labelSelected[i]];
-      }
-      this.plot(finalData);
-
-      if (loading) {
-        this.setLoadingOn(500, 'Generate graph');
-      }
+      this.generateChart();
     }
   }
 
@@ -151,8 +142,46 @@ export class PlotlyComponent implements AfterViewInit {
     return 0;
   }
 
+  private preselectChart() {
+    for(let i = 0; i < this.labels.length; i++) {
+      if (i < this.selected.length && this.labelValues[i].indexOf(this.selected[i]) >= 0) {
+        this.onLabelSelectedChange(i, this.selected[i], false);
+      } else {
+        this.onLabelSelectedChange(i, this.labelValues[i][0], false);
+      }
+    }
+  }
+
+  private generateChart(loading:boolean = true) {
+    if (loading) {
+      this.setLoadingOn();
+    }
+
+    if (this.labels.length == 0) {
+
+      this.plot(this.schema);
+
+    } else if (this.labels.length == this.labelSelected.length && _.every(this.labelSelected, (v, k) => this.hasLabelSelected(k))) {
+
+
+      // Check if all labels are selected in order to generate the Plotly graph
+      let finalData = this.schema[this.labelSelected[0]];
+      for (let i = 1; i < this.labels.length; i++) {
+        finalData = finalData[this.labelSelected[i]];
+      }
+      this.plot(finalData);
+    } else if (loading) {
+      this.setLoadingOff();
+      return;
+    }
+
+    if (loading) {
+      this.setLoadingOn(500, 'Generate graph');
+    }
+  }
+
   private plot(data: any) {
-    if (document.getElementById(this.plotlyId)) {
+    if (this.display && document.getElementById(this.plotlyId)) {
       try {
         Plotly.newPlot(this.plotlyId, data);
       } catch (e){
