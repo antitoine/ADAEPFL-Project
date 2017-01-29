@@ -24,7 +24,7 @@
       <h2>Summary</h2>
       <ul>
         <li><a routerLink="/scraping" fragment="lamara-2016">Lausanne Marathon 2016</a></li>
-        <li><a routerLink="/scraping" fragment="lamara-all">Lausanne Marathon 1999 to 2016</a></li>
+        <li><a routerLink="/scraping" fragment="lamara-all">Lausanne Marathon 1999-2016</a></li>
         <li><a routerLink="/scraping" fragment="runners">Runners</a></li>
         <li><a routerLink="/scraping" fragment="weather">Weather</a></li>
       </ul>
@@ -390,7 +390,7 @@
 
       <p>Final CSV file containing formatted date is available <a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv">here <i class="fa fa-file-text-o" aria-hidden="true"></i></a>.</p>
 
-      <h2 id="lamara-all">Lausanne Marathon 1999 to 2016</h2>
+      <h2 id="lamara-all">Lausanne Marathon 1999-2016</h2>
 
       <p>Main work was already done in the previous part. We thus simply applied the same algorithm for each Lausanne Marathon's event between 1999 to 2016.</p>
 
@@ -431,7 +431,7 @@
           Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
         </div>
       </div>
-      <p>As some years (1999, 2000, 2006, 2007 and 2008) have a different format (german column names, extra columns, and so on), we changed a little bit some functions in order to achieve extraction. Then, we cleaned and merged every table.</p>
+      <p>As some years (1999, 2000, 2006, 2007 and 2008) have a different format (column names in German, extra columns, and so on), we changed a little bit some functions in order to achieve extraction. Then, we cleaned and merged every table.</p>
       <div class="cell">
         <div class="input">
           <div class=" highlight hl-ipython3">
@@ -582,21 +582,21 @@
 <span class="n">IV_BYTES</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">IV</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">unpad</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
 <span class="sd">    Remove the PKCS#7 padding from a text string</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-<span class="n">length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
-<span class="n">pad_size</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="k">return</span> <span class="n">string</span><span class="p">[:</span><span class="n">length</span> <span class="o">-</span> <span class="n">pad_size</span><span class="p">]</span>
+<span class="n">    length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="n">    pad_size</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">    return</span> <span class="n">string</span><span class="p">[:</span><span class="n">length</span> <span class="o">-</span> <span class="n">pad_size</span><span class="p">]</span>
 
 <span class="k">def</span> <span class="nf">decrypt_data</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">):</span>
-<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    &#39;&#39;&#39;</span>
 <span class="sd">    Decrypt data given key and iv</span>
 <span class="sd">    &#39;&#39;&#39;</span>
 
-<span class="n">decrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">a2b_base64</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
-<span class="k">return</span> <span class="n">unpad</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
+<span class="n">    decrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">a2b_base64</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+<span class="k">    return</span> <span class="n">unpad</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
 
 <span></span><span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;3zxaer+64X4MlhwuD6brwClAgmm46IWbdo+vg+1p6+A3Og6ugY/KVQAogTCv34A7HOvz4oGJKqEYzQLFoi5shtCBJkc1ftSlLsnl+lI8mrOMKiJ3KLItdYODgDj52XA3lAVw2TI5ITwmwCIMFaSVi13z0ZMif2VlsTvBiOGGc2sDrmfGNPwG0dHTc1ub0+580Ro0kTShNyLwcvCRAYK5LrLEMqW9wBCc7/+l28IWLQTKM9iIakZdIYhbUKbZuY7Z62+o3GjPzu6uNAMeS8WWLgsIfcIwkjhvfveg68rXMTKW3qmp9DtRjEnTTiE/VVCtrck3e7bJAwGZMTXKUYCb2HzzFoREJ+PmJ8l7NjS9emPpZeHOVC52lXPYivLozBtbkzkdreOQoXVZ33LM228GgEyAQmln3RtD84Pqg8rtYnhlSKHTotmhw49u+s6XhDQ+1QFTaDFQ0Q9xMtGfRUcCY4A9jjIUbstnOA1clDfNMzn29VXoKmTz0nVUstd+jlN0dHAedZUl0t57Ml64vSZNxQ5Zda5ckZAsXhdTKhAuO91mR1TEdTXBChX+ngjacdLCO3e6FGO/YMT6WM5whFvamW4D3Ls/zcSYGMoUeIOr068=&#39;</span>
 <span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY_BYTES</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CBC</span><span class="p">,</span> <span class="n">IV_BYTES</span><span class="p">,</span> <span class="n">segment_size</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
