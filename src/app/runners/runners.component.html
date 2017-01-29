@@ -7,193 +7,169 @@
 
       <h2>Summary</h2>
       <ul>
-        <li><a routerLink="/runners" fragment="data-pre-processing">Data pre-processing</a></li>
+        <li>
+          <a routerLink="/runners" fragment="data-pre-processing-and-overview">Data pre-processing and overview</a>
+          <ul>
+            <li><a routerLink="/runners" fragment="data-pre-processing-and-overview-global-overview">Global overview of speed performance following runnings</a></li>
+            <li><a routerLink="/runners" fragment="data-pre-processing-and-overview-methodology-and-dataset">About methodology and data used</a></li>
+          </ul>
+        </li>
         <li><a routerLink="/runners" fragment="performance-analysis">Performance analysis</a></li>
         <li>
           <a routerLink="/runners" fragment="individual-study">Individual study</a>
           <ul>
-            <li><a routerLink="/runners" fragment="individual-study-performance-coefficient">Performance coefficient</a></li>
-            <li><a routerLink="/runners" fragment="individual-study-weather-coefficient">Weather coefficient</a></li>
+            <li><a routerLink="/runners" fragment="individual-study-methodology">Methodology</a></li>
+            <li><a routerLink="/runners" fragment="individual-study-performance-coefficient">Performance's coefficient</a></li>
+            <li><a routerLink="/runners" fragment="individual-study-weather-coefficient">Weather's coefficient</a></li>
+            <li><a routerLink="/runners" fragment="individual-study-conclusion">Conclusion</a></li>
           </ul>
         </li>
       </ul>
 
-      <h2 id="data-pre-processing">Data pre-processing</h2>
+      <h2 id="data-pre-processing-and-overview">Data pre-processing and overview</h2>
 
       <p>
-        During the study of the marathon of Lausanne, we have found runners who for the same event (distance and location) have drastically different performances.
-        We have decided to go further in our study and focus on individual performance to understand the factors having an impact on performances.
+        During the study of the marathon of Lausanne, we found runners for whom performances were different over the years for a given event. We have decided so to go further in our study and to focus on such runners in order to try to better understand the factors which can have an impact - direct or not - on the runners and their performances.
         <br>
-        For instance <a href="https://www.polar.com/en/running/factors-affecting-running-heart-rate/">humidity could be one factor</a>:
+        For instance, humidity could be one factor. Indeed, Polar indicates <a href="https://www.polar.com/en/running/factors-affecting-running-heart-rate/">on its website</a>:
       </p>
       <blockquote>
         "Your body tries to cool itself down during exercise, typically by sweating. Humidity reduces the effectiveness of sweating, which means your body temperature goes up – together with your heart rate."
       </blockquote>
       <p>
-        Of course we are aware that we can't study all factors which have an impact as hydratation, , training, nutrition, altitude, etc. We try during the study to reduce the different dependent
-        variables by eliminating as much effect as we can with our current dataset.
-        <br>
-        All data of runners have been gotten from datasport, Information about the scrapping can be found <a routerLink="/scraping" fragment="runners">here</a>
+        Here, the main problem is that we don't have access to a lot of these factors like hydration, training, nutrition, altitude, and so one. In a first phase, we thus tried to ignore all of these by assuming that their effects are negligible in our case.
       </p>
 
+      <h3 id="data-pre-processing-and-overview-global-overview">Global overview of speed performance following runnings</h3>
 
-      <div class="row row-lg-align-center">
-        <div class="col-lg-4">
-          <p>
-            We have access to all the races from three runners randomly selected from 1999 to 2016. As we can notice from the graph above, we observe huge differences
-            between the speed of the races having the same distance. Furthermore, another interesting fact is that the speed of the race seems lower for
-            the race of <a href="http://www.sierre-zinal.com">31Km</a> than marathons.
-            <br>
-            The current study try to focus on the visualization of multiple factors that could explain those performance gaps
-          </p>
-          <ul>
-            <li> Age </li>
-            <li> Experience </li>
-            <li> Training (As we don't have any personal information, we have taken Km/years in competition and the event/years) </li>
-            <li> Weather </li>
-          </ul>
-          <p>
-            After the data pre-processing, the study relies on 47 runners who have finished more than 10 races, for a total of 3535 races. Most of them are not beginners.
-            Some of them have participated in more than 500 events on 17 years which means more than 2 events each month during a period of 17 years...
-            <br>
-            Knowing that the more races you run in a year, the shorter the training period and the opportunity for quality training you have, it seems interesting
-            to find a correlation between the performance and the number of events per year.
-          </p>
-          <p>
-            We should keep in mind that as everyone is different and reacts differently, this study is clearly individual. For this reason, the results obtained in his study should be verified on bigger dataset.
-          </p>
-        </div>
-        <div class="col-lg-8">
-          <div class="thumbnail">
-            <img src="./assets/images/study-runners-runner-race-distibution.png" alt="Distribution race runners"/>
-          </div>
+      <div>
+        <div class="thumbnail">
+          <img src="./assets/images/study-runners-runner-race-distibution.png" alt="Distribution race runners"/>
         </div>
       </div>
 
+      <div>
+        <p>
+          First, we analysed all the races done between 1999 and 2016 by three runners who were randomly selected in the data. As we can notice from the graphs displayed above, we sometimes observe huge differences between the average speed of different races with same distance. Furthermore, we see that the average speeds for these runners are lower for the <a href="http://www.sierre-zinal.com">31-km races</a> than for the marathons.
+        </p>
+      </div>
+      <div>
+        <h3 id="data-pre-processing-and-overview-methodology-and-dataset">About methodology and data used</h3>
+        <p>
+          The present study was focused on the visualization of some following factors that could explain the performance gaps we saw:
+        </p>
+        <ul>
+          <li>age;</li>
+          <li>experience;</li>
+          <li>training*;</li>
+          <li>weather.</li>
+        </ul>
+        <p>
+          <small>*Note that as we don't have such additional information about runners, we took number of km crossed per year during competitions and number of events per year.</small>
+        </p>
+        <plotly [url]="'./assets/json/study-runners-distribution-age.json.zip'"></plotly>
+        <p>
+          After the processing of data, we obtained 47 runners. The group of considered runners had a mean age of 52,67 years, which is very high (but we have to keep in mind that part of data is related to 1999's events). Notice that all these runners have finished more than 10 races, for a total of 3535 races. Some of them have even participated in more than 500 events the past 17 years (i.e. more than 2 events each month in average). Put in other words, the majority of these runners are not amateur. Now, knowing that the more races you run in a year, the shorter the training period and the opportunity to obtain good trainings are, we wanted to check, among other things, if there was a possible correlation between the performance of a runner and the number of events he makes each year.
+        </p>
+        <p>
+          <b>In any case, it is important to keep in mind that as everyone is unique and reacts differently, it is important to conduct an in-depth analysis on a bigger dataset to make fiable conclusions. For this reason, the results obtained in this study must be considered carefully and reader must put things into perspective.</b>
+        </p>
+      </div>
 
       <h2 id="performance-analysis">Performance analysis</h2>
 
       <p>
-        The current study relies on marathon of Lausanne, which is the marathon where we had the more data.
+        This part relies on marathons of Lausanne as they were marathons for which we obtained the most data.
       </p>
 
-      <div class="row row-lg-align-center">
-        <div class="col-lg-8">
+      <div>
           <div class="thumbnail">
             <img src="./assets/images/study-runners-pace-distribution-lausanne.png" alt="Distribution pace marathon de lausanne"/>
           </div>
-        </div>
-        <div class="col-lg-4">
+      </div>
+      <div>
           <ul>
-            <li> Sum distance (km) represents the kilometers/years in competition for each runners. </li>
-            <li> Total number event represents the number event/years in competition for each runners.</li>
+            <li>Sum distance (km) represents the number of km by year done in competition for each runner.</li>
+            <li>Total number event represents the number of events by years done in competition for each runner.</li>
+            <li>Each color represents a given runner.</li>
           </ul>
-          <p>
-            From an individual point of view, generally the sum distance (Km) and total event remain constants through years for a specific runner (each color represents a runner).
-            From a collective point of view, there is no specific pattern form the graph above. The first two best results have been obtained by different runners with a huge difference of kilometers/years.
-            <br>
-            We need to individualize the study if we want to find a relation between external factors and the performance. By individualizing the study, we can isolate some missing information like age, genetic, training, etc.
-          </p>
-        </div>
+        <br/>
+        <p>
+          From an individual point of view, we see that, generally, the cumulative distance and the total number of events remain constant through the years. From a collective point of view, we cannot extract any specific pattern form the graph above. Among other things, the the two best results have been obtained by different runners (i.e. runners with huge difference of number of kilometers crossed per year). Thus, the previous assumption we made about general factors is wrong and so we needed to individualize the study as much as possible. Doing that, some parameters did not change anymore among the manipulated data and so it has been unnecessary to consider some factors anymore.
+        </p>
       </div>
 
       <h2 id="individual-study">Individual study</h2>
 
+      <h3 id="individual-study-methodology">Methodology</h3>
       <p>
-        To individualize the study, we compute some 'coefficients' for each interesting feature. A coefficient is defined by the difference between the value
-        (temperature, Humidity, ect) for the current row and the value obtained for the best time of the race for the same specific race. (current_value - bestTime_value).
-        <br>
-        The idea behind the ‘coefficient’ is to try to isolate as much external factors as possible. We also suppose that the route of the different races does
-        not change a lot between the multiple races editions as we don't have this information.
-        <br>
-        <i>For instance, if the temperature coefficient is positive, it means that the temperature was higher for this specific race compared to the temperature of the best time race for the same runners.</i>
+        To individualize the study, we computed some 'coefficients' for each interesting feature. Note that, for a given runner and a specific race, a coefficient's value is defined by the difference between the value of the considered factor (temperature, Humidity, and so on) for the aforesaid race and the value associated with the race during which runner obtained his best performance (i.e. value of considered race - value of best race). The idea behind such manipulation is to try to isolate as much as possible remaining external factors. For instance, if the coefficient related to temperature is positive for a given race, it means that the temperature was higher for this specific race than the temperature of the race where the runner obtained his best performance.
+      </p>
+      <p>
+        After that, we split the set of runners in two groups: the first group contained runners who have done more than 175 races the last 18 years and the second group contained runners who have done less than 175 races during the same period. Roughly speaking, the first group was about runners who race a lot, as participating to 175 events between 1999-2016 correspond to 10 races per year, while the second one was about amateur runners. Notice that the value 175 is totally subjective.
+      </p>
+      <p>
+        When all the processing of data was done, we applied the <a href="http://www.itl.nist.gov/div898/handbook/prc/section2/prc213.htm">Shapiro-Wilk test</a> on the two groups to compare the distribution of each coefficient with a gaussian. One can remark that in a perfect world, if the coefficient has no impact on the performance, then the aforesaid coefficient should follow a normal law, which means that the studied parameter improves the performance as much as it degrades it. More information can be found in the Notebook corresponding to the present part of the study.
       </p>
 
-      <p>
-        We split the set of runners into two groups: The first group considers runners with more than 175 races per year and the second group considers runners with less than 175 races.
-        The first group represents the runners who raced a lot, as 175 events between 1999-2016 corresponds to 10 races/years. The value 175 is totally subjective, but we found interesting to study two groups of runners to
-        validate if the different external factors have the same effects on regular runners.
-      </p>
+      <h3 id="individual-study-performance-coefficient">Performance's coefficient</h3>
 
       <p>
-        We have applied the <a href="https://plot.ly/python/normality-test/">Shapiro-Wilk</a>  test to compare the distribution of each coefficient with a gaussian.
-        In a perfect world, if the coefficient has no impact on the performance, the coefficient should follow a normal law, which means that the studied parameter improves the performance
-        as much as it degrades it. Please check our Notebook, if you want more information about this point..
-      </p>
-
-      <plotly [url]="'./assets/json/study-runners-distribution-age.json.zip'"></plotly>
-
-      <p>
-        The group of runners had a mean age of 52,67, which is very high but we have to keep in mind that we have data of runners from 1999.
-      </p>
-
-      <h3 id="individual-study-performance-coefficient">Performance coefficient</h3>
-
-      <p>
-        We have computed three parameters:
+        Regarding performance, we computed three parameters:
       </p>
       <ul>
         <li>
-          <u>age coefficient:</u> difference between the age of the studied year and the year where the runner has made his best time.
+          <b>age coefficient</b> (difference between the age of a considered year and the one of the year where the runner has obtained his best time);
         </li>
         <li>
-          <u>event coefficient:</u> difference between the number of events of the studied year and the year where the runner has made his best time.
+          <b>event coefficient</b> (difference between the number of events of the considered year and the one of the year where the runner has obtained his best time);
         </li>
         <li>
-          <u>performance coefficient:</u> difference between the total of kilometers of the studied year and the year where the runner has made
+          <b>performance coefficient</b> (difference between the total of kilometers crossed during the considered year and the total of kilometers crossed during the year where the runner has obtained his best time).
         </li>
       </ul>
 
       <plotly [url]="'./assets/json/study-runners-performance-coefficient.json.zip'" [labels]="['Performance coefficient']"></plotly>
 
-      <h3 id="individual-study-weather-coefficient">Weather coefficient</h3>
+      <h3 id="individual-study-weather-coefficient">Weather's coefficient</h3>
 
       <p>
-        We have taken weather data for the following races: Lausanne Marathon, 20km de Lausanne, Morat-Fribourg, Course de l'Escalade, Sierre-Zinal, Zermatt Marathon .
-        The data collected is based on an average from 6:00 AM to 20:00 PM on the weather’s data for the exact day of race. Even though the race is usually in the same period,
-        the difference of temperature can differ of 10 degrees.
+        Even if the races are usually done during the same period of the year, the difference of temperature can differ of 10 degrees (and so on for other weather data). Thus, we also decided to obtain detailed data regarding weather for the following races: Lausanne Marathon, 20km de Lausanne, Morat-Fribourg, Course de l'Escalade, Sierre-Zinal, Zermatt Marathon. The collected data were based on average results of weather census done by Infoclimat from 6:00 AM to 20:00 PM, for the exact day of each race.
       </p>
-
       <p>
-        We have computed three parameters :
+        We then computed three parameters:
       </p>
       <ul>
         <li>
-          <u>wind coefficient:</u> difference between the wind speed (km/h) of the studied year and the year where the runner has made his best time.
+          <b>wind coefficient</b> (difference between the wind speed (km/h) of a considered year and the one of the year where the runner has obtained his best time);
         </li>
         <li>
-          <u>humidity coefficient:</u> difference between the humidity percentage of the studied year and the year where the runner has made his best time.
+          <b>humidity coefficient</b> (difference between the humidity's percentage of a considered year and the humidity's percentage of the year where the runner has obtained his best time);
         </li>
         <li>
-          <u>temperature coefficient:</u> difference between the temperature in degree between the studied year and the year where the runner has made his best time.
+          <b>temperature coefficient</b> (difference between the temperature (°C) of a considered year and the temperature (°C) of the year where the runner has obtained his best time).
         </li>
       </ul>
-
       <plotly [url]="'./assets/json/study-runners-weather-coefficient.json.zip'" [labels]="['Weather coefficient']"></plotly>
 
+      <h3 id="individual-study-conclusion">Conclusion</h3>
       <p>
-        As conclusion, there are no big differences between experienced runners and inexperienced runners.
-        <br>
-        Runners got their best performance when they were younger (knowing the mean age of the group of runners is 52,47 years) and when the temperature is warmer.
-        More strangely, runners got their best performance when they raced less kilometers than other years; Here are some explanations to the phenomena:
+        We found that there are no big differences between experienced runners and inexperienced runners. We also found that runners obtain their best performance when they were younger (we recall that the mean age of the group of runners is 52,47 years) and when the temperature is warmer. More strangely, runners obtain their best performance when they race less kilometers than during the other years. There are some possible explanations of the phenomenon.
       </p>
       <ul>
         <li>
-          One explication could be that runners raced more when they are getting older, but we applied a regression test and we get a R-squared value equals to 0,0066, which mean there is no linear link between the
-          two variables. (Age and Kilometer/years)
+          One explication could be that runners race more when they are getting older. For pure curiosity, we applied a regression test and we got a R-squared value equals to 0,0066. Thus, we can safely conclude that there is no linear link between these two variables (but it does not mean that there is no link at all).
         </li>
         <li>
-          A lot of runners could have made other sport events not considered in our study like triathlon, cycle, walks, .... This hypothesis seems to be confirmed as this this effect disappears with the event
-          coefficient.
+          Another hypothesis is that a lot of runners have probably participated to a lot of other sports' events not considered in our study (like triathlon/cycling/walking events for example). Note that such hypothesis seems to be confirmed as the observation we made disappears when we consider the event's coefficient.
         </li>
         <li>
-          It could be an effect of the over-training.
+          Finally, such observation could result from the effect of an over-training of runners.
         </li>
       </ul>
 
       <p>
-        One other important aspect is the positive and negative impact of the wind coefficient as the force and the direction of the wind could change the
-        performance of the runners.
+        One can also remark another important aspect, which is the positive and negative impacts of the wind's coefficient. This is because the force and the direction of the wind can affect the performance of the runners!
       </p>
 
     </div>

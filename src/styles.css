@@ -11,7 +11,7 @@ body {
   background-color: #1C1B1B;
 }
 
-p {
+p, ul {
   text-align: justify;
 }
 
