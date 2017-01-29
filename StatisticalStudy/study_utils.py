@@ -463,6 +463,8 @@ def display_boxplot(data, x, y, hue=None, title=None, x_format=None, y_format=No
     if title:
         plt.title(title)
 
+    ax.set(xlabel=x.capitalize(), ylabel=y.capitalize())
+
     plt.show()
 
 

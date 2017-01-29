@@ -332,7 +332,10 @@ def plot_time_distribution_by_bib_numbers(df):
         - df: DataFrame containing data to use to generate the graph
     '''
 
-    ax = df.plot(kind='scatter', x='number', y='time', xlim=(-1000, 18000));
+    x = 'number'
+    y = 'time'
+    ax = df.plot(kind='scatter', x=x, y=y, xlim=(-1000, 18000));
+    ax.set(xlabel=x.capitalize(), ylabel=y.capitalize())
     lines = [-200, 2000, 8800, 9800, 17000]
     annotations = [('10 km', 12500), ('21 km', 4500), ('42 km', 150)]
     for line in lines:
@@ -423,9 +426,11 @@ def plot_distribution_team_individuals(df, total_10, total_21, total_42):
 
     ax = fig.add_subplot(111)
     ax = sns.countplot(x='profile', hue='distance (km)', data=df)
+    ax.set_title('Individual and team-mate runners\' composition')
+    ax.legend(title='Distance (km)')
     ax.set_xlabel('')
+    ax.set_xticklabels(['Individual runners', 'Team-mate runners'])
     ax.set_ylabel('Number of Runners')
-    ax.set_title('Team/indivual runners composition')
 
     totals = [total_10, total_21, total_42]
     race_type = 0
@@ -455,13 +460,15 @@ def plot_time_difference_distribution(data):
 
     # Display of the median and title
     ax.axvline(mean, 0, 1750, color='r', linestyle='--')
-    ax.set_title('Time difference with best runner in the team distribution')
+    ax.set_title('Distribution of runners according to difference of time with the best runner in team')
+    ax.set_xlabel('Difference of time')
+    ax.set_ylabel('Number of runners')
 
     # Display of x ticks in HH:mm:ss format
     plt.xticks(ax.get_xticks(), [study_utils.convert_seconds_to_time(label) for label in ax.get_xticks()])
 
     # Calculation and display of age distribution statistics by gender
-    time_stats = 'Mean time difference : ' + study_utils.convert_seconds_to_time(mean) + '\n' + 'Max time difference : ' + study_utils.convert_seconds_to_time(max_time_diff)
+    time_stats = 'Mean difference of time: ' + study_utils.convert_seconds_to_time(mean) + '\n' + 'Maximum difference of time: ' + study_utils.convert_seconds_to_time(max_time_diff)
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
     ax.text(.95, .95, time_stats, fontsize=11, transform=ax.transAxes, va='top', ha='right', bbox=props, multialignment='left')
 
@@ -476,7 +483,7 @@ def display_legend(dict_team_runner, plot):
     '''
 
     # Creation of string containing the statistics
-    pairs_runners = 'Pair runners: ' + str(dict_team_runner.get(1))   + ' runners'
+    pairs_runners = 'Paired runners: ' + str(dict_team_runner.get(1))   + ' runners'
     individual_runners = 'Individual runners: ' + str(dict_team_runner.get(0)) + ' runners'
     stats_str = pairs_runners + '\n' + individual_runners 
 
@@ -524,8 +531,8 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
     
     # Plotting the results
     plot = fig.add_subplot(subplot_idx)
-    sns.swarmplot(x="team_code", y="time difference team", hue="sex", data=race_team, ax = plot )
-    plot.set_title('Distance = '+ str(distance))
+    sns.swarmplot(x='team_code', y='time difference team', hue='sex', data=race_team, ax = plot )
+    plot.set_title('Distance: '+ str(distance) + ' km')
     plot.set_xlabel('')
     plot.set_ylabel('')
     plot.legend(loc='upper left')
@@ -539,7 +546,7 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
     if subplot_idx != 311: 
         plot.legend_.remove()
     if subplot_idx == 312:
-        plot.set_ylabel('Time difference with the best runners in the team')
+        plot.set_ylabel('Difference of time with the best runner in the team')
     if subplot_idx == 313:
         plot.set_xlabel('Team number')
         

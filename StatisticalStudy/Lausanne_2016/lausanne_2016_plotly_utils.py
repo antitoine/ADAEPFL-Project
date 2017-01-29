@@ -169,7 +169,7 @@ def plot_age_distribution(df, age_column_name='age', sex_column_name='sex'):
     return figure
 
 
-def plot_distribution_age_distance(data, runnings=None, title='Distribution of runners by age categories', age_column_name='age', sex_column_name='sex'):
+def plot_distribution_age_distance(data, runnings=None, title='Distribution of runners by age', age_column_name='age', sex_column_name='sex'):
     '''
     This function plots, for each running, the distribution of ages of runners based on the genders of participants.
 
@@ -609,7 +609,7 @@ def display_legend(dict_team_runner, plot):
     '''
 
     # Creation of string containing the statistics
-    pairs_runners = 'Pair runners: ' + str(dict_team_runner.get(1))   + ' runners'
+    pairs_runners = 'Paired runners: ' + str(dict_team_runner.get(1))   + ' runners'
     individual_runners = 'Individual runners: ' + str(dict_team_runner.get(0)) + ' runners'
     stats_str = pairs_runners + '\n' + individual_runners 
 
@@ -657,8 +657,8 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
     
     # Plotting the results
     plot = fig.add_subplot(subplot_idx)
-    sns.swarmplot(x="team_code", y="time difference team", hue="sex", data=race_team, ax = plot )
-    plot.set_title('Distance = '+ str(distance))
+    sns.swarmplot(x='team_code', y="time difference team", hue='sex', data=race_team, ax = plot )
+    plot.set_title('Distance: '+ str(distance) + ' km')
     plot.set_xlabel('')
     plot.set_ylabel('')
     plot.legend(loc='upper left')
@@ -672,7 +672,7 @@ def plot_scatter_difference_time_number(fig, data, distance, subplot_idx, annota
     if subplot_idx != 311: 
         plot.legend_.remove()
     if subplot_idx == 312:
-        plot.set_ylabel('Time difference with the best runners in the team')
+        plot.set_ylabel('Difference of time with the best runner in the team')
     if subplot_idx == 313:
         plot.set_xlabel('Team number')
         
