@@ -24,9 +24,8 @@
         <li>
           <a routerLink="/lausanne-1999-2016" fragment="performances-analysis">Analysis of performance of Lausanne Marathon editions</a>
           <ul>
-            <li><a routerLink="/lausanne-1999-2016" fragment="performances-evolution-over-years">Evolution of performance over the years</a></li>
-            <li><a routerLink="/lausanne-1999-2016" fragment="distribution-of-the-performance">Distribution of the performance</a></li>
             <li><a routerLink="/lausanne-1999-2016" fragment="evolution-nb-runners-performances">Perspective evolution number of runners and performances</a></li>
+            <li><a routerLink="/lausanne-1999-2016" fragment="distribution-of-the-performance">Distribution of the performance</a></li>
             <li><a routerLink="/lausanne-1999-2016" fragment="teams-performances">Teams performances</a></li>
           </ul>
         </li>
@@ -365,25 +364,43 @@
 
       <h2 id="performances-analysis">Analysis of performance of Lausanne Marathon editions</h2>
 
-      <h3 id="performances-evolution-over-years">Evolution of performance over the years</h3>
+      <h3 id="evolution-nb-runners-performances">Perspective evolution number of runners and performances</h3>
 
-      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
+      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolution-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
+
+      <p>
+        The mean time and speed of each event of the marathon of Lausanne remains constant through the years. The 10Km is the race where the pace is the highest and the marathon is the slowest race as we can expect from the difference of distance.<br/>
+        From the best runners point of view, the difference of speed between the 3 events increase when the year goes up. This could be the representation of the turn of 2009 where the excellent runners were not attracted anymore. <br/>
+        From the worst runners the years 2005 was a year with the worst performances. <br/>
+      </p>
+      <p>
+        On one hand we can see above the overall age decrease monotonically from 1999 to 2016. On the other hand, the performances of older runner (from category 51 to 65+) are getting worst  when the year goes up, this could explain why the overall performance
+        stay constant.<br/>
+        Moreover despite the fact that the overall number of runners increases, the number of runner in category 61 to 65+ decreases
+      </p>
 
       <h3 id="distribution-of-the-performance">Distribution of the performance</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-performances-distribution.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
 
-      <h3 id="evolution-nb-runners-performances">Perspective evolution number of runners and performances</h3>
+      <p>
+        The speed of each event tends to be normally distributed. The marathon contains more rebounds, which could be explained by the fact that before the marathon of Lausanne was the <a href="http://www.arrs.net/HP_LausMa.htm">national ethiopian selection</a> and the prize money was very high compared to recent edition.
+      </p>
 
-      <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolution-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
 
       <h3 id="teams-performances">Teams performances</h3>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-teams-performances.json.zip'" [labels]="['Type']"></plotly>
 
+      <p>
+        We can notice for all events of the Lausanne marathon, the performance of certain number of team remains constant through the years (for instance taking the marathon, the team geneve).
+        More generally we could say that the overall performance of a team remains constant for big team (where individuality couldn't have a big impact on performance of the team). Unlike small teams, generally the furthest from lausanne, which have some disparities in their overall performance.
+      </p>
+
       <h2 id="globals-comparisons-of-each-year">Globals comparisons of each year</h2>
 
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip'" [labels]="['Year']"></plotly>
+      As we can notice the overall performance of each category improves when the year increases. However performance gaps stay very close through the years
 
     </div>
   </div>
