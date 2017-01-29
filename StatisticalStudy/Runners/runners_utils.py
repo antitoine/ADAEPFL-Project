@@ -29,6 +29,7 @@ from IPython import get_ipython
 from nbformat import read
 from IPython.core.interactiveshell import InteractiveShell
 import io, os, sys, types
+from plotly.graph_objs import Annotation, Annotations
 
 warnings.filterwarnings('ignore')
 
@@ -375,19 +376,16 @@ def display_age_distribution(data, title):
     '''
     Display the age distribution.
 
-    Parameters
+    Parameters :
         - data: Serie of age
+        - title: title of the graph
     '''
-    data = [
+    data_fig = [
         go.Histogram(
-            x=data
-        ),
-        go.Scatter(
-            x=[75],
-            y=[120],
-               mode='text',
-               text=['mean age :' + str(round(data.mean(),2))]
-         )
+            x=data,
+            histnorm='count',
+            name='runners'
+        )
     ]
 
     layout = go.Layout(
@@ -399,17 +397,22 @@ def display_age_distribution(data, title):
             )
         ),
         yaxis=dict(
-            title='number of runners',
+            title='Number of runners',
             titlefont=dict(
                 size=18
             )
         ),
-        showlegend=False
+        showlegend=False,
+        annotations = [Annotation(
+            y=120,
+            x=75,
+            text='mean age : ' + str(round(data.mean(),2)),
+            showarrow=False
+        )]
     )
-
-    fig = go.Figure(data=data, layout=layout)
+    
+    fig = go.Figure(data=data_fig, layout=layout)
     plotly.offline.iplot(fig)
-
     return fig
 
 def diplay_comparaison_runners_performance(fig, data): 
@@ -528,7 +531,8 @@ def plot_coefficient_distribution(data, inexperienced_runners, experienced_runne
     my_fig = tls.make_subplots( subplot_titles=('Experienced Runners', 'Inexperienced runners'),                       
             rows = 1,
             cols = 2,
-            print_grid=False
+            print_grid=False,
+            vertical_spacing = 1
     )
     
     add_figure_from_displot(my_fig, displot_experienced, displot_inexperienced)
@@ -609,6 +613,8 @@ def modify_layout(my_fig, max_yaxis, name_coefficient):
     my_fig['layout']['yaxis2'].update(range=[0, max_yaxis])
     my_fig['layout']['xaxis1'].update(title=name_coefficient, range=[-1, 1])
     my_fig['layout']['xaxis2'].update(title=name_coefficient, range=[-1, 1])
+    my_fig['layout']['annotations'][0].update(y=1.04)
+    my_fig['layout']['annotations'][1].update(y=1.04)
     my_fig['layout']['yaxis1'].update(title='density')
     my_fig['layout'].update(title='Coefficient distribution')
     my_fig['layout']['showlegend'] = False
