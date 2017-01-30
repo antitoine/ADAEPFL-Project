@@ -1,0 +1,33 @@
+<div class="ng-plotly-container" *ngIf="display">
+
+  <div class="row same-height">
+    <div class="col-md-8" *ngIf="labels.length">
+      <form class="form-horizontal">
+        <div class="form-group" *ngFor="let label of labels; let i = index">
+          <label [for]="'labelSelector-' + i" class="col-sm-4 control-label">{{ label }}:</label>
+          <div class="col-sm-8">
+            <select class="form-control" [id]="'labelSelector-' + i" [name]="'labelSelector-' + i" [(ngModel)]="labelSelected[i]" (change)="onLabelSelectedChange(i, $event.target.value)" [disabled]="loading || i > 0 && !hasLabelSelected(i-1)">
+              <template [ngIf]="labelValues && labelValues.length > i && labelValues[i]  && labelValues[i].length">
+                <option [value]="value" *ngFor="let value of labelValues[i]">{{value}}</option>
+              </template>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-md-4" [class.col-md-offset-4]="!labels.length">
+      <div class="loader" *ngIf="loading">
+        <i class="fa fa-spinner fa-pulse fa-4x fa-fw"></i>
+        <span class="sr-only">Loading...</span>
+        <span>{{loadingMsg}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="ng-plotly" [id]="plotlyId"></div>
+    </div>
+  </div>
+</div>

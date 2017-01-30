@@ -1,0 +1,8 @@
+.thumbnail img {
+  max-height: 300px;
+}
+
+.thumbnail .caption h3,
+.thumbnail .caption p {
+  text-align: center;
+}

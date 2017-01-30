@@ -1,0 +1,245 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <div class="row">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+          <div class="row">
+            <div class="col-xs-4 col-sm-4">
+              <a routerLink="/about" fragment="antoine-chabert" class="thumbnail">
+                <img src="./assets/images/about-antoine-chabert.jpg" alt="Antoine Chabert - EPFL Student 2016/2017" title="Antoine Chabert - EPFL Student 2016/2017">
+              </a>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <a routerLink="/about" fragment="arnaud-dupeyrat" class="thumbnail">
+                <img src="./assets/images/about-arnaud-dupeyrat.jpg" alt="Arnaud Dupeyrat - EPFL Student 2016/2017" title="Arnaud Dupeyrat - EPFL Student 2016/2017">
+              </a>
+            </div>
+            <div class="col-xs-4 col-sm-4">
+              <a routerLink="/about" fragment="arber-salihi"  class="thumbnail">
+                <img src="./assets/images/about-arber-salihi.jpg" alt="Arbër Salihi - EPFL Student 2016/2017" title="Arbër Salihi - EPFL Student 2016/2017">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h1 class="title">About technologies and team<br><small>Antoine, Arnaud and Arbër</small></h1>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>
+          <a routerLink="/about" fragment="technologies">Technologies</a>
+          <ul>
+            <li><a routerLink="/about" fragment="tech-study">Study</a></li>
+            <li><a routerLink="/about" fragment="tech-website">Website</a></li>
+            <li>
+              <a routerLink="/about" fragment="tech-plotly">Plotly Graph</a>
+              <ul>
+                <li><a routerLink="/about" fragment="tech-plotly-export">Export from Python</a></li>
+                <li><a routerLink="/about" fragment="tech-plotly-import">Import into Javascript</a></li>
+                <li><a routerLink="/about" fragment="tech-plotly-portability">Improve portability</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a routerLink="/about" fragment="team">Team</a></li>
+      </ul>
+
+      <h2 id="technologies">Technologies</h2>
+
+      <h3 id="tech-study">Study</h3>
+
+      <p>
+        Full study has been made with <a href="https://www.python.org/">Python 3</a> and <a href="http://jupyter.org/">iPython Jupyter Notebook</a>. You can find the full code directly on your GitHub repository <a href="https://github.com/antitoine/ADAEPFL-Project">here</a>.
+        <br>
+        To manage data, major part of the work has been done with <a href="http://pandas.pydata.org/">Pandas</a>.
+        <br>
+        Visualisation part has been made with <a href="http://seaborn.pydata.org/">Seaborn</a> but also using <a href="https://plot.ly/">Plotly</a> library for Python to facilitate the migration to the website.
+      </p>
+
+      <h3 id="tech-website">Website</h3>
+
+      <p>
+        This website has been built with <a href="https://angular.io/">Angular 2 (2.3.1)</a>.
+        In addition, we used mainly the following components:
+      </p>
+
+      <ul>
+        <li><a href="http://getbootstrap.com/">Bootstrap (3.3.7)</a></li>
+        <li><a href="http://fontawesome.io/">Font Awesome (4.7.0)</a></li>
+        <li><a href="http://valor-software.com/ng2-bootstrap/">ng2-bootstrap (1.1.16)</a></li>
+      </ul>
+
+      <p>
+        In order to make visualisation graphs, we chose <a href="https://plot.ly/">Plotly</a> library for JavaScript. Below, we explain how we managed to export graphs from Notebook to the website.
+        <br>
+        Website sources are also available on our repository <a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>.
+      </p>
+
+      <h3 id="tech-plotly">Plotly Graph</h3>
+
+      <p>
+        We did a lot of search to find a library which allows to create dynamic plots that work with both Python and JavaScript.
+        At present, the only one which is free, reliable and well-documented is Plotly.
+        However, use-cases were sometimes missing and, among other things, we found nothing that indicates the possibility to export figures from Python to JavaScript.
+        The solution we used (see below) is certainly the best one without as it does not produce any specific JavaScript code but only use Plotly.js API.
+      </p>
+
+      <h4 id="tech-plotly-export">Export from Python</h4>
+
+      <p>
+        When a Plotly figure is created in Python, one can notice that the schema given to Plotly is a large dictionary - similar to a <i>JSON</i> one - which contains all data and parameters of the layout.
+        We remark that this dictionary has the same attributes of the ones of a figure created using Plotly.js API (this was definitively confirmed after a check of Plotly source code).
+        Thus, the first thing to do is to export the dictionary to a <i>JSON</i> file.
+        In source code of python library of Plotly, we see that all dictionaries are transformed used a custom <i>JSON encoder</i> (see <a href="https://github.com/plotly/plotly.py/blob/0b6e0109defc1a0257dd98e20ff1e31504b887bb/plotly/plotly/plotly.py#L652">here</a>).
+        So we do the same:
+      </p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">obj</span><span class="o">=</span><span class="n">plotly_data</span><span class="p">,</span> <span class="n">cls</span><span class="o">=</span><span class="n">plotly</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">PlotlyJSONEncoder</span><span class="p">,</span> <span class="n">fp</span><span class="o">=</span><span class="s1">&#39;plotly_graph.json&#39;</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+<pre>{{'{'}}
+    "15-25 years":{{'{'}}
+        "All":{{'{'}}
+            "data":[
+                {{'{'}}
+                    "mode":"lines",
+                    "name":"10 km",
+                    "type":"scatter",
+                    "x":[
+                        1999,
+                        2000,
+                        2001,
+                        [...]
+                    ],
+                }
+            ],
+            "layout":[
+                [...]
+            ]
+        }
+    }
+}</pre>
+          </div>
+        </div>
+      </div>
+
+      <h4 id="tech-plotly-import">Import into Javascript</h4>
+
+      <p>
+        Now, it is very easy to display the same graphic that the one of Notebook; we just have to give the <i>JSON</i> object to the Plotly.js API (JavaScript):
+      </p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">Plotly</span><span class="o">.</span><span class="n">newPlot</span><span class="p">(</span><span class="s1">&#39;demo-plotly-container&#39;</span><span class="p">,</span> <span class="n">json</span><span class="p">[</span><span class="s1">&#39;15-25 years&#39;</span><span class="p">][</span><span class="s1">&#39;All&#39;</span><span class="p">]);</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <plotly [url]="'./assets/json/about-demo-plotly-from-python-to-javascript.json'"></plotly>
+        </div>
+      </div>
+
+      <h4 id="tech-plotly-portability">Improvement of portability</h4>
+
+      <p>
+        In appearance, all seems to be right, but with a large graph like the one presented in Lausanne Marathon 1999-2016 study, generated JSON file is too big to be used (more than 130 MB for the minified JSON file containing the plot with comparison of performances).
+        The <i>JSON</i> schema is not very efficient when we look the size.
+        <br>
+        To fix this issue, we built a system that download a compressed version of the <i>json</i> (in a simple <i>zip</i> file), we decompress it from the client side and then display the graph.
+        With this technique we increase the rapidity and decrease the size of the page.
+        The <i>JSON</i> file of 130 MB takes only 7 MB after compression (it is available <a href="./assets/json/marathon-lausanne-1999-2016-comparisons.json.zip">here</a>) and we need to wait 20 seconds of decompression (for comparison, to have the same speed without compressed file, the user need a network connection of 52 Mb/s).
+        <br>
+        The full procedure is in the TypeScript/Angular code inside the website branch of our repository (see <a href="https://github.com/antitoine/ADAEPFL-Project/tree/website">here</a>).
+      </p>
+
+      <h2 id="team">Team</h2>
+
+      <p>
+        We are three students doing their exchange at École Polytechnique Fédérale de Lausanne (EPFL) in IC Master section (computer sciences). We all come from Institut National des Sciences Appliquées de Lyon (INSA de Lyon), where we do an engineering degree.
+        <br>
+        If your are interested to learn more about us, you can find details in the following links:
+      </p>
+
+      <div class="row">
+        <div class="col-sm-4" id="antoine-chabert">
+          <div class="thumbnail">
+            <img src="./assets/images/about-antoine-chabert.jpg" alt="Antoine Chabert - EPFL Student 2016/2017" title="Antoine Chabert - EPFL Student 2016/2017">
+            <div class="caption">
+              <h3>Antoine Chabert</h3>
+              <p>
+                <a href="https://fr.linkedin.com/in/chabertantoine" class="btn btn-default" role="button" title="Linkedin - Antoine Chabert" target="_blank">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  <span class="sr-only">Linkedin</span>
+                </a>
+                <a href="https://github.com/antitoine/" class="btn btn-default" role="button" title="Github - Antoine Chabert" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="sr-only">Github</span>
+                </a>
+                <a href="mailto:antoine.chabert@epfl.ch" class="btn btn-default" role="button" title="Email - Antoine Chabert" target="_blank">
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <span class="sr-only">Email</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" id="arnaud-dupeyrat">
+          <div class="thumbnail">
+            <img src="./assets/images/about-arnaud-dupeyrat.jpg" alt="Arnaud Dupeyrat - EPFL Student 2016/2017" title="Arnaud Dupeyrat - EPFL Student 2016/2017">
+            <div class="caption">
+              <h3>Arnaud Dupeyart</h3>
+              <p>
+                <a href="https://ch.linkedin.com/in/arnaud-dupeyrat-b4609176" class="btn btn-default" role="button" title="Linkedin - Arnaud Dupeyrat" target="_blank">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  <span class="sr-only">Linkedin</span>
+                </a>
+                <a href="https://github.com/arnaudDup" class="btn btn-default" role="button" title="Github - Arnaud Dupeyrat" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="sr-only">Github</span>
+                </a>
+                <a href="mailto:arnaud.dupeyrat@epfl.ch" class="btn btn-default" role="button" title="Email - Arnaud Dupeyrat" target="_blank">
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <span class="sr-only">Email</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" id="arber-salihi">
+          <div class="thumbnail">
+            <img src="./assets/images/about-arber-salihi.jpg" alt="Arbër Salihi - EPFL Student 2016/2017" title="Arbër Salihi - EPFL Student 2016/2017">
+            <div class="caption">
+              <h3>Arbër Salihi</h3>
+              <p>
+                <a href="https://fr.linkedin.com/in/arber-salihi/fr" class="btn btn-default" role="button" title="Linkedin - Arbër Salihi" target="_blank">
+                  <i class="fa fa-linkedin fa-fw"></i>
+                  <span class="sr-only">Linkedin</span>
+                </a>
+                <a href="https://github.com/asalihi" class="btn btn-default" role="button" title="Github - Arbër Salihi" target="_blank">
+                  <i class="fa fa-github fa-fw"></i>
+                  <span class="sr-only">Github</span>
+                </a>
+                <a href="mailto:arber.salihi@epfl.ch" class="btn btn-default" role="button" title="Email - Arbër Salihi" target="_blank">
+                  <i class="fa fa-envelope fa-fw"></i>
+                  <span class="sr-only">Email</span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

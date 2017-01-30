@@ -1,0 +1,864 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-12">
+
+      <img src="./assets/images/scraping-header-web-data-extraction.png" alt="Image representing the processing to extract data from the web" class="img-responsive" />
+
+      <h1 class="title">Scraping data from DataSport and Infoclimat</h1>
+
+      <div class="row row-md-align-center">
+        <div class="col-md-6">
+          <p>Our main goal was to get data from <a href="https://www.datasport.com/en/">DataSport</a> - especially runs over years. However, there is a lot of runnings, even if we consider only the ones from Switzerland (i.e. more than 2200 events). Thus, we firstly focused on a single run: Lausanne Marathon of 2016. Such approach helped us to understand how data are presented and how to get them. In a second part, we then got all Lausanne Marathon's events (i.e. runnings between 1999 and 2016), by applying the same approach as before. Finally, we tried to get all runs of some peoples using different techniques which required some reverse engineering to decode results from DataSport API.</p>
+          <p>The present page gives some excerpts of the code used to get information from DataSport (and Infoclimat). Full version is present on <a href="https://github.com/antitoine/ADAEPFL-Project">Github <i aria-hidden="true" class="fa fa-github"></i></a>.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="thumbnail">
+            <img src="./assets/images/scraping-datasport-screenshot.png" alt="Screenshot of the datasport website" />
+            <div class="caption">
+              <p>Screenshot of Datasport's website</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li><a routerLink="/scraping" fragment="lamara-2016">Lausanne Marathon 2016</a></li>
+        <li><a routerLink="/scraping" fragment="lamara-all">Lausanne Marathon 1999-2016</a></li>
+        <li><a routerLink="/scraping" fragment="runners">Runners</a></li>
+        <li><a routerLink="/scraping" fragment="weather">Weather</a></li>
+      </ul>
+
+      <h2 id="lamara-2016">Lausanne Marathon 2016</h2>
+
+      <p>First, we began with <a href="https://services.datasport.com/2016/lauf/lamara/">Lausanne Marathon of 2016</a>. There was a lot of possibilities to get all runners' information, but the easiest one was to use alphabetical order. Indeed, doing so permitted us to retrieve all the participants.</p>
+
+      <div class="thumbnail thumbnail-large">
+        <img src="./assets/images/scraping-datasport-lausanne-marathon-2016-runners-a-screenshot.png" alt="Screenshot of runners with name start with letter A in the Lausanne Marathon 2016 from datasport" />
+        <div class="caption">
+          <p>Screenshot took from DataSport's website (information about runners of Lausanne Marathon 2016 for whom last name starts with letter A)</p>
+        </div>
+      </div>
+
+      <p>Data were not very easily readable by a program, even if there were presentable for human. Indeed, there is no structure behind these tables, but only spaces. For this reason, we worked on a probabilistic algorithm that splits at the right place, in order to create columns accordingly. Main idea behind such algorithm is to count the number of blanks (spaces) in a column. The larger the count, the higher the probability to split is. We also improved the split process by checking header of columns in order to avoid a split in a middle of a column name. Finally, we used <a href="http://docs.astropy.org/en/stable/io/ascii/">ASCII</a> part of the <a href="http://www.astropy.org/">astropy</a> library that rebuilds the table.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class="highlight hl-ipython3">
+            <pre><span class="n">read_page</span><span class="p">(</span><span class="s1">&#39;https://services.datasport.com/2016/lauf/lamara/alfaa.htm&#39;</span><span class="p">,</span> <span class="s1">&#39;no-check&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>catégorie</th>
+                <th>rang</th>
+                <th>nom</th>
+                <th>an</th>
+                <th>lieu</th>
+                <th>équipe</th>
+                <th>pénalité</th>
+                <th>temps</th>
+                <th>retard</th>
+                <th>doss</th>
+                <th>overall</th>
+                <th>moyenne</th>
+                <th>acode</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>0</th>
+                <td>21-H50</td>
+                <td>147.</td>
+                <td>Abaidia Jilani</td>
+                <td>1966</td>
+                <td>St-Légier-La Chiésaz</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>1:45.28,4</td>
+                <td>25.56,8</td>
+                <td>(5082)</td>
+                <td>diplôme foto video 21-Hom</td>
+                <td>1241. 4.59</td>
+                <td>1KSQJLYCM</td>
+              </tr>
+              <tr>
+                <th>1</th>
+                <td>21-D40</td>
+                <td>81.</td>
+                <td>Abaidia Sandrine</td>
+                <td>1972</td>
+                <td>St-Légier</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>1:49.40,8</td>
+                <td>24.09,5</td>
+                <td>(5080)</td>
+                <td>diplôme foto video 21-Fem</td>
+                <td>289. 5.11</td>
+                <td>J2R2H9J5F</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>M-Fille3</td>
+                <td>33.</td>
+                <td>Abaidia Selma</td>
+                <td>2006</td>
+                <td>St-Légier-La Chiésaz</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>7.12,2</td>
+                <td>1.36,3</td>
+                <td>(22010)</td>
+                <td>diplôme foto video ---</td>
+                <td>4.48</td>
+                <td>T4HUZEMR7</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>10W-NW</td>
+                <td>NaN</td>
+                <td>Abansir Florence</td>
+                <td>1971</td>
+                <td>Lausanne</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>1:28.29,2</td>
+                <td>NaN</td>
+                <td>(18024)</td>
+                <td>diplôme foto video ---</td>
+                <td>8.50</td>
+                <td>73E4NWC9K</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>21-H60</td>
+                <td>103.</td>
+                <td>Abb Jochen</td>
+                <td>1948</td>
+                <td>Ernen</td>
+                <td>NaN</td>
+                <td>NaN</td>
+                <td>2:50.40,7</td>
+                <td>1:21.28,7</td>
+                <td>(8381)</td>
+                <td>diplôme foto video 21-Hom</td>
+                <td>2921. 8.05</td>
+                <td>X7U8LH7Y1</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>When the retrieve was done, we needed to extract links of all alphabetic lists and extract data.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+            <pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">get_all_data_from_page</span><span class="p">(</span><span class="s1">&#39;https://services.datasport.com/2016/lauf/lamara/&#39;</span><span class="p">)</span></pre>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+<pre> 1/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAA.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAA.HTM</a>
+ 2/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAB.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAB.HTM</a>
+ 3/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAC.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAC.HTM</a>
+ 4/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAD.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAD.HTM</a>
+ 5/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAE.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAE.HTM</a>
+ 6/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAF.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAF.HTM</a>
+ 7/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAG.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAG.HTM</a>
+ 8/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAH.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAH.HTM</a>
+ 9/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAI.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAI.HTM</a>
+10/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAJ.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAJ.HTM</a>
+11/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAK.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAK.HTM</a>
+12/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAL.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAL.HTM</a>
+13/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAM.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAM.HTM</a>
+14/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAN.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAN.HTM</a>
+15/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAO.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAO.HTM</a>
+16/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAP.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAP.HTM</a>
+17/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAQ.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAQ.HTM</a>
+18/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAR.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAR.HTM</a>
+19/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAS.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAS.HTM</a>
+20/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAT.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAT.HTM</a>
+21/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAU.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAU.HTM</a>
+22/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAV.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAV.HTM</a>
+23/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAW.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAW.HTM</a>
+24/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAX.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAX.HTM</a>
+25/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAY.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAY.HTM</a>
+26/26 - Processing <a href="https://services.datasport.com/2016/lauf/lamara/ALFAZ.HTM">https://services.datasport.com/2016/lauf/lamara/ALFAZ.HTM</a>
+</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>As the reader can see, we needed to make an extra work to clean and rename columns, to parse dates and times and to remove some unnecessary fields.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">clean_dataframe</span><span class="p">(</span><span class="n">df_2016_lauf_lamara_ALFAA</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>number</th>
+                <th>time</th>
+                <th>category</th>
+                <th>name</th>
+                <th>team</th>
+                <th>birthday</th>
+                <th>acode</th>
+                <th>rank</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>0</th>
+                <td>5082</td>
+                <td>01:45:28.400000</td>
+                <td>21-H50</td>
+                <td>Abaidia Jilani</td>
+                <td>NaN</td>
+                <td>1966</td>
+                <td>1KSQJLYCM</td>
+                <td>147</td>
+              </tr>
+              <tr>
+                <th>1</th>
+                <td>5080</td>
+                <td>01:49:40.800000</td>
+                <td>21-D40</td>
+                <td>Abaidia Sandrine</td>
+                <td>NaN</td>
+                <td>1972</td>
+                <td>J2R2H9J5F</td>
+                <td>81</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>22010</td>
+                <td>00:07:12.200000</td>
+                <td>M-Fille3</td>
+                <td>Abaidia Selma</td>
+                <td>NaN</td>
+                <td>2006</td>
+                <td>T4HUZEMR7</td>
+                <td>33</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>18024</td>
+                <td>01:28:29.200000</td>
+                <td>10W-NW</td>
+                <td>Abansir Florence</td>
+                <td>NaN</td>
+                <td>1971</td>
+                <td>73E4NWC9K</td>
+                <td>NaN</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>8381</td>
+                <td>02:50:40.700000</td>
+                <td>21-H60</td>
+                <td>Abb Jochen</td>
+                <td>NaN</td>
+                <td>1948</td>
+                <td>X7U8LH7Y1</td>
+                <td>103</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>Finally, we merged all tables into a single one.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class="highlight hl-ipython3">
+<pre><span></span><span class="n">dataframes</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">DATA_DIR</span><span class="p">):</span>
+    <span class="n">uncleaned_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_DIR</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">cleaned_df</span> <span class="o">=</span> <span class="n">clean_dataframe</span><span class="p">(</span><span class="n">uncleaned_df</span><span class="p">)</span>
+    <span class="n">dataframes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">cleaned_df</span><span class="p">)</span>
+<span></span><span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dataframes</span><span class="p">)</span>
+<span class="n">merged_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>number</th>
+                <th>time</th>
+                <th>category</th>
+                <th>name</th>
+                <th>team</th>
+                <th>birthday</th>
+                <th>acode</th>
+                <th>rank</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>0</th>
+                <td>11404</td>
+                <td>00:50:26.600000</td>
+                <td>10-H40</td>
+                <td>Waardenburg George</td>
+                <td>NaN</td>
+                <td>1976</td>
+                <td>CPQP6ZGUB</td>
+                <td>285</td>
+              </tr>
+              <tr>
+                <th>1</th>
+                <td>13468</td>
+                <td>00:53:10.800000</td>
+                <td>10-JunG</td>
+                <td>Waeber Jean</td>
+                <td>NaN</td>
+                <td>1997</td>
+                <td>X4HC5EYRT</td>
+                <td>186</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>11449</td>
+                <td>00:48:47.500000</td>
+                <td>10-D50</td>
+                <td>Waeber Marie-Jo</td>
+                <td>NaN</td>
+                <td>1963</td>
+                <td>HAP8H6A7Q</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>6523</td>
+                <td>02:03:58.500000</td>
+                <td>21-H30</td>
+                <td>Waeber Pascal</td>
+                <td>NaN</td>
+                <td>1979</td>
+                <td>ZT9BYS5M3</td>
+                <td>778</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>6441</td>
+                <td>01:34:50.700000</td>
+                <td>21-D40</td>
+                <td>Waeber Yvette</td>
+                <td>NaN</td>
+                <td>1970</td>
+                <td>2T9WCSAM7</td>
+                <td>11</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>Final CSV file containing formatted date is available <a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv">here <i class="fa fa-file-text-o" aria-hidden="true"></i></a>.</p>
+
+      <h2 id="lamara-all">Lausanne Marathon 1999-2016</h2>
+
+      <p>Main work was already done in the previous part. We thus simply applied the same algorithm for each Lausanne Marathon's event between 1999 to 2016.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">lauf_urls</span> <span class="o">=</span> <span class="p">{{ '{' }}</span>
+    <span class="s1">&#39;Lausanne_Marathon_2016&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2016/lauf/lamara/">https://services.datasport.com/2016/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2015&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2015/lauf/lamara/">https://services.datasport.com/2015/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2014&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2014/lauf/lamara/">https://services.datasport.com/2014/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2013&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2013/lauf/lamara/">https://services.datasport.com/2013/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2012&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2012/lauf/lamara/">https://services.datasport.com/2012/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2011&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2011/lauf/lamara/">https://services.datasport.com/2011/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2010&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2010/lauf/lamara/">https://services.datasport.com/2010/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2009&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2009/lauf/lamara/">https://services.datasport.com/2009/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2005&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2005/lauf/lamara/">https://services.datasport.com/2005/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2004&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2004/lauf/lamara/">https://services.datasport.com/2004/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2003&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2003/lauf/lamara/">https://services.datasport.com/2003/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2002&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2002/lauf/lamara/">https://services.datasport.com/2002/lauf/lamara/</a>&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Lausanne_Marathon_2001&#39;</span><span class="p">:</span> <span class="s1">&#39;<a href="https://services.datasport.com/2001/lauf/lamara/marathon/">https://services.datasport.com/2001/lauf/lamara/marathon/</a>&#39;</span><span class="p">,</span>
+
+    <span class="c1"># Need to be done manually</span>
+    <span class="c1">#&#39;Lausanne_Marathon_2008&#39;: &#39;<a href="https://services.datasport.com/2008/lauf/lamara/">https://services.datasport.com/2008/lauf/lamara/</a>&#39;,</span>
+    <span class="c1">#&#39;Lausanne_Marathon_2007&#39;: &#39;<a href="https://services.datasport.com/2007/lauf/lamara/">https://services.datasport.com/2007/lauf/lamara/</a>&#39;,</span>
+    <span class="c1">#&#39;Lausanne_Marathon_2006&#39;: &#39;<a href="https://services.datasport.com/2006/lauf/lamara/">https://services.datasport.com/2006/lauf/lamara/</a>&#39;,</span>
+    <span class="c1">#&#39;Lausanne_Marathon_2000&#39;: &#39;<a href="https://services.datasport.com/2000/lauf/lamara/marathon/">https://services.datasport.com/2000/lauf/lamara/marathon/</a>&#39;</span>
+    <span class="c1">#&#39;Lausanne_Marathon_1999&#39;: &#39;<a href="https://services.datasport.com/1999/lauf/lamara/rang2/">https://services.datasport.com/1999/lauf/lamara/rang2/</a>&#39;</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="n">directory</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">lauf_urls</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">directory_path</span> <span class="o">=</span> <span class="s1">&#39;./Data/&#39;</span> <span class="o">+</span> <span class="n">directory</span>
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">access</span><span class="p">(</span><span class="n">directory_path</span><span class="p">,</span> <span class="n">os</span><span class="o">.</span><span class="n">W_OK</span><span class="p">):</span>
+        <span class="n">get_all_data_from_page</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">directory_path</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
+        </div>
+      </div>
+      <p>As some years (1999, 2000, 2006, 2007 and 2008) have a different format (column names in German, extra columns, and so on), we changed a little bit some functions in order to achieve extraction. Then, we cleaned and merged every table.</p>
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span class="k">for</span> <span class="n">directory</span><span class="p">,</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">lauf_urls</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">directory_path</span> <span class="o">=</span> <span class="s1">&#39;./Data/&#39;</span> <span class="o">+</span> <span class="n">directory</span>
+    <span class="n">dataframes</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory_path</span><span class="p">):</span>
+        <span class="n">uncleaned_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">directory_path</span> <span class="o">+</span> <span class="s1">&#39;/&#39;</span> <span class="o">+</span> <span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">dataframes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">clean_dataframe</span><span class="p">(</span><span class="n">uncleaned_df</span><span class="p">))</span>
+    <span class="n">merged_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">dataframes</span><span class="p">)</span>
+    <span class="n">merged_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">directory_path</span> <span class="o">+</span> <span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+    <span class="n">merged_df</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="n">directory_path</span> <span class="o">+</span> <span class="s1">&#39;.pickle&#39;</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/merge_and_clean.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>All final tables are available here:</p>
+
+      <div class="table-responsive">
+        <table class="table  table-condensed">
+          <thead>
+          <tr>
+            <th>File</th>
+            <th>Number of runners (rows)</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2016.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2016</a></td>
+            <td>13 557 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2015.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2015</a></td>
+            <td>13 075 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2014.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2014</a></td>
+            <td>12 851 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2013.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2013</a></td>
+            <td>12 013 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2012.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2012</a></td>
+            <td>9 648 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2011.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2011</a></td>
+            <td>10 643 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2010.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2010</a></td>
+            <td>10 122 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2009</a></td>
+            <td>9 544 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2008.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2008</a></td>
+            <td>8 161 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2007.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2007</a></td>
+            <td>8 407 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2006.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2006</a></td>
+            <td>8 661 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2005.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2005</a></td>
+            <td>8 233 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2004.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2004</a></td>
+            <td>8 459 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2003.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2003</a></td>
+            <td>7 260 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2002.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2002</a></td>
+            <td>6 229 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2001.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2001</a></td>
+            <td>6 567 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_2000.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 2000</a></td>
+            <td>6 101 runners</td>
+          </tr>
+          <tr>
+            <td><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Lausanne_Marathon_1999.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> Lausanne Marathon 1999</a></td>
+            <td>5 423 runners</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2 id="runners">Runners</h2>
+
+      <p>In a third part, we wanted to make an historical background of some runners (for examples: who participated to all Lausanne Marathon events, what is the best time of a given runner and for which reason(s), and so on). However, the main problem here was that DataSport doesn't provide any possibility to link a runner with other tables from a provided table. Also, using the name was not sufficient as there are homonyms in such events. For all that, we found another way to get this kind of information. Indeed, Datasport provides a web service that proposes, for a given runner, a complete history if and only if he kept the same registration ID during multiple runs. For an experimented runner, this is probably the case as the BIB number is also given regarding historical background. We can see this information in all runs from 2009, when we select a runner's name in a table as presented in the screenshot below.</p>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/scraping-datasport-acode-display-service-screenshot.png" alt="Screenshot of a runner information given by the DataSport API" />
+            <div class="caption">
+              <p>Screenshot of information of a runner returned by DataSport API</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="thumbnail">
+            <img src="./assets/images/scraping-datasport-acode-display-service-single-screenshot.png" alt="Screenshot of a runner information given by the DataSport API with URL" />
+            <div class="caption">
+              <p>Screenshot of information of a runner given by the DataSport API with URL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p>So we checked how to use this web service directly and figured out that all the information were present in HTML/JavaScript code of the pages generated by DataSport. After having retrieved all "acode" (i.e. unique identifier of a runner), which were available directly in the link related to a given runner, we accessed to all pages corresponding to a given runner - like the following one - by manipulating GET requests.</p>
+
+      <p>Note that such pages give all the links that we can use to get information about an event done by a considered runner. Also, and in order to use the information, we had to decrypt the answers returned by DataSport API. The code used was written in JavaScript so we exported it to Python.</p>
+
+      <div class="thumbnail thumbnail-medium">
+        <img src="./assets/images/scraping-datasport-acode-javascript-decode-screenshot.png" alt="Screenshot of the code used to decrypt responses from DataSport API" />
+        <div class="caption">
+          <p>Screenshot of the code used to decrypt responses retrieved from DataSport API</p>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">KEY</span> <span class="o">=</span> <span class="s1">&#39;0187fcdf7ac3d90d68334afa03b87efe&#39;</span>
+<span class="n">IV</span> <span class="o">=</span> <span class="s1">&#39;33a39433e4dde7c4ddb9d4502b8905d4&#39;</span>
+<span class="n">KEY_BYTES</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">KEY</span><span class="p">)</span>
+<span class="n">IV_BYTES</span> <span class="o">=</span> <span class="n">binascii</span><span class="o">.</span><span class="n">a2b_hex</span><span class="p">(</span><span class="n">IV</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">unpad</span><span class="p">(</span><span class="n">string</span><span class="p">):</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    Remove the PKCS#7 padding from a text string</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<span class="n">    length</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+<span class="n">    pad_size</span> <span class="o">=</span> <span class="n">string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="k">    return</span> <span class="n">string</span><span class="p">[:</span><span class="n">length</span> <span class="o">-</span> <span class="n">pad_size</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">decrypt_data</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">):</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+<span class="sd">    Decrypt data given key and iv</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+
+<span class="n">    decrypted</span> <span class="o">=</span> <span class="n">cipher</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">binascii</span><span class="o">.</span><span class="n">a2b_base64</span><span class="p">(</span><span class="n">encrypted</span><span class="p">)</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+<span class="k">    return</span> <span class="n">unpad</span><span class="p">(</span><span class="n">decrypted</span><span class="p">)</span>
+
+<span></span><span class="n">encrypted</span> <span class="o">=</span> <span class="s1">&#39;3zxaer+64X4MlhwuD6brwClAgmm46IWbdo+vg+1p6+A3Og6ugY/KVQAogTCv34A7HOvz4oGJKqEYzQLFoi5shtCBJkc1ftSlLsnl+lI8mrOMKiJ3KLItdYODgDj52XA3lAVw2TI5ITwmwCIMFaSVi13z0ZMif2VlsTvBiOGGc2sDrmfGNPwG0dHTc1ub0+580Ro0kTShNyLwcvCRAYK5LrLEMqW9wBCc7/+l28IWLQTKM9iIakZdIYhbUKbZuY7Z62+o3GjPzu6uNAMeS8WWLgsIfcIwkjhvfveg68rXMTKW3qmp9DtRjEnTTiE/VVCtrck3e7bJAwGZMTXKUYCb2HzzFoREJ+PmJ8l7NjS9emPpZeHOVC52lXPYivLozBtbkzkdreOQoXVZ33LM228GgEyAQmln3RtD84Pqg8rtYnhlSKHTotmhw49u+s6XhDQ+1QFTaDFQ0Q9xMtGfRUcCY4A9jjIUbstnOA1clDfNMzn29VXoKmTz0nVUstd+jlN0dHAedZUl0t57Ml64vSZNxQ5Zda5ckZAsXhdTKhAuO91mR1TEdTXBChX+ngjacdLCO3e6FGO/YMT6WM5whFvamW4D3Ls/zcSYGMoUeIOr068=&#39;</span>
+<span class="n">cipher</span> <span class="o">=</span> <span class="n">AES</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">KEY_BYTES</span><span class="p">,</span> <span class="n">AES</span><span class="o">.</span><span class="n">MODE_CBC</span><span class="p">,</span> <span class="n">IV_BYTES</span><span class="p">,</span> <span class="n">segment_size</span><span class="o">=</span><span class="mi">128</span><span class="p">)</span>
+<span class="n">decrypt_data</span><span class="p">(</span><span class="n">cipher</span><span class="p">,</span> <span class="n">encrypted</span><span class="p">)</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div>
+<pre>&#39;{{ '{' }}&#34;eventRaceNr&#34;:&#34;82AC26FB103154E3C868A28C85B3D712&#34;,&#34;catRank&#34;:358,&#34;eventName&#34;:&#34;Lausanne Marathon&#34;,&#34;categoryName&#34;:&#34;Semi Hommes H20&#34;,&#34;eventDate&#34;:&#34;24.10.2015&#34;,&#34;raceNr&#34;:17110,&#34;racePayload&#34;:&#34;AB36F4C561CEE89876D769AED4ED7C144C440A5216CCF7F36D1D1EED82663891&#34;,&#34;resultState&#34;:&#34;Klassiert&#34;,&#34;entryArt&#34;:&#34;Bezahlt&#34;,&#34;startNumber&#34;:7773,&#34;provider&#34;:&#34;Datasport&#34;,&#34;overCategoryName&#34;:&#34;Semi Marathon Hommes Overall&#34;,&#34;entryPayart&#34;:&#34;Online&#34;,&#34;runtime&#34;:&#34;1:51.57,8&#34;,&#34;overRank&#34;:1602}&#39;</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/decrypt_ajax_response_python.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>Notice that DataSport makes a lot of effort to keep its service very hard to use by other people. When we tried to get some information from this web service, a lot of our IP were definitely banned. Thus, we made the choice to use this service only for few people, selected from Lausanne Marathon and among those who done a lot of runnings). To avoid any problem and further bans, extraction of information of 61 runners took 7 hours (in addition to timers, we changed header information of GET requests and IP of servers). The reader can find extracted data in the following files. The file 'runners.csv' contains all information of runners (name, birthday, location, and so on) while the file 'runs.csv' contains all runnings corresponding to a participant:</p>
+
+      <ul>
+        <li><a href="https://github.com/antitoine/ADAEPFL-Project/raw/master/Scraping/DataSport/Data/Runners/runners_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runners.csv (information about runners)</a></li>
+        <li><a href="https://raw.githubusercontent.com/antitoine/ADAEPFL-Project/master/Scraping/DataSport/Data/Runners/runs_2009.csv"><i class="fa fa-file-text-o" aria-hidden="true"></i> runs.csv (information about runnings)</a></li>
+      </ul>
+
+      <h2 id="weather">Weather</h2>
+
+      <p>In addition to data from DataSport, we also wanted to retrieve the weather of the day during which runnings were done in order to conduct some analysis. To do so, we used French website <a href="http://www.infoclimat.fr">www.infoclimat.fr</a>, which gives detailed weather information thanks to 85 stations based in Switzerland.</p>
+
+      <div class="thumbnail thumbnail-large">
+        <img src="./assets/images/scraping-infoclimat.png" alt="Detailed weather information for Lausanne station (screenshot from infoclimat)" />
+        <div class="caption">
+          <p>Detailed weather information for station of Lausanne (screenshot from InfoClimat)</p>
+        </div>
+      </div>
+
+      <p>First, we retrieved all the information related to the available stations in Switzerland. To do so, we used <a href="http://www.seleniumhq.org/">Selenium</a> and <a href="https://www.crummy.com/software/BeautifulSoup/">BeautifulSoup</a> to retrieve all the list of these stations, and then, to retrieve the detailed page (see previous figure) containing, among other things, coordinates of each station.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="k">def</span> <span class="nf">getInformationStation</span><span class="p">():</span>
+    <span class="c1"># Creation of driver</span>
+    <span class="n">chromedriver</span> <span class="o">=</span> <span class="s2">&quot;./Lib/chromedriver&quot;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;webdriver.chrome.driver&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">chromedriver</span>
+    <span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">chromedriver</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">FILTER_URL</span><span class="p">)</span>
+
+    <span class="c1"># Retrieve of information</span>
+    <span class="n">result_screen_scraping</span> <span class="o">=</span> <span class="n">multiselect_set_selections</span><span class="p">(</span><span class="n">driver</span><span class="p">, </span><span class="s1">&#39;select_station&#39;</span><span class="p">, </span><span class="n">availableStation</span><span class="p">)</span>
+    <span class="n">result_screen_scraping</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./Data/InformationStation.csv&#39;</span><span class="p">)</span>
+    <span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/Weather/get_information_station.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>For further use, we decided to store the results in a CSV file. Note that the content can still be loaded into a pandas' DataFrame.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class="highlight hl-ipython3">
+<pre><span class="n">stations_data_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Station&#39;</span><span class="p">,</span> <span class="s1">&#39;Altitude (m)&#39;</span><span class="p">,</span> <span class="s1">&#39;Latitude&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">,</span> <span class="s1">&#39;URL&#39;</span><span class="p">]</span>
+<span class="n">stations</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./Data/InformationStation.csv&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">stations_data_columns</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Station&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{{ '{' }}</span><span class="s1">&#39;Latitude&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span> <span class="s1">&#39;Longitude&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">,</span> <span class="s1">&#39;Altitude (m)&#39;</span><span class="p">:</span> <span class="s1">&#39;float&#39;</span><span class="p">})</span>
+<span class="n">stations</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>Altitude (m)</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+                <th>URL</th>
+              </tr>
+              <tr>
+                <th>Station</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>Adelboden</th>
+                <td>1325.0</td>
+                <td>46.30</td>
+                <td>7.34</td>
+                <td>http://www.infoclimat.fr/observations-meteo/te...</td>
+              </tr>
+              <tr>
+                <th>Aigle</th>
+                <td>383.0</td>
+                <td>46.33</td>
+                <td>6.92</td>
+                <td>http://www.infoclimat.fr/observations-meteo/te...</td>
+              </tr>
+              <tr>
+                <th>Alpnach</th>
+                <td>445.0</td>
+                <td>45.93</td>
+                <td>8.28</td>
+                <td>http://www.infoclimat.fr/observations-meteo/te...</td>
+              </tr>
+              <tr>
+                <th>Altdorf</th>
+                <td>449.0</td>
+                <td>46.87</td>
+                <td>8.63</td>
+                <td>http://www.infoclimat.fr/observations-meteo/te...</td>
+              </tr>
+              <tr>
+                <th>Altenrhein</th>
+                <td>0.0</td>
+                <td>47.48</td>
+                <td>9.57</td>
+                <td>http://www.infoclimat.fr/observations-meteo/te...</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="caption">
+          Full code is available <a href="https://github.com/antitoine/ADAEPFL-Project/blob/master/Scraping/DataSport/scraping_by_runs.ipynb">here</a>.
+        </div>
+      </div>
+
+      <p>The first thing to do was to find the station which was the nearest to Lausanne Marathon. For better results, this can be done using an algorithm, but in our case we manually selected <a href="http://www.infoclimat.fr/observations-meteo/temps-reel/lausanne-pully/06711.html">Lausanne - Pully</a>'s station and it was sufficient (note that the automatic select would be more interesting for a global analysis of runnings around Switzerland or even other European countries).</p>
+
+      <p>Then, we retrieved the detailed information of the station for the given date and we cleaned the obtained DataFrame (i.e., among other things, we removed unnecessary columns and formatted the data). At the end of the process, we obtained similar - but formatted and ready-to-use - data. Here is an example for Lausanne Marathon of 2016 (comparison between data offered by Infoclimat and data retrieved and formatted by us).</p>
+
+      <div class="thumbnail thumbnail-fit">
+        <img src="./assets/images/scraping-lausanne-2016-10-30.png" alt="Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)" />
+        <div class="caption">
+          <p>Weather data of Lausanne-Pully for October, 30th 2016 (from Infoclimat)</p>
+        </div>
+      </div>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">page</span> <span class="o">=</span> <span class="n">retrieve_weather_of_location_by_date</span><span class="p">(</span><span class="mf">46.514113</span><span class="p">,</span> <span class="mf">6.620386</span><span class="p">,</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">))</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">format_complete_reading</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+<span class="n">clean_df</span> <span class="o">=</span> <span class="n">clean_reading_dataframe</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">clean_df</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="table-responsive">
+            <table class="table table-bordered">
+              <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>Hour</th>
+                <th>Temperature (°C)</th>
+                <th>Rain (mm/1h)</th>
+                <th>Humidity (%)</th>
+                <th>Wind (average) (km/h)</th>
+                <th>Pressure (hPa)</th>
+                <th>Visibility (km)</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>1</th>
+                <td>0.0</td>
+                <td>8.7</td>
+                <td>0.0</td>
+                <td>85.0</td>
+                <td>6.0</td>
+                <td>1026.6</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>23.0</td>
+                <td>8.3</td>
+                <td>0.0</td>
+                <td>87.0</td>
+                <td>7.0</td>
+                <td>1026.9</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>22.0</td>
+                <td>8.3</td>
+                <td>0.0</td>
+                <td>84.0</td>
+                <td>6.0</td>
+                <td>1027.0</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>21.0</td>
+                <td>8.8</td>
+                <td>0.0</td>
+                <td>81.0</td>
+                <td>9.0</td>
+                <td>1026.9</td>
+                <td>0.0</td>
+              </tr>
+              <tr>
+                <th>5</th>
+                <td>20.0</td>
+                <td>8.6</td>
+                <td>0.0</td>
+                <td>83.0</td>
+                <td>7.0</td>
+                <td>1026.8</td>
+                <td>0.0</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <p>We also provide a summary of the weather information of the day for immediate use. To do so, we use JSON format. Here is an example of the output for the previous example.</p>
+
+      <div class="cell">
+        <div class="input">
+          <div class=" highlight hl-ipython3">
+<pre><span></span><span class="n">weather_info</span> <span class="o">=</span> <span class="n">get_weather_info</span><span class="p">(</span><span class="n">clean_df</span><span class="p">)</span>
+<span class="n">weather_info</span>
+</pre>
+          </div>
+        </div>
+        <div class="output">
+          <div class="output_text output_subarea output_execute_result">
+<pre>{{ '{' }}
+  &#39;humidity&#39;: 82.16,
+  &#39;pression&#39;: {{ '{' }}
+    &#39;avg&#39;: 1027.4640000000002,
+    &#39;max&#39;: 1029.4000000000001,
+    &#39;min&#39;: 1025.3
+  },
+  &#39;rain&#39;: 0.0,
+  &#39;temperature&#39;: {{ '{' }}
+    &#39;avg&#39;: 9.472,
+    &#39;max&#39;: 12.9,
+    &#39;min&#39;: 7.9000000000000004
+  },
+  &#39;visibility&#39;: 0.0,
+  &#39;wind&#39;: {{ '{' }}
+    &#39;avg&#39;: 5.04,
+    &#39;max&#39;: 9.0,
+    &#39;min&#39;: 2.0
+  }
+}</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
