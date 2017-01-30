@@ -1,6 +1,14 @@
-# ADAEPFL-Project
+# Applied Data Analysis - EPFL: project about DataSport
 
-[Project presentation website](https://antitoine.github.io/ADAEPFL-Project/)
+See [Project presentation website](https://antitoine.github.io/ADAEPFL-Project/)
+
+The source code of the study is in the [Study](https://github.com/antitoine/ADAEPFL-Project/tree/master/Study) folder:
+  - Scraping of data from DataSport: [Study/Scraping](https://github.com/antitoine/ADAEPFL-Project/tree/master/Study/Scraping)
+  - Study about the Lausanne Marathon 2016: [Study/Statistics/Lausanne_2016](https://github.com/antitoine/ADAEPFL-Project/blob/master/Study/Statistics/Lausanne_2016/study_lausanne_2016.ipynb)
+  - Study about the Lausanne Marathon from 1999 to 2016: [Study/Statistics/Lausanne_1999_2016](https://github.com/antitoine/ADAEPFL-Project/blob/master/Study/Statistics/Lausanne_1999_2016/study_lausanne_1999_2016.ipynb)
+  - Study about some runners: [Study/Statistics/Runners](https://github.com/antitoine/ADAEPFL-Project/blob/master/Study/Statistics/Runners/runners.ipynb)
+
+The source of the website is in the [Website](https://github.com/antitoine/ADAEPFL-Project/tree/master/Website) folder.
 
 ## Abstract
 
@@ -67,7 +75,4 @@ We should focus our study on multiple points:
 We plan to schedule our project on the following big steps:
   - Gathering data and wrangling (2 month)
   - Key point study  (1 month)
-  - Visualization / Website  (2 month)
-
-See below a quick overview of the project time plan:
-![Gantt Time Plan](https://antitoine.github.io/ADAEPFL-Project/images/gantt.png)
+  - Visualization / Website  (3 month)
