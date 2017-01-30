@@ -6,15 +6,22 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import numpy as np
-import collections
 import copy
 import sys
 sys.path.append('..')
 import study_utils
 import plotly
+from collections import OrderedDict
 from plotly import tools
 import plotly.graph_objs as go
 from plotly.graph_objs import Annotation
+
+# ----------------------------------------------------------------------------------------------------------
+# Constants
+
+KM_10_COLOR = '#f99740'
+KM_21_COLOR = '#40aff9'
+KM_42_COLOR = '#f94040'
 
 # ----------------------------------------------------------------------------------------------------------
 # Functions
@@ -246,7 +253,7 @@ def plot_distribution_over_years(data, title='Distribution of runners over the y
         - figure: Plotly figure
     '''
 
-    colors = {'10 km': '#f99740', 'Semi-marathon': '#40aff9', 'Marathon': '#f94040'}
+    colors = {'10 km': KM_10_COLOR, 'Semi-marathon': KM_21_COLOR, 'Marathon': KM_42_COLOR}
     bars = []
 
     for running in data.columns:
@@ -269,7 +276,7 @@ def plot_gender_distributions_over_years(data, title='Gender distribution over t
         - figure: Plotly figure
     '''
 
-    colors = {'10 km': '#f99740', 'Semi-marathon': '#40aff9', 'Marathon': '#f94040'}
+    colors = {'10 km': KM_10_COLOR, 'Semi-marathon': KM_21_COLOR, 'Marathon': KM_42_COLOR}
 
     # We ignore outputs of Plotly
     with study_utils.ignore_stdout():
@@ -309,7 +316,7 @@ def generate_median_age_statistics(df):
                 series_with_gender[df_name][(sex, str(year))] = df[(df['year'] == year) & (df['sex'] == sex)]['age'].median()
     statistics = {}
     for stats, results in {'global': series, 'detailed': series_with_gender}.items():
-        statistics[stats] = pd.DataFrame(collections.OrderedDict([('Median age (10 km)', pd.Series(results['10km'])), ('Median age (semi-marathon)', pd.Series(results['21km'])), ('Median age (marathon)', pd.Series(results['42km'])), ('Median age (all runnings)', pd.Series(results['All runnings']))]))
+        statistics[stats] = pd.DataFrame(OrderedDict([('Median age (10 km)', pd.Series(results['10km'])), ('Median age (semi-marathon)', pd.Series(results['21km'])), ('Median age (marathon)', pd.Series(results['42km'])), ('Median age (all runnings)', pd.Series(results['All runnings']))]))
     return statistics
 
 
@@ -416,7 +423,8 @@ def generate_all_evolution_figures(df, age_categories, sex_categories):
     '''
 
     # We define the considered runnings and the years interval
-    runnings = {10: '10 km', 21: 'Semi-marathon', 42: 'Marathon'}
+    runnings = {'column_name': 'distance (km)', 'values': OrderedDict([(10, {'name': '10 km', 'color': KM_10_COLOR}), (21, {'name': 'Semi-marathon', 'color': KM_21_COLOR}), (42, {'name': 'Marathon', 'color': KM_42_COLOR})])}
+
     year_values = [year for year in df['year'].unique() if year]
     
     # We define options and the final Dict
@@ -440,9 +448,9 @@ def generate_all_evolution_figures(df, age_categories, sex_categories):
 
             lines = []
 
-            for km, running in runnings.items():
-                data_running = data_final[data_final['distance (km)'] == km]
-                line = go.Scatter(x = year_values, y = [len(data_running[data_running['year'] == y]) for y in year_values], mode = 'lines', name = running)
+            for km, attributes in runnings['values'].items():
+                data_running = data_final[data_final[runnings['column_name']] == km]
+                line = go.Scatter(x = year_values, y = [len(data_running[data_running['year'] == y]) for y in year_values], mode = 'lines', name = attributes['name'], marker={'color': attributes['color']})
                 lines.append(line)
 
             annotations = [Annotation(y=1.1, text='Age category: ' + age_category + '    Sex category: ' + sex_category + ' runners', xref='paper', yref='paper', showarrow=False)]
@@ -497,7 +505,7 @@ def generate_all_performance_figures(df, age_categories, sex_categories, perform
     # We define the considered runnings and the years interval, as colors for boxplots
     runnings = {10: '10 km', 21: 'Semi-marathon', 42: 'Marathon'}
     year_values = [year for year in df['year'].unique() if year]
-    colors = {'10 km': '#f99740', 'Semi-marathon': '#40aff9', 'Marathon': '#f94040'}
+    colors = {'10 km': KM_10_COLOR, 'Semi-marathon': KM_21_COLOR, 'Marathon': KM_42_COLOR}
     
     # We define options and the final Dict
     figures = {}
@@ -641,7 +649,7 @@ def generate_performance_comparison(df, age_categories, performance_criteria):
                     df_filtered_final_year = df_filtered_final[df_filtered_final['year'] == year]
                     
                     # We create x values (see definition of generate_x_data for more information)
-                    x_variables = collections.OrderedDict([(variable, variable.capitalize()) for variable in ['all', 'female', 'male']])
+                    x_variables = OrderedDict([(variable, variable.capitalize()) for variable in ['all', 'female', 'male']])
                     x_all = study_utils.generate_x_data(df_filtered_final, x_variables, 'sex')
                     x_filtered = study_utils.generate_x_data(df_filtered_final_year, x_variables, 'sex')
 
@@ -817,7 +825,7 @@ def generate_evolution_and_performance_figure(data, criterion):
 
     year_values = [year for year in range(1999, 2017)]
     year_labels = [v for v in year_values]
-    colors = {'10 km': '#f99740', 'Semi-marathon': '#40aff9', 'Marathon': '#f94040'}
+    colors = {'10 km': KM_10_COLOR, 'Semi-marathon': KM_21_COLOR, 'Marathon': KM_42_COLOR}
 
     # We ignore outputs of Plotly
     with study_utils.ignore_stdout():
@@ -939,7 +947,7 @@ def generate_performance_distribution_figure(data, age_category, sex_category, c
     '''
 
     # We define the considered runnings and the years interval
-    runnings = collections.OrderedDict([(10, {'name': '10 km', 'position': 1}), (21, {'name': 'Semi-marathon', 'position': 2}), (42, {'name': 'Marathon', 'position': 3})])
+    runnings = OrderedDict([(10, {'name': '10 km', 'position': 1}), (21, {'name': 'Semi-marathon', 'position': 2}), (42, {'name': 'Marathon', 'position': 3})])
     years_range = range(1999, 2017)
     years = {year: str(year) for year in years_range}
     colors = study_utils.generate_colors_palette(years)

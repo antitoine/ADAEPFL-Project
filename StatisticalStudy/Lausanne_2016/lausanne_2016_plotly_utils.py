@@ -31,7 +31,7 @@ TOTAL_RESIDENT_FEMALE = 396501
 YEAR_CATEGORIES = ['15-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years']
 FEMALE_COLOR = '#f442e8'
 MALE_COLOR = '#4286f4'
-ALL_GENDERS_COLOR = '#f4df42'
+ALL_GENDERS_COLOR = '#9b0048'
 INDIVIDUAL_COLOR = '#42f4c5'
 TEAM_COLOR = '#a142f4'
 KM_10_COLOR = '#f99740'
@@ -301,7 +301,7 @@ def generate_performance_by_age_and_age_category(data, runnings=None, age_column
             # Creation of boxplots for female and male runners
             boxplots = study_utils.create_plotly_boxplots(data=filtered_df, x=column_name, y='time', hue=sex_column_name, hue_names=attributes['names'], colors=attributes['colors'], visibility=attributes['visibility'], use_hue_names=False, use_legend_group=True, show_legend=(column_name == 'age'))
             # We add boxplots for all runners (without consideration of sex)
-            boxplots.append(go.Box(y=filtered_df['time'], x=data[column_name], name=attributes['names']['all'], marker={'color': attributes['colors']['all']}, visible=attributes['visibility']['all'], legendgroup=attributes['names']['all'], showlegend=(column_name == 'age')))
+            boxplots.append(go.Box(y=filtered_df['time'], x=filtered_df[column_name], name=attributes['names']['all'], marker={'color': attributes['colors']['all']}, visible=attributes['visibility']['all'], legendgroup=attributes['names']['all'], showlegend=(column_name == 'age')))
             # We add each generated boxplot in the correct subplot
             for boxplot in boxplots:
                 figure.append_trace(boxplot, 1 if column_name == 'age' else 2, 1)
