@@ -249,10 +249,10 @@ def compute_age_of_runner(runner):
     Return
         - age of runner (int)
     '''
-    
-    today = date.today()
+
+    reference = date(year=runner['year'], month=10, day=15)
     birth_year = runner['birthday']
-    return today.year - birth_year.year - ((today.month, today.day) < (birth_year.month, birth_year.day))
+    return reference.year - birth_year.year - ((reference.month, reference.day) < (birth_year.month, birth_year.day))
 
 
 def compute_run_in_team(runner):
