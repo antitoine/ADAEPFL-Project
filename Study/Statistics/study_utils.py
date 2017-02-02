@@ -239,18 +239,25 @@ def compute_distance_from_category (runner):
     return None
 
 
-def compute_age_of_runner(runner):
+def compute_age_of_runner(runner, ref=False):
     '''
     Returns the age of runner, based on this year of birth.
     
     Parameters
         - runner: row representing the runner
+        - ref: Date representing the reference date to compute the age, by default date(year=2016, month=10, day=15)
         
     Return
         - age of runner (int)
     '''
-
-    reference = date(year=runner['year'], month=10, day=15)
+    
+    if ref:
+        reference = ref
+    elif 'year' in runner:
+        reference = date(year=runner['year'], month=10, day=15)
+    else:
+        reference = date(year=2016, month=10, day=15)
+    
     birth_year = runner['birthday']
     return reference.year - birth_year.year - ((reference.month, reference.day) < (birth_year.month, birth_year.day))
 
