@@ -548,11 +548,11 @@ def create_plotly_boxplots(data, x, y, hue=None, hue_names=None, colors=None, vi
     Return
         - fig: Plotly figure
     '''
-    
-    hue_values = data[hue].unique()
+
     all_boxes = []
 
     if hue:
+        hue_values = data[hue].unique()
         for value in hue_values:
             filtered_data = data[data[hue] == value]
             current_x = filtered_data[x]
