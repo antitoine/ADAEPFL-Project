@@ -348,6 +348,27 @@ def plot_median_age_evolution(data, x=None, y='Median age (all runnings)', title
     return figure
 
 
+def plot_age_evolution_boxplots(df, title='Evolution of age of runners over the years', year_column='year', age_column='age'):
+    '''
+    This function plots evolution of age of runners over the years (using boxplots).
+
+    Parameters
+        - df: DataFrame containing records about runners
+        - title: Title of the graph (by default, 'Evolution of age of runners over the years')
+        - year_column: Name of column containing years of event
+        - age_column: Name of column containing age of runners
+
+    Return
+        - figure: Plotly figure
+    '''
+
+    options = {'title': title, 'x_name': year_column.capitalize(), 'y_name': age_column.capitalize()}
+    boxplots = study_utils.create_plotly_boxplots(data=df, x='year', y=age_column)
+    figure = study_utils.create_plotly_legends_and_layout(data=boxplots, **options)
+    plotly.offline.iplot(figure)
+    return figure
+
+
 def plot_ols_fitted_and_true_values(data, ols_results, x=None, y='Median age (all runnings)', title='Fitted and original values for median ages of participants of Lausanne Marathon editions', groupby_column='Gender', markers_attributes=None):
     '''
     This function plots fitted and true values for a given dataset and associated ols results.
