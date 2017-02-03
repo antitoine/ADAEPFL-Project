@@ -67,9 +67,20 @@
         <p>
           <small>*Note that as we don't have such additional information about runners, we took number of km crossed per year during competitions and number of events per year.</small>
         </p>
+
+        <p>
+          <small>Note, As we display the information about all races of our dataset some runners can appear multiple time.</small>
+        </p>
         <plotly [url]="'./assets/json/study-runners-distribution-age.json.zip'"></plotly>
         <p>
-          After the processing of data, we obtained 47 runners. The group of considered runners had a mean age of 52,67 years, which is very high (but we have to keep in mind that part of data is related to 1999's events). Notice that all these runners have finished more than 10 races, for a total of 3535 races. Some of them have even participated in more than 500 events the past 17 years (i.e. more than 2 events each month in average). Put in other words, the majority of these runners are not amateur. Now, knowing that the more races you run in a year, the shorter the training period and the opportunity to obtain good trainings are, we wanted to check, among other things, if there was a possible correlation between the performance of a runner and the number of events he makes each year.
+
+          After the processing of data, we obtained 47 runners. The group of considered runners had a mean age of 52,67 years, which is very high (but we have to keep in mind that part of data is related to 1999's events).
+          Moreover in our dataset the frequent runners (more than 175 events) are quite old (mean birthyear = 1947 ) which could explains the high mean age of our dataset.
+          Notice that all these runners have finished more than 10 races, for a total of 3535 races.
+          Some of them have even participated in more than 500 events the past 17 years (i.e. more than 2 events each month in average).
+          Put in other words, the majority of these runners are not amateur.
+          Now, knowing that the more races you run in a year, the shorter the training period and the opportunity to obtain good trainings are, we wanted to check, among other things,
+          if there was a possible correlation between the performance of a runner and the number of events he makes each year.
         </p>
         <p>
           <b>In any case, it is important to keep in mind that as everyone is unique and reacts differently, it is important to conduct an in-depth analysis on a bigger dataset to make fiable conclusions. For this reason, the results obtained in this study must be considered carefully and reader must put things into perspective.</b>
