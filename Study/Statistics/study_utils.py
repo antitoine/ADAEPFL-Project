@@ -118,7 +118,7 @@ def apply_computations(df):
     df_cleaned = df_cleaned[df_cleaned['birthday'].notnull()]
     df_cleaned['age'] = df_cleaned.apply(compute_age_of_runner, axis=1)
     df_cleaned['age'] = df_cleaned['age'].apply(lambda x : int(float(x)))
-    df_cleaned['age category'] = pd.cut(df_cleaned['age'], [15, 26, 31, 36, 41, 46, 51, 56, 61, 66, 100], labels=['15-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years'], right=False)
+    df_cleaned['age category'] = pd.cut(df_cleaned['age'], [10, 26, 31, 36, 41, 46, 51, 56, 61, 66, 100], labels=['10-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years'], right=False)
     
     # We then format time
     # Runners without time are excluded from analysis
@@ -241,7 +241,7 @@ def compute_distance_from_category (runner):
 
 def compute_age_of_runner(runner, ref=None):
     '''
-    Returns the age of runner, based on this year of birth.
+    Returns the age of runner, based on his year of birth.
     
     Parameters
         - runner: row representing the runner
@@ -264,13 +264,13 @@ def compute_age_of_runner(runner, ref=None):
 
 def compute_run_in_team(runner):
     '''
-    Returns the age of runner, based on this year of birth.
+    Returns the profile of runner (team-mate/individual).
     
     Parameters
         - runner: row representing the runner
         
     Return
-        - age of runner (int)
+        - Profile of runner ('Individual' or 'Team-mate')
     '''
     
     if pd.isnull(runner['team']):

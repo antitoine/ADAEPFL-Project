@@ -66,7 +66,7 @@
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-age-median-evolution.json.zip'"></plotly>
 
       <p>
-        The evolution of the age is not very relevant, even if between 2007 and 2015 there is a possible linear regression, in 2016 the average age seem to increase and break the regression.
+        The evolution of the age is not very relevant, even if between 2007 and 2015 there is a possible linear regression. Also, we observe that in 2016 the average age seems to increase and break the previous downwards tendency.
       </p>
 
       <h3 id="synthesis-global-evolution-number-participants">Synthesis of the global evolution of number of participants</h3>
@@ -74,8 +74,10 @@
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolutions.json.zip'" [labels]="['Age category', 'Sex']"></plotly>
 
       <p>
-        By selecting a young category of age, we can see a real progression over the years, but regarding the precedent graphic with the global evolution of the average age over year, there is not evolution, so we can say that every category increases with a perfect equilibrium.
-        The same argument can be applied to the gender distribution, and finally we can deduce that the augmentation of runners, extend the repartition but with the same proportion in order to don't change the average values.
+        By selecting a category of young runners, we can see a real progression over the years. We can also observe a huge gap between 10-km running/semi-marathon and marathon for such categories (note that the gap tends to decrease when runners are older). Moreover, one can remark that for marathon, we see a new tendency after the introduction of new organization in 2009 (number of runners globally increases, while it was decreasing until 2009).
+      </p>
+      <p>
+        Now, more generally, if we combine this information with the precedent plot with the global evolution of the average age over year, we see that there is no evolution; so we can say that every category increases with a perfect equilibrium. The same argument can be applied to the gender distribution. We can thus deduce that the augmentation of runners extends the repartition between genders but in the same proportion so that it doesn't change average, global, values.
       </p>
 
       <h2 id="performances-analysis">Analysis of performance of Lausanne Marathon's editions</h2>
@@ -85,9 +87,10 @@
       <plotly [url]="'./assets/json/marathon-lausanne-1999-2016-evolution-performances.json.zip'" [labels]="['Age category', 'Sex', 'Performance']"></plotly>
 
       <p>
-        The mean time and mean speed of each event of the marathon of Lausanne remains constant through the years. The 10-km running is the race where the pace is the highest and the marathon is the one with the lowest speed (this is what we can expect because of the difference of distance between races).<br/>
-        From the best runners' point of view, the difference of speed between the 3 events increases with the years. This could be a direct consequence of the reconsideration of 2009 regarding the downturn of the prizes reserved to the winners: some excellent runners were probably not attracted anymore.<br/>
-        We can also notice that 2005 was quite singular as it exposed the worst general performance.<br/>
+        The mean time and mean speed of events of the marathon of Lausanne seem to slightly oscillate over the years, but globally remain constant. The 10-km running is the race where the pace is the highest and the marathon is the one with the lowest speed (this is what we can expect because of the difference of distance between races).
+      </p>
+      <p>
+        From the best runners' point of view, the difference of speed between the 3 events increases with the years. This could be a direct consequence of the reconsideration of 2009 regarding the downturn of the prizes reserved to the winners: some excellent runners were probably not attracted anymore. We can also notice that 2006 was quite singular as it exposed the worst general performance.<br/>
       </p>
 
       <h3 id="distribution-of-the-performances">Distribution of the performances</h3>
