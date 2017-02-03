@@ -28,7 +28,7 @@ TOTAL_RESIDENT_VAUD = 778365
 TOTAL_RESIDENT_MALE = 381864
 TOTAL_RESIDENT_FEMALE = 396501
 
-YEAR_CATEGORIES = ['15-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years']
+YEAR_CATEGORIES = ['10-25 years', '26-30 years', '31-35 years', '36-40 years', '41-45 years', '46-50 years', '51-55 years', '56-60 years', '61-65 years', '65+ years']
 FEMALE_COLOR = '#f442e8'
 MALE_COLOR = '#4286f4'
 ALL_GENDERS_COLOR = '#9b0048'

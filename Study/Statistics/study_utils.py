@@ -99,7 +99,7 @@ def apply_computations(df):
     '''
     This function applies different computations in order to clean DataFrame.
 
-    Parameters:
+    Parameters
         - df: DataFrame on which computations will be applied
 
     Return
@@ -239,13 +239,13 @@ def compute_distance_from_category (runner):
     return None
 
 
-def compute_age_of_runner(runner, ref=False):
+def compute_age_of_runner(runner, ref=None):
     '''
     Returns the age of runner, based on this year of birth.
     
     Parameters
         - runner: row representing the runner
-        - ref: Date representing the reference date to compute the age, by default date(year=2016, month=10, day=15)
+        - ref: Date representing the reference date to compute the age (by default, None)
         
     Return
         - age of runner (int)
@@ -316,7 +316,7 @@ def compute_time_to_best_in_team(runner, data):
     '''
     This function computes the difference between individual time and best time in a team.
 
-    Parameters:
+    Parameters
         - runner: row representing the runner to consider for comparison
         - data: DataFrame containing the data about runners
 
