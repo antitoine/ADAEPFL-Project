@@ -9,6 +9,7 @@ The source code of the study is in the [Study](https://github.com/antitoine/ADAE
   - Study about some runners: [Study/Statistics/Runners](https://github.com/antitoine/ADAEPFL-Project/blob/master/Study/Statistics/Runners/runners.ipynb)
 
 The source of the website is in the [Website](https://github.com/antitoine/ADAEPFL-Project/tree/master/Website) folder.
+
 *Note: The output of plotly visualizations doesn't work well, please download and run the notebooks if you want to see our entire work*
 
 
