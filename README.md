@@ -80,6 +80,6 @@ We plan to schedule our project on the following big steps:
   - Key point study  (1 month)
   - Visualization / Website  (3 month)
 
-## Timeplan
+## Posters
 
 Posters used during presentation of project are available in [Doc](https://github.com/antitoine/ADAEPFL-Project/tree/master/Doc) folder.
