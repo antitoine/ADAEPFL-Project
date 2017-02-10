@@ -10,6 +10,9 @@ The source code of the study is in the [Study](https://github.com/antitoine/ADAE
 
 The source of the website is in the [Website](https://github.com/antitoine/ADAEPFL-Project/tree/master/Website) folder.
 
+*Note: The output of plotly visualizations doesn't work well, please download and run the notebooks if you want to see our entire work*
+
+
 ## Abstract
 
 This project aims to focus on Lausanne Marathon and, more precisely, on the analysis of the different runs (10km, semi-marathon and marathon).
